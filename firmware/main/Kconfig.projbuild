@@ -1,0 +1,47 @@
+menu "NavSphere"
+config NAV_HARDWARE_CONFIRMED
+    bool "Enable confirmed ESP32-WROOM ADC1 hardware"
+    default y
+    depends on IDF_TARGET_ESP32
+    help
+        Off: no ADC reads; telemetry validity mask is zero. A/B control
+        configuration is selected independently below.
+        On: six native ADC1 GPIO32,33,34,35,36,39 are acquired.
+config NAV_PHYSICAL_CONTROLS
+    bool "Drive external active-high A/B outputs (GPIO25/26)"
+    default y
+    depends on IDF_TARGET_ESP32
+config NAV_CONTROL_A_GPIO
+    int "Control A output GPIO (external LED with resistor)"
+    default 25
+    range 25 26
+config NAV_CONTROL_B_GPIO
+    int "Control B output GPIO"
+    default 26
+    range 25 26
+config NAV_CONTROL_TIMEOUT_MS
+    int "Control inactivity watchdog (ms); safe low after this interval"
+    default 60000
+    range 1000 3600000
+config NAV_ADC_SAMPLE_MS
+    int "Full six-channel acquisition period (ms)"
+    range 20 10000
+    default 100
+config NAV_ADC_AVERAGES
+    int "ADC samples averaged per logical channel"
+    range 1 32
+    default 4
+config NAV_REQUIRE_TLS
+    bool "Reject plaintext MQTT URI"
+    default n
+config NAV_MQTT_TOPIC_PREFIX
+    string "MQTT topic prefix (1..64 letters, digits, underscores or hyphens)"
+    default "navsphere"
+config NAV_SNTP_SERVER
+    string "SNTP server"
+    default "pool.ntp.org"
+config NAV_COMMAND_MAX_TTL_MS
+    int "Maximum command delivery validity (ms)"
+    range 1000 300000
+    default 30000
+endmenu

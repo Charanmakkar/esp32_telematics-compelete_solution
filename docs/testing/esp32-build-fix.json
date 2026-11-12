@@ -1,0 +1,26 @@
+{
+  "verified_at_utc": "2026-11-11T10:12:49.712279+00:00",
+  "cause": [
+    "Native ESP-IDF selected the platform root, which lacked an ESP-IDF entry point",
+    "Microsoft C/C++ did not have a root compile-database/compiler configuration"
+  ],
+  "target": "esp32",
+  "project_directory": ".",
+  "build_directory": "build",
+  "workspace_switch_required": false,
+  "full_root_rebuild_passed": true,
+  "default_vscode_task_command_passed": true,
+  "sdk_configuration_editor_backend_passed": true,
+  "cpp_compiler_path_verified": true,
+  "cpp_compile_database": "build/compile_commands.json",
+  "application_files_with_verified_sdk_header_paths": 7,
+  "headers_verified": [
+    "esp_log.h",
+    "nvs_flash.h",
+    "sdkconfig.h"
+  ],
+  "root_firmware_config_matches_standalone_except_partition_relative_path": true,
+  "editor_visual_diagnostics_verified": false,
+  "app_bytes": 988272,
+  "app_sha256": "6e3cf44c028503e028c20f10c529dce925a5ef90de390201cbb3352fa35d8c03"
+}

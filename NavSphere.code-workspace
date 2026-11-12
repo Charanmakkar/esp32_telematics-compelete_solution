@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "ESP32 Firmware",
+      "path": "firmware"
+    },
+    {
+      "name": "NavSphere Platform",
+      "path": "."
+    }
+  ],
+  "settings": {
+    "idf.currentSetup": "C:\\esp\\v6.0.2\\esp-idf",
+    "idf.customExtraVars": {
+      "IDF_TARGET": "esp32",
+      "KCONFIG_REPORT_VERBOSITY": "quiet"
+    }
+  }
+}

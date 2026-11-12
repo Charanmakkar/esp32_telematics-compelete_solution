@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "value_count": 1269,
+  "stderr": "Server running, waiting for requests on stdin...",
+  "elapsed_seconds": 3.95,
+  "target": "esp32",
+  "exact_idf_confserver_command_passed": true,
+  "verified_at_utc": "2026-11-11T10:54:31.964801+00:00",
+  "setting": "KCONFIG_REPORT_VERBOSITY=quiet",
+  "reason": "ESP-IDF extension 2.3 misclassifies SDK 6 informational stderr notes as errors and focuses Output",
+  "real_configuration_errors_remain_visible": true,
+  "gui_verified": false,
+  "gui_verification_limit": "Native VS Code window input geometry/capture unavailable",
+  "reload_window_required_for_cached_extension_state": true
+}

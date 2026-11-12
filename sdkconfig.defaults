@@ -1,0 +1,2 @@
+# Root builds share the firmware defaults; only this relative path differs.
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="firmware/partitions.csv"

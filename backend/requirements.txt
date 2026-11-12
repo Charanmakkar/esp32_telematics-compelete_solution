@@ -1,0 +1,10 @@
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+pydantic-settings>=2.7,<3
+SQLAlchemy>=2.0.37,<3
+alembic>=1.14,<2
+PyMySQL[rsa]>=1.1,<2
+paho-mqtt>=2.1,<3
+pytest>=8.3,<10
+httpx>=0.28,<1
+ruff>=0.9,<1

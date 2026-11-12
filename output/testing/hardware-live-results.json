@@ -1,0 +1,108 @@
+{
+  "source": "hardware",
+  "device_id": "ESP32_001",
+  "boot_id": "67f1fc5b-00b6-12da-9b8f-a4a97b37d08f",
+  "elapsed_seconds": 30.571,
+  "sequence_start": 455,
+  "sequence_end": 754,
+  "expected_rows": 299,
+  "stored_rows": 299,
+  "websocket_stages": {
+    "received": 298,
+    "persisted": 297
+  },
+  "valid_mask": 63,
+  "channels_mv": {
+    "analog_1": 536,
+    "analog_2": 300,
+    "analog_3": 142,
+    "analog_4": 142,
+    "analog_5": 142,
+    "analog_6": 142
+  },
+  "raw_counts": [
+    486,
+    195,
+    0,
+    0,
+    0,
+    0
+  ],
+  "time_valid": true,
+  "startup_dropped_samples": 77,
+  "additional_dropped_samples": 0,
+  "channel_history_http_status": {
+    "1": 200,
+    "2": 200,
+    "3": 200,
+    "4": 200,
+    "5": 200,
+    "6": 200
+  },
+  "health": {
+    "ready": true,
+    "database_connected": true,
+    "mqtt_connected": true
+  },
+  "device": {
+    "device_id": "ESP32_001",
+    "online": true,
+    "last_seen": "2026-11-12T04:07:01.895000Z",
+    "source": "hardware",
+    "boot_id": "67f1fc5b-00b6-12da-9b8f-a4a97b37d08f",
+    "controls": {
+      "A": 0,
+      "B": 0
+    },
+    "mapping": [
+      {
+        "channel": "analog_1",
+        "label": "Analog 1",
+        "physical": "GPIO32 / ADC1"
+      },
+      {
+        "channel": "analog_2",
+        "label": "Analog 2",
+        "physical": "GPIO33 / ADC1"
+      },
+      {
+        "channel": "analog_3",
+        "label": "Analog 3",
+        "physical": "GPIO34 / ADC1"
+      },
+      {
+        "channel": "analog_4",
+        "label": "Analog 4",
+        "physical": "GPIO35 / ADC1"
+      },
+      {
+        "channel": "analog_5",
+        "label": "Analog 5",
+        "physical": "GPIO36 / ADC1"
+      },
+      {
+        "channel": "analog_6",
+        "label": "Analog 6",
+        "physical": "GPIO39 / ADC1"
+      }
+    ]
+  },
+  "passed": true,
+  "tested_at_utc": "2026-11-12T04:07:36.372128+00:00",
+  "wifi_ssid": "Airtel_WiFi",
+  "wifi_password_matches_windows_profile": true,
+  "esp32_ip": "192.168.31.211",
+  "mqtt_endpoint": "192.168.31.50:1883",
+  "serial_port": "COM3",
+  "flash_verified": true,
+  "pre_flash_backup": "firmware/.local/esp32-before-provisioning.bin",
+  "dashboard": "http://localhost:5173/",
+  "dashboard_visually_verified": true,
+  "physical_outputs_toggled": false,
+  "notes": [
+    "Simulated command integration ran before connecting hardware to broker.",
+    "Both hardware outputs remained LOW.",
+    "77 samples discarded during startup before MQTT connected; no increase during measured hardware window.",
+    "ADC readings are not a validation of attached sensor accuracy."
+  ]
+}

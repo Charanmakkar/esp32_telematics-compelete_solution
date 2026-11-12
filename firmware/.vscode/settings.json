@@ -1,0 +1,36 @@
+{
+  "idf.currentSetup": "C:\\esp\\v6.0.2\\esp-idf",
+  "idf.port": "COM3",
+  "idf.buildPath": "${workspaceFolder}/build",
+  "idf.sdkconfigDefaults": ["sdkconfig.defaults"],
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32",
+    "KCONFIG_REPORT_VERBOSITY": "quiet"
+  },
+  "C_Cpp.intelliSenseEngine": "default",
+  "idf.extensionActivationMode": "always",
+  "cmake.configureOnOpen": false,
+  "cmake.configureOnEdit": false,
+  "cmake.automaticReconfigure": false,
+  "cmake.autoSelectActiveFolder": false,
+  "cmake.options.advanced": {
+    "build": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    },
+    "launch": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    },
+    "debug": {
+      "statusBarVisibility": "inherit",
+      "inheritDefault": "hidden"
+    }
+  },
+  "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+  "clangd.arguments": [
+    "--background-index",
+    "--query-driver=**",
+    "--compile-commands-dir=${workspaceFolder}/build"
+  ]
+}

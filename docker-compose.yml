@@ -1,0 +1,36 @@
+name: navsphere
+services:
+  mqtt:
+    image: eclipse-mosquitto:2.0.22
+    ports:
+      - "127.0.0.1:1883:1883"
+    volumes:
+      - ./mqtt/docker.conf:/mosquitto/config/mosquitto.conf:ro
+      - ./mqtt/acl.example:/mosquitto/config/acl:ro
+      - ./.runtime/mqtt/passwords:/mosquitto/config/passwords:ro
+      - mqtt_data:/mosquitto/data
+    restart: unless-stopped
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      MQTT_HOST: mqtt
+      DB_HOST: host.docker.internal
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "127.0.0.1:8000:8000"
+    depends_on:
+      - mqtt
+    restart: unless-stopped
+  frontend:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:5173:80"
+    depends_on:
+      - backend
+    restart: unless-stopped
+volumes:
+  mqtt_data:
+# No MySQL service: reuse your existing server. Configure a restricted database
+# account that accepts connections from Docker's subnet before using this mode.

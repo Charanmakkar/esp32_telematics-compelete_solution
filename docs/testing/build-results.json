@@ -1,0 +1,53 @@
+{
+  "firmware": {
+    "framework": "ESP-IDF 6.0.2",
+    "target": "esp32",
+    "build_passed": true,
+    "app_bytes": 988272,
+    "app_sha256": "6e3cf44c028503e028c20f10c529dce925a5ef90de390201cbb3352fa35d8c03",
+    "app_partition_bytes": 3145728,
+    "iram_bytes": 87999,
+    "iram_capacity_bytes": 131072,
+    "static_dram_bytes": 44511,
+    "static_dram_capacity_bytes": 180736,
+    "runtime_heap_measured": false,
+    "physical_board_tested": false,
+    "last_rebuild_verified_at_utc": "2026-11-11T10:12:49.712279+00:00",
+    "build_directory": "build"
+  },
+  "backend": {
+    "tests_passed": 28,
+    "test_execution_note": "All 28 passed together after Swagger-origin and production-promotion regressions",
+    "ruff_passed": true,
+    "python_compile_passed": true
+  },
+  "frontend": {
+    "tests_passed": 15,
+    "typescript_vite_build_passed": true,
+    "npm_audit_vulnerabilities": 0,
+    "visual_browser_qa_complete": false
+  },
+  "simulator": {
+    "tests_passed": 10
+  },
+  "firmware_host": {
+    "command_rule_assertions_passed": 13,
+    "command_handler_suite_passed": true
+  },
+  "windows_scripts": {
+    "powershell_syntax_passed": true,
+    "owned_process_tree_test_passed": true,
+    "full_stack_stop_restart_passed": true,
+    "apache_mysql_preserved": true
+  },
+  "database": {
+    "engine": "MariaDB 10.4.32",
+    "alembic_head": "0002",
+    "analog_columns": 6,
+    "backup_generated": true,
+    "restore_tested": false
+  },
+  "docker": {
+    "executed": false
+  }
+}

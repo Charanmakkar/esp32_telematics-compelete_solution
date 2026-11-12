@@ -1,0 +1,26 @@
+{
+    "idf.currentSetup": "C:\\esp\\v6.0.2\\esp-idf",
+    "idf.port": "COM3",
+    "idf.buildPath": "${workspaceFolder}/build",
+    "idf.sdkconfigDefaults": [
+      "firmware/sdkconfig.defaults",
+      "sdkconfig.defaults"
+    ],
+    "cmake.configureOnOpen": false,
+    "cmake.configureOnEdit": false,
+    "cmake.automaticReconfigure": false,
+    "cmake.autoSelectActiveFolder": false,
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/build/compile_commands.json",
+    "C_Cpp.default.compilerPath": "C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc.exe",
+    "idf.customExtraVars": {
+      "IDF_TARGET": "esp32",
+      "KCONFIG_REPORT_VERBOSITY": "quiet"
+    },
+    "clangd.path": "C:\\Espressif\\tools\\esp-clang\\esp-20.1.1_20250829\\esp-clang\\bin\\clangd.exe",
+    "clangd.arguments": [
+      "--background-index",
+      "--query-driver=**",
+      "--compile-commands-dir=${workspaceFolder}/build"
+    ],
+    "idf.flashType": "UART"
+}

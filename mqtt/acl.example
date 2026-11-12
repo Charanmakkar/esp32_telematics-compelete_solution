@@ -1,0 +1,13 @@
+# Backend service account may ingest all devices and publish commands.
+user navsphere_backend
+topic read navsphere/+/telemetry
+topic read navsphere/+/ack
+topic read navsphere/+/status
+topic write navsphere/+/command
+
+# Every device username must equal its provisioned device_id.
+# These pattern grants also apply to other users but are scoped to their username.
+pattern write navsphere/%u/telemetry
+pattern write navsphere/%u/status
+pattern write navsphere/%u/ack
+pattern read navsphere/%u/command
