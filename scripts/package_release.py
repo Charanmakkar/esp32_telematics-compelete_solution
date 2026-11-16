@@ -24,7 +24,7 @@ def main() -> None:
         files[name] = {"bytes":destination.stat().st_size,
                        "sha256":hashlib.sha256(destination.read_bytes()).hexdigest()}
     manifest = {"target":"esp32", "module":"ESP32S-WROOM", "esp_idf":"6.0.2",
-        "channels":6, "adc1_gpio":[32,33,34,35,36,39], "control_gpio":{"A":25,"B":26},
+        "channels":6, "adc1_gpio":[32,33,34,35,36,39], "control_gpio":{"A":2,"B":0},
         "flash_mode":"dio", "flash_size":"4MB", "flash_frequency":"40m",
         "offsets":{"bootloader.bin":"0x1000","partition-table.bin":"0x8000","navsphere.bin":"0x10000"},
         "nvs_offset":"0x9000", "nvs_included":False,"hardware_flashed":False,
@@ -45,7 +45,7 @@ def main() -> None:
                 continue
             if path.parts[0] not in allowed and name not in top:
                 continue
-            if any(part in {".env",".runtime",".tools","node_modules",".venv","build","__pycache__",".pytest_cache"} for part in path.parts):
+            if any(part in {".env",".local",".runtime",".tools","node_modules",".venv","build","__pycache__",".pytest_cache"} for part in path.parts):
                 raise RuntimeError("Unexpected private/runtime path in release candidates")
             source = ROOT / path
             if source.is_file():

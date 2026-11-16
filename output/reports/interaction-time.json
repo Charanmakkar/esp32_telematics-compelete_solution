@@ -1,0 +1,82 @@
+{
+  "completed_turns": 9,
+  "total_ms": 6400122,
+  "first": 1794384619,
+  "last": 1794460768,
+  "elapsed_seconds": 76149,
+  "by_chat": [
+    {
+      "title": "Recover missing project files",
+      "total_ms": 2313844
+    },
+    {
+      "title": "Build NavSphere telemetry platform",
+      "total_ms": 4086278
+    }
+  ],
+  "turns": [
+    {
+      "id": "01a1c9a8-66ac-7e72-ba65-50fc11f0357b",
+      "status": "completed",
+      "startedAt": 1794384619,
+      "completedAt": 1794386832,
+      "durationMs": 2213145
+    },
+    {
+      "id": "01a1ca03-e557-7db0-98e0-916be23e5678",
+      "status": "completed",
+      "startedAt": 1794390615,
+      "completedAt": 1794391063,
+      "durationMs": 448145
+    },
+    {
+      "id": "01a1ca0c-6262-7581-bc37-a49675e5ab49",
+      "status": "completed",
+      "startedAt": 1794391171,
+      "completedAt": 1794391988,
+      "durationMs": 816758
+    },
+    {
+      "id": "01a1ca36-0665-7672-9d37-d855f048345e",
+      "status": "completed",
+      "startedAt": 1794393900,
+      "completedAt": 1794394509,
+      "durationMs": 608230
+    },
+    {
+      "id": "01a1cddb-14f3-7b00-a92a-11ba92e132b1",
+      "status": "completed",
+      "startedAt": 1794455049,
+      "completedAt": 1794455658,
+      "durationMs": 608650
+    },
+    {
+      "id": "01a1cdeb-88b5-76d0-8fc4-a9c4a2748ea8",
+      "status": "completed",
+      "startedAt": 1794456127,
+      "completedAt": 1794456464,
+      "durationMs": 337121
+    },
+    {
+      "id": "01a1cdf9-e18f-7413-8ee9-4d51033502a4",
+      "status": "completed",
+      "startedAt": 1794457067,
+      "completedAt": 1794457442,
+      "durationMs": 374516
+    },
+    {
+      "id": "01a1ce20-0993-7190-8945-da98024a8920",
+      "status": "completed",
+      "startedAt": 1794459568,
+      "completedAt": 1794460242,
+      "durationMs": 673653
+    },
+    {
+      "id": "01a1ce2d-75e1-7b61-8b43-0ac6c83e775a",
+      "status": "completed",
+      "startedAt": 1794460448,
+      "completedAt": 1794460768,
+      "durationMs": 319904
+    }
+  ]
+}

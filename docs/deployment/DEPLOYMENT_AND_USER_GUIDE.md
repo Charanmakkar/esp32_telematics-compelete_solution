@@ -94,7 +94,7 @@ queries. UTC and local timestamp columns are both included.
 
 Controls lets an administrator set A/B to1 or0. Pending and accepted do not
 mean applied. Wait for the matching device acknowledgement. A stale/offline
-device is blocked. GPIO25/26 are active high; firmware resets them LOW after
+device is blocked. GPIO2/0 are active high; firmware resets them LOW after
 network loss or a configurable 60second inactivity watchdog. Send another
 valid command to refresh the corresponding output's watchdog. An applied ack
 confirms software latch state; verify electrical behavior on the actual board.
@@ -142,8 +142,8 @@ No ADC2 channels or extra acquisition hardware are used. ADC attenuation does
 not make pins5V tolerant. Verify the usable calibrated voltage range in the
 ESP32 documentation and protect/scale signals as needed. GPIO34/35/36/39
 have no internal pulls. Floating inputs cannot be treated as valid sensor data.
-GPIO25 -> suitable series resistor -> LED -> GND is the selected A output.
-GPIO26 is B. High-current loads require a suitable driver circuit.
+GPIO2 -> suitable series resistor -> LED -> GND is the selected A output.
+GPIO0 is B. High-current loads require a suitable driver circuit.
 
 Build with the existing IDF installation:
 
@@ -204,6 +204,21 @@ Compose ports bind to loopback. Native Windows is the verified deployment path.
 
 ## Troubleshooting
 
+### Office network access
+
+The native frontend launcher listens on all local interfaces on port 5173.
+Other PCs on the same office network can open `http://<laptop-Wi-Fi-IP>:5173`.
+Add that exact URL to `FRONTEND_ORIGINS` in the private `backend/.env` file,
+then restart the backend. The frontend proxies API and WebSocket traffic to
+the backend on loopback; port 8000 does not need to be exposed.
+
+Run `scripts/enable_office_access.ps1` in an Administrator PowerShell to allow
+TCP 5173 from the local subnet through the Wi-Fi interface. The rule applies
+even when Windows identifies office Wi-Fi as a Public network. Office client
+isolation or VLAN policies may still prevent another PC from connecting.
+For laptop-only access, launch `scripts/start_frontend.ps1 -BindAddress 127.0.0.1`.
+This local development server is not an internet deployment.
+
 Connection refused: check existing services, `.runtime` logs and listening
 ports. MQTT authentication failed: match backend credentials/password hashes
 and device username/ID; recheck ACLs. Avoid sharing the backend account with
@@ -223,3 +238,8 @@ the configured safety watchdog. Physical LED behavior is a separate board test.
 PowerShell scripts disabled: use the documented process-scoped Bypass command;
 the helper does not change system execution policy. Native stop starts no
 system-wide kills and does not stop Apache or MariaDB.
+
+
+### Control pin update 12 November 2026
+
+Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.

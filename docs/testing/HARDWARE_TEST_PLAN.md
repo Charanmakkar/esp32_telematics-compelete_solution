@@ -8,7 +8,7 @@ version, wiring, calibration source, instrument and test duration.
 1. Confirm six sensor inputs connect in order to GPIO32, 33, 34, 35, 36, 39 and
    share ground. Leave ADC2 unused. Keep signals inside the calibrated ADC range;
    attenuation does not make an input 5 V tolerant.
-2. Connect A's LED through a suitable resistor to GPIO25; observe GPIO26 as B
+2. Connect A's LED through a suitable resistor to GPIO2; observe GPIO0 as B
    with a meter or a logic-level compatible circuit. Never drive a high-current
    load directly. Measure both LOW at boot before Wi-Fi connection.
 3. Build and flash the configured firmware and provision its separate NVS image.
@@ -35,3 +35,8 @@ version, wiring, calibration source, instrument and test duration.
 
 These hardware checks are pending until a board, wiring and serial port are
 available. See integration-results.json for the separately measured host path.
+
+
+### Control pin update 12 November 2026
+
+Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.

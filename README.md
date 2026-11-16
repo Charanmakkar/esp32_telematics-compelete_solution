@@ -70,8 +70,8 @@ also exposes both project folders; choose the matching current project in ESP-ID
 | Input / output | GPIO |
 |---|---|
 | Analog 1–6 | 32, 33, 34, 35, 36, 39, respectively |
-| Control A, active high | 25; external LED with series resistor |
-| Control B, active high | 26 |
+| Control A, active high | 2; external LED with series resistor |
+| Control B, active high | 0 |
 
 Both outputs start LOW and return LOW after network loss or the configurable
 60-second inactivity watchdog. An applied acknowledgement confirms the software
@@ -98,3 +98,8 @@ Detailed deliverables: [API reference](docs/api/API_REFERENCE.md),
 [deployment/user guide](docs/deployment/DEPLOYMENT_AND_USER_GUIDE.md), and
 [PDF editions](output/pdf/). Docker Compose is optional, uses the existing host
 database, and has not been executed on this laptop because Docker is unavailable.
+
+
+### Control pin update 12 November 2026
+
+Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.

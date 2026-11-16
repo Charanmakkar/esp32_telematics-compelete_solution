@@ -66,10 +66,10 @@ Commands published by the backend:
 Acknowledgements publish accepted then applied, or rejected:
 
 ```json
-{"command_id":"550e8400-e29b-41d4-a716-446655440000","key":"A","value":1,"status":"applied","reason":"GPIO25 set high","boot_id":"a-new-id-each-boot"}
+{"command_id":"550e8400-e29b-41d4-a716-446655440000","key":"A","value":1,"status":"applied","reason":"GPIO2 set high","boot_id":"a-new-id-each-boot"}
 ```
 
-Status example (retained): `{"online":true,"boot_id":"a-new-id-each-boot","controls":{"A":0,"B":0}}`. Configure device Last Will as `{"online":false}`. An online announcement alone does not refresh stale telemetry. Report control states only after the corresponding physical state has been set. Firmware A maps to GPIO25 and B to GPIO26, active high; safe startup/disconnection level is0.
+Status example (retained): `{"online":true,"boot_id":"a-new-id-each-boot","controls":{"A":0,"B":0}}`. Configure device Last Will as `{"online":false}`. An online announcement alone does not refresh stale telemetry. Report control states only after the corresponding physical state has been set. Firmware A maps to GPIO2 and B to GPIO0, active high; safe startup/disconnection level is0.
 
 ## WebSocket
 

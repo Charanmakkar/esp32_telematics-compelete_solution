@@ -77,8 +77,8 @@ No formal MISRA or CERT compliance certification is claimed.
 | analog_4 | GPIO35 / ADC1 |
 | analog_5 | GPIO36 / ADC1 / VP |
 | analog_6 | GPIO39 / ADC1 / VN |
-| A | GPIO25, active-high LED/output |
-| B | GPIO26, active-high output |
+| A | GPIO2, active-high LED/output |
+| B | GPIO0, active-high output |
 
 The ADC uses12 bit resolution,12 dB attenuation and configurable averaging
 (default 4 reads per channel). The driver requires usable eFuse calibration;
@@ -87,7 +87,7 @@ millivolts from an assumed reference. Six validity bits give a full mask of 63.
 An invalid numeric zero is not a zero-volt measurement. Floating pins can
 return readable but meaningless values. Attenuation is not5V protection.
 
-GPIO25/26 initialize LOW and return LOW after observed network disconnection,
+GPIO2/0 initialize LOW and return LOW after observed network disconnection,
 clock invalidity or the configurable 60-second inactivity watchdog. Reset-time
 electrical guarantees require suitable external circuit design. An applied ack
 means the software GPIO latch write succeeded, not that an independent sensor

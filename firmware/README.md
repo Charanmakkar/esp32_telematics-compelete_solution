@@ -41,12 +41,12 @@ values are calibrated. Per-channel read/calibration failures clear that bit.
 
 ## A/B output mapping
 
-The user authorized physical GPIO HIGH/LOW controls. A is GPIO25 and B is
-GPIO26, active high. For an external LED use GPIO25 -> series resistor (for
-example 1kOhm) -> LED anode, cathode -> GND. GPIO26 can drive a second LED with
+The user authorized physical GPIO HIGH/LOW controls. A is GPIO2 and B is
+GPIO0, active high. For an external LED use GPIO2 -> series resistor (for
+example 1kOhm) -> LED anode, cathode -> GND. GPIO0 can drive a second LED with
 its own resistor or a logic-level input within ESP32 pad current/voltage limits.
 No built-in LED mapping is assumed. Do not drive motors, relays or loads directly.
-Use external pull-downs if LOW must be guaranteed during reset/boot.
+GPIO0 must remain HIGH during reset for normal boot; do not fit a pull-down to Control B. GPIO2 must be LOW or floating to enter the serial bootloader. Firmware drives both outputs LOW after startup. Use an external driver with an independent enable if the load must remain inactive during reset.
 
 Both latches initialize LOW. They reset LOW within one publish cycle (nominal
 100ms) after observed Wi-Fi/MQTT disconnect or clock invalidity, and after a

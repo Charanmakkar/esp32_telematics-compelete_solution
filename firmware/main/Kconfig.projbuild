@@ -8,17 +8,17 @@ config NAV_HARDWARE_CONFIRMED
         configuration is selected independently below.
         On: six native ADC1 GPIO32,33,34,35,36,39 are acquired.
 config NAV_PHYSICAL_CONTROLS
-    bool "Drive external active-high A/B outputs (GPIO25/26)"
+    bool "Drive external active-high A/B outputs (GPIO2/0)"
     default y
     depends on IDF_TARGET_ESP32
 config NAV_CONTROL_A_GPIO
     int "Control A output GPIO (external LED with resistor)"
-    default 25
-    range 25 26
+    default 2
+    range 2 2
 config NAV_CONTROL_B_GPIO
-    int "Control B output GPIO"
-    default 26
-    range 25 26
+    int "Control B output GPIO (boot strapping pin)"
+    default 0
+    range 0 0
 config NAV_CONTROL_TIMEOUT_MS
     int "Control inactivity watchdog (ms); safe low after this interval"
     default 60000

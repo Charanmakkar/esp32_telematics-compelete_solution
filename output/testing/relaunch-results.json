@@ -1,0 +1,25 @@
+{
+  "verified_at_utc": "2026-11-12T05:17:59.266259+00:00",
+  "health": {
+    "ready": true,
+    "database_connected": true,
+    "mqtt_connected": true
+  },
+  "frontend_status": 200,
+  "source": "hardware",
+  "boot_id": "f61f0249-a013-6c58-5e2b-da875a755cd2",
+  "sequence_start": 4134,
+  "sequence_end": 4937,
+  "valid_mask": 63,
+  "time_valid": true,
+  "controls": {
+    "A": 0,
+    "B": 0
+  },
+  "gpio_mapping": {
+    "A": 2,
+    "B": 0
+  },
+  "age_seconds": 0.276553,
+  "passed": true
+}

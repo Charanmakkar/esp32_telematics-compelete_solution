@@ -1,7 +1,7 @@
 # MASTER DEVELOPMENT PROMPT
 ## NavSphere — ESP32 IoT Telemetry, MQTT, Python Backend & React Dashboard
 
-**Confirmed scope (user update, 11 November 2026):** ESP32S-WROOM, six onboard ADC1 channels only (GPIO32, 33, 34, 35, 36, 39), no extra ADC hardware. A = GPIO25 and B = GPIO26, active-high with safe LOW defaults. The supplied firmware is an empty ESP-IDF skeleton; extend it in native C/FreeRTOS.
+**Confirmed scope (user update, 11 November 2026):** ESP32S-WROOM, six onboard ADC1 channels only (GPIO32, 33, 34, 35, 36, 39), no extra ADC hardware. A = GPIO2 and B = GPIO0, active-high with safe LOW defaults. The supplied firmware is an empty ESP-IDF skeleton; extend it in native C/FreeRTOS.
 
 **Project Name:** NavSphere  
 **Tagline:** 360° Visibility. Comprehensive Tracking. Real-Time Intelligence.
@@ -341,9 +341,9 @@ Requirements:
 - Protect against duplicate command execution.
 - Implement configurable command timeout behavior.
 - Define safe startup and disconnect states.
-- A and B are active-high physical GPIO outputs: A = GPIO25 (external LED with series resistor), B = GPIO26. Set HIGH for value 1 and LOW for value 0. Both default LOW and return LOW after disconnect or configurable command inactivity timeout.
+- A and B are active-high physical GPIO outputs: A = GPIO2 (external LED with series resistor), B = GPIO0. Set HIGH for value 1 and LOW for value 0. Both default LOW and return LOW after disconnect or configurable command inactivity timeout.
 
-Document GPIO25/GPIO26 electrical constraints and safe-state behavior. Do not assume a built-in LED pin or connect an unprotected load directly to a GPIO.
+Document GPIO2/GPIO0 electrical constraints and safe-state behavior. Do not assume a built-in LED pin or connect an unprotected load directly to a GPIO.
 
 # 5. PYTHON BACKEND
 

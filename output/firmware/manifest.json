@@ -12,8 +12,8 @@
     39
   ],
   "control_gpio": {
-    "A": 25,
-    "B": 26
+    "A": 2,
+    "B": 0
   },
   "flash_mode": "dio",
   "flash_size": "4MB",
@@ -38,8 +38,8 @@
     },
     "navsphere.bin": {
       "bytes": 988272,
-      "sha256": "1c1cc0788b62e7ad1ac465474d039de30ae0ffd3f03e6eb551ebb676d7f03b77"
+      "sha256": "3516dcf5b5249abeeace3bdd7ae20d240b2f2647b8e1e306e8d77f69c18ce906"
     }
   },
-  "packaged_at_utc": "2026-11-12T04:07:36.465530+00:00"
+  "packaged_at_utc": "2026-11-16T07:17:21.412277+00:00"
 }

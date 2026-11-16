@@ -1,5 +1,6 @@
 #include "command_handler.h"
 #include "freertos/queue.h"
+#include "driver/gpio.h"
 #include <assert.h>
 #include <stdio.h>
 #include <string.h>
@@ -10,6 +11,26 @@ static bool clock_valid = true;
 static unsigned int accepted;
 static unsigned int applied;
 static unsigned int rejected;
+static unsigned int pin_levels[3] = {1U, 1U, 1U};
+static bool outputs_configured;
+
+esp_err_t gpio_set_level(gpio_num_t pin, uint32_t value)
+{
+    assert(pin == 2 || pin == 0);
+    assert(value <= 1U);
+    pin_levels[pin] = value;
+    return ESP_OK;
+}
+esp_err_t gpio_config(const gpio_config_t *config)
+{
+    assert(config->pin_bit_mask == ((UINT64_C(1) << 2) | UINT64_C(1)));
+    assert(config->mode == GPIO_MODE_OUTPUT);
+    assert(config->pull_up_en == GPIO_PULLUP_DISABLE);
+    assert(config->pull_down_en == GPIO_PULLDOWN_DISABLE);
+    assert(pin_levels[2] == 0U && pin_levels[0] == 0U);
+    outputs_configured = true;
+    return ESP_OK;
+}
 
 QueueHandle_t xQueueCreateStatic(size_t capacity, size_t item_size, uint8_t *storage, StaticQueue_t *queue)
 {
@@ -52,11 +73,13 @@ int main(void)
 {
     const char *valid = "{\"command_id\":\"12345678-abcd-1234-abcd-123456789abc\",\"key\":\"A\",\"value\":1,\"issued_at_ms\":10000,\"expires_at_ms\":20000}";
     assert(command_handler_safe_start() == ESP_OK);
+    assert(outputs_configured);
     assert(command_handler_init(acknowledge) == ESP_OK);
     submit(valid, false); command_handler_tick(true);
     uint8_t a, b;
     command_handler_state(&a, &b);
     assert(a == 1U && b == 0U && accepted == 1U && applied == 1U && rejected == 0U);
+    assert(pin_levels[2] == 1U && pin_levels[0] == 0U);
     submit(valid, false); command_handler_tick(true);
     assert(applied == 1U && rejected == 1U);
     submit(valid, true); command_handler_tick(true);
@@ -72,14 +95,17 @@ int main(void)
     submit("{bad json", false); submit("[[[[[[[[[[1]]]]]]]]]]", false);
     command_handler_tick(true); assert(applied == 1U && rejected == 6U);
     command_handler_tick(false); command_handler_state(&a, &b); assert(a == 0U && b == 0U);
+    assert(pin_levels[2] == 0U && pin_levels[0] == 0U);
     submit(valid, false); command_handler_tick(true); command_handler_state(&a, &b);
     assert(a == 0U && rejected == 7U); /* no re-execution after safe reset */
     const char *second = "{\"command_id\":\"12345678-abcd-1234-abcd-123456789abd\",\"key\":\"B\",\"value\":1,\"issued_at_ms\":10000,\"expires_at_ms\":20000}";
     submit(second, false); command_handler_tick(true); command_handler_state(&a, &b);
     assert(b == 1U && applied == 2U);
+    assert(pin_levels[2] == 0U && pin_levels[0] == 1U);
     now_ms = 9000U; uptime_ms = 72000U;
     command_handler_tick(true); command_handler_state(&a, &b);
     assert(a == 0U && b == 0U); /* watchdog survives a backwards epoch correction */
+    assert(pin_levels[2] == 0U && pin_levels[0] == 0U);
     now_ms = 11000U; uptime_ms = 11000U; clock_valid = false;
     submit(second, false); command_handler_tick(true); assert(applied == 2U && rejected == 8U);
     clock_valid = true;

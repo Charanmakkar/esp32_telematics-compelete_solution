@@ -82,7 +82,7 @@ export function ControlsPage() {
       <div className="notice info">
         <LockKeyhole size={18} />
         <span>
-          <strong>Device outputs:</strong> A → GPIO25 · B → GPIO26. Outputs
+          <strong>Device outputs:</strong> A → GPIO2 · B → GPIO0. Outputs
           start OFF and return OFF after a disconnect or a 60-second command
           lease. Applied status requires device acknowledgement.
         </span>
@@ -145,7 +145,7 @@ export function ControlsPage() {
               </div>
               <h2>
                 Control {key}{" "}
-                <span className="control-pin">GPIO{key === "A" ? 25 : 26}</span>
+                <span className="control-pin">GPIO{key === "A" ? 2 : 0}</span>
               </h2>
               <p>
                 Send a binary state to {deviceId}.<br />

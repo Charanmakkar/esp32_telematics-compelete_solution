@@ -1,0 +1,274 @@
+{
+  "verified_at": "2026-11-16T06:48:11.419776Z",
+  "first": {
+    "received": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "f38571f8-502b-56f9-6466-c7e60151dd98",
+      "sequence": 110,
+      "timestamp_ms": null,
+      "time_valid": false,
+      "uptime_ms": 11036,
+      "channels": {
+        "analog_1": 850,
+        "analog_2": 620,
+        "analog_3": 462,
+        "analog_4": 353,
+        "analog_5": 258,
+        "analog_6": 142
+      },
+      "raw": [
+        873,
+        589,
+        395,
+        260,
+        143,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": null,
+      "received_at": "2026-11-16T06:47:52.084249Z",
+      "persisted_at": null
+    },
+    "persisted": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "f38571f8-502b-56f9-6466-c7e60151dd98",
+      "sequence": 110,
+      "timestamp_ms": null,
+      "time_valid": false,
+      "uptime_ms": 11036,
+      "channels": {
+        "analog_1": 850,
+        "analog_2": 620,
+        "analog_3": 462,
+        "analog_4": 353,
+        "analog_5": 258,
+        "analog_6": 142
+      },
+      "raw": [
+        873,
+        589,
+        395,
+        260,
+        143,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": 58551,
+      "received_at": "2026-11-16T06:47:52.084Z",
+      "persisted_at": "2026-11-16T06:47:52.084Z"
+    }
+  },
+  "health": {
+    "status": "ok",
+    "mqtt_connected": true,
+    "database_connected": true,
+    "database_engine": "mysql",
+    "metrics": {
+      "received": 257,
+      "persisted": 257,
+      "invalid": 0,
+      "duplicates": 0,
+      "dropped": 0,
+      "database_errors": 0,
+      "last_received_at": "2026-11-16T12:18:11.007499+05:30",
+      "last_persisted_at": "2026-11-16T12:18:11.007906+05:30",
+      "frequency_hz": 11.12,
+      "queue_depth": 0,
+      "websocket_dropped": 0
+    }
+  },
+  "devices": {
+    "devices": [
+      {
+        "device_id": "ESP32_001",
+        "online": true,
+        "last_seen": "2026-11-16T06:48:11.007Z",
+        "source": "hardware",
+        "boot_id": "2227ca05-c84d-0b9f-51e0-9249dc51c05c",
+        "controls": {
+          "A": 0,
+          "B": 0
+        },
+        "mapping": [
+          {
+            "channel": "analog_1",
+            "label": "Analog 1",
+            "physical": "GPIO32 / ADC1"
+          },
+          {
+            "channel": "analog_2",
+            "label": "Analog 2",
+            "physical": "GPIO33 / ADC1"
+          },
+          {
+            "channel": "analog_3",
+            "label": "Analog 3",
+            "physical": "GPIO34 / ADC1"
+          },
+          {
+            "channel": "analog_4",
+            "label": "Analog 4",
+            "physical": "GPIO35 / ADC1"
+          },
+          {
+            "channel": "analog_5",
+            "label": "Analog 5",
+            "physical": "GPIO36 / ADC1"
+          },
+          {
+            "channel": "analog_6",
+            "label": "Analog 6",
+            "physical": "GPIO39 / ADC1"
+          }
+        ]
+      }
+    ]
+  },
+  "second": {
+    "received": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "2227ca05-c84d-0b9f-51e0-9249dc51c05c",
+      "sequence": 182,
+      "timestamp_ms": null,
+      "time_valid": false,
+      "uptime_ms": 18234,
+      "channels": {
+        "analog_1": 741,
+        "analog_2": 465,
+        "analog_3": 272,
+        "analog_4": 181,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        739,
+        398,
+        160,
+        48,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": null,
+      "received_at": "2026-11-16T06:48:11.007499Z",
+      "persisted_at": null
+    },
+    "persisted": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "2227ca05-c84d-0b9f-51e0-9249dc51c05c",
+      "sequence": 182,
+      "timestamp_ms": null,
+      "time_valid": false,
+      "uptime_ms": 18234,
+      "channels": {
+        "analog_1": 741,
+        "analog_2": 465,
+        "analog_3": 272,
+        "analog_4": 181,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        739,
+        398,
+        160,
+        48,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": 58658,
+      "received_at": "2026-11-16T06:48:11.007Z",
+      "persisted_at": "2026-11-16T06:48:11.007Z"
+    }
+  },
+  "ssid": "Navtech_Wifi5G",
+  "final": {
+    "received": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "2227ca05-c84d-0b9f-51e0-9249dc51c05c",
+      "sequence": 508,
+      "timestamp_ms": 1794811724487,
+      "time_valid": true,
+      "uptime_ms": 50834,
+      "channels": {
+        "analog_1": 689,
+        "analog_2": 380,
+        "analog_3": 184,
+        "analog_4": 142,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        675,
+        293,
+        52,
+        0,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": null,
+      "received_at": "2026-11-16T06:48:43.615554Z",
+      "persisted_at": null
+    },
+    "persisted": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "2227ca05-c84d-0b9f-51e0-9249dc51c05c",
+      "sequence": 508,
+      "timestamp_ms": 1794811724487,
+      "time_valid": true,
+      "uptime_ms": 50834,
+      "channels": {
+        "analog_1": 689,
+        "analog_2": 380,
+        "analog_3": 184,
+        "analog_4": 142,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        675,
+        293,
+        52,
+        0,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 76,
+      "source": "hardware",
+      "stale": false,
+      "id": 58984,
+      "received_at": "2026-11-16T06:48:43.615Z",
+      "persisted_at": "2026-11-16T06:48:43.616Z"
+    }
+  }
+}

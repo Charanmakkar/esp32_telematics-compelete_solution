@@ -24,7 +24,7 @@ and dashboard therefore use six channels only.
 Proposed tasks are independent periodic acquisition, periodic MQTT publication,
 and command processing. Wi-Fi event callbacks drive reconnection. A bounded
 latest-sample queue prevents network stalls from blocking ADC reads. Commands
-are bounded, validated, identified and acknowledged. GPIO25 and GPIO26 provide
+are bounded, validated, identified and acknowledged. GPIO2 and GPIO0 provide
 active-high A and B outputs with safe LOW startup/disconnect behavior. A requires
 an external LED and series resistor; no built-in LED wiring is assumed.
 

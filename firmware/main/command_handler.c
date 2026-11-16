@@ -37,14 +37,14 @@ static esp_err_t apply_output(size_t control, uint8_t value)
 esp_err_t command_handler_safe_start(void)
 {
 #if CONFIG_NAV_PHYSICAL_CONTROLS
-    /* User authorized A/B GPIO actuation. Only non-strapping GPIO25/26 are
-     * selectable here; neither conflicts with the native ADC1 six-input map. */
+    /* Selected outputs are A=GPIO2 and B=GPIO0. Both are boot strapping
+     * pins; attached circuitry must preserve the required reset levels. */
     if (CONFIG_NAV_CONTROL_A_GPIO == CONFIG_NAV_CONTROL_B_GPIO) { return ESP_ERR_INVALID_ARG; }
     const uint64_t mask = (UINT64_C(1) << CONFIG_NAV_CONTROL_A_GPIO) | (UINT64_C(1) << CONFIG_NAV_CONTROL_B_GPIO);
     const gpio_config_t output = { .pin_bit_mask = mask, .mode = GPIO_MODE_OUTPUT,
         .pull_up_en = GPIO_PULLUP_DISABLE, .pull_down_en = GPIO_PULLDOWN_DISABLE, .intr_type = GPIO_INTR_DISABLE };
-    /* Program LOW latch before changing the pad to output. External pull-downs
-     * are still required to guarantee a safe level before firmware starts. */
+    /* Program LOW latch before changing the pad to output. Do not add a
+     * GPIO0 pull-down: normal boot requires GPIO0 HIGH during reset. */
     if ((gpio_set_level((gpio_num_t)CONFIG_NAV_CONTROL_A_GPIO, 0U) != ESP_OK) ||
         (gpio_set_level((gpio_num_t)CONFIG_NAV_CONTROL_B_GPIO, 0U) != ESP_OK)) { return ESP_FAIL; }
     return gpio_config(&output);
