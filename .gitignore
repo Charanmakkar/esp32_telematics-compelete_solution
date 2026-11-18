@@ -25,3 +25,5 @@ managed_components/
 output/testing/screenshots/
 tmp/
 !.env.example
+can_dbc/*
+!can_dbc/README.md

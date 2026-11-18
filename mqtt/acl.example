@@ -3,6 +3,7 @@ user navsphere_backend
 topic read navsphere/+/telemetry
 topic read navsphere/+/ack
 topic read navsphere/+/status
+topic read navsphere/+/can
 topic write navsphere/+/command
 
 # Every device username must equal its provisioned device_id.
@@ -10,4 +11,5 @@ topic write navsphere/+/command
 pattern write navsphere/%u/telemetry
 pattern write navsphere/%u/status
 pattern write navsphere/%u/ack
+pattern write navsphere/%u/can
 pattern read navsphere/%u/command

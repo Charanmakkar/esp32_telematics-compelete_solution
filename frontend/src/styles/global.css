@@ -2717,3 +2717,25 @@ td small {
   border: 1px solid var(--border);
   border-radius: 4px;
 }
+/* CAN view uses the existing theme and leaves the original pages unchanged. */
+.can-page { display: grid; gap: 18px; }
+.can-page p { line-height: 1.6; }
+.can-dbc { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding: 20px; border: 1px solid #60708055; border-radius: 12px; }
+.can-dbc input { display: block; margin-top: 8px; max-width: 100%; }
+.can-dbc > div { flex: 1 1 360px; min-width: 0; }
+.can-dbc-path { display: block; overflow-wrap: anywhere; }
+.can-dbc label { flex: 0 1 280px; }
+.can-dbc small { display: block; margin-top: 8px; }
+.can-dbc-files { padding-left: 24px; overflow-wrap: anywhere; }
+.can-table-wrap { width: 100%; overflow-x: auto; border: 1px solid #60708055; border-radius: 12px; }
+.can-table { border-collapse: collapse; width: 100%; text-align: left; }
+.can-table th, .can-table td { padding: 14px; border-bottom: 1px solid #60708033; vertical-align: top; }
+.can-table th { white-space: nowrap; font-size: 13px; }
+.can-table td { font-size: 13px; line-height: 1.8; }
+.can-table code { white-space: nowrap; }
+.can-page button { padding: 8px 14px; border-radius: 6px; border: 1px solid #60708066; background: transparent; color: inherit; cursor: pointer; }
+.can-page button:disabled { opacity: .4; cursor: default; }
+.can-pagination { display: flex; gap: 18px; align-items: center; }
+.can-counters { font-size: 13px; opacity: .85; }
+.can-good { color: #1da88b; }
+.can-warning { color: #c78926; }

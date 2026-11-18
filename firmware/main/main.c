@@ -3,6 +3,7 @@
 #include "mqtt_manager.h"
 #include "command_handler.h"
 #include "wifi_manager.h"
+#include "can_manager.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
 
@@ -22,4 +23,6 @@ void app_main(void)
         ESP_ERROR_CHECK(wifi_manager_start(&config));
         ESP_ERROR_CHECK(mqtt_manager_start(&config));
     }
+    const esp_err_t can_result = can_manager_start();
+    if (can_result != ESP_OK) { ESP_LOGE("can", "CAN startup failed: %s", esp_err_to_name(can_result)); }
 }

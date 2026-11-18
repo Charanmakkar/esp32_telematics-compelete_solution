@@ -1,6 +1,6 @@
 {
     "idf.currentSetup": "C:\\esp\\v6.0.2\\esp-idf",
-    "idf.port": "COM3",
+    "idf.port": "COM5",
     "idf.buildPath": "${workspaceFolder}/build",
     "idf.sdkconfigDefaults": [
       "firmware/sdkconfig.defaults",

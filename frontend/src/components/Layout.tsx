@@ -49,7 +49,7 @@ export function Layout() {
   const [logoutError, setLogoutError] = useState("");
   const location = useLocation();
   const analytics = location.pathname.startsWith("/analytics");
-  const section = analytics
+  const section = location.pathname === "/can" ? "CAN data" : analytics
     ? "Channel analytics"
     : location.pathname === "/controls"
       ? "Device controls"
@@ -118,6 +118,7 @@ export function Layout() {
             <Settings2 size={18} />
             <span>Device controls</span>
           </NavLink>
+          <NavLink to="/can"><Cpu size={18} /><span>CAN data</span></NavLink>
         </nav>
         <div className="nav-label">MANAGE</div>
         <nav

@@ -36,6 +36,26 @@ typedef struct {
 } mqtt_context_t;
 static mqtt_context_t context = { .counter_lock = portMUX_INITIALIZER_UNLOCKED };
 
+bool mqtt_manager_publish_can(const char *frames, uint32_t queue_drops, uint32_t serial_drops,
+    uint32_t publish_drops, uint32_t missed, uint32_t overruns, uint32_t bus_errors)
+{
+    if (!context.client || !context.events ||
+        !(xEventGroupGetBits(context.events) & NAV_MQTT_CONNECTED_BIT)) { return false; }
+    char topic[NAV_TOPIC_CAPACITY];
+    char payload[7168];
+    (void)snprintf(topic, sizeof(topic), "%s/%s/can", CONFIG_NAV_MQTT_TOPIC_PREFIX, context.config->device_id);
+    const int n = snprintf(payload, sizeof(payload),
+        "{\"schema_version\":1,\"device_id\":\"%s\",\"boot_id\":\"%s\",\"frames\":[%s],"
+        "\"stats\":{\"queue_drops\":%" PRIu32 ",\"serial_drops\":%" PRIu32 ",\"publish_drops\":%" PRIu32
+        ",\"rx_missed\":%" PRIu32 ",\"rx_overruns\":%" PRIu32 ",\"bus_errors\":%" PRIu32 "}}",
+        context.config->device_id, context.boot_id, frames, queue_drops, serial_drops,
+        publish_drops, missed, overruns, bus_errors);
+    if (n < 0 || (size_t)n >= sizeof(payload)) { return false; }
+    /* Reserve half the shared outbox for existing telemetry and control acknowledgements. */
+    if (esp_mqtt_client_get_outbox_size(context.client) > NAV_MQTT_OUTBOX_BYTES / 2) { return false; }
+    return esp_mqtt_client_enqueue(context.client, topic, payload, n, MQTT_QOS, 0, true) >= 0;
+}
+
 static void count_dropped(mqtt_context_t *state, uint32_t count)
 {
     portENTER_CRITICAL(&state->counter_lock);

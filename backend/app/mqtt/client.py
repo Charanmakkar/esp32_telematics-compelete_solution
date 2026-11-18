@@ -31,7 +31,7 @@ class MqttClient:
             topics = [
                 (f"{self.settings.mqtt_topic_prefix}/{d}/{kind}", 1)
                 for d in self.settings.allowed_devices
-                for kind in ("telemetry", "ack", "status")
+                for kind in ("telemetry", "ack", "status", "can")
             ]
             result, _ = client.subscribe(topics)
             if result != mqtt.MQTT_ERR_SUCCESS:

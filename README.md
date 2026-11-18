@@ -103,3 +103,16 @@ database, and has not been executed on this laptop because Docker is unavailable
 ### Control pin update 12 November 2026
 
 Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.
+# CAN bus support
+
+The `feature/add_CAN` branch adds classic CAN capture at 500 kbit/s using
+GPIO25 (TX) and GPIO26 (RX), in listen-only mode. Open `/can` for the latest
+raw frame per CAN ID, history, capture diagnostics and administrator DBC upload.
+Raw CAN history is stored independently of analog telemetry. See the
+[CAN setup and data guide](docs/firmware/CAN_GUIDE.md) for wiring, database
+migration, DBC support and throughput limits.
+
+Put all bus definition files in the project's [can_dbc folder](can_dbc/README.md).
+The CAN page loads multiple files automatically and lists parsing or ID conflicts.
+For another office PC, this laptop's current Ethernet dashboard URL is
+<http://192.168.9.253:5173/can>; see the CAN guide for firewall/network setup.

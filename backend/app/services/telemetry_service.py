@@ -16,6 +16,7 @@ from app.database.repository import Repository, iso
 from app.mqtt.client import MqttClient
 from app.schemas.commands import CommandAck
 from app.schemas.telemetry import Telemetry
+from app.services.can_service import CanService
 from app.services.command_service import CommandService
 from app.services.websocket_manager import WebSocketManager
 
@@ -27,6 +28,7 @@ class Runtime:
         self.settings = settings
         self.db = Database(settings)
         self.repository = Repository(self.db)
+        self.can = CanService(self)
         self.queue: Queue = Queue(maxsize=settings.ingest_queue_size)
         self.hub = WebSocketManager()
         self.mqtt = MqttClient(settings, self.enqueue)
@@ -84,7 +86,11 @@ class Runtime:
 
     async def start(self):
         await asyncio.to_thread(self.initialize)
-        self.tasks = [asyncio.create_task(self.consume()), asyncio.create_task(self.maintenance())]
+        self.tasks = [
+            asyncio.create_task(self.consume()),
+            asyncio.create_task(self.maintenance()),
+            asyncio.create_task(self.can.consume()),
+        ]
         self.mqtt.start()
 
     async def stop(self):
@@ -97,6 +103,8 @@ class Runtime:
         self.db.engine.dispose()
 
     def enqueue(self, topic: str, payload: bytes, retained: bool = False) -> bool:
+        if topic.endswith("/can"):
+            return self.can.enqueue(topic, payload, retained)
         if len(payload) > 8192:
             self.metrics["invalid"] += 1
             return False

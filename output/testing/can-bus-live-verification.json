@@ -1,0 +1,83 @@
+{
+  "first_metrics": {
+    "persisted": 52247,
+    "duplicates": 0,
+    "invalid": 0,
+    "dropped_batches": 0,
+    "database_errors": 0,
+    "database_dropped_frames": 0
+  },
+  "checked_at": "2026-11-17T11:56:17.0892898Z",
+  "dbc": null,
+  "physical_can_frames_verified": true,
+  "more_ids": false,
+  "last_metrics": {
+    "persisted": 53202,
+    "duplicates": 0,
+    "invalid": 0,
+    "dropped_batches": 0,
+    "database_errors": 0,
+    "database_dropped_frames": 0
+  },
+  "sample": [
+    {
+      "sequence": 246271,
+      "uptime_ms": 222521,
+      "timestamp_ms": 1794916539575,
+      "can_id": 1,
+      "extended": false,
+      "rtr": false,
+      "dlc": 8,
+      "data": "0000CECE0000CE00",
+      "device_id": "ESP32_001",
+      "boot_id": "961cb917-ac98-65ca-7526-e18a40ff3e7e",
+      "received_at": "2026-11-17T17:25:39.715925+05:30",
+      "frame_count": 107,
+      "decode_status": "no_dbc",
+      "signals": []
+    },
+    {
+      "sequence": 246272,
+      "uptime_ms": 222521,
+      "timestamp_ms": 1794916539575,
+      "can_id": 2,
+      "extended": false,
+      "rtr": false,
+      "dlc": 8,
+      "data": "0000000000000000",
+      "device_id": "ESP32_001",
+      "boot_id": "961cb917-ac98-65ca-7526-e18a40ff3e7e",
+      "received_at": "2026-11-17T17:25:39.715925+05:30",
+      "frame_count": 107,
+      "decode_status": "no_dbc",
+      "signals": []
+    },
+    {
+      "sequence": 245536,
+      "uptime_ms": 221866,
+      "timestamp_ms": 1794916538920,
+      "can_id": 20,
+      "extended": false,
+      "rtr": false,
+      "dlc": 3,
+      "data": "006000",
+      "device_id": "ESP32_001",
+      "boot_id": "961cb917-ac98-65ca-7526-e18a40ff3e7e",
+      "received_at": "2026-11-17T17:25:39.025378+05:30",
+      "frame_count": 564,
+      "decode_status": "no_dbc",
+      "signals": []
+    }
+  ],
+  "status": {
+    "boot_id": "961cb917-ac98-65ca-7526-e18a40ff3e7e",
+    "received_at": "2026-11-17T17:25:39.817198+05:30",
+    "queue_drops": 1014,
+    "serial_drops": 211940,
+    "publish_drops": 193315,
+    "rx_missed": 0,
+    "rx_overruns": 17,
+    "bus_errors": 0
+  },
+  "latest_ids": 65
+}
