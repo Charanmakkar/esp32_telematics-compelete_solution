@@ -1,9 +1,13 @@
+import re
+from itertools import islice
+
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, ConfigDict, Field
 from sqlalchemy import select
 
-from app.core.security import authenticate, current_user
+from app.core.security import authenticate, current_user, utcnow
 from app.database.models import CanFrame, CanLatest
+from app.database.repository import iso
 from app.services.can_service import decode_frame, parse_dbc
 from app.services.dbc_folder import MAX_FILE_BYTES
 
@@ -17,34 +21,81 @@ def service(request, device_id):
     return rt.can
 
 
+@router.get("/statistics")
+def statistics(request: Request, device_id: str = "ESP32_001"):
+    can = service(request, device_id)
+    return {**can.statistics.snapshot(device_id), "server": dict(can.metrics)}
+
+
 @router.get("/latest")
 def latest(
     request: Request,
     device_id: str = "ESP32_001",
     offset: int = Query(0, ge=0, le=1000000),
     limit: int = Query(100, ge=1, le=500),
+    current_boot_only: bool = False,
+    search: str = Query("", max_length=128),
 ):
     can = service(request, device_id)
     database, dbc = can.dbc(device_id)
+    status = can.status.get(device_id)
+    boot_id = status.get("boot_id") if status else None
+    query = select(CanLatest).where(CanLatest.device_id == device_id)
+    if current_boot_only:
+        # Prior runs remain available through the existing all-IDs API.
+        query = (
+            query.where(CanLatest.payload["boot_id"].as_string() == boot_id)
+            if boot_id
+            else query.where(False)
+        )
     with can.runtime.db.session() as db:
-        rows = db.scalars(
-            select(CanLatest)
-            .where(CanLatest.device_id == device_id)
-            .order_by(CanLatest.can_id, CanLatest.extended, CanLatest.rtr)
-            .offset(offset)
-            .limit(limit + 1)
-        ).all()
-        return {
-            "frames": [
+        query = query.order_by(CanLatest.can_id, CanLatest.extended, CanLatest.rtr)
+        term = search.strip().casefold()
+        if term:
+            # Search before pagination, including names from the current DBC library.
+            # Stream latest rows only; never scan the frame-history table.
+            rows = db.scalars(query.execution_options(yield_per=256))
+            decoded = (
                 {**r.payload, "frame_count": r.frame_count, **decode_frame(r.payload, database)}
-                for r in rows[:limit]
-            ],
-            "has_more": len(rows) > limit,
+                for r in rows
+            )
+            frames = list(
+                islice((f for f in decoded if matches_search(f, term)), offset, offset + limit + 1)
+            )
+        else:
+            rows = db.scalars(query.offset(offset).limit(limit + 1)).all()
+            frames = [
+                {**r.payload, "frame_count": r.frame_count, **decode_frame(r.payload, database)}
+                for r in rows
+            ]
+        return {
+            "frames": frames[:limit],
+            "has_more": len(frames) > limit,
             "dbc": dbc,
             "dbc_library": can.dbc_folder.read(parse_dbc)[1],
-            "status": can.status.get(device_id),
+            "status": status,
+            "current_boot_id": boot_id,
+            "server_time": iso(utcnow()),
             "metrics": dict(can.metrics),
         }
+
+
+def matches_search(frame, term):
+    can_id = frame["can_id"]
+    width = 8 if frame["extended"] else 3
+    names = [
+        f"0x{can_id:0{width}x}",
+        frame.get("message_name") or "",
+        frame.get("dbc_file") or "",
+        *frame.get("dbc_files", []),
+        *(s["name"] for s in frame["signals"]),
+    ]
+    if any(term in name.casefold() for name in names):
+        return True
+    if re.fullmatch(r"(?:0x)?[0-9a-f]+", term) and int(term, 16) == can_id:
+        return True  # Accept both 0x06E and 6E, including extra leading zeros.
+    raw = re.sub(r"[\s:-]", "", term)
+    return bool(re.fullmatch(r"[0-9a-f]+", raw) and raw in frame["data"].casefold())
 
 
 @router.get("/history")

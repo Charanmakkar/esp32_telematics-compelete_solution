@@ -1,0 +1,361 @@
+{
+  "time_utc": "2026-11-18T17:51:12.342511+00:00",
+  "interfaces": {
+    "http://127.0.0.1:8000": {
+      "id_samples": [
+        {
+          "sequence": 273624,
+          "uptime_ms": 624159,
+          "timestamp_ms": 1795024273138,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "BBDBFF0300811600",
+          "device_id": "ESP32_001",
+          "boot_id": "ca38c9a4-bfe6-517b-25f5-8787110f1146",
+          "received_at": "2026-11-18T17:51:13.172811+00:00",
+          "frame_count": 2228186,
+          "decode_status": "decoded",
+          "message_name": "BMS_VCU_INV_DCDC_01",
+          "signals": [
+            {
+              "name": "Checksum_6E",
+              "value": 187,
+              "unit": "no unit (-)",
+              "label": "187"
+            },
+            {
+              "name": "MessageCounter_6E",
+              "value": 11,
+              "unit": "no unit (-)",
+              "label": "11"
+            },
+            {
+              "name": "BMS_Current",
+              "value": 4095.5,
+              "unit": "ampere (A)",
+              "label": "4095.5"
+            },
+            {
+              "name": "BMS_Voltage",
+              "value": 0.0,
+              "unit": "volt (V)",
+              "label": "0.0"
+            },
+            {
+              "name": "BMS_ErrorIsolationSingle",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "fault"
+            },
+            {
+              "name": "BMS_ErrorRelayWelded",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_ErrorLimitedPower",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": null
+            },
+            {
+              "name": "BMS_ErrorRelayOpen",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_IsoMeasurementActive",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "Isolation Measurement Active"
+            },
+            {
+              "name": "BMS_State",
+              "value": 5,
+              "unit": "no unit (-)",
+              "label": "BatteryError"
+            },
+            {
+              "name": "BMS_ContactorState",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "HVBattCntctr_Open"
+            }
+          ],
+          "dbc_file": "powertrain_HVA.dbc"
+        },
+        {
+          "sequence": 275053,
+          "uptime_ms": 626409,
+          "timestamp_ms": 1795024275388,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "4FDCFF0300811600",
+          "device_id": "ESP32_001",
+          "boot_id": "ca38c9a4-bfe6-517b-25f5-8787110f1146",
+          "received_at": "2026-11-18T17:51:15.613195+00:00",
+          "frame_count": 2228249,
+          "decode_status": "decoded",
+          "message_name": "BMS_VCU_INV_DCDC_01",
+          "signals": [
+            {
+              "name": "Checksum_6E",
+              "value": 79,
+              "unit": "no unit (-)",
+              "label": "79"
+            },
+            {
+              "name": "MessageCounter_6E",
+              "value": 12,
+              "unit": "no unit (-)",
+              "label": "12"
+            },
+            {
+              "name": "BMS_Current",
+              "value": 4095.5,
+              "unit": "ampere (A)",
+              "label": "4095.5"
+            },
+            {
+              "name": "BMS_Voltage",
+              "value": 0.0,
+              "unit": "volt (V)",
+              "label": "0.0"
+            },
+            {
+              "name": "BMS_ErrorIsolationSingle",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "fault"
+            },
+            {
+              "name": "BMS_ErrorRelayWelded",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_ErrorLimitedPower",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": null
+            },
+            {
+              "name": "BMS_ErrorRelayOpen",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_IsoMeasurementActive",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "Isolation Measurement Active"
+            },
+            {
+              "name": "BMS_State",
+              "value": 5,
+              "unit": "no unit (-)",
+              "label": "BatteryError"
+            },
+            {
+              "name": "BMS_ContactorState",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "HVBattCntctr_Open"
+            }
+          ],
+          "dbc_file": "powertrain_HVA.dbc"
+        }
+      ],
+      "name_matches": 9,
+      "raw_matches": 1,
+      "clear_restores_ids": 31,
+      "reported_firmware": "1.1.3"
+    },
+    "http://192.168.9.59:5173": {
+      "id_samples": [
+        {
+          "sequence": 275327,
+          "uptime_ms": 626819,
+          "timestamp_ms": 1795024275798,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "72D5FF0300811600",
+          "device_id": "ESP32_001",
+          "boot_id": "ca38c9a4-bfe6-517b-25f5-8787110f1146",
+          "received_at": "2026-11-18T17:51:16.703368+00:00",
+          "frame_count": 2228257,
+          "decode_status": "decoded",
+          "message_name": "BMS_VCU_INV_DCDC_01",
+          "signals": [
+            {
+              "name": "Checksum_6E",
+              "value": 114,
+              "unit": "no unit (-)",
+              "label": "114"
+            },
+            {
+              "name": "MessageCounter_6E",
+              "value": 5,
+              "unit": "no unit (-)",
+              "label": "5"
+            },
+            {
+              "name": "BMS_Current",
+              "value": 4095.5,
+              "unit": "ampere (A)",
+              "label": "4095.5"
+            },
+            {
+              "name": "BMS_Voltage",
+              "value": 0.0,
+              "unit": "volt (V)",
+              "label": "0.0"
+            },
+            {
+              "name": "BMS_ErrorIsolationSingle",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "fault"
+            },
+            {
+              "name": "BMS_ErrorRelayWelded",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_ErrorLimitedPower",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": null
+            },
+            {
+              "name": "BMS_ErrorRelayOpen",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_IsoMeasurementActive",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "Isolation Measurement Active"
+            },
+            {
+              "name": "BMS_State",
+              "value": 5,
+              "unit": "no unit (-)",
+              "label": "BatteryError"
+            },
+            {
+              "name": "BMS_ContactorState",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "HVBattCntctr_Open"
+            }
+          ],
+          "dbc_file": "powertrain_HVA.dbc"
+        },
+        {
+          "sequence": 276779,
+          "uptime_ms": 631503,
+          "timestamp_ms": 1795024280482,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "FED9FF0300811600",
+          "device_id": "ESP32_001",
+          "boot_id": "ca38c9a4-bfe6-517b-25f5-8787110f1146",
+          "received_at": "2026-11-18T17:51:21.507564+00:00",
+          "frame_count": 2228278,
+          "decode_status": "decoded",
+          "message_name": "BMS_VCU_INV_DCDC_01",
+          "signals": [
+            {
+              "name": "Checksum_6E",
+              "value": 254,
+              "unit": "no unit (-)",
+              "label": "254"
+            },
+            {
+              "name": "MessageCounter_6E",
+              "value": 9,
+              "unit": "no unit (-)",
+              "label": "9"
+            },
+            {
+              "name": "BMS_Current",
+              "value": 4095.5,
+              "unit": "ampere (A)",
+              "label": "4095.5"
+            },
+            {
+              "name": "BMS_Voltage",
+              "value": 0.0,
+              "unit": "volt (V)",
+              "label": "0.0"
+            },
+            {
+              "name": "BMS_ErrorIsolationSingle",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "fault"
+            },
+            {
+              "name": "BMS_ErrorRelayWelded",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_ErrorLimitedPower",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": null
+            },
+            {
+              "name": "BMS_ErrorRelayOpen",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "no fault"
+            },
+            {
+              "name": "BMS_IsoMeasurementActive",
+              "value": 1,
+              "unit": "no unit (-)",
+              "label": "Isolation Measurement Active"
+            },
+            {
+              "name": "BMS_State",
+              "value": 5,
+              "unit": "no unit (-)",
+              "label": "BatteryError"
+            },
+            {
+              "name": "BMS_ContactorState",
+              "value": 0,
+              "unit": "no unit (-)",
+              "label": "HVBattCntctr_Open"
+            }
+          ],
+          "dbc_file": "powertrain_HVA.dbc"
+        }
+      ],
+      "name_matches": 9,
+      "raw_matches": 1,
+      "clear_restores_ids": 31,
+      "reported_firmware": "1.1.3"
+    }
+  }
+}

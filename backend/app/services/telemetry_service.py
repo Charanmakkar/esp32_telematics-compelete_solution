@@ -16,6 +16,7 @@ from app.database.repository import Repository, iso
 from app.mqtt.client import MqttClient
 from app.schemas.commands import CommandAck
 from app.schemas.telemetry import Telemetry
+from app.services.bms_service import BmsService
 from app.services.can_service import CanService
 from app.services.command_service import CommandService
 from app.services.websocket_manager import WebSocketManager
@@ -33,6 +34,7 @@ class Runtime:
         self.hub = WebSocketManager()
         self.mqtt = MqttClient(settings, self.enqueue)
         self.commands = CommandService(self)
+        self.bms = BmsService(self)
         self.latest_received: dict[str, dict] = {}
         self.arrivals: deque[float] = deque(maxlen=1000)
         self.metrics = {
@@ -83,6 +85,7 @@ class Runtime:
             db.execute(delete(LoginSession).where(LoginSession.expires_at < utcnow()))
             db.commit()
         self.database_connected = True
+        self.bms.initialize()
 
     async def start(self):
         await asyncio.to_thread(self.initialize)
@@ -90,10 +93,12 @@ class Runtime:
             asyncio.create_task(self.consume()),
             asyncio.create_task(self.maintenance()),
             asyncio.create_task(self.can.consume()),
+            asyncio.create_task(self.bms.consume()),
         ]
         self.mqtt.start()
 
     async def stop(self):
+        await asyncio.to_thread(self.bms.stop)
         await asyncio.to_thread(self.mqtt.stop)
         for task in self.tasks:
             task.cancel()
@@ -103,6 +108,8 @@ class Runtime:
         self.db.engine.dispose()
 
     def enqueue(self, topic: str, payload: bytes, retained: bool = False) -> bool:
+        if topic.endswith("/diagnostic/response"):
+            return self.bms.enqueue(topic, payload, retained)
         if topic.endswith("/can"):
             return self.can.enqueue(topic, payload, retained)
         if len(payload) > 8192:

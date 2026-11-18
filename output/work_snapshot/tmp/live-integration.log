@@ -1,0 +1,36 @@
+{
+  "source": "simulator",
+  "boot_id": "bbd97126-dff6-4d2d-bcb0-d2097fda5e9f",
+  "samples": 300,
+  "dropped": 0,
+  "elapsed_seconds": 30.002,
+  "passed": true,
+  "checks": [
+    "unauthenticated API blocked",
+    "CSRF and first-login password-change gate enforced",
+    "authenticated simulator telemetry persisted in MySQL",
+    "authenticated WebSocket received and persisted stages delivered",
+    "A and B on/off commands acknowledged and verified through MQTT",
+    "invalid command rejected",
+    "malformed MQTT JSON counted without crashing",
+    "QoS1 duplicate sample stored exactly once",
+    "six channel histories, statistics and bounded downsampling queried",
+    "Swagger, ReDoc, OpenAPI and dependency readiness reachable",
+    "logout invalidates session"
+  ],
+  "database": "MariaDB / MySQL",
+  "stored_rows": 300,
+  "throughput_hz": 9.999,
+  "sample_to_insert_timestamp_ms": {
+    "median": 1.0,
+    "p95": 3.0,
+    "max": 25.0
+  },
+  "observed_latest_age_ms": {
+    "median": 57.93,
+    "p95": 101.28
+  },
+  "tested_at_utc": "2026-11-12T04:04:18.393641+00:00",
+  "hardware_tested": false,
+  "timing_note": "persisted_at is assigned before INSERT/commit; latest age is observed after committed REST retrieval"
+}

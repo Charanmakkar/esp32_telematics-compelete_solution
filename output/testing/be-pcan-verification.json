@@ -1,0 +1,703 @@
+{
+  "time_utc": "2026-11-18T13:22:21.555163+00:00",
+  "reference": "HVBEOSK/be_repo",
+  "client_version": "15.0.4",
+  "pcan_reads": [
+    {
+      "instance": 1,
+      "did": "0xf18c",
+      "response": "62F18C3032333435363738393031323334353637383930313233343536373839303132",
+      "trace": [
+        {
+          "t": 9.6e-05,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.101034,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.202115,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.302676,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.403332,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.504076,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.604667,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.714118,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.81463,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.9153,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.015911,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.117021,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.217673,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.318225,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.418826,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.519383,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.619759,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.721011,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.82146,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.92254,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 2.643367,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "0322F18C55555555"
+        },
+        {
+          "t": 2.644967,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "0322F18C55555555",
+          "error": false
+        },
+        {
+          "t": 2.64636,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "102362F18C303233",
+          "error": false
+        },
+        {
+          "t": 2.646433,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "3000015555555555"
+        },
+        {
+          "t": 2.648073,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "3000015555555555",
+          "error": false
+        },
+        {
+          "t": 2.656124,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2134353637383930",
+          "error": false
+        },
+        {
+          "t": 2.66612,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2231323334353637",
+          "error": false
+        },
+        {
+          "t": 2.675999,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2338393031323334",
+          "error": false
+        },
+        {
+          "t": 2.686172,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2435363738393031",
+          "error": false
+        },
+        {
+          "t": 2.696232,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2532555555555555",
+          "error": false
+        }
+      ],
+      "status": "OK",
+      "received_counts": {
+        "7E4": 2,
+        "7EC": 6,
+        "14FF4049": 1
+      }
+    },
+    {
+      "instance": 1,
+      "did": "0xc000",
+      "response": "62C00031303030383231345F41422C3230313334302D3130312C432E352E322C323530323537323639303039360000000000000000000000000000000000008401",
+      "trace": [
+        {
+          "t": 0.000277,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.10153,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.202098,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.302653,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.403217,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.504362,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.605441,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.737084,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.845304,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.964374,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.070007,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.171362,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.27184,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.372571,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.473073,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.574269,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.674782,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.775263,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.877168,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.978268,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 2.701748,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "0322C00055555555"
+        },
+        {
+          "t": 2.703415,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "0322C00055555555",
+          "error": false
+        },
+        {
+          "t": 2.711452,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "104162C000313030",
+          "error": false
+        },
+        {
+          "t": 2.711558,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "3000015555555555"
+        },
+        {
+          "t": 2.713204,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "3000015555555555",
+          "error": false
+        },
+        {
+          "t": 2.721284,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2130383231345F41",
+          "error": false
+        },
+        {
+          "t": 2.731247,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "22422C3230313334",
+          "error": false
+        },
+        {
+          "t": 2.741241,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "23302D3130312C43",
+          "error": false
+        },
+        {
+          "t": 2.751266,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "242E352E322C3235",
+          "error": false
+        },
+        {
+          "t": 2.761246,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2530323537323639",
+          "error": false
+        },
+        {
+          "t": 2.771238,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2630303936000000",
+          "error": false
+        },
+        {
+          "t": 2.7813,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2700000000000000",
+          "error": false
+        },
+        {
+          "t": 2.791287,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2800000000000000",
+          "error": false
+        },
+        {
+          "t": 2.801244,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2900840155555555",
+          "error": false
+        }
+      ],
+      "status": "OK",
+      "received_counts": {
+        "7E4": 2,
+        "7EC": 10,
+        "14FF4049": 1
+      }
+    },
+    {
+      "instance": 1,
+      "did": "0xfd20",
+      "response": "62FD20303233343536373839303143540001010008090103020A090807060504030201",
+      "trace": [
+        {
+          "t": 0.00015,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.1009,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.20139,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.302364,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.402957,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.50341,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.603794,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.736303,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.836798,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 0.94445,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.044865,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.14545,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.247843,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.348647,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.449202,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.5497,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.650279,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.751411,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.852382,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 1.953362,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "023E805555555555"
+        },
+        {
+          "t": 2.668846,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "0322FD2055555555"
+        },
+        {
+          "t": 2.671138,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "0322FD2055555555",
+          "error": false
+        },
+        {
+          "t": 2.681391,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "102362FD20303233",
+          "error": false
+        },
+        {
+          "t": 2.681447,
+          "direction": "tx",
+          "id": "0x7e4",
+          "data": "3000015555555555"
+        },
+        {
+          "t": 2.682972,
+          "direction": "echo",
+          "id": "0x7e4",
+          "data": "3000015555555555",
+          "error": false
+        },
+        {
+          "t": 2.691193,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2134353637383930",
+          "error": false
+        },
+        {
+          "t": 2.70115,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2231435400010100",
+          "error": false
+        },
+        {
+          "t": 2.711155,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2308090103020A09",
+          "error": false
+        },
+        {
+          "t": 2.721142,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2408070605040302",
+          "error": false
+        },
+        {
+          "t": 2.731133,
+          "direction": "rx",
+          "id": "0x7ec",
+          "data": "2501555555555555",
+          "error": false
+        }
+      ],
+      "status": "OK",
+      "received_counts": {
+        "1D400000": 1,
+        "630": 1,
+        "1F400000": 1,
+        "631": 1,
+        "103": 1,
+        "134": 1,
+        "78": 1,
+        "79": 1,
+        "88": 1,
+        "1A0": 1,
+        "1B0": 1,
+        "1B5": 1,
+        "1B400001": 1,
+        "7E4": 2,
+        "110": 6,
+        "6F": 6,
+        "6E": 6,
+        "82": 3,
+        "A0": 6,
+        "7EC": 6,
+        "126": 1
+      }
+    }
+  ],
+  "original_executable_tests": [
+    {
+      "time_utc": "2026-11-18T13:01:55.947909+00:00",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "abs_hv_serial_number_read.bat"
+      ],
+      "elapsed_seconds": 9.128,
+      "exit_code": 1,
+      "observed_result": "FD20 codec: bad char in struct format"
+    },
+    {
+      "time_utc": "2026-11-18T13:06:56.293647+00:00",
+      "command": [
+        "cmd.exe",
+        "/d",
+        "/c",
+        "abs_cust_hw_part_number_read.bat"
+      ],
+      "elapsed_seconds": 10.066,
+      "exit_code": 1,
+      "observed_result": "F191 codec expects more than the returned 8 bytes"
+    },
+    {
+      "time_utc": "2026-11-18T13:07:05.457199+00:00",
+      "command": [
+        "C:\\Users\\charanpreet\\Documents\\ChatGPT\\HVBEOSK\\be_repo\\45_Release\\abs_hv_bms_release\\client\\amp_uds_client.exe",
+        "abs_hv",
+        "--app",
+        "--json_config",
+        "C:\\Users\\charanpreet\\Documents\\ChatGPT\\HVBEOSK\\be_repo\\45_Release\\abs_hv_bms_release\\client\\config.json",
+        "--port",
+        "1",
+        "--did_read",
+        "0xF18C",
+        "--log_level",
+        "10"
+      ],
+      "elapsed_seconds": 9.162,
+      "exit_code": 1,
+      "observed_result": "F18C codec consumes 23 bytes, while BMS returned 32"
+    }
+  ],
+  "live_bms_writes_executed": false,
+  "scope": "PCAN physical read evidence. Not proof of successful ESP32 transport."
+}

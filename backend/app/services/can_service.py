@@ -16,6 +16,7 @@ from app.core.security import utcnow
 from app.database.models import CanDbc, CanFrame, CanLatest
 from app.database.repository import iso
 from app.schemas.can import CanBatch
+from app.services.can_statistics import CanStatistics
 from app.services.dbc_folder import DbcFolder
 
 logger = logging.getLogger(__name__)
@@ -104,6 +105,7 @@ class CanService:
         )
         self.status = {}
         self.dbc_folder = DbcFolder()
+        self.statistics = CanStatistics()
 
     def enqueue(self, topic, payload, retained):
         if len(payload) > 8192:
@@ -137,6 +139,7 @@ class CanService:
                     or batch.device_id not in self.runtime.settings.allowed_devices
                 ):
                     raise ValueError("Invalid CAN topic/device or retained batch")
+                self.statistics.observe(batch)
                 # Retry a bounded interval. A database outage must not block analog ingestion.
                 for attempt in range(4):
                     try:

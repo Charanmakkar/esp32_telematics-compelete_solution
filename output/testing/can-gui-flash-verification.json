@@ -1,0 +1,93 @@
+{
+  "time_utc": "2026-11-18T17:30:14.836519+00:00",
+  "sw_version": "1.1.3",
+  "sw_build": "8097dcac11e0",
+  "firmware_sha256": "6dc913faf334c11229077318780b2d11552694bd8806c8b5bb04689e128336f0",
+  "port": "COM3",
+  "mac": "ec:62:60:9c:40:84",
+  "baud": 115200,
+  "verified_components": [
+    "bootloader@0x1000",
+    "partition_table@0x8000",
+    "application@0x10000"
+  ],
+  "nvs_written": false,
+  "serial_capture_seconds": 20,
+  "can_serial_lines": 2806,
+  "com3_exclusive_open_and_close_passed": true,
+  "gui_samples": [
+    {
+      "time_utc": "2026-11-18T17:29:06.222Z",
+      "raw": "BB DB FF 03 00 81 16 00",
+      "seen": "0.7s ago\n2208252 frames"
+    },
+    {
+      "time_utc": "2026-11-18T17:29:23.627Z",
+      "raw": "72 D5 FF 03 00 81 16 00",
+      "seen": "0.6s ago\n2208442 frames"
+    }
+  ],
+  "interfaces": {
+    "http://127.0.0.1:8000": {
+      "current_ids": 31,
+      "all_saved_ids": 69,
+      "advanced_ids": [
+        "0x3",
+        "0x6e",
+        "0x6f",
+        "0x78",
+        "0x79",
+        "0x82",
+        "0x88",
+        "0xa0",
+        "0x103",
+        "0x110",
+        "0x126",
+        "0x134",
+        "0x1a0",
+        "0x1b0",
+        "0x1b5",
+        "0x630",
+        "0x631",
+        "0x14ff4049",
+        "0x1b400001",
+        "0x1c400000",
+        "0x1d400000"
+      ]
+    },
+    "http://192.168.9.59:5173": {
+      "current_ids": 31,
+      "all_saved_ids": 69,
+      "advanced_ids": [
+        "0x3",
+        "0x6e",
+        "0x6f",
+        "0x78",
+        "0x79",
+        "0x82",
+        "0x88",
+        "0xa0",
+        "0x103",
+        "0x110",
+        "0x126",
+        "0x127",
+        "0x128",
+        "0x129",
+        "0x134",
+        "0x1a0",
+        "0x1b0",
+        "0x1b5",
+        "0x630",
+        "0x631",
+        "0x14ff4049",
+        "0x1b400001",
+        "0x1c400000",
+        "0x1d400000",
+        "0x1f400000"
+      ]
+    }
+  },
+  "lan_test_scope": "Laptop using its LAN address; not a separate remote PC",
+  "diagnostic_tx_retested": false,
+  "limitations": "Existing serial/MQTT drops remain; this is not a lossless logging claim."
+}

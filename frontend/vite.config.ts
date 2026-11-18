@@ -1,8 +1,15 @@
 import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react";
+import { SW_VERSION, SW_BUILD_ID } from "./src/sw_version";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), {
+    name: "software-version",
+    generateBundle() {
+      this.emitFile({ type: "asset", fileName: "sw-version.json",
+        source: JSON.stringify({ sw_version: SW_VERSION, sw_build: SW_BUILD_ID }) });
+    },
+  }],
   build: {
     rollupOptions: {
       output: {

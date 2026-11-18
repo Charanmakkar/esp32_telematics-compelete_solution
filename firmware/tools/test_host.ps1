@@ -1,6 +1,10 @@
 $ErrorActionPreference = 'Stop'
 Push-Location (Split-Path $PSScriptRoot -Parent)
 try {
+    & gcc -std=c11 -Wall -Wextra -Werror -Imain main/diagnostic_isotp.c test/test_diagnostic_isotp.c -o test/diagnostic_isotp_test.exe
+    if ($LASTEXITCODE -ne 0) { throw 'ISO-TP test compilation failed' }
+    & ./test/diagnostic_isotp_test.exe
+    if ($LASTEXITCODE -ne 0) { throw 'ISO-TP tests failed' }
     & gcc -std=c11 -Wall -Wextra -Werror -Imain main/command_rules.c test/test_command_rules.c -o test/command_rules_test.exe
     if ($LASTEXITCODE -ne 0) { throw 'Command-rule test compilation failed' }
     & ./test/command_rules_test.exe

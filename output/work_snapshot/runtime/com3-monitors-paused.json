@@ -1,0 +1,22 @@
+[
+  {
+    "ProcessId": 34300,
+    "CommandLine": "\"C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe\" C:\\esp\\v6.0.2\\esp-idf\\tools\\idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make \"'C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe' 'C:\\esp\\v6.0.2\\esp-idf\\tools\\idf.py'\" --target esp32 c:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\build\\firmware.elf",
+    "CreationDate": "2026-11-18T18:54:39.707713+05:30"
+  },
+  {
+    "ProcessId": 28820,
+    "CommandLine": "\"C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe\" C:\\esp\\v6.0.2\\esp-idf\\tools\\idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make \"'C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe' 'C:\\esp\\v6.0.2\\esp-idf\\tools\\idf.py'\" --target esp32 c:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\build\\firmware.elf",
+    "CreationDate": "2026-11-18T18:54:39.720068+05:30"
+  },
+  {
+    "ProcessId": 15512,
+    "CommandLine": "C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe -m esp_idf_monitor -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make \"'C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe' 'C:\\esp\\v6.0.2\\esp-idf\\tools\\idf.py'\" --target esp32 c:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\build\\firmware.elf",
+    "CreationDate": "2026-11-18T18:54:39.760613+05:30"
+  },
+  {
+    "ProcessId": 28040,
+    "CommandLine": "C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe -m esp_idf_monitor -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --make \"'C:\\Espressif\\tools\\python\\v6.0.2\\venv\\Scripts\\python.exe' 'C:\\esp\\v6.0.2\\esp-idf\\tools\\idf.py'\" --target esp32 c:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\build\\firmware.elf",
+    "CreationDate": "2026-11-18T18:54:39.767582+05:30"
+  }
+]

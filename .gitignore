@@ -27,3 +27,6 @@ tmp/
 !.env.example
 can_dbc/*
 !can_dbc/README.md
+# BMS images are local proprietary inputs.
+bms_images/*
+!bms_images/README.txt

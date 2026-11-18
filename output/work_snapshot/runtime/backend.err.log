@@ -1,0 +1,9 @@
+INFO:     Started server process [25660]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+{"timestamp": "2026-11-18T17:48:47.760933+00:00", "level": "INFO", "logger": "app.mqtt.client", "message": "mqtt_connected=True"}
+INFO:     127.0.0.1:65150 - "WebSocket /ws/v1/telemetry" [accepted]
+INFO:     connection open
+INFO:     127.0.0.1:65475 - "WebSocket /ws/v1/telemetry" [accepted]
+INFO:     connection open

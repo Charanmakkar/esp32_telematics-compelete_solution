@@ -9,3 +9,5 @@ pytest>=8.3,<10
 httpx>=0.28,<1
 ruff>=0.9,<1
 cantools>=40,<42
+cryptography>=44,<51
+xdis==6.3.0

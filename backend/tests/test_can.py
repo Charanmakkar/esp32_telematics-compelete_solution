@@ -76,6 +76,24 @@ def test_can_persist_deduplicate_and_latest(admin):
     )
 
 
+def test_device_version_survives_ingestion_with_can_frames_and_legacy_boot(admin):
+    app, client = admin
+    body = batch()
+    body["stats"].update(sw_version="1.1.0", sw_build="0123456789ab")
+    assert ingest(app, body, kind="can")
+    wait_for(lambda: app.state.runtime.can.metrics["persisted"] == 1)
+    stats = client.get("/api/v1/can/statistics").json()
+    assert stats["device"]["sw_version"] == "1.1.0"
+    assert stats["device"]["sw_build"] == "0123456789ab"
+    assert client.get("/api/v1/can/latest").json()["frames"][0]["data"] == "D204FE00"
+    legacy = batch()
+    legacy["boot_id"] = "legacy-boot"
+    assert ingest(app, legacy, kind="can")
+    wait_for(lambda: app.state.runtime.can.metrics["persisted"] == 2)
+    stats = client.get("/api/v1/can/statistics").json()
+    assert stats["boot_id"] == "legacy-boot" and stats["device"]["sw_version"] is None
+
+
 def test_dbc_decode_signed_endian_scale_extended_and_mux():
     db = parse_dbc(DBC)
     decoded = decode_frame(frame(), db)
@@ -144,11 +162,73 @@ def test_can_routes_require_login(application):
     assert client.get("/api/v1/can/history").status_code == 401
 
 
+def test_latest_current_run_filters_prior_boot_before_pagination(admin):
+    app, client = admin
+    old = batch([dict(frame(), can_id=1)])
+    assert ingest(app, old, kind="can")
+    wait_for(lambda: app.state.runtime.can.metrics["persisted"] == 1)
+    current = batch([dict(frame(), can_id=110), dict(frame(2), can_id=111)])
+    current["boot_id"] = "current-boot"
+    assert ingest(app, current, kind="can")
+    wait_for(lambda: app.state.runtime.can.metrics["persisted"] == 3)
+    latest = client.get("/api/v1/can/latest?current_boot_only=true&limit=1").json()
+    assert latest["frames"][0]["can_id"] == 110 and latest["has_more"]
+    assert latest["current_boot_id"] == "current-boot" and latest["server_time"]
+    next_page = client.get("/api/v1/can/latest?current_boot_only=true&limit=1&offset=1").json()
+    assert next_page["frames"][0]["can_id"] == 111 and not next_page["has_more"]
+    assert len(client.get("/api/v1/can/latest").json()["frames"]) == 3
+    assert len(client.get("/api/v1/can/history?can_id=1").json()["frames"]) == 1
+    app.state.runtime.can.status.clear()
+    assert client.get("/api/v1/can/latest?current_boot_only=true").json()["frames"] == []
+    assert len(client.get("/api/v1/can/latest").json()["frames"]) == 3
+
+
 def test_formats_and_rtr_have_distinct_latest_rows(admin):
     app, client = admin
     frames = [frame(), {**frame(2), "extended": True}, {**frame(3), "rtr": True, "data": ""}]
     app.state.runtime.can.persist(CanBatch.model_validate(batch(frames)), utcnow())
     assert len(client.get("/api/v1/can/latest").json()["frames"]) == 3
+
+
+def test_latest_search_matches_hex_dbc_names_and_raw_bytes(admin):
+    app, client = admin
+    can = app.state.runtime.can
+    frames = [frame(), {**frame(2), "can_id": 512, "dlc": 2, "data": "020A"}]
+    can.persist(CanBatch.model_validate(batch(frames)), utcnow())
+    assert (
+        client.post(
+            "/api/v1/can/dbc/files", json={"filename": "power.dbc", "content": DBC}
+        ).status_code
+        == 200
+    )
+    for term in ("0X0123", "123", "eNgInE", "speed", "D2 04", "d2:04", "  D204  "):
+        result = client.get("/api/v1/can/latest", params={"search": term}).json()
+        assert [f["can_id"] for f in result["frames"]] == [291], term
+    for term in ("power.dbc", "   "):
+        assert len(client.get("/api/v1/can/latest", params={"search": term}).json()["frames"]) == 2
+    assert not client.get("/api/v1/can/latest?search=no-such-message").json()["frames"]
+    assert client.get("/api/v1/can/latest", params={"search": "x" * 129}).status_code == 422
+    assert len(client.get("/api/v1/can/history").json()["frames"]) == 2
+
+
+def test_latest_search_precedes_pagination_and_respects_current_run(admin):
+    app, client = admin
+    can = app.state.runtime.can
+    # The matching ID is outside the first unfiltered page.
+    frames = [dict(frame(i), can_id=i, data="00000000") for i in range(1, 7)]
+    can.persist(CanBatch.model_validate(batch(frames)), utcnow())
+    assert client.get("/api/v1/can/latest?limit=2&search=0x006").json()["frames"][0]["can_id"] == 6
+    current = batch([dict(frame(10), can_id=5), dict(frame(11), can_id=6)])
+    current["boot_id"] = "search-boot"
+    can.persist(CanBatch.model_validate(current), utcnow())
+    can.status["ESP32_001"] = {"boot_id": "search-boot"}
+    params = {"search": "D2 04", "current_boot_only": True, "limit": 1}
+    first = client.get("/api/v1/can/latest", params=params).json()
+    assert [f["can_id"] for f in first["frames"]] == [5] and first["has_more"]
+    second = client.get("/api/v1/can/latest", params={**params, "offset": 1}).json()
+    assert [f["can_id"] for f in second["frames"]] == [6] and not second["has_more"]
+    assert not client.get("/api/v1/can/latest?search=0x001&current_boot_only=true").json()["frames"]
+    assert client.get("/api/v1/can/latest?search=0x001").json()["frames"][0]["can_id"] == 1
 
 
 def test_folder_multiple_files_reload_conflict_and_remove(tmp_path):

@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-11-18T17:57:35.290420+00:00",
+  "release": {
+    "sw_version": "1.1.4",
+    "source_sha256": "2ae749ea5903e1f3befe0151d211d792abe63b9cbb47db1bd083e0331b52f5fe",
+    "built_at_utc": "2026-11-18T17:48:31+00:00"
+  },
+  "backend_can_tests_passed": 18,
+  "frontend_tests_passed": 33,
+  "ruff_passed": true,
+  "gui_production_build_passed": true,
+  "firmware_build_passed": true,
+  "firmware_sha256": "0af7b4d2a54b7c70838652a6b0bcb6914c9bd8e561ad3274bd059e5983c9e03c",
+  "hardware_flashed_this_change": false,
+  "live_hardware_version": "1.1.3",
+  "search_verified_backend_and_laptop_lan": true,
+  "search_verified_actual_browser": true,
+  "bms_diagnostic_tx_still_unresolved": true,
+  "temporary_work": {
+    "inventoried_files": 45819,
+    "temporary_files_included": 201,
+    "files_with_credentials_redacted": 0,
+    "excluded_files": 45344
+  }
+}

@@ -1,0 +1,1 @@
+if (-not (Get-NetFirewallRule -Name 'NavSphere-Ethernet-MQTT' -ErrorAction SilentlyContinue)) { New-NetFirewallRule -Name 'NavSphere-Ethernet-MQTT' -DisplayName 'NavSphere Ethernet MQTT' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 1883 -RemoteAddress LocalSubnet -InterfaceAlias Ethernet -Profile Any | Out-Null }

@@ -1,0 +1,21 @@
+{
+  "time_utc": "2026-11-18T16:55:54.945844+00:00",
+  "port": "COM3",
+  "port_released": true,
+  "mac": "ec:62:60:9c:40:84",
+  "sw_version": "1.1.0",
+  "sw_build": "2e6876f40c71",
+  "flash_components_verified": 3,
+  "nvs_written": false,
+  "sha256": "20763b850373c610628167ecce0a05732f48e6ac1ed9141c648bae695b2b0a8a",
+  "serial_version_verified": true,
+  "mqtt_version_verified": true,
+  "gui_version_match_observed": true,
+  "can_serial_frames_in_20_seconds": 2415,
+  "can_capture_delta_6_seconds": 3425,
+  "can_database_delta_6_seconds": 674,
+  "backend_relevant_tests_passed": 48,
+  "frontend_tests_passed": 30,
+  "version_tests_passed": 3,
+  "bms_diagnostic_read": "transmission failed; listen-only restored"
+}

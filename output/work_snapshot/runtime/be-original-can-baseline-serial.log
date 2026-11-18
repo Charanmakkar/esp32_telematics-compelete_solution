@@ -1,0 +1,65 @@
+nit: Chip rI (589) wifi:wifi driver task: 3ffc39fc, prio:23, stack:6656, core=0
+I (596) wifi:wifi firmware version: 00ad238
+I (596) wifi:wifi certification version: v7.0
+I (596) wifi:config NVS flash: enabled
+I (598) wifi:config nano formatting: disabled
+I (602) wifi:Init data frame dynamic rx buffer num: 32
+I (607) wifi:Init static rx mgmt buffer num: 5
+I (611) wifi:Init management short buffer num: 32
+I (615) wifi:Init dynamic tx buffer num: 32
+I (620) wifi:Init static rx buffer size: 1600
+I (624) wifi:Init static rx buffer num: 10
+I (627) wifi:Init dynamic rx buffer num: 32
+I (633) wifi_init: rx ba win: 6
+I (634) wifi_init: accept mbox: 6
+I (637) wifi_init: tcpip mbox: 32
+I (640) wifi_init: udp mbox: 6
+I (643) wifi_init: tcp mbox: 6
+I (646) wifi_init: tcp tx win: 5760
+I (649) wifi_init: tcp rx win: 5760
+I (652) wifi_init: tcp mss: 1440
+I (655) wifi_init: WiFi IRAM OP enabled
+I (659) wifi_init: WiFi RX IRAM OP enabled
+I (664) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+I (747) wifi:mode : sta (ec:62:60:9c:40:84)
+I (748) wifi:enable tsf
+E (762) esp-tls: [sock=54] connect() error: Host is unreachable
+E (764) transport_base: Failed to open a new connection: 32772
+E (765) mqtt_client: Error transport connect
+I (766) can: Listen-only classic CAN 500 kbit/s TX=25 RX=26; accepting all IDs
+W (767) mqtt: Transport or broker error (credentials never logged)
+W (780) mqtt: Disconnected
+I (783) main_task: Returned from app_main()
+E (1755) wifi:sta is connecting, return error
+I (2436) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1, snd_ch_cfg:0x0
+I (2438) wifi:state: init -> auth (0xb0)
+I (2443) wifi:state: auth -> init (0x8a0)
+W (2446) wifi: Disconnected; bounded reconnect worker will retry
+I (5871) wifi:state: init -> auth (0xb0)
+I (5877) wifi:state: auth -> assoc (0x0)
+I (5884) wifi:state: assoc -> run (0x10)
+I (5908) wifi:connected with Navtech_Wifi5G, aid = 4, channel 12, BW20, bssid = dc:ea:e7:98:f4:40
+I (5909) wifi:security: WPA2-PSK, phy: bgn, rssi: -76, cipher(pairwise:0x3, group:0x1), pmf:0
+I (5914) wifi:pm start, type: 1
+
+I (5917) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (5934) wifi:<ba-add>idx:0 (ifx:0, dc:ea:e7:98:f4:40), tid:0, ssn:0, winSize:64
+I (5961) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (6994) wifi:<ba-add>idx:1 (ifx:0, dc:ea:e7:98:f4:40), tid:6, ssn:2, winSize:64
+W (7758) wifi:sta is connected, disconnect before connecting to new ap
+I (8014) esp_netif_handlers: sta ip: 192.168.10.57, mask: 255.255.252.0, gw: 192.168.9.1
+I (8015) wifi: IP acquired
+I (8764) mqtt_client: Client force reconnect requested
+I (9350) mqtt: Connected and command subscription requested
+I (9362) resources: free_heap=146304 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2984
+I (10462) resources: free_heap=141260 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2984
+I (11462) resources: free_heap=146012 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (12462) resources: free_heap=143496 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (13462) resources: free_heap=145908 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (14463) resources: free_heap=143308 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (15562) resources: free_heap=145048 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (16562) resources: free_heap=147476 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (17562) resources: free_heap=144472 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (18562) resources: free_heap=144088 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (19562) resources: free_heap=145528 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920
+I (20562) resources: free_heap=146984 adc_queue_drops=0 publish_drops=87 mqtt_stack_margin=2920

@@ -1,0 +1,649 @@
+{
+  "time_utc": "2026-11-18T13:20:40.076897+00:00",
+  "reference": {
+    "cdd_sha256": "649da632b11280656732e1ed685e5900e4532e6c870afadd06bd745ee3f5f441",
+    "cdd_instances": 40,
+    "services": 55,
+    "scripts": 44,
+    "reference_root": "C:\\Users\\charanpreet\\Documents\\ChatGPT\\HVBEOSK\\be_repo",
+    "targets": [
+      {
+        "ecu": "abs_hv",
+        "instance": 1,
+        "name": "abs_hv1",
+        "tx_id": 2020,
+        "rx_id": 2028
+      },
+      {
+        "ecu": "abs_hv_old",
+        "instance": 1,
+        "name": "abs_hv1",
+        "tx_id": 1600,
+        "rx_id": 1616
+      }
+    ],
+    "bitrate": 500000,
+    "source_read_only": true,
+    "client_version": "15.0.4",
+    "client_sha256": "84b51a8589b89a337cff76587fa7155786001ab0962ea6e9f868d930b2fa0232"
+  },
+  "client": {
+    "version": "15.0.4",
+    "sha256": "84b51a8589b89a337cff76587fa7155786001ab0962ea6e9f868d930b2fa0232"
+  },
+  "scripts": [
+    {
+      "id": "abs_cust_hw_part_number_read",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "e11d2dcfa89f922f978d4a78adae35faf406cb0511dcd116404d0926551f2f06",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22F191",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_disable_isolation_EOL",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "b123e23506311673eb3e5f3e30ba851ee64304b786bc9d7db2ade288428b9b25",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00100",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_enable_isolation_EOL",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "da19c3b6b946b804abf876d9400c2279a3289090dd72a1d6ea139d5eec3e965f",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00101",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_erase_nvm",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "c4f7839885013d3d0fbbf5b6499949246ac5dfb50c0d19243c21bb0651392857",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ECE0001",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_clear_faults",
+      "operation": "clear_dtc",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "da0157e6fbf5cf292952d5b272c9b23c0009ce9e9cddae1de98d368d11065fe8",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "14FFFFFF",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_erase_app",
+      "operation": "erase_app",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "af4b69c469abeae6b0050d58163ca1c892f73bf4c378e9b21c7ef403e69fbda2",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": null,
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_app",
+      "operation": "program",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "a6671ab192aa5f9613f3e407d35745e3b538ab1077eaa139bedf687ded265b45",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": null,
+      "image": {
+        "name": "abs_app.hex",
+        "sha256": "c451021db16249922df9d1aaf3e8ed77b802366cbad5ebd95b73918f7df40ce0",
+        "bytes": 917504,
+        "source_bytes": 917504,
+        "crc_injected": false,
+        "download_sha256": "7625846c7af4f451e84ea1db0cffeb29d3bc997f6c9f91ab3b37dce9bfd64c83",
+        "segments": [
+          {
+            "address": 16777216,
+            "length": 917504
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_boot_updater",
+      "operation": "program",
+      "ecu": "abs_hv_old",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "84be0ab6017ca8bb7760f69da9350153ef62bdcc78dae6084aca434a7bbdfddd",
+      "tx_id": 1600,
+      "rx_id": 1616,
+      "request_hex": null,
+      "image": {
+        "name": "abs_hv_boot_updater.hex",
+        "sha256": "8ca5e63d02430124aa1dc5846c327cb67ac572af60322fe5f800628ff509d45c",
+        "bytes": 98304,
+        "source_bytes": 98304,
+        "crc_injected": false,
+        "download_sha256": "7de7468293b1d42b28359fcfeaa71b23446b7121775cb9f0c583bb8a31f89958",
+        "segments": [
+          {
+            "address": 16777216,
+            "length": 98304
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_boot_updater_0_6_0",
+      "operation": "program",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "1f5846647b4a9a72c0ce492eae46f6aced6aaaa862d08509e9a1fb99a87b545f",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": null,
+      "image": {
+        "name": "abs_hv_boot_updater_0_6_0.hex",
+        "sha256": "847826ac8cfbbd70e01161d33f2c363b97ac500149a65684560611fbb5abbaec",
+        "bytes": 98304,
+        "source_bytes": 98304,
+        "crc_injected": false,
+        "download_sha256": "0ff1928135a5b84ada7873cb461530e1371eb28099c83e673dea2b7b370b18fb",
+        "segments": [
+          {
+            "address": 16777216,
+            "length": 98304
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_bootloader_0_4_0",
+      "operation": "program",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "fe5f3ef3925954a71bc20174c6a68cfa204e1ff6f8d657de89f0d3c78fabacd4",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": null,
+      "image": {
+        "name": "abs_hv_bootloader.hex",
+        "sha256": "fe8be308697be4591ed32509dc52b7535ec23ad39ce0049e3ea1b7bcc57282df",
+        "bytes": 98304,
+        "source_bytes": 98304,
+        "crc_injected": false,
+        "download_sha256": "39ba31e1ebbdfe39a04527ca44028033211b2ebd5833645aa386d16257d8ffad",
+        "segments": [
+          {
+            "address": 17825792,
+            "length": 98304
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_bootloader_0_6_0",
+      "operation": "program",
+      "ecu": "abs_hv_old",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "1b173578823da694523ee0fe7f654534426ddd96bff7d16d67e40aeb6c8001af",
+      "tx_id": 1600,
+      "rx_id": 1616,
+      "request_hex": null,
+      "image": {
+        "name": "abs_hv_bootloader_0_6_0.hex",
+        "sha256": "922c9fe278477c63f410db33ef715bf303925e45642d1e5679c50920e5dacf83",
+        "bytes": 98304,
+        "source_bytes": 98304,
+        "crc_injected": false,
+        "download_sha256": "84faffcf9118c28fc178b763655f0b132dec6753ba210badd4ca4a54a40ce6a3",
+        "segments": [
+          {
+            "address": 17825792,
+            "length": 98304
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_program_cal",
+      "operation": "program",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "839f7d7f367b19cac5d8680d6c958fea4821d3648df53c72e5e66e2315ceff0f",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": null,
+      "image": {
+        "name": "hva_cal.hex",
+        "sha256": "cb4aff21218590779187587957315abd986d04470c56ae389844d55ce1ccbb23",
+        "bytes": 65536,
+        "source_bytes": 65536,
+        "crc_injected": false,
+        "download_sha256": "e53dd067c2f81eede3b9ed63a44d835640660f89c7fcb15d304ed77453d566a9",
+        "segments": [
+          {
+            "address": 16580608,
+            "length": 65536
+          }
+        ]
+      },
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_custom_1_did",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "3b00dc85729e80077727e784d8eb8b1f03f21e1ae5056ed9f1f2e65bbed28131",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22D001",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_custom_2_did",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "a7bf9258a863ec7d814456ce425be8675c3a6f67f3af604953982dd748d87342",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22D002",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_custom_3_did",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "fc29808f3b236a8eabb35d1ad6efb1b66fa16103991e65bca4baad41d09b6142",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22D003",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_custom_4_did",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "1998d33115b8891f9516bdaa34f014455762160b272d90c6b2b5bfa69095e50e",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22D004",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_custom_5_did",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "90a54f64b86087bb7416fee022b98bdc115908fbfc64941e0e041e6effc002ca",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22D005",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_read_sn",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "7977afd00927df7d9fc9cb493d257d5dd6bac5a0b2f2591d098d5afde902fb69",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22F18C",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_serial_number_read",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "6cebb559779605b60b7beceb8d0e519feef4cbdd8249c5439e5b9e0377d76a0d",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD20",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_serial_number_write",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "0a0146a01b7c4434355c72a3c68633acd9b18a2bc998aecfa1a6b1f0f8e6877b",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD200000000000000000000000435400010100020002030209080706050403020100",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_custom_1_did",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "ccab7154abdefbe9990366550822088aacd4d16c588cbbdb80ac0ee109bdb73a",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00101",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_custom_2_did",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "f99f228c97597f560c476ec0410b422e6678717be38ba9827923319b5931c5dd",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00201",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_custom_3_did",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "2767547d96c990c9f7a1299e4cc4a75c72a20fd7dbd5d4d64bb3e034c4cad33b",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00301",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_custom_4_did",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "b720316bdbabd5ce5c0a2affaee74e43dfcd3e6f4425f2cdb54c91a9f8806298",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00401",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_custom_5_did",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "3eb5d96e2c8b0dd6278aed668200a11c2c0a2ccdd2ce386f411667909f50dde6",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ED00501",
+      "preparation": "passed"
+    },
+    {
+      "id": "abs_hv_write_sn",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": false,
+      "risk": "critical",
+      "source_sha256": "ace17df4c0b6091cff96472550d59137f1a9b8387f31dbb376d3bf061acfa696",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EF18C5445535400000000000000000000000000000000000000000000000000000000",
+      "preparation": "passed"
+    },
+    {
+      "id": "balance_cmd_disable_algo",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "4f620b38174d33c118ff639a10f372ee22a07fb7063a9dd78f60e42b72b957ce",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0600010000000000000000000000000000000000000000000000",
+      "preparation": "passed"
+    },
+    {
+      "id": "balance_cmd_disable_all",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "8a4901e447d568683b6383bdb03464b685d3597dd2091d6f3d7cd5f697acabe0",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0601010000000000000000000000000000000000000000000000",
+      "preparation": "passed"
+    },
+    {
+      "id": "balance_cmd_enable_algo",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "c70831cb8f6925eb01ffabcceb22300f58bfc2e9d30446b6bc967f047722bffc",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0601000000000000000000000000000000000000000000000000",
+      "preparation": "passed"
+    },
+    {
+      "id": "balance_cmd_enable_all",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "2d54fd947129f7461a70381b210ddca558f420b4207208e9b9fbecf1c254ea32",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD060101FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+      "preparation": "passed"
+    },
+    {
+      "id": "balance_cmd_read",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "e286923c9a373840ad256e13974a9babba8b6b6854c58fc8833a602bbc51ac8f",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD06",
+      "preparation": "passed"
+    },
+    {
+      "id": "can_debug_disable",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "fa204a8b9a5990aea44381d7553b1832bc307dbcea1b43b6de4a986b7d98cb3a",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0800",
+      "preparation": "passed"
+    },
+    {
+      "id": "can_debug_enable",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "change",
+      "source_sha256": "0a62f69f425c7e86a9ec555bc0bca915e3284ea6769e7846d0b3e5102d3d6b38",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0801",
+      "preparation": "passed"
+    },
+    {
+      "id": "erase_nvm",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "524e27354271118da46227896ee2ae2398b2710439c1f38e6f4c1308dcd7ddd2",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ECE0001",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_avg_temp",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "2deafb22d8c96c2e2a57fe7981406e94b876493770ac02c9f454296aa3190363",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0A",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_soc_vs_CCurr",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "5cf43f4c826946536c4feb7dd4f28b0ded52528d1a3d97659daf9813aa8800c0",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0E",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_soc_vs_DCurr",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "5d09b3678341d68e2a5cf26ae488b157ad7fada09678f0e494249e56d5b9e839",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0F",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_temp_vs_CCurr",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "542d91ed368e0cada924d2bbaf0fafefee82f56f5182f46ea4750fb89bcb9d3d",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0C",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_temp_vs_DCurr",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "3b5046182c6109fd0380107641dc674e6c289f273bdfcc3a3460a5c0b8a9a6de",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0D",
+      "preparation": "passed"
+    },
+    {
+      "id": "histo_temp_vs_soc",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "686ded1a9a9469a7711e5dbabb2a03d5ee347f5bdc87edc3ba93584cd9aa0740",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD0B",
+      "preparation": "passed"
+    },
+    {
+      "id": "open_wire_read",
+      "operation": "read",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "read",
+      "source_sha256": "80c934f38610da15428192dba6f7f7f0ca779571f563218f0f61a016f5d8da4b",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "22FD07",
+      "preparation": "passed"
+    },
+    {
+      "id": "reset_all_histo",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "4a525b36aabaf49f448d97dcb265bf59b0ebfc12a8fc537bbd4802061f21daa5",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD09FF",
+      "preparation": "passed"
+    },
+    {
+      "id": "reset_histo",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "378b0a7607ddaa95f132ef68d7fbe3e53edf802632548566f005faf2df5d94d6",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2EFD0900",
+      "preparation": "passed"
+    },
+    {
+      "id": "soc_reset",
+      "operation": "write",
+      "ecu": "abs_hv",
+      "app": true,
+      "risk": "critical",
+      "source_sha256": "52a0b58489d9bcd40e13ed65c7baa1b923db2e32bb87245e0f05307008174cad",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "request_hex": "2ECE0201",
+      "preparation": "passed"
+    }
+  ],
+  "scope": "Static preparation only; no CAN traffic, security unlock or programming performed."
+}

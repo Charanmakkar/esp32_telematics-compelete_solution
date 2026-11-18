@@ -132,3 +132,23 @@ class AuditEvent(Base):
     actor: Mapped[str] = mapped_column(String(64))
     action: Mapped[str] = mapped_column(String(64))
     details: Mapped[dict] = mapped_column(JSON)
+
+
+class BmsJob(Base):
+    __tablename__ = "bms_jobs"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    device_id: Mapped[str] = mapped_column(String(64), index=True)
+    actor: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(TIME, index=True)
+    updated_at: Mapped[datetime] = mapped_column(TIME)
+    status: Mapped[str] = mapped_column(String(24))
+    summary: Mapped[dict] = mapped_column(JSON)
+    result: Mapped[dict] = mapped_column(JSON)
+
+
+class BmsExchange(Base):
+    __tablename__ = "bms_exchanges"
+    id: Mapped[int] = mapped_column(SERIAL, primary_key=True, autoincrement=True)
+    job_id: Mapped[str] = mapped_column(ForeignKey("bms_jobs.id"), index=True)
+    created_at: Mapped[datetime] = mapped_column(TIME)
+    details: Mapped[dict] = mapped_column(JSON)

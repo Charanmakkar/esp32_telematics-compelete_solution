@@ -1,0 +1,22 @@
+I (5873) wifi:<ba-add>idx:0 (ifx:0, aa:a9:15:95:59:7c), tid:6, ssn:2, winSize:64
+I (6888) esp_netif_handlers: sta ip: 192.168.31.211, mask: 255.255.255.0, gw: 192.168.31.1
+I (6889) wifi: IP acquired
+I (7792) mqtt_client: Client force reconnect requested
+I (7960) wifi:<ba-add>idx:1 (ifx:0, aa:a9:15:95:59:7c), tid:0, ssn:0, winSize:64
+I (8196) mqtt: Connected and command subscription requested
+I (8293) resources: free_heap=192412 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2988
+I (9303) resources: free_heap=185736 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (10392) resources: free_heap=189044 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (11493) resources: free_heap=189524 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (12493) resources: free_heap=190480 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (13493) resources: free_heap=191440 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (14596) resources: free_heap=188924 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (15700) resources: free_heap=187000 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (16793) resources: free_heap=188080 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (17793) resources: free_heap=189040 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (18893) resources: free_heap=189040 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (19893) resources: free_heap=187968 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (20893) resources: free_heap=188860 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (21893) resources: free_heap=185848 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (22892) resources: free_heap=190480 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924
+I (23893) resources: free_heap=185848 adc_queue_drops=0 publish_drops=77 mqtt_stack_margin=2924

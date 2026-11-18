@@ -1,0 +1,12 @@
+I (326069) resources: free_heap=120764 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (327069) resources: free_heap=123160 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (328069) resources: free_heap=120652 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (329069) resources: free_heap=120764 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (330069) resources: free_heap=122680 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (331069) resources: free_heap=118732 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (332069) resources: free_heap=121724 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (333069) resources: free_heap=123640 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (334069) resources: free_heap=117036 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (335169) resources: free_heap=115948 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (336170) resources: free_heap=115788 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652
+I (337269) resources: free_heap=114976 adc_queue_drops=0 publish_drops=126 mqtt_stack_margin=2652

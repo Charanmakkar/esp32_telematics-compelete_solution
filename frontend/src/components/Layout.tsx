@@ -22,6 +22,7 @@ import { useAuth } from "../hooks/useAuth";
 import { useTelemetry } from "../hooks/useTelemetry";
 import { documentationUrl } from "../services/api";
 import { StatusBadge } from "./StatusBadge";
+import { SoftwareVersion } from "./SoftwareVersion";
 
 export function Brand({ compact = false }: { compact?: boolean }) {
   return (
@@ -49,7 +50,7 @@ export function Layout() {
   const [logoutError, setLogoutError] = useState("");
   const location = useLocation();
   const analytics = location.pathname.startsWith("/analytics");
-  const section = location.pathname === "/can" ? "CAN data" : analytics
+  const section = location.pathname === "/bms" ? "BMS diagnostics" : location.pathname === "/can" ? "CAN data" : analytics
     ? "Channel analytics"
     : location.pathname === "/controls"
       ? "Device controls"
@@ -119,6 +120,7 @@ export function Layout() {
             <span>Device controls</span>
           </NavLink>
           <NavLink to="/can"><Cpu size={18} /><span>CAN data</span></NavLink>
+          <NavLink to="/bms"><Activity size={18} /><span>BMS diagnostics</span></NavLink>
         </nav>
         <div className="nav-label">MANAGE</div>
         <nav
@@ -244,6 +246,7 @@ export function Layout() {
               <ChevronDown size={14} />
             </label>
           </div>
+          <SoftwareVersion deviceId={deviceId} />
           <Outlet />
         </main>
         <footer className="app-footer">

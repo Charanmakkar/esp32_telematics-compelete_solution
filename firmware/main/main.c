@@ -4,11 +4,13 @@
 #include "command_handler.h"
 #include "wifi_manager.h"
 #include "can_manager.h"
+#include "sw_version.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
 
 void app_main(void)
 {
+    ESP_LOGI("navsphere", "SW_VERSION=%s BUILD=%s UTC=%s", SW_VERSION, SW_BUILD_ID, SW_BUILD_UTC);
     /* Do not erase NVS automatically: it contains provisioned credentials. */
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(command_handler_safe_start());

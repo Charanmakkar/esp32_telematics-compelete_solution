@@ -34,6 +34,28 @@ class CanStats(BaseModel):
     rx_missed: UInt
     rx_overruns: UInt
     bus_errors: UInt
+    # Optional fields preserve compatibility with deployed listen-only firmware.
+    uptime_ms: int | None = Field(default=None, ge=0)
+    rx_total: int | None = Field(default=None, ge=0)
+    rx_bytes: int | None = Field(default=None, ge=0)
+    standard_frames: int | None = Field(default=None, ge=0)
+    extended_frames: int | None = Field(default=None, ge=0)
+    rtr_frames: int | None = Field(default=None, ge=0)
+    wire_bits_min: int | None = Field(default=None, ge=0)
+    wire_bits_max: int | None = Field(default=None, ge=0)
+    tx_frames: int | None = Field(default=None, ge=0)
+    tx_failed: int | None = Field(default=None, ge=0)
+    arb_lost: int | None = Field(default=None, ge=0)
+    rx_error_counter: int | None = Field(default=None, ge=0, le=65535)
+    tx_error_counter: int | None = Field(default=None, ge=0, le=65535)
+    controller_state: int | None = Field(default=None, ge=0, le=3)
+    mode: Literal["listen_only", "diagnostic", "unavailable"] | None = None
+    mode_changes: int | None = Field(default=None, ge=0)
+    mode_switch_drops: int | None = Field(default=None, ge=0)
+    diag_supported: bool = False
+    diag_version: int | None = Field(default=None, ge=1, le=100)
+    sw_version: str | None = Field(default=None, max_length=31, pattern=r"^\d+\.\d+\.\d+$")
+    sw_build: str | None = Field(default=None, pattern=r"^[0-9a-f]{12}$")
 
 
 class CanBatch(BaseModel):

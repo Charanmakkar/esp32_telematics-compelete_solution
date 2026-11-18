@@ -1,0 +1,25 @@
+{
+  "time_utc": "2026-11-18T16:53:03.534306+00:00",
+  "port": "COM3",
+  "baud": 115200,
+  "seconds": 20,
+  "sw_version": "1.1.0",
+  "sw_build": "2e6876f40c71",
+  "identity": [
+    "I (566) navsphere: SW_VERSION=1.1.0 BUILD=2e6876f40c71 UTC=2026-11-18T16:48:00+00:00",
+    "I (810) can: CAN_BUILD SW_VERSION=1.1.0 BUILD=2e6876f40c71 diag_version=3 ELF=ece1b8252; serial CAN ID/data enabled"
+  ],
+  "can_serial_frames": 2415,
+  "examples": [
+    "CAN seq=0 ID=0x1B400001 EXT DATA DLC=8 DATA=00 00 00 00 00 00 00 00 ",
+    "CAN seq=1 ID=0x00000127 STD DATA DLC=8 DATA=03 64 64 64 64 64 00 00 ",
+    "CAN seq=2 ID=0x0000006F STD DATA DLC=3 DATA=FC 07 00 ",
+    "CAN seq=3 ID=0x000000A0 STD DATA DLC=7 DATA=DC 07 00 00 00 00 00 ",
+    "CAN seq=4 ID=0x0000006E STD DATA DLC=8 DATA=69 D7 FF 03 00 81 16 00 "
+  ],
+  "status": [
+    "I (5557) can: CAN_STATUS mode=listen_only state=1 rx=1570 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=1013 RXD26_now=0",
+    "I (11377) can: CAN_STATUS mode=listen_only state=1 rx=4454 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=3087 RXD26_now=1",
+    "I (16387) can: CAN_STATUS mode=listen_only state=1 rx=7267 tx=0 bus_errors=9 REC=0 TEC=0 serial_drops=5130 RXD26_now=1"
+  ]
+}

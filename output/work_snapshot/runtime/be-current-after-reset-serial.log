@@ -1,0 +1,16 @@
+I (12386) resources: free_heap=109036 adc_queue_drops=0 publish_drops=56 mqtt_stack_margin=2880
+I (13386) resources: free_heap=106652 adc_queue_drops=0 publish_drops=56 mqtt_stack_margin=2880
+I (14386) resources: free_heap=104952 adc_queue_drops=0 publish_drops=56 mqtt_stack_margin=2880
+I (15485) resources: free_heap=102700 adc_queue_drops=0 publish_drops=61 mqtt_stack_margin=2880
+I (16485) resources: free_heap=101672 adc_queue_drops=0 publish_drops=71 mqtt_stack_margin=2880
+I (17486) resources: free_heap=104576 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2880
+I (18486) resources: free_heap=104824 adc_queue_drops=0 publish_drops=100 mqtt_stack_margin=2880
+I (19485) resources: free_heap=104900 adc_queue_drops=0 publish_drops=111 mqtt_stack_margin=2880
+W (22383) transport_base: Poll timeout or error, errno=Connection already in progress, fd=54, timeout_ms=2000
+E (22384) mqtt_client: Writing didn't complete in specified timeout: errno=119
+E (22389) mqtt_client: Error to resend data 
+W (22396) mqtt: Disconnected
+I (22398) resources: free_heap=107592 adc_queue_drops=17 publish_drops=127 mqtt_stack_margin=2880
+I (23263) mqtt_client: Client force reconnect requested
+I (23746) mqtt: Connected and command subscription requested
+I (23786) resources: free_heap=105108 adc_queue_drops=17 publish_drops=148 mqtt_stack_margin=2880

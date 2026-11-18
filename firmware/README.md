@@ -168,8 +168,9 @@ The checked partition table reserves nvs at 0x9000, length 0x6000. Back up any
 existing device NVS before replacing it. Once wiring and serial port are verified,
 from an IDF terminal in firmware run `idf.py -p COMx flash`, then
 `python -m esptool --chip esp32 --port COMx write-flash 0x9000 .local/nvs.bin`,
-then `idf.py -p COMx monitor`. These are explicit device-writing operations;
-no board was flashed automatically during this implementation.
+then `idf.py -p COMx monitor`. These are explicit device-writing operations.
+For the current COM3 flash and CAN/BMS verification record, see
+`docs/development/BE_CLIENT_IMPLEMENTATION.md` from the project root.
 
 Set `CONFIG_NAV_REQUIRE_TLS=y` for protected deployments. TLS uses ESP-IDF's
 trusted root bundle and hostname validation; the broker certificate must chain

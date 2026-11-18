@@ -1,0 +1,2528 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: HVESP01 HVESS
+VAL_TABLE_ HVESP_SystemState 14 "Unknown" 13 "Disconnect" 12 "Charge" 11 "Drive" 10 "ExternalIsoTestCharge" 9 "ExternalIsoTestDrive" 8 "ConnectChargeStagger" 7 "ConnectChargeBusJoin" 6 "ConnectChargePrechg" 5 "ConnectDriveStagger" 4 "ConnectDriveBusJoin" 3 "ConnectDrivePrechg" 2 "StandbyReady" 1 "StandbyNotReady" 0 "Cooldown" ;
+VAL_TABLE_ HVESP_PackState 7 "Disengage" 6 "Connected" 5 "ExternalIsolationCheck" 4 "PrepareBusJoin" 3 "PrepareBusPrecharge" 2 "StandbyReady" 1 "StandbyNotReady" 0 "StandbyInit" ;
+VAL_TABLE_ HVESP_OperationalStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "DisabledInt" 5 "DisabledExtCmd" 4 "EmergencyPowerDown" 3 "NormalPowerDown" 2 "Operational" 1 "InitComplete" 0 "InitInProcess" ;
+VAL_TABLE_ HVESP_HvBusConnectionStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "Reserved" 4 "DisconnectedPreChgFail" 3 "DisconnectionInProcess" 2 "ConnectionInProcess" 1 "Connected" 0 "Disconnected" ;
+VAL_TABLE_ HVESP_CellBalancingActive 3 "NA" 2 "Error" 1 "CellBalancingActive" 0 "CellBalancingNotActive" ;
+VAL_TABLE_ HVESP_HvilStatus 3 "NA" 2 "Error" 1 "HvilOpen" 0 "HvilClosed" ;
+VAL_TABLE_ HVESP_HvBusPassiveIsoTestStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "TestCompleteFault" 4 "TestCompleteMarginal" 3 "TestCompleteAcceptable" 2 "TestInProcess" 1 "TestRequestedNotInProgress" 0 "NoTestRequested" ;
+VAL_TABLE_ HVESP_HvBusActiveIsoTestStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "TestCompleteFault" 4 "TestCompleteMarginal" 3 "TestCompleteAcceptable" 2 "TestInProcess" 1 "TestRequestedNotInProgress" 0 "NoTestRequested" ;
+VAL_TABLE_ HVESP_HvBusPrechgRelayState 3 "NA" 2 "Error" 1 "RelayOpen" 0 "RelayClosed" ;
+VAL_TABLE_ HVESP_HvBusNegContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_TABLE_ HVESP_HvBusPosContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_TABLE_ HVESP_SystemHvStatus 3 "DontCare" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_TABLE_ HVESP_HvBusPassiveIsolationTest 3 "DontCare" 2 "Reserved" 1 "PassiveIsolationTestRequested" 0 "PassiveIsolationTestNotRequested" ;
+VAL_TABLE_ HVESP_HvBusActiveIsoTestCmd 3 "DontCare" 2 "Reserved" 1 "ActiveIsoTestRequested" 0 "ActiveIsoTestNotRequested" ;
+VAL_TABLE_ HVESP_PowerDownCmd 3 "DontCare" 2 "EmergencyPowerDown" 1 "NormalPowerDown" 0 "PowerDownNotRequested" ;
+VAL_TABLE_ HVESP_HvBusConnectCmd 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+
+
+BO_ 2498862693 HVESP01_Status02: 8 HVESP01
+ SG_ HVESP01_status02Crc : 16|8@1+ (1,0) [0|255] "count"  HVESP01
+ SG_ HVESP01_status02Counter : 8|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_hvBusFcPosContState : 6|2@1+ (1,0) [0|3] "V"  HVESP01
+ SG_ HVESP01_hvBusFcNegContState : 4|2@1+ (1,0) [0|3] "V"  HVESP01
+ SG_ HVESP01_hvBusNegContState : 2|2@1+ (1,0) [0|3] "V"  HVESP01
+ SG_ HVESP01_hvBusPosContState : 0|2@1+ (1,0) [0|3] "V"  HVESP01
+
+BO_ 2499795813 HVESP01_FC_Voltage: 6 HVESP01
+ SG_ HVESP01_VFC : 32|16@1- (0.02,0) [-655.36|655.34] "v"  HVESP01
+ SG_ HVESP01_diagVFCPos : 16|16@1- (0.02,0) [-655.36|655.34] "v"  HVESP01
+ SG_ HVESP01_diagVFCNeg : 0|16@1- (0.02,0) [-655.36|655.34] "v"  HVESP01
+
+BO_ 2499749477 HVESP01_WatchdogNotify: 8 HVESP01
+ SG_ HVESP01_bat1msTaskLock : 0|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_bat10msTaskLock : 1|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_bat100msTaskLock : 2|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_nvmTaskLock : 3|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_afeTaskLock : 4|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_canTxTaskLock : 5|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_canRxTaskLock : 6|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_canRxFastTaskLock : 7|1@1+ (1,0) [0|1] ""  HVESP01
+
+BO_ 2499746149 HVESP01_Current: 8 HVESP01
+ SG_ HVESP01_currentSecondary : 0|22@1+ (0.001,-1600) [-1600|1600] "A"  HVESP01
+ SG_ HVESP01_currentPrimary : 40|22@1+ (0.001,-1600) [-1600|1600] "A"  HVESP01
+
+BO_ 2499740773 HVESP01_SpeakerClaim: 8 HVESP01
+ SG_ HVESP01_speakerClaimFlag : 0|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_expectedSpeakerID : 8|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SystemState : 16|4@1+ (1,0) [0|15] ""  HVESP01
+
+BO_ 2499748453 HVESP01_SleepWake: 8 HVESP01
+ SG_ HVESP01_timeAsleepSec : 32|32@1+ (1,0) [0|4294967295] "seconds"  HVESP01
+ SG_ HVESP01_timeAwakeSec : 0|32@1+ (1,0) [0|4294967295] "seconds"  HVESP01
+
+BO_ 2499748709 HVESP01_WakeReason: 1 HVESP01
+ SG_ HVESP01_wakeReasonFailToSleep : 3|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_wakeReasonAlarm : 2|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_wakeReasonCan : 1|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_wakeReasonIgn : 0|1@1+ (1,0) [0|1] ""  HVESP01
+
+BO_ 2499748197 HVESP01_BMSDiag: 8 HVESP01
+ SG_ HVESP01_LV_InputVoltage : 48|16@1+ (0.01,0) [0|35] "V" Vector__XXX
+ SG_ HVESP01_pyroCheckResult : 0|16@1+ (0.001,0) [0|30] "V"  HVESP01
+ SG_ HVESP01_dc_pos_cntr_coil : 16|16@1+ (0.01,0) [0|655] "V"  HVESP01
+ SG_ HVESP01_dc_neg_cntr_coil : 32|16@1+ (0.01,0) [0|655] "V"  HVESP01
+
+BO_ 2499760997 HVESP01_packBoardDetails: 8 HVESP01
+ SG_ HVESP01_packBoardDetails_pack_id : 8|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_packBoardDetails_board : 0|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_packBoardDetails_revPath : 12|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_packBoardDetails_fwdPath : 20|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_packBoardDetails_rev : 28|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_packBoardDetails_variant : 36|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499743589 HVESP01_brickCapacity: 8 HVESP01
+ SG_ HVESP01_brickCapacity_01 m0 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_02 m0 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_03 m0 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_04 m0 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_05 m1 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_06 m1 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_07 m1 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_08 m1 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_09 m2 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_10 m2 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_11 m2 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_12 m2 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_13 m3 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_14 m3 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_15 m3 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_16 m3 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_17 m4 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_18 m4 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_19 m4 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_20 m4 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_21 m5 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_22 m5 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_23 m5 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_24 m5 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_25 m6 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_26 m6 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_27 m6 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_28 m6 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_29 m7 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_30 m7 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_31 m7 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_32 m7 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_33 m8 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_34 m8 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_35 m8 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_36 m8 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_37 m9 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_38 m9 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_39 m9 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_40 m9 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_41 m10 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_42 m10 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_43 m10 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_44 m10 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_45 m11 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_46 m11 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_47 m11 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_48 m11 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_49 m12 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_50 m12 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_51 m12 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_52 m12 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_53 m13 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_54 m13 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_55 m13 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_56 m13 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_57 m14 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_58 m14 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_59 m14 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_60 m14 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_61 m15 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_62 m15 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_63 m15 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_64 m15 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_65 m16 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_66 m16 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_67 m16 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_68 m16 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_69 m17 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_70 m17 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_71 m17 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_72 m17 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_73 m18 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_74 m18 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_75 m18 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_76 m18 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_77 m19 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_78 m19 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_79 m19 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_80 m19 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_81 m20 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_82 m20 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_83 m20 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_84 m20 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_85 m21 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_86 m21 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_87 m21 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_88 m21 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_89 m22 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_90 m22 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_91 m22 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_92 m22 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_93 m23 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_94 m23 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_95 m23 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_96 m23 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_97 m24 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_98 m24 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_99 m24 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_100 m24 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_101 m25 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_102 m25 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_103 m25 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_104 m25 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_105 m26 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_106 m26 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_107 m26 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_108 m26 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_109 m27 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_110 m27 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_111 m27 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_112 m27 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_113 m28 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_114 m28 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_115 m28 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_116 m28 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_117 m29 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_118 m29 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_119 m29 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_120 m29 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_121 m30 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_122 m30 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_123 m30 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_124 m30 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_125 m31 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_126 m31 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_127 m31 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_128 m31 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_129 m32 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_130 m32 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_131 m32 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_132 m32 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_133 m33 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_134 m33 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_135 m33 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_136 m33 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_137 m34 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_138 m34 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_139 m34 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_140 m34 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_141 m35 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_142 m35 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_143 m35 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_144 m35 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_145 m36 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_146 m36 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_147 m36 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_148 m36 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_149 m37 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_150 m37 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_151 m37 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_152 m37 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_153 m38 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_154 m38 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_155 m38 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_156 m38 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_157 m39 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_158 m39 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_159 m39 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_160 m39 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_161 m40 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_162 m40 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_163 m40 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_164 m40 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_165 m41 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_166 m41 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_167 m41 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_168 m41 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_169 m42 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_170 m42 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_171 m42 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_172 m42 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_173 m43 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_174 m43 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_175 m43 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_176 m43 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_177 m44 : 8|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_178 m44 : 22|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_179 m44 : 36|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ HVESP01_brickCapacity_180 m44 : 50|14@1+ (1,0) [0|16383] "Ah"  HVESP01
+ SG_ multiplexorcap M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499750245 HVESP01_EstOcv: 8 HVESP01
+ SG_ HVESP01_estOcv_01 m0 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_02 m0 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_03 m0 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_04 m0 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_05 m1 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_06 m1 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_07 m1 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_08 m1 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_09 m2 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_10 m2 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_11 m2 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_12 m2 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_13 m3 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_14 m3 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_15 m3 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_16 m3 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_17 m4 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_18 m4 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_19 m4 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_20 m4 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_21 m5 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_22 m5 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_23 m5 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_24 m5 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_25 m6 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_26 m6 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_27 m6 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_28 m6 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_29 m7 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_30 m7 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_31 m7 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_32 m7 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_33 m8 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_34 m8 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_35 m8 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_36 m8 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_37 m9 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_38 m9 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_39 m9 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_40 m9 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_41 m10 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_42 m10 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_43 m10 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_44 m10 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_45 m11 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_46 m11 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_47 m11 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_48 m11 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_49 m12 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_50 m12 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_51 m12 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_52 m12 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_53 m13 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_54 m13 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_55 m13 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_56 m13 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_57 m14 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_58 m14 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_59 m14 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_60 m14 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_61 m15 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_62 m15 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_63 m15 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_64 m15 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_65 m16 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_66 m16 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_67 m16 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_68 m16 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_69 m17 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_70 m17 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_71 m17 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_72 m17 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_73 m18 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_74 m18 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_75 m18 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_76 m18 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_77 m19 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_78 m19 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_79 m19 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_80 m19 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_81 m20 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_82 m20 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_83 m20 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_84 m20 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_85 m21 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_86 m21 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_87 m21 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_88 m21 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_89 m22 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_90 m22 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_91 m22 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_92 m22 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_93 m23 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_94 m23 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_95 m23 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_96 m23 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_97 m24 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_98 m24 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_99 m24 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_100 m24 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_101 m25 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_102 m25 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_103 m25 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_104 m25 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_105 m26 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_106 m26 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_107 m26 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_108 m26 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_109 m27 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_110 m27 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_111 m27 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_112 m27 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_113 m28 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_114 m28 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_115 m28 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_116 m28 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_117 m29 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_118 m29 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_119 m29 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_120 m29 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_121 m30 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_122 m30 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_123 m30 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_124 m30 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_125 m31 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_126 m31 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_127 m31 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_128 m31 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_129 m32 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_130 m32 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_131 m32 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_132 m32 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_133 m33 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_134 m33 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_135 m33 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_136 m33 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_137 m34 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_138 m34 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_139 m34 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_140 m34 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_141 m35 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_142 m35 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_143 m35 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_144 m35 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_145 m36 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_146 m36 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_147 m36 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_148 m36 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_149 m37 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_150 m37 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_151 m37 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_152 m37 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_153 m38 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_154 m38 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_155 m38 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_156 m38 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_157 m39 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_158 m39 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_159 m39 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_160 m39 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_161 m40 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_162 m40 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_163 m40 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_164 m40 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_165 m41 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_166 m41 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_167 m41 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_168 m41 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_169 m42 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_170 m42 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_171 m42 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_172 m42 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_173 m43 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_174 m43 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_175 m43 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_176 m43 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_177 m44 : 8|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_178 m44 : 22|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_179 m44 : 36|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ HVESP01_estOcv_180 m44 : 50|14@1+ (0.001,0) [0|16.383] "Ah"  HVESP01
+ SG_ multiplexoreo M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499748965 HVESP01_ChgLimitsDebug: 8 HVESP01
+ SG_ HVESP01_iChgLimContLut : 0|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iChgLim10sLut : 12|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iChgLimInstLut : 24|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iChgLimHeat : 36|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iChgLimDcir : 48|12@1+ (1,0) [0|4095] "A"  HVESP01
+
+BO_ 2499749221 HVESP01_DchLimitsDebug: 8 HVESP01
+ SG_ HVESP01_iDchLimContLut : 0|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iDchLim10sLut : 12|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iDchLimInstLut : 24|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iDchLimHeat : 36|12@1+ (1,0) [0|4095] "A"  HVESP01
+ SG_ HVESP01_iDchLimDcir : 48|12@1+ (1,0) [0|4095] "A"  HVESP01
+
+BO_ 2499761253 HVESP01_ResetReason: 8 HVESP01
+ SG_ HVESP01_Des_VOR_reset : 0|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_TS_reset : 1|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_flash_init_reset : 2|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_fn_reset_escn : 3|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_stcu_fault_reset : 4|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_fccu_ftr_reset : 5|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_software_dest_reset : 6|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Des_power_on_reset : 7|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_VOR_fn_reset : 8|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_TS_fn_reset : 9|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_jtag_fn_reset : 10|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_fccu_soft_reset : 11|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_fccu_hard_reset : 12|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_external_reset : 13|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_software_fn_reset : 14|1@0+ (1,0) [0|1] "B"  HVESP01
+ SG_ HVESP01_Fes_self_test_done_reset : 15|1@0+ (1,0) [0|1] "B"  HVESP01
+
+BO_ 2499743333 HVESP01_CellBalance: 8 HVESP01
+ SG_ HVESP01_CellBalance_01 m0 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_02 m0 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_03 m0 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_04 m0 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_05 m0 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_06 m0 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_07 m0 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_08 m0 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_09 m1 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_10 m1 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_11 m1 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_12 m1 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_13 m1 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_14 m1 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_15 m1 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_16 m1 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_17 m2 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_18 m2 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_19 m2 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_20 m2 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_21 m2 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_22 m2 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_23 m2 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_24 m2 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_25 m3 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_26 m3 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_27 m3 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_28 m3 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_29 m3 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_30 m3 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_31 m3 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_32 m3 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_33 m4 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_34 m4 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_35 m4 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_36 m4 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_37 m4 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_38 m4 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_39 m4 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_40 m4 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_41 m5 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_42 m5 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_43 m5 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_44 m5 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_45 m5 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_46 m5 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_47 m5 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_48 m5 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_49 m6 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_50 m6 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_51 m6 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_52 m6 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_53 m6 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_54 m6 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_55 m6 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_56 m6 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_57 m7 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_58 m7 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_59 m7 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_60 m7 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_61 m7 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_62 m7 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_63 m7 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_64 m7 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_65 m8 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_66 m8 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_67 m8 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_68 m8 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_69 m8 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_70 m8 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_71 m8 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_72 m8 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_73 m9 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_74 m9 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_75 m9 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_76 m9 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_77 m9 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_78 m9 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_79 m9 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_80 m9 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_81 m10 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_82 m10 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_83 m10 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_84 m10 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_85 m10 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_86 m10 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_87 m10 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_88 m10 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_89 m11 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_90 m11 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_91 m11 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_92 m11 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_93 m11 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_94 m11 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_95 m11 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_96 m11 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_97 m12 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_98 m12 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_99 m12 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_100 m12 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_101 m12 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_102 m12 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_103 m12 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_104 m12 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_105 m13 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_106 m13 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_107 m13 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_108 m13 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_109 m13 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_110 m13 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_111 m13 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_112 m13 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_113 m14 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_114 m14 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_115 m14 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_116 m14 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_117 m14 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_118 m14 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_119 m14 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_120 m14 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_121 m15 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_122 m15 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_123 m15 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_124 m15 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_125 m15 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_126 m15 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_127 m15 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_128 m15 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_129 m16 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_130 m16 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_131 m16 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_132 m16 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_133 m16 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_134 m16 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_135 m16 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_136 m16 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_137 m17 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_138 m17 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_139 m17 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_140 m17 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_141 m17 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_142 m17 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_143 m17 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_144 m17 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_145 m18 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_146 m18 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_147 m18 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_148 m18 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_149 m18 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_150 m18 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_151 m18 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_152 m18 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_153 m19 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_154 m19 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_155 m19 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_156 m19 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_157 m19 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_158 m19 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_159 m19 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_160 m19 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_161 m20 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_162 m20 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_163 m20 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_164 m20 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_165 m20 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_166 m20 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_167 m20 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_168 m20 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_169 m21 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_170 m21 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_171 m21 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_172 m21 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_173 m21 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_174 m21 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_175 m21 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_176 m21 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_177 m22 : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_178 m22 : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_179 m22 : 10|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_180 m22 : 11|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_181 m22 : 12|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_182 m22 : 13|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_183 m22 : 14|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_CellBalance_184 m22 : 15|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ multiplexorcb M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499743077 HVESP01_Version: 8 HVESP01
+ SG_ HVESP01_SerNum_Prod_Serial_No m4 : 32|16@1+ (1,0) [0|9999] ""  HVESP01
+ SG_ HVESP01_SerNum_Location m4 : 48|8@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SerNum_Julian_Date m4 : 8|17@1+ (1,0) [0|9999] ""  HVESP01
+ SG_ HVESP01_SerNum_PartNo_SubVersion m3 : 40|10@1+ (1,0) [0|1023] ""  HVESP01
+ SG_ HVESP01_SerNum_PartNo_Main m3 : 8|32@1+ (1,0) [0|99999999] ""  HVESP01
+ SG_ HVESP01_SwVerSubMinorApp m0 : 24|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMinorApp m0 : 16|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMajorApp m0 : 8|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_HwVerApp m0 : 32|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsCusApp m0 : 40|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsIntApp m0 : 48|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerSubMinorBl m1 : 24|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMinorBl m1 : 16|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMajorBl m1 : 8|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_HwVerBl m1 : 32|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsCusBl m1 : 40|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsIntBl m1 : 48|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerSubMinorCal m2 : 24|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMinorCal m2 : 16|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerMajorCal m2 : 8|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_HwVerCal m2 : 32|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsCusCal m2 : 40|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ HVESP01_SwVerAbsIntCal m2 : 48|8@1+ (1,0) [0|255] ""  HVESP01
+ SG_ multiplexorvr M : 0|4@1+ (1,0) [0|15] ""  HVESP01
+
+BO_ 2499742821 HVESP01_HVPack: 8 HVESP01
+ SG_ HVESP01_fcposPackConStatusReq : 21|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_fcnegPackConStatusReq : 20|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_vPackVoir : 48|16@1+ (0.05,0) [0|3276.75] "V"  HVESP01
+ SG_ HVESP01_packstate : 16|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_vLoad : 0|16@1+ (0.05,0) [0|3276.75] "V"  HVESP01
+ SG_ HVESP01_vPackSumofcells : 24|16@1+ (0.05,0) [0|3276.75] "V"  HVESP01
+ SG_ HVESP01_negPackConStatusReq : 42|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_posPackConStatusReq : 41|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_prechargeConStatusReq : 45|1@1+ (1,0) [0|1] ""  HVESP01
+
+BO_ 2499747941 HVESP01_VoltageDiag: 8 HVESP01
+ SG_ HVESP01_diagVPackPos : 16|16@1+ (0.02,0) [0|1310.7] "v"  HVESP01
+ SG_ HVESP01_diagVPackNeg : 0|16@1+ (0.02,0) [0|1310.7] "v"  HVESP01
+ SG_ HVESP01_diagVLoadNeg : 32|16@1+ (0.02,0) [0|1310.7] "v"  HVESP01
+ SG_ HVESP01_diagVLoadPos : 48|16@1+ (0.02,0) [0|1310.7] "v"  HVESP01
+
+BO_ 2499742565 HVESP01_packDchLimits: 8 HVESP01
+ SG_ HVESP01_vBusMin : 48|16@1+ (0.02,0) [0|1310.7] "V"  HVESP01
+ SG_ HVESP01_iPackDchLimitInst : 16|16@1- (0.1,0) [-3276.8|0] "A"  HVESP01
+ SG_ HVESP01_iPackDchLimit10s : 0|16@1- (-0.1,0) [-3276.7|0] "A"  HVESP01
+ SG_ HVESP01_iPackDchLimitCont : 32|16@1- (0.02,0) [-655.36|0] "A"  HVESP01
+
+BO_ 2499742309 HVESP01_packChgLimits: 8 HVESP01
+ SG_ HVESP01_vBusMax : 48|16@1+ (0.02,0) [0|1310.7] "V"  HVESP01
+ SG_ HVESP01_iPackChgLimitInst : 16|16@1+ (0.025,0) [0|1638.375] "A"  HVESP01
+ SG_ HVESP01_iPackChgLimit10s : 0|16@1+ (0.025,0) [0|1638.375] "A"  HVESP01
+ SG_ HVESP01_iPackChgLimitCont : 32|16@1+ (0.01,0) [0|655.35] "A"  HVESP01
+
+BO_ 2499741797 HVESP01_InternalResistance: 8 HVESP01
+ SG_ HVESP01_brickResistance_01_ m0 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_02_ m0 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_03_ m0 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_04_ m0 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_05_ m1 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_06_ m1 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_07_ m1 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_08_ m1 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_09_ m2 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_10_ m2 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_11_ m2 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_12_ m2 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_13_ m3 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_14_ m3 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_15_ m3 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_16_ m3 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_17_ m4 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_18_ m4 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_19_ m4 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_20_ m4 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_21_ m5 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_22_ m5 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_23_ m5 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_24_ m5 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_25_ m6 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_26_ m6 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_27_ m6 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_28_ m6 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_29_ m7 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_30_ m7 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_31_ m7 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_32_ m7 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_33_ m8 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_34_ m8 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_35_ m8 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_36_ m8 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_37_ m9 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_38_ m9 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_39_ m9 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_40_ m9 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_41_ m10 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_42_ m10 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_43_ m10 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_44_ m10 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_45_ m11 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_46_ m11 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_47_ m11 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_48_ m11 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_49_ m12 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_50_ m12 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_51_ m12 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_52_ m12 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_53_ m13 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_54_ m13 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_55_ m13 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_56_ m13 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_57_ m14 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_58_ m14 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_59_ m14 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_60_ m14 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_61_ m15 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_62_ m15 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_63_ m15 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_64_ m15 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_65_ m16 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_66_ m16 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_67_ m16 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_68_ m16 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_69_ m17 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_70_ m17 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_71_ m17 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_72_ m17 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_73_ m18 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_74_ m18 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_75_ m18 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_76_ m18 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_77_ m19 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_78_ m19 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_79_ m19 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_80_ m19 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_81_ m20 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_82_ m20 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_83_ m20 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_84_ m20 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_85_ m21 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_86_ m21 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_87_ m21 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_88_ m21 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_89_ m22 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_90_ m22 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_91_ m22 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_92_ m22 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_93_ m23 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_94_ m23 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_95_ m23 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_96_ m23 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_97_ m24 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_98_ m24 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_99_ m24 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_100 m24 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_101 m25 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_102 m25 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_103 m25 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_104 m25 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_105 m26 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_106 m26 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_107 m26 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_108 m26 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_109 m27 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_110 m27 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_111 m27 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_112 m27 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_113 m28 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_114 m28 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_115 m28 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_116 m28 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_117 m29 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_118 m29 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_119 m29 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_120 m29 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_121 m30 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_122 m30 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_123 m30 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_124 m30 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_125 m31 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_126 m31 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_127 m31 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_128 m31 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_129 m32 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_130 m32 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_131 m32 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_132 m32 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_133 m33 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_134 m33 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_135 m33 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_136 m33 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_137 m34 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_138 m34 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_139 m34 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_140 m34 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_141 m35 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_142 m35 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_143 m35 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_144 m35 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_145 m36 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_146 m36 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_147 m36 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_148 m36 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_149 m37 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_150 m37 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_151 m37 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_152 m37 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_153 m38 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_154 m38 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_155 m38 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_156 m38 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_157 m39 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_158 m39 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_159 m39 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_160 m39 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_161 m40 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_162 m40 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_163 m40 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_164 m40 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_165 m41 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_166 m41 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_167 m41 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_168 m41 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_169 m42 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_170 m42 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_171 m42 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_172 m42 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_173 m43 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_174 m43 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_175 m43 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_176 m43 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_177 m44 : 8|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_178 m44 : 22|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_179 m44 : 36|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ HVESP01_brickResistance_180 m44 : 50|14@1+ (0.01,0) [0|50] "mOhm"  HVESP01
+ SG_ multiplexorbr M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499742053 HVESP01_modTemperature: 8 HVESP01
+ SG_ HVESP01_modTemperature_01 m0 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_02 m0 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_03 m0 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_04 m0 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_05 m0 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_06 m1 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_07 m1 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_08 m1 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_09 m1 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_10 m1 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_11 m2 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_12 m2 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_13 m2 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_14 m2 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_15 m2 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_16 m3 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_17 m3 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_18 m3 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_19 m3 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_20 m3 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_21 m4 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_22 m4 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_23 m4 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_24 m4 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_25 m4 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_26 m5 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_27 m5 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_28 m5 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_29 m5 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_30 m5 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_31 m6 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_32 m6 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_33 m6 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_34 m6 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_35 m6 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_36 m7 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_37 m7 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_38 m7 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_39 m7 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_40 m7 : 48|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_41 m8 : 16|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_42 m8 : 24|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_43 m8 : 32|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ HVESP01_modTemperature_44 m8 : 40|8@1- (1,25) [-103|152] "Celsius"  HVESP01
+ SG_ multiplexormt M : 0|9@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499741541 HVESP01_cellVoltage: 8 HVESP01
+ SG_ HVESP01_cellVoltage_01 m0 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_02 m0 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_03 m0 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_04 m0 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_05 m1 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_06 m1 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_07 m1 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_08 m1 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_09 m2 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_10 m2 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_11 m2 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_12 m2 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_13 m3 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_14 m3 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_15 m3 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_16 m3 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_17 m4 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_18 m4 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_19 m4 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_20 m4 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_21 m5 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_22 m5 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_23 m5 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_24 m5 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_25 m6 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_26 m6 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_27 m6 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_28 m6 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_29 m7 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_30 m7 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_31 m7 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_32 m7 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_33 m8 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_34 m8 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_35 m8 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_36 m8 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_37 m9 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_38 m9 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_39 m9 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_40 m9 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_41 m10 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_42 m10 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_43 m10 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_44 m10 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_45 m11 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_46 m11 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_47 m11 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_48 m11 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_49 m12 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_50 m12 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_51 m12 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_52 m12 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_53 m13 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_54 m13 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_55 m13 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_56 m13 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_57 m14 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_58 m14 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_59 m14 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_60 m14 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_61 m15 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_62 m15 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_63 m15 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_64 m15 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_65 m16 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_66 m16 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_67 m16 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_68 m16 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_69 m17 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_70 m17 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_71 m17 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_72 m17 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_73 m18 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_74 m18 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_75 m18 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_76 m18 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_77 m19 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_78 m19 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_79 m19 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_80 m19 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_81 m20 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_82 m20 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_83 m20 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_84 m20 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_85 m21 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_86 m21 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_87 m21 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_88 m21 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_89 m22 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_90 m22 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_91 m22 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_92 m22 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_93 m23 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_94 m23 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_95 m23 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_96 m23 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_97 m24 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_98 m24 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_99 m24 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_100 m24 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_101 m25 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_102 m25 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_103 m25 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_104 m25 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_105 m26 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_106 m26 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_107 m26 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_108 m26 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_109 m27 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_110 m27 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_111 m27 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_112 m27 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_113 m28 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_114 m28 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_115 m28 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_116 m28 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_117 m29 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_118 m29 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_119 m29 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_120 m29 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_121 m30 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_122 m30 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_123 m30 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_124 m30 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_125 m31 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_126 m31 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_127 m31 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_128 m31 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_129 m32 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_130 m32 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_131 m32 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_132 m32 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_133 m33 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_134 m33 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_135 m33 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_136 m33 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_137 m34 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_138 m34 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_139 m34 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_140 m34 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_141 m35 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_142 m35 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_143 m35 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_144 m35 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_145 m36 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_146 m36 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_147 m36 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_148 m36 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_149 m37 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_150 m37 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_151 m37 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_152 m37 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_153 m38 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_154 m38 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_155 m38 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_156 m38 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_157 m39 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_158 m39 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_159 m39 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_160 m39 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_161 m40 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_162 m40 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_163 m40 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_164 m40 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_165 m41 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_166 m41 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_167 m41 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_168 m41 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_169 m42 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_170 m42 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_171 m42 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_172 m42 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_173 m43 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_174 m43 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_175 m43 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_176 m43 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_177 m44 : 8|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_178 m44 : 22|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_179 m44 : 36|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ HVESP01_cellVoltage_180 m44 : 50|14@1+ (0.001,0) [0|16.383] "V"  HVESP01
+ SG_ multiplexorcv M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499741285 HVESP01_brickSOHC: 8 HVESP01
+ SG_ HVESP01_brickSOHC_01 m0 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_02 m0 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_03 m0 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_04 m0 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_05 m1 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_06 m1 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_07 m1 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_08 m1 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_09 m2 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_10 m2 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_11 m2 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_12 m2 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_13 m3 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_14 m3 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_15 m3 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_16 m3 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_17 m4 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_18 m4 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_19 m4 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_20 m4 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_21 m5 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_22 m5 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_23 m5 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_24 m5 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_25 m6 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_26 m6 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_27 m6 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_28 m6 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_29 m7 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_30 m7 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_31 m7 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_32 m7 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_33 m8 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_34 m8 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_35 m8 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_36 m8 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_37 m9 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_38 m9 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_39 m9 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_40 m9 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_41 m10 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_42 m10 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_43 m10 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_44 m10 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_45 m11 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_46 m11 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_47 m11 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_48 m11 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_49 m12 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_50 m12 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_51 m12 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_52 m12 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_53 m13 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_54 m13 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_55 m13 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_56 m13 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_57 m14 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_58 m14 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_59 m14 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_60 m14 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_61 m15 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_62 m15 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_63 m15 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_64 m15 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_65 m16 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_66 m16 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_67 m16 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_68 m16 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_69 m17 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_70 m17 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_71 m17 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_72 m17 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_73 m18 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_74 m18 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_75 m18 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_76 m18 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_77 m19 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_78 m19 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_79 m19 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_80 m19 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_81 m20 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_82 m20 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_83 m20 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_84 m20 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_85 m21 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_86 m21 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_87 m21 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_88 m21 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_89 m22 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_90 m22 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_91 m22 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_92 m22 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_93 m23 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_94 m23 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_95 m23 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_96 m23 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_97 m24 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_98 m24 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_99 m24 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_100 m24 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_101 m25 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_102 m25 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_103 m25 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_104 m25 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_105 m26 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_106 m26 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_107 m26 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_108 m26 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_109 m27 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_110 m27 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_111 m27 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_112 m27 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_113 m28 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_114 m28 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_115 m28 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_116 m28 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_117 m29 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_118 m29 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_119 m29 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_120 m29 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_121 m30 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_122 m30 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_123 m30 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_124 m30 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_125 m31 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_126 m31 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_127 m31 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_128 m31 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_129 m32 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_130 m32 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_131 m32 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_132 m32 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_133 m33 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_134 m33 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_135 m33 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_136 m33 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_137 m34 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_138 m34 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_139 m34 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_140 m34 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_141 m35 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_142 m35 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_143 m35 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_144 m35 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_145 m36 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_146 m36 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_147 m36 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_148 m36 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_149 m37 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_150 m37 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_151 m37 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_152 m37 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_153 m38 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_154 m38 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_155 m38 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_156 m38 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_157 m39 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_158 m39 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_159 m39 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_160 m39 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_161 m40 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_162 m40 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_163 m40 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_164 m40 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_165 m41 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_166 m41 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_167 m41 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_168 m41 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_169 m42 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_170 m42 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_171 m42 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_172 m42 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_173 m43 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_174 m43 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_175 m43 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_176 m43 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_177 m44 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_178 m44 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_179 m44 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOHC_180 m44 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ multiplexorsohc M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499741029 HVESP01_brickSOC: 8 HVESP01
+ SG_ HVESP01_brickSOC_01 m0 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_02 m0 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_03 m0 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_04 m0 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_05 m1 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_06 m1 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_07 m1 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_08 m1 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_09 m2 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_10 m2 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_11 m2 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_12 m2 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_13 m3 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_14 m3 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_15 m3 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_16 m3 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_17 m4 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_18 m4 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_19 m4 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_20 m4 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_21 m5 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_22 m5 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_23 m5 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_24 m5 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_25 m6 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_26 m6 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_27 m6 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_28 m6 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_29 m7 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_30 m7 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_31 m7 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_32 m7 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_33 m8 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_34 m8 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_35 m8 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_36 m8 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_37 m9 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_38 m9 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_39 m9 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_40 m9 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_41 m10 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_42 m10 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_43 m10 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_44 m10 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_45 m11 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_46 m11 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_47 m11 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_48 m11 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_49 m12 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_50 m12 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_51 m12 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_52 m12 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_53 m13 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_54 m13 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_55 m13 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_56 m13 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_57 m14 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_58 m14 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_59 m14 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_60 m14 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_61 m15 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_62 m15 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_63 m15 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_64 m15 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_65 m16 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_66 m16 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_67 m16 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_68 m16 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_69 m17 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_70 m17 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_71 m17 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_72 m17 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_73 m18 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_74 m18 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_75 m18 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_76 m18 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_77 m19 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_78 m19 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_79 m19 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_80 m19 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_81 m20 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_82 m20 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_83 m20 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_84 m20 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_85 m21 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_86 m21 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_87 m21 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_88 m21 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_89 m22 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_90 m22 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_91 m22 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_92 m22 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_93 m23 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_94 m23 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_95 m23 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_96 m23 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_97 m24 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_98 m24 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_99 m24 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_100 m24 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_101 m25 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_102 m25 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_103 m25 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_104 m25 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_105 m26 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_106 m26 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_107 m26 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_108 m26 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_109 m27 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_110 m27 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_111 m27 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_112 m27 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_113 m28 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_114 m28 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_115 m28 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_116 m28 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_117 m29 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_118 m29 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_119 m29 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_120 m29 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_121 m30 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_122 m30 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_123 m30 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_124 m30 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_125 m31 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_126 m31 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_127 m31 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_128 m31 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_129 m32 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_130 m32 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_131 m32 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_132 m32 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_133 m33 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_134 m33 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_135 m33 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_136 m33 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_137 m34 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_138 m34 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_139 m34 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_140 m34 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_141 m35 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_142 m35 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_143 m35 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_144 m35 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_145 m36 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_146 m36 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_147 m36 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_148 m36 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_149 m37 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_150 m37 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_151 m37 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_152 m37 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_153 m38 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_154 m38 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_155 m38 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_156 m38 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_157 m39 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_158 m39 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_159 m39 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_160 m39 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_161 m40 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_162 m40 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_163 m40 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_164 m40 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_165 m41 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_166 m41 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_167 m41 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_168 m41 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_169 m42 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_170 m42 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_171 m42 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_172 m42 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_173 m43 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_174 m43 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_175 m43 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_176 m43 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_177 m44 : 8|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_178 m44 : 22|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_179 m44 : 36|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_brickSOC_180 m44 : 50|14@1+ (0.01,0) [0|100] "%"  HVESP01
+ SG_ multiplexorsoc M : 0|8@1+ (1,0) [0|255] ""  HVESP01
+
+BO_ 2499744869 HVESP01_Inhibitions: 8 HVESP01
+ SG_ HVESP01_inhibitionPyroFuse : 9|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionRegen : 8|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionFullPower : 7|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionRampDown : 6|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionSupportEntry : 5|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionSupport : 4|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionDriveEntry : 3|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionDrive : 2|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionCharge : 1|1@1+ (1,0) [0|1] ""  HVESP01
+ SG_ HVESP01_inhibitionChargeEntry : 0|1@1+ (1,0) [0|1] ""  HVESP01
+
+BO_ 2499740517 HVESP01_Sohr: 8 HVESP01
+ SG_ HVESP01_packSOHR : 32|8@1+ (0.4,0) [0|100] "%"  HVESP01
+ SG_ HVESP01_lowestCellSohrCellNum : 24|8@1+ (1,0) [0|250] "count"  HVESP01
+
+BO_ 2499500389 HVESP01_History: 8 HVESP01
+ SG_ HVESP01_lowestCellSohcCellNum : 16|8@1+ (1,0) [0|255] "count"  HVESP01
+ SG_ HVESP01_highestCellSohcCellNum : 8|8@1+ (1,0) [0|255] "count"  HVESP01
+ SG_ HVESP01_stateOfHealth : 0|8@1+ (0.4,0) [0|100] "%"  HVESP01
+
+BO_ 2485806436 HVESP01_Control01: 8 HVESS
+ SG_ HVESP01_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP01_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP01_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP01_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP01_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP01_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP01_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP01_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485806692 HVESP02_Control01: 8 HVESS
+ SG_ HVESP02_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP02_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP02_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP02_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP02_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP02_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP02_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP02_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485806948 HVESP03_Control01: 8 HVESS
+ SG_ HVESP03_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP03_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP03_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP03_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP03_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP03_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP03_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP03_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485807204 HVESP04_Control01: 8 HVESS
+ SG_ HVESP04_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP04_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP04_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP04_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP04_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP04_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP04_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP04_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485807460 HVESP05_Control01: 8 HVESS
+ SG_ HVESP05_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP05_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP05_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP05_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP05_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP05_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP05_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP05_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485807716 HVESP06_Control01: 8 HVESS
+ SG_ HVESP06_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP06_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP06_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP06_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP06_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP06_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP06_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP06_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485807972 HVESP07_Control01: 8 HVESS
+ SG_ HVESP07_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP07_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP07_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP07_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP07_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP07_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP07_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP07_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485808228 HVESP08_Control01: 8 HVESS
+ SG_ HVESP08_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP08_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP08_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP08_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP08_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP08_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP08_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP08_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485808484 HVESP09_Control01: 8 HVESS
+ SG_ HVESP09_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP09_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP09_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP09_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP09_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP09_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP09_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP09_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2485808740 HVESP10_Control01: 8 HVESS
+ SG_ HVESP10_control01Crc : 56|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP10_control01Counter : 52|4@1+ (1,0) [0|15] ""  HVESS
+ SG_ HVESP10_arbitrationCmd : 20|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP10_systemHvStatus : 12|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP10_hvBusPassveIsoTest : 6|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP10_hvBusActiveIsoTest : 4|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP10_powerDownCmd : 2|2@1+ (1,0) [0|3] ""  HVESS
+ SG_ HVESP10_hvBusConnectCmd : 0|2@1+ (1,0) [0|3] ""  HVESS
+
+BO_ 2498860901 HVESP01_Status01: 8 HVESP01
+ SG_ HVESP01_status01Crc : 56|8@1+ (1,0) [0|255] "count"  HVESP01
+ SG_ HVESP01_status01Counter : 52|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_operationalStatus : 44|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_hvBusConnectionStatus : 40|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_cellBalancingActive : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hvilStatus : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hvBusPassveIsoTestStatus : 16|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_hvBusActiveIsoTestStatus : 12|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_hvBusPrechgRelayState : 8|2@1+ (1,0) [0|3] "V"  HVESP01
+
+BO_ 2498862437 HVESP01_Data10: 8 HVESP01
+ SG_ HVESP01_hvBusPassveIsoTestResult : 48|16@1+ (0.1,0) [0|6425.5] "ohm per V"  HVESP01
+ SG_ HVESP01_hvBusActiveIsoTestResult : 32|16@1+ (0.1,0) [0|6425.5] "ohm per V"  HVESP01
+ SG_ HVESP01_lowestCellSocCellNum : 24|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_lowestCellSocModNum : 16|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_highestCellSocCellNum : 8|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_highestCellSocModNum : 0|8@1+ (1,0) [0|250] "count"  HVESP01
+
+BO_ 2498862181 HVESP01_Data09: 8 HVESP01
+ SG_ HVESP01_lowestCellTempModNum : 16|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_highestCellTempModNum : 0|8@1+ (1,0) [0|250] "count"  HVESP01
+
+BO_ 2498861925 HVESP01_Data08: 8 HVESP01
+ SG_ HVESP01_averageCellVoltage : 32|16@1+ (0.001,0) [0|64.255] "V"  HVESP01
+ SG_ HVESP01_lowestCellVoltCellNum : 24|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_lowestCellVoltModNum : 16|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_highestCellVoltCellNum : 8|8@1+ (1,0) [0|250] "count"  HVESP01
+ SG_ HVESP01_highestCellVoltModNum : 0|8@1+ (1,0) [0|250] "count"  HVESP01
+
+BO_ 2498861157 HVESP01_Data07: 8 HVESP01
+ SG_ HVESP01_maxChargeVoltageLimit : 48|16@1+ (0.05,0) [0|3212.75] "V"  HVESP01
+ SG_ HVESP01_chargeEnergyCapacity : 24|24@1+ (0.001,0) [0|16449.535] "kWh"  HVESP01
+ SG_ HVESP01_dischargeEnergyCapacity : 0|24@1+ (0.001,0) [0|16449.535] "kWh"  HVESP01
+
+BO_ 2498860389 HVESP01_Data05: 8 HVESP01
+ SG_ HVESP01_highestSoc : 48|16@1+ (0.0015625,0) [0|100.3984375] "%"  HVESP01
+ SG_ HVESP01_lowestSoc : 32|16@1+ (0.0015625,0) [0|100.3984375] "%"  HVESP01
+ SG_ HVESP01_chargeCurrentLimit : 16|16@1+ (0.05,-1600) [-1600|1612.75] "A"  HVESP01
+ SG_ HVESP01_dischargeCurrentLimit : 0|16@1+ (0.05,-1600) [-1600|1612.75] "A"  HVESP01
+
+BO_ 2498859877 HVESP01_Data03: 8 HVESP01
+ SG_ HVESP01_ambientTemperature : 8|8@1- (1,25) [-103|152] "C"  HVESP01
+ SG_ HVESP01_averageCellTemperature : 32|8@1- (1,25) [-103|152] "C"  HVESP01
+ SG_ HVESP01_lowestCellTemperature : 16|8@1- (1,25) [-103|152] "C"  HVESP01
+ SG_ HVESP01_highestCellTemperature : 0|8@1- (1,25) [-103|152] "C"  HVESP01
+ SG_ HVESP01_coolantTemperature : 24|8@1- (1,25) [-103|152] "C"  HVESP01
+
+BO_ 2498859621 HVESP01_Data02: 8 HVESP01
+ SG_ HVESP01_FaultLevel : 56|4@1+ (1,0) [0|15] ""  HVESP01
+ SG_ HVESP01_lowestCellVoltage : 32|16@1+ (0.001,0) [0|64.255] "V"  HVESP01
+ SG_ HVESP01_highestCellVoltage : 16|16@1+ (0.001,0) [0|64.255] "V"  HVESP01
+ SG_ HVESP01_fastUpdateSoc : 0|16@1+ (0.0015625,0) [0|100.3984375] "%"  HVESP01
+
+BO_ 2498859365 HVESP01_Data01: 8 HVESP01
+ SG_ HVESP01_current : 48|16@1+ (0.05,-1600) [-1600|1612.75] "A"  HVESP01
+ SG_ HVESP01_voltageLevel : 32|16@1+ (0.05,0) [0|3212.75] "V"  HVESP01
+ SG_ HVESP01_availableDischargePower : 0|16@1+ (0.05,0) [0|3212.75] "kW"  HVESP01
+ SG_ HVESP01_availableChargePower : 16|16@1+ (0.05,0) [0|3212.75] "kW"  HVESP01
+
+BO_ 2499743845 HVESP01_DiagnosticA: 8 HVESP01
+ SG_ HVESP01_vBrickOverSev : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickOverMod : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickOverWar : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVESP01Quiet : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderMod : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderWar : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverSev : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverMod : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverWar : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderSev : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderMod : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderWar : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargesev : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargesev : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverHardware : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosDcContStuckOpen : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosDcContWelded : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegDcContStuckOpen : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegDcContWelded : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgTooFast : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgContWelded : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgTimeout : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgContStuckOpen : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleImbalance : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleMIA : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SensePackVoltError : 48|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseLoadVoltError : 62|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseShuntError : 60|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseFcVoltError : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Placeholder14 : 56|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499744101 HVESP01_DiagnosticB: 8 HVESP01
+ SG_ HVESP01_SenseBrickImpHigh : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AFEfault : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AFEerror : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVESP01MIA : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverSev : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverMod : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverWar : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AbnormReset : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseAuxVoltError : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CalibrationInvalid : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TaskLockup : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_RAMover : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickOverdischarge : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickOvercharge : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalancePer : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempBrickImbalance : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CapPackLow : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_rBrickHigh : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PowerpackInsuffErr : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickSoftShort : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_chargeUndercurrent : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILcurrentSourceError : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SRS : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationExtWar : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationIntWar : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PyroFuseBlown : 48|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderSev : 62|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_chargePrechargeTimeout : 60|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultModerate : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultWarning : 56|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499744357 HVESP01_DiagnosticC: 8 HVESP01
+ SG_ HVESP01_PackVoltageImbalance : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechargeoverCurrent : 56|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILvoltageError : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILcurrentReturnError : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosFcContWelded : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosFcContStuckOpen : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegFcContWelded : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegFcContStuckOpen : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationIntFault : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationExtFault : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_pcb_error : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hall_eff_hi_rang_err : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_brick_volt_sns_open : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_5v_error : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_3_3_hot_error : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_12v_input_error : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_1_25v_error : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_shunt_MIA : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SBC_int_reg_error : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_pos_3_3v_analog_error : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_outlt_clnt_thrm_open : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_neg_3_3_analog_error : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_inlet_clnt_thrm_open : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hall_eff_lo_rang_err : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_outlt_clnt_thrm_short : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_inlet_clnt_thrm_short : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_3_3v_error : 48|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499744613 HVESP01_DiagnosticD: 8 HVESP01
+ SG_ HVESP01_BusJoinFailed : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultSevere : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Cal2PackMismatch : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HardwareUvloError : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargemod : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_afe_pwr_wire_open : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HardwareOVError : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_DoubleDcContWeld : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CurrentMismatch : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceWar : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceMod : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceSev : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Placeholder06 : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargewar : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SpeakerMia : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsoSpiBreak : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_VersionMismatch : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SystemPrechargeFail : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargemod : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargewar : 32|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499745125 HVESP01_DiagnosticPrevA: 8 HVESP01
+ SG_ HVESP01_vBrickOverSev : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickOverMod : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickOverWar : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVESP01Quiet : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderMod : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderWar : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverSev : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverMod : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleOverWar : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderSev : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderMod : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempModuleUnderWar : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargesev : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargesev : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverHardware : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosDcContStuckOpen : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosDcContWelded : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegDcContStuckOpen : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegDcContWelded : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgTooFast : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgContWelded : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgTimeout : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechgContStuckOpen : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleImbalance : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleMIA : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SensePackVoltError : 48|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseLoadVoltError : 62|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseShuntError : 60|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseFcVoltErrorr : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Placeholder14 : 56|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499745381 HVESP01_DiagnosticPrevB: 8 HVESP01
+ SG_ HVESP01_SenseBrickImpHigh : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AFEfault : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AFEerror : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVESP01MIA : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverSev : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverMod : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempAmbientOverWar : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_AbnormReset : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SenseAuxVoltError : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CalibrationInvalid : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TaskLockup : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_RAMover : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickOverdischarge : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickOvercharge : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalancePer : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_TempBrickImbalance : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CapPackLow : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_rBrickHigh : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PowerpackInsuffErr : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_BrickSoftShort : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_chargeUndercurrent : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILcurrentSourceError : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SRS : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationExtWar : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationIntWar : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PyroFuseBlown : 48|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickUnderSev : 62|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_chargePrechargeTimeout : 60|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultModerate : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultWarning : 56|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499745637 HVESP01_DiagnosticPrevC: 8 HVESP01
+ SG_ HVESP01_PackVoltageImbalance : 58|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PrechargeoverCurrent : 56|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILvoltageError : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HVILcurrentReturnError : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosFcContWelded : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_PosFcContStuckOpen : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegFcContWelded : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_NegFcContStuckOpen : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsospiBreak : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationIntFault : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsolationExtFault : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_pcb_error : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hall_eff_hi_rang_err : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_brick_volt_sns_open : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_5v_error : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_3_3_hot_error : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_12v_input_error : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_1_25v_error : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_shunt_MIA : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SBC_int_reg_error : 32|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_pos_3_3v_analog_error : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_outlt_clnt_thrm_open : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_neg_3_3_analog_error : 42|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_inlet_clnt_thrm_open : 40|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_hall_eff_lo_rang_err : 54|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_outlt_clnt_thrm_short : 52|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_inlet_clnt_thrm_short : 50|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_3_3v_error : 48|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499745893 HVESP01_DiagnosticPrevD: 8 HVESP01
+ SG_ HVESP01_BusJoinFailed : 10|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_ModuleThermFaultSevere : 8|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Cal2PackMismatch : 22|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HardwareUvloError : 20|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargemod : 46|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_afe_pwr_wire_open : 44|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_HardwareOVError : 18|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_DoubleDcContWeld : 16|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_CurrentMismatch : 30|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceWar : 28|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceMod : 26|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_vBrickImbalanceSev : 24|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_Placeholder06 : 38|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargewar : 36|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SpeakerMia : 2|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_IsoSpiBreak : 0|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_VersionMismatch : 14|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_SystemPrechargeFail : 12|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverdischargemod : 34|2@1+ (1,0) [0|3] ""  HVESP01
+ SG_ HVESP01_iOverchargewar : 32|2@1+ (1,0) [0|3] ""  HVESP01
+
+BO_ 2499739749 HVESP01_HVIL: 8 HVESP01
+ SG_ HVESP01_hvilSinkCrrnt : 24|6@1+ (1,0) [0|50] "mA"  HVESP01
+ SG_ HVESP01_hvilSourceVolt : 8|6@1+ (0.1,0) [0|6.3] "Volts"  HVESP01
+ SG_ HVESP01_hvilSourceCurrent : 16|5@1+ (1,0) [0|29] "mA"  HVESP01
+
+BO_ 2499740005 HVESP01_LimitsDischarge: 8 HVESP01
+ SG_ HVESP01_LimitDschrgPwrLongTerm : 48|12@1+ (1,0) [0|4095] "kW"  HVESP01
+ SG_ HVESP01_LimitDschrgPwrShortTerm : 16|12@1+ (1,0) [0|4095] "kW"  HVESP01
+ SG_ HVESP01_LimitDschrgPwrMidTerm : 32|12@1+ (1,0) [0|4095] "kW"  HVESP01
+
+BO_ 2499740261 HVESP01_LimitsRegen: 8 HVESP01
+ SG_ HVESP01_LimitRegenPwrLongTerm : 48|12@1+ (1,0) [0|4095] "kW"  HVESP01
+ SG_ HVESP01_LimitRegenPwrMidTerm : 32|12@1+ (1,0) [0|4095] "kW"  HVESP01
+ SG_ HVESP01_LimitRegenPwrShortTerm : 16|12@1+ (1,0) [0|4095] "kW"  HVESP01
+
+BO_ 2499760741 HVESP01_RTOS: 8 HVESP01
+ SG_ HVESP01_RTOS_Battery_1000Hz : 48|12@1+ (1,0) [0|4095] ""  HVESP01
+ SG_ HVESP01_RTOS_Battery_100Hz : 36|12@1+ (1,0) [0|4095] ""  HVESP01
+ SG_ HVESP01_RTOS_Battery_10hz : 24|12@1+ (1,0) [0|4095] ""  HVESP01
+ SG_ HVESP01_RTOS_AFE : 12|12@1+ (1,0) [0|4095] ""  HVESP01
+ SG_ HVESP01_RTOS_CAN : 0|12@1+ (1,0) [0|4095] ""  HVESP01
+
+BO_ 2499764325 HVESP01_DPP_Data: 8 HVESP01
+ SG_ HVESP01_DPP_Pack_ID : 0|8@1+ (1,0) [1|8] ""  HVESS
+ SG_ HVESP01_DPP_Data_ID : 8|8@1+ (1,0) [1|20] ""  HVESS
+ SG_ HVESP01_DPP_Data_Value : 16|32@1+ (1,0) [0|4294967295] "Depends on Data_ID"  HVESS
+ SG_ HVESP01_DPP_Message_Counter : 48|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP01_DPP_Data_Status : 56|8@1+ (1,0) [0|1] ""  HVESS
+
+BO_ 2499764581 HVESP01_DPP_Identifier: 8 HVESP01
+ SG_ HVESP01_DPP_Pack_ID : 0|8@1+ (1,0) [1|8] ""  HVESS
+ SG_ HVESP01_Segment_ID : 8|8@1+ (1,0) [0|255] ""  HVESS
+ SG_ HVESP01_DPP_Info : 16|48@1+ (1,0) [0|281474976710655] ""  HVESS
+
+BO_ 2499750501 HVESP01_AfePwrWireTotal_01_04: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_01 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_02 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_03 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_04 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499750757 HVESP01_AfePwrWireTotal_05_08: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_05 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_06 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_07 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_08 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499751013 HVESP01_AfePwrWireTotal_09_12: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_09 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_10 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_11 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_12 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499751269 HVESP01_AfePwrWireTotal_13_16: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_13 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_14 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_15 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_16 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499751525 HVESP01_AfePwrWireTotal_17_20: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_17 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_18 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_19 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_20 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499751781 HVESP01_AfePwrWireTotal_21_22: 8 HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_21 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireAfeTotal_22 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499752037 HVESP01_AfePwrWireCellSum_01_04: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_01 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_02 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_03 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_04 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499752293 HVESP01_AfePwrWireCellSum_05_08: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_05 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_06 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_07 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_08 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499752549 HVESP01_AfePwrWireCellSum_09_12: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_09 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_10 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_11 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_12 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499752805 HVESP01_AfePwrWireCellSum_13_16: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_13 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_14 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_15 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_16 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499753061 HVESP01_AfePwrWireCellSum_17_20: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_17 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_18 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_19 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_20 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499753317 HVESP01_AfePwrWireCellSum_21_22: 8 HVESP01
+ SG_ HVESP01_afePwrWireCellSum_21 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireCellSum_22 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499753573 HVESP01_AfePwrWireDelta_01_04: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_01 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_02 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_03 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_04 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499753829 HVESP01_AfePwrWireDelta_05_08: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_05 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_06 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_07 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_08 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499754085 HVESP01_AfePwrWireDelta_09_12: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_09 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_10 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_11 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_12 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499754341 HVESP01_AfePwrWireDelta_13_16: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_13 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_14 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_15 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_16 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499754597 HVESP01_AfePwrWireDelta_17_20: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_17 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_18 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_19 : 32|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_20 : 48|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+BO_ 2499754853 HVESP01_AfePwrWireDelta_21_22: 8 HVESP01
+ SG_ HVESP01_afePwrWireDelta_21 : 0|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+ SG_ HVESP01_afePwrWireDelta_22 : 16|16@1+ (0.01,0) [0|655.34] "V"  HVESP01
+
+
+
+CM_ "HV_CORE v1.3";
+CM_ BO_ 2498862693 "DEBUG Message";
+CM_ BO_ 2499740773 "Message on BATT (internal multi pack CAN bus) for backup speaker handshake";
+CM_ SG_ 2499740773 HVESP01_speakerClaimFlag "Active speaker will set this bit to 1.
+Rest of the packs will set this value to 0.
+Backup speaker will set this bit to 1 in case of _speakerClaimFlag_1
+";
+CM_ SG_ 2499740773 HVESP01_expectedSpeakerID "Default all the packs will set this value to 1.
+Pack 2 shall set this signal to 2 in case of trying to become speaker.  ";
+CM_ BO_ 2499764325 "EU battery passport; application-scheduled every 1000 ms; CAN ID 0x14FF6065; 500 kbit/s.";
+CM_ SG_ 2499764325 HVESP01_DPP_Pack_ID "One-based battery pack identifier (1-8); used by the speaker as the receive-array index.";
+CM_ SG_ 2499764325 HVESP01_DPP_Data_ID "1=Battery life status;  2=Battery capacity;  3-7=SOC history;  8-10=power capability;  11=charge/discharge count; 12-17=temperature history;  18=deep-discharge event count;  19=overcharge event count;  20=post-event status.";
+CM_ SG_ 2499764325 HVESP01_DPP_Data_Value "Raw value selected by Data_ID. See PASSPORT_DATA_ID_MAPPING for encoding and units. IDs 8-10 use 0.1 W/bit; other IDs use factor 1. All offsets are 0. Upper bits for values shorter than 32 bits are unspecified.";
+CM_ SG_ 2499764325 HVESP01_DPP_Message_Counter "Incremented per pack frame; rolls over 255 to 0.";
+CM_ SG_ 2499764325 HVESP01_DPP_Data_Status "0=Valid; 1=Invalid / not available.";
+CM_ BO_ 2499764581 "EU battery passport; application-scheduled every 1000 ms; CAN ID 0x14FF6165; 500 kbit/s.";
+CM_ SG_ 2499764581 HVESP01_DPP_Pack_ID "One-based battery pack identifier (1 to 8).";
+CM_ SG_ 2499764581 HVESP01_Segment_ID "Cumulative byte count for a 64-byte DPP ID: 6, 12, ..., 60, 64. Ten chunks carry six bytes and the final chunk carries four bytes; restart from the first chunk for the next transfer.";
+CM_ SG_ 2499764581 HVESP01_DPP_Info "Up to six DPP ID bytes in payload bytes 2-7. Identifier length is exactly 64 bytes. The final chunk contains four ID bytes followed by two zero padding bytes. No terminator is transmitted.";
+CM_ BO_ 2499750501 "AFE V+ total voltage, modules 01-04; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499750757 "AFE V+ total voltage, modules 05-08; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499751013 "AFE V+ total voltage, modules 09-12; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499751269 "AFE V+ total voltage, modules 13-16; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499751525 "AFE V+ total voltage, modules 17-20; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499751781 "AFE V+ total voltage, modules 21-22; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499752037 "AFE module cell voltage sum, modules 01-04; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499752293 "AFE module cell voltage sum, modules 05-08; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499752549 "AFE module cell voltage sum, modules 09-12; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499752805 "AFE module cell voltage sum, modules 13-16; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499753061 "AFE module cell voltage sum, modules 17-20; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499753317 "AFE module cell voltage sum, modules 21-22; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499753573 "AFE module absolute voltage difference, modules 01-04; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499753829 "AFE module absolute voltage difference, modules 05-08; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499754085 "AFE module absolute voltage difference, modules 09-12; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499754341 "AFE module absolute voltage difference, modules 13-16; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499754597 "AFE module absolute voltage difference, modules 17-20; 0xFFFF encodes unavailable.";
+CM_ BO_ 2499754853 "AFE module absolute voltage difference, modules 21-22; 0xFFFF encodes unavailable.";
+BA_DEF_ BO_  "GenMsgDiag" ENUM  "No","Yes";
+BA_DEF_ BU_  "GenNodeInstanceStartBit" INT 0 0;
+BA_DEF_ BU_  "GenNodeInstanceBitWidth" INT 0 0;
+BA_DEF_ BO_  "GenMsgInstanced" STRING ;
+BA_DEF_  "CustApp" INT 0 99;
+BA_DEF_  "CustNum" INT 0 99;
+BA_DEF_  "NetworkSpeed" ENUM  "250kBit/s","500kBit/s","1000kBit/s";
+BA_DEF_ SG_  "SigType" ENUM  "Default","Range","RangeSigned","ASCII","Discrete","Control","ReferencePGN","DTC","StringDelimiter","StringLength","StringLengthControl","MessageCounter","MessageChecksum";
+BA_DEF_ SG_  "GenSigEVName" STRING ;
+BA_DEF_ SG_  "GenSigILSupport" ENUM  "No","Yes";
+BA_DEF_ SG_  "GenSigSendType" ENUM  "Cyclic","OnWrite","OnWriteWithRepetition","OnChange","OnChangeWithRepetition","IfActive","IfActiveWithRepetition","NoSigSendType";
+BA_DEF_ BO_  "GenMsgFastOnStart" INT 0 100000;
+BA_DEF_ SG_  "GenSigInactiveValue" INT 0 0;
+BA_DEF_ BO_  "GenMsgCycleTimeFast" INT 0 3600000;
+BA_DEF_ BO_  "GenMsgNrOfRepetition" INT 0 1000000;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 10000;
+BA_DEF_ BO_  "GenMsgDelayTime" INT 0 1000;
+BA_DEF_ BO_  "GenMsgILSupport" ENUM  "No","Yes";
+BA_DEF_ BO_  "GenMsgStartDelayTime" INT 0 100000;
+BA_DEF_ BU_  "NodeLayerModules" STRING ;
+BA_DEF_ BU_  "ECU" STRING ;
+BA_DEF_ BU_  "NmJ1939SystemInstance" INT 0 15;
+BA_DEF_ BU_  "NmJ1939System" INT 0 127;
+BA_DEF_ BU_  "NmJ1939ManufacturerCode" INT 0 2047;
+BA_DEF_ BU_  "NmJ1939IndustryGroup" INT 0 7;
+BA_DEF_ BU_  "NmJ1939IdentityNumber" INT 0 2097151;
+BA_DEF_ BU_  "NmJ1939FunctionInstance" INT 0 7;
+BA_DEF_ BU_  "NmJ1939Function" INT 0 255;
+BA_DEF_ BU_  "NmJ1939ECUInstance" INT 0 3;
+BA_DEF_ BU_  "NmJ1939AAC" INT 0 1;
+BA_DEF_ BU_  "NmStationAddress" INT 0 255;
+BA_DEF_ BO_  "GenMsgSendType" ENUM  "cyclic","NotUsed","IfActive","NotUsed","NotUsed","NotUsed","NotUsed","NotUsed","noMsgSendType";
+BA_DEF_ BO_  "GenMsgRequestable" INT 0 1;
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 3600000;
+BA_DEF_ SG_  "SPN" INT 0 524287;
+BA_DEF_  "DBName" STRING ;
+BA_DEF_  "BusType" STRING ;
+BA_DEF_  "ProtocolType" STRING ;
+BA_DEF_ BO_  "VFrameFormat" ENUM  "StandardCAN","ExtendedCAN","reserved","J1939PG";
+BA_DEF_ SG_  "SystemSignalLongSymbol" STRING ;
+BA_DEF_DEF_  "GenMsgDiag" "No";
+BA_DEF_DEF_  "GenNodeInstanceStartBit" 0;
+BA_DEF_DEF_  "GenNodeInstanceBitWidth" 0;
+BA_DEF_DEF_  "GenMsgInstanced" "No";
+BA_DEF_DEF_  "CustApp" 0;
+BA_DEF_DEF_  "CustNum" 0;
+BA_DEF_DEF_  "NetworkSpeed" "250kBit/s";
+BA_DEF_DEF_  "SigType" "Default";
+BA_DEF_DEF_  "GenSigEVName" "Env@Nodename_@Signame";
+BA_DEF_DEF_  "GenSigILSupport" "Yes";
+BA_DEF_DEF_  "GenSigSendType" "NoSigSendType";
+BA_DEF_DEF_  "GenMsgFastOnStart" 0;
+BA_DEF_DEF_  "GenSigInactiveValue" 0;
+BA_DEF_DEF_  "GenMsgCycleTimeFast" 0;
+BA_DEF_DEF_  "GenMsgNrOfRepetition" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;
+BA_DEF_DEF_  "GenMsgDelayTime" 0;
+BA_DEF_DEF_  "GenMsgILSupport" "Yes";
+BA_DEF_DEF_  "GenMsgStartDelayTime" 0;
+BA_DEF_DEF_  "NodeLayerModules" "";
+BA_DEF_DEF_  "ECU" "";
+BA_DEF_DEF_  "NmJ1939SystemInstance" 0;
+BA_DEF_DEF_  "NmJ1939System" 0;
+BA_DEF_DEF_  "NmJ1939ManufacturerCode" 0;
+BA_DEF_DEF_  "NmJ1939IndustryGroup" 0;
+BA_DEF_DEF_  "NmJ1939IdentityNumber" 0;
+BA_DEF_DEF_  "NmJ1939FunctionInstance" 0;
+BA_DEF_DEF_  "NmJ1939Function" 0;
+BA_DEF_DEF_  "NmJ1939ECUInstance" 0;
+BA_DEF_DEF_  "NmJ1939AAC" 0;
+BA_DEF_DEF_  "NmStationAddress" 254;
+BA_DEF_DEF_  "GenMsgSendType" "noMsgSendType";
+BA_DEF_DEF_  "GenMsgRequestable" 1;
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "SPN" 0;
+BA_DEF_DEF_  "DBName" "";
+BA_DEF_DEF_  "BusType" "CAN";
+BA_DEF_DEF_  "ProtocolType" "J1939";
+BA_DEF_DEF_  "VFrameFormat" "J1939PG";
+BA_DEF_DEF_  "SystemSignalLongSymbol" "";
+BA_ "ProtocolType" "CAN";
+BA_ "BusType" "CAN";
+BA_ "DBName" "NF_BMS_Application";
+BA_ "GenNodeInstanceBitWidth" BU_ HVESP01 8;
+BA_ "GenNodeInstanceBitWidth" BU_ HVESS 8;
+BA_ "GenNodeInstanceStartBit" BU_ HVESS 4;
+BA_ "GenMsgCycleTime" BO_ 2498862693 1000;
+BA_ "VFrameFormat" BO_ 2498862693 1;
+BA_ "GenMsgInstanced" BO_ 2498862693 "Yes";
+BA_ "GenMsgDiag" BO_ 2498862693 1;
+BA_ "VFrameFormat" BO_ 2499795813 1;
+BA_ "GenMsgCycleTime" BO_ 2499795813 100;
+BA_ "GenMsgInstanced" BO_ 2499795813 "Yes";
+BA_ "VFrameFormat" BO_ 2499749477 1;
+BA_ "GenMsgInstanced" BO_ 2499749477 "Yes";
+BA_ "GenMsgInstanced" BO_ 2499746149 "Yes";
+BA_ "GenMsgSendType" BO_ 2499746149 0;
+BA_ "GenMsgCycleTime" BO_ 2499746149 200;
+BA_ "VFrameFormat" BO_ 2499746149 3;
+BA_ "GenMsgInstanced" BO_ 2499740773 "Yes";
+BA_ "VFrameFormat" BO_ 2499740773 3;
+BA_ "VFrameFormat" BO_ 2499748453 1;
+BA_ "GenMsgCycleTime" BO_ 2499748453 1000;
+BA_ "GenMsgInstanced" BO_ 2499748453 "Yes";
+BA_ "GenMsgDiag" BO_ 2499748453 1;
+BA_ "VFrameFormat" BO_ 2499748709 1;
+BA_ "GenMsgCycleTime" BO_ 2499748709 1000;
+BA_ "GenMsgInstanced" BO_ 2499748709 "Yes";
+BA_ "GenMsgDiag" BO_ 2499748709 1;
+BA_ "VFrameFormat" BO_ 2499748197 1;
+BA_ "GenMsgCycleTime" BO_ 2499748197 1000;
+BA_ "GenMsgInstanced" BO_ 2499748197 "Yes";
+BA_ "GenMsgDiag" BO_ 2499748197 1;
+BA_ "GenMsgCycleTime" BO_ 2499760997 1000;
+BA_ "GenMsgSendType" BO_ 2499760997 0;
+BA_ "GenMsgInstanced" BO_ 2499760997 "Yes";
+BA_ "VFrameFormat" BO_ 2499760997 3;
+BA_ "VFrameFormat" BO_ 2499743589 1;
+BA_ "GenMsgInstanced" BO_ 2499743589 "Yes";
+BA_ "GenMsgDiag" BO_ 2499743589 1;
+BA_ "VFrameFormat" BO_ 2499750245 1;
+BA_ "GenMsgInstanced" BO_ 2499750245 "Yes";
+BA_ "GenMsgDiag" BO_ 2499750245 1;
+BA_ "GenMsgInstanced" BO_ 2499748965 "Yes";
+BA_ "GenMsgDiag" BO_ 2499748965 1;
+BA_ "GenMsgSendType" BO_ 2499748965 0;
+BA_ "GenMsgCycleTime" BO_ 2499748965 100;
+BA_ "VFrameFormat" BO_ 2499748965 3;
+BA_ "GenMsgInstanced" BO_ 2499749221 "Yes";
+BA_ "GenMsgDiag" BO_ 2499749221 1;
+BA_ "GenMsgSendType" BO_ 2499749221 0;
+BA_ "GenMsgCycleTime" BO_ 2499749221 100;
+BA_ "VFrameFormat" BO_ 2499749221 3;
+BA_ "GenMsgInstanced" BO_ 2499761253 "Yes";
+BA_ "GenMsgDiag" BO_ 2499761253 1;
+BA_ "GenMsgSendType" BO_ 2499761253 0;
+BA_ "GenMsgCycleTime" BO_ 2499761253 100;
+BA_ "VFrameFormat" BO_ 2499761253 3;
+BA_ "GenMsgInstanced" BO_ 2499743333 "Yes";
+BA_ "VFrameFormat" BO_ 2499743333 3;
+BA_ "VFrameFormat" BO_ 2499743077 1;
+BA_ "GenMsgInstanced" BO_ 2499743077 "Yes";
+BA_ "GenMsgInstanced" BO_ 2499742821 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499742821 100;
+BA_ "VFrameFormat" BO_ 2499742821 1;
+BA_ "GenMsgInstanced" BO_ 2499747941 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499747941 100;
+BA_ "VFrameFormat" BO_ 2499747941 1;
+BA_ "GenMsgCycleTime" BO_ 2499742565 100;
+BA_ "GenMsgInstanced" BO_ 2499742565 "Yes";
+BA_ "VFrameFormat" BO_ 2499742565 3;
+BA_ "GenMsgCycleTime" BO_ 2499742309 100;
+BA_ "GenMsgInstanced" BO_ 2499742309 "Yes";
+BA_ "VFrameFormat" BO_ 2499742309 3;
+BA_ "GenMsgInstanced" BO_ 2499741797 "Yes";
+BA_ "GenMsgDiag" BO_ 2499741797 1;
+BA_ "VFrameFormat" BO_ 2499741797 3;
+BA_ "GenMsgInstanced" BO_ 2499742053 "Yes";
+BA_ "VFrameFormat" BO_ 2499742053 3;
+BA_ "GenMsgInstanced" BO_ 2499741541 "Yes";
+BA_ "VFrameFormat" BO_ 2499741541 3;
+BA_ "GenMsgInstanced" BO_ 2499741285 "Yes";
+BA_ "GenMsgDiag" BO_ 2499741285 1;
+BA_ "VFrameFormat" BO_ 2499741285 3;
+BA_ "GenMsgInstanced" BO_ 2499741029 "Yes";
+BA_ "GenMsgDiag" BO_ 2499741029 1;
+BA_ "VFrameFormat" BO_ 2499741029 3;
+BA_ "GenMsgCycleTime" BO_ 2499744869 100;
+BA_ "GenMsgInstanced" BO_ 2499744869 "Yes";
+BA_ "VFrameFormat" BO_ 2499744869 1;
+BA_ "GenMsgCycleTime" BO_ 2499740517 100;
+BA_ "GenMsgInstanced" BO_ 2499740517 "Yes";
+BA_ "GenMsgSendType" BO_ 2499740517 0;
+BA_ "VFrameFormat" BO_ 2499740517 3;
+BA_ "GenMsgCycleTime" BO_ 2499500389 100;
+BA_ "GenMsgInstanced" BO_ 2499500389 "Yes";
+BA_ "GenMsgSendType" BO_ 2499500389 0;
+BA_ "VFrameFormat" BO_ 2499500389 3;
+BA_ "GenMsgSendType" BO_ 2485806436 0;
+BA_ "VFrameFormat" BO_ 2485806436 3;
+BA_ "VFrameFormat" BO_ 2485806692 3;
+BA_ "VFrameFormat" BO_ 2485806948 3;
+BA_ "VFrameFormat" BO_ 2485807204 3;
+BA_ "VFrameFormat" BO_ 2485807460 3;
+BA_ "VFrameFormat" BO_ 2485807716 3;
+BA_ "VFrameFormat" BO_ 2485807972 3;
+BA_ "VFrameFormat" BO_ 2485808228 3;
+BA_ "VFrameFormat" BO_ 2485808484 3;
+BA_ "VFrameFormat" BO_ 2485808740 3;
+BA_ "GenMsgSendType" BO_ 2498860901 0;
+BA_ "GenMsgInstanced" BO_ 2498860901 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498860901 100;
+BA_ "VFrameFormat" BO_ 2498860901 3;
+BA_ "GenMsgSendType" BO_ 2498862437 0;
+BA_ "GenMsgInstanced" BO_ 2498862437 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498862437 100;
+BA_ "VFrameFormat" BO_ 2498862437 3;
+BA_ "GenMsgSendType" BO_ 2498862181 0;
+BA_ "GenMsgInstanced" BO_ 2498862181 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498862181 100;
+BA_ "VFrameFormat" BO_ 2498862181 3;
+BA_ "GenMsgSendType" BO_ 2498861925 0;
+BA_ "GenMsgInstanced" BO_ 2498861925 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498861925 100;
+BA_ "VFrameFormat" BO_ 2498861925 3;
+BA_ "GenMsgSendType" BO_ 2498861157 0;
+BA_ "GenMsgInstanced" BO_ 2498861157 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498861157 100;
+BA_ "VFrameFormat" BO_ 2498861157 3;
+BA_ "GenMsgSendType" BO_ 2498860389 0;
+BA_ "GenMsgInstanced" BO_ 2498860389 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498860389 100;
+BA_ "VFrameFormat" BO_ 2498860389 3;
+BA_ "GenMsgSendType" BO_ 2498859877 0;
+BA_ "GenMsgInstanced" BO_ 2498859877 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498859877 100;
+BA_ "VFrameFormat" BO_ 2498859877 3;
+BA_ "GenMsgSendType" BO_ 2498859621 0;
+BA_ "GenMsgInstanced" BO_ 2498859621 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498859621 100;
+BA_ "VFrameFormat" BO_ 2498859621 3;
+BA_ "GenMsgSendType" BO_ 2498859365 0;
+BA_ "GenMsgInstanced" BO_ 2498859365 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2498859365 100;
+BA_ "VFrameFormat" BO_ 2498859365 3;
+BA_ "GenMsgInstanced" BO_ 2499743845 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499743845 200;
+BA_ "GenMsgSendType" BO_ 2499743845 0;
+BA_ "VFrameFormat" BO_ 2499743845 3;
+BA_ "GenMsgInstanced" BO_ 2499744101 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499744101 200;
+BA_ "GenMsgSendType" BO_ 2499744101 0;
+BA_ "VFrameFormat" BO_ 2499744101 3;
+BA_ "GenMsgInstanced" BO_ 2499744357 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499744357 200;
+BA_ "GenMsgSendType" BO_ 2499744357 0;
+BA_ "VFrameFormat" BO_ 2499744357 3;
+BA_ "GenMsgInstanced" BO_ 2499744613 "Yes";
+BA_ "GenMsgSendType" BO_ 2499744613 0;
+BA_ "GenMsgCycleTime" BO_ 2499744613 200;
+BA_ "VFrameFormat" BO_ 2499744613 3;
+BA_ "GenMsgInstanced" BO_ 2499745125 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499745125 200;
+BA_ "GenMsgSendType" BO_ 2499745125 0;
+BA_ "VFrameFormat" BO_ 2499745125 3;
+BA_ "GenMsgInstanced" BO_ 2499745381 "Yes";
+BA_ "GenMsgSendType" BO_ 2499745381 0;
+BA_ "GenMsgCycleTime" BO_ 2499745381 200;
+BA_ "VFrameFormat" BO_ 2499745381 3;
+BA_ "GenMsgInstanced" BO_ 2499745637 "Yes";
+BA_ "GenMsgSendType" BO_ 2499745637 0;
+BA_ "GenMsgCycleTime" BO_ 2499745637 200;
+BA_ "VFrameFormat" BO_ 2499745637 3;
+BA_ "GenMsgInstanced" BO_ 2499745893 "Yes";
+BA_ "GenMsgSendType" BO_ 2499745893 0;
+BA_ "GenMsgCycleTime" BO_ 2499745893 200;
+BA_ "VFrameFormat" BO_ 2499745893 3;
+BA_ "GenMsgInstanced" BO_ 2499739749 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499739749 100;
+BA_ "GenMsgSendType" BO_ 2499739749 0;
+BA_ "VFrameFormat" BO_ 2499739749 3;
+BA_ "GenMsgInstanced" BO_ 2499740005 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499740005 1000;
+BA_ "GenMsgSendType" BO_ 2499740005 0;
+BA_ "VFrameFormat" BO_ 2499740005 3;
+BA_ "GenMsgInstanced" BO_ 2499740261 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499740261 1000;
+BA_ "GenMsgSendType" BO_ 2499740261 0;
+BA_ "VFrameFormat" BO_ 2499740261 3;
+BA_ "GenMsgInstanced" BO_ 2499760741 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499760741 1000;
+BA_ "GenMsgSendType" BO_ 2499760741 0;
+BA_ "GenMsgDiag" BO_ 2499760741 1;
+BA_ "VFrameFormat" BO_ 2499760741 3;
+BA_ "VFrameFormat" BO_ 2499764325 1;
+BA_ "GenMsgInstanced" BO_ 2499764325 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499764325 0;
+BA_ "GenMsgSendType" BO_ 2499764325 0;
+BA_ "VFrameFormat" BO_ 2499764581 1;
+BA_ "GenMsgInstanced" BO_ 2499764581 "Yes";
+BA_ "GenMsgCycleTime" BO_ 2499764581 0;
+BA_ "GenMsgSendType" BO_ 2499764581 0;
+BA_ "GenMsgSendType" BO_ 2499750501 0;
+BA_ "GenMsgInstanced" BO_ 2499750501 "Yes";
+BA_ "GenMsgDiag" BO_ 2499750501 1;
+BA_ "GenMsgCycleTime" BO_ 2499750501 1000;
+BA_ "VFrameFormat" BO_ 2499750501 3;
+BA_ "GenMsgSendType" BO_ 2499750757 0;
+BA_ "GenMsgInstanced" BO_ 2499750757 "Yes";
+BA_ "GenMsgDiag" BO_ 2499750757 1;
+BA_ "GenMsgCycleTime" BO_ 2499750757 1000;
+BA_ "VFrameFormat" BO_ 2499750757 3;
+BA_ "GenMsgSendType" BO_ 2499751013 0;
+BA_ "GenMsgInstanced" BO_ 2499751013 "Yes";
+BA_ "GenMsgDiag" BO_ 2499751013 1;
+BA_ "GenMsgCycleTime" BO_ 2499751013 1000;
+BA_ "VFrameFormat" BO_ 2499751013 3;
+BA_ "GenMsgSendType" BO_ 2499751269 0;
+BA_ "GenMsgInstanced" BO_ 2499751269 "Yes";
+BA_ "GenMsgDiag" BO_ 2499751269 1;
+BA_ "GenMsgCycleTime" BO_ 2499751269 1000;
+BA_ "VFrameFormat" BO_ 2499751269 3;
+BA_ "GenMsgSendType" BO_ 2499751525 0;
+BA_ "GenMsgInstanced" BO_ 2499751525 "Yes";
+BA_ "GenMsgDiag" BO_ 2499751525 1;
+BA_ "GenMsgCycleTime" BO_ 2499751525 1000;
+BA_ "VFrameFormat" BO_ 2499751525 3;
+BA_ "GenMsgSendType" BO_ 2499751781 0;
+BA_ "GenMsgInstanced" BO_ 2499751781 "Yes";
+BA_ "GenMsgDiag" BO_ 2499751781 1;
+BA_ "GenMsgCycleTime" BO_ 2499751781 1000;
+BA_ "VFrameFormat" BO_ 2499751781 3;
+BA_ "GenMsgSendType" BO_ 2499752037 0;
+BA_ "GenMsgInstanced" BO_ 2499752037 "Yes";
+BA_ "GenMsgDiag" BO_ 2499752037 1;
+BA_ "GenMsgCycleTime" BO_ 2499752037 1000;
+BA_ "VFrameFormat" BO_ 2499752037 3;
+BA_ "GenMsgSendType" BO_ 2499752293 0;
+BA_ "GenMsgInstanced" BO_ 2499752293 "Yes";
+BA_ "GenMsgDiag" BO_ 2499752293 1;
+BA_ "GenMsgCycleTime" BO_ 2499752293 1000;
+BA_ "VFrameFormat" BO_ 2499752293 3;
+BA_ "GenMsgSendType" BO_ 2499752549 0;
+BA_ "GenMsgInstanced" BO_ 2499752549 "Yes";
+BA_ "GenMsgDiag" BO_ 2499752549 1;
+BA_ "GenMsgCycleTime" BO_ 2499752549 1000;
+BA_ "VFrameFormat" BO_ 2499752549 3;
+BA_ "GenMsgSendType" BO_ 2499752805 0;
+BA_ "GenMsgInstanced" BO_ 2499752805 "Yes";
+BA_ "GenMsgDiag" BO_ 2499752805 1;
+BA_ "GenMsgCycleTime" BO_ 2499752805 1000;
+BA_ "VFrameFormat" BO_ 2499752805 3;
+BA_ "GenMsgSendType" BO_ 2499753061 0;
+BA_ "GenMsgInstanced" BO_ 2499753061 "Yes";
+BA_ "GenMsgDiag" BO_ 2499753061 1;
+BA_ "GenMsgCycleTime" BO_ 2499753061 1000;
+BA_ "VFrameFormat" BO_ 2499753061 3;
+BA_ "GenMsgSendType" BO_ 2499753317 0;
+BA_ "GenMsgInstanced" BO_ 2499753317 "Yes";
+BA_ "GenMsgDiag" BO_ 2499753317 1;
+BA_ "GenMsgCycleTime" BO_ 2499753317 1000;
+BA_ "VFrameFormat" BO_ 2499753317 3;
+BA_ "GenMsgSendType" BO_ 2499753573 0;
+BA_ "GenMsgInstanced" BO_ 2499753573 "Yes";
+BA_ "GenMsgDiag" BO_ 2499753573 1;
+BA_ "GenMsgCycleTime" BO_ 2499753573 1000;
+BA_ "VFrameFormat" BO_ 2499753573 3;
+BA_ "GenMsgSendType" BO_ 2499753829 0;
+BA_ "GenMsgInstanced" BO_ 2499753829 "Yes";
+BA_ "GenMsgDiag" BO_ 2499753829 1;
+BA_ "GenMsgCycleTime" BO_ 2499753829 1000;
+BA_ "VFrameFormat" BO_ 2499753829 3;
+BA_ "GenMsgSendType" BO_ 2499754085 0;
+BA_ "GenMsgInstanced" BO_ 2499754085 "Yes";
+BA_ "GenMsgDiag" BO_ 2499754085 1;
+BA_ "GenMsgCycleTime" BO_ 2499754085 1000;
+BA_ "VFrameFormat" BO_ 2499754085 3;
+BA_ "GenMsgSendType" BO_ 2499754341 0;
+BA_ "GenMsgInstanced" BO_ 2499754341 "Yes";
+BA_ "GenMsgDiag" BO_ 2499754341 1;
+BA_ "GenMsgCycleTime" BO_ 2499754341 1000;
+BA_ "VFrameFormat" BO_ 2499754341 3;
+BA_ "GenMsgSendType" BO_ 2499754597 0;
+BA_ "GenMsgInstanced" BO_ 2499754597 "Yes";
+BA_ "GenMsgDiag" BO_ 2499754597 1;
+BA_ "GenMsgCycleTime" BO_ 2499754597 1000;
+BA_ "VFrameFormat" BO_ 2499754597 3;
+BA_ "GenMsgSendType" BO_ 2499754853 0;
+BA_ "GenMsgInstanced" BO_ 2499754853 "Yes";
+BA_ "GenMsgDiag" BO_ 2499754853 1;
+BA_ "GenMsgCycleTime" BO_ 2499754853 1000;
+BA_ "VFrameFormat" BO_ 2499754853 3;
+BA_ "GenSigStartValue" SG_ 2499795813 HVESP01_VFC 0;
+BA_ "GenSigStartValue" SG_ 2499795813 HVESP01_diagVFCPos 0;
+BA_ "GenSigStartValue" SG_ 2499795813 HVESP01_diagVFCNeg 0;
+BA_ "GenSigStartValue" SG_ 2499746149 HVESP01_currentSecondary 0;
+BA_ "GenSigStartValue" SG_ 2499746149 HVESP01_currentPrimary 0;
+BA_ "SystemSignalLongSymbol" SG_ 2499760997 HVESP01_packBoardDetails_revPath "HVESP01_packBoardDetails_revPathBreak";
+BA_ "SystemSignalLongSymbol" SG_ 2499760997 HVESP01_packBoardDetails_fwdPath "HVESP01_packBoardDetails_fwdPathBreak";
+BA_ "GenSigStartValue" SG_ 2499764325 HVESP01_DPP_Pack_ID 1;
+BA_ "GenSigStartValue" SG_ 2499764325 HVESP01_DPP_Data_ID 1;
+BA_ "GenSigStartValue" SG_ 2499764581 HVESP01_DPP_Pack_ID 1;
+BA_ "SigType" SG_ 2499764581 HVESP01_DPP_Info 3;
+VAL_ 2498862693 HVESP01_hvBusFcPosContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_ 2498862693 HVESP01_hvBusFcNegContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_ 2498862693 HVESP01_hvBusNegContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_ 2498862693 HVESP01_hvBusPosContState 3 "NA" 2 "Error" 1 "ContactorClosed" 0 "ContactorOpen" ;
+VAL_ 2499740773 HVESP01_SystemState 14 "Unknown" 13 "Disconnect" 12 "Charge" 11 "Drive" 10 "ExternalIsoTestCharge" 9 "ExternalIsoTestDrive" 8 "ConnectChargeStagger" 7 "ConnectChargeBusJoin" 6 "ConnectChargePrechg" 5 "ConnectDriveStagger" 4 "ConnectDriveBusJoin" 3 "ConnectDrivePrechg" 2 "StandbyReady" 1 "StandbyNotReady" 0 "Cooldown" ;
+VAL_ 2499760997 HVESP01_packBoardDetails_board 3 "Unknown" 2 "Core" 1 "JuiceBox" 0 "BaldEagle" ;
+VAL_ 2499743077 HVESP01_SerNum_Location 2 "Springboro" 1 "Lake Orion Tech Center" 0 "Unknown" ;
+VAL_ 2499743077 HVESP01_SerNum_PartNo_SubVersion 0 "AA" 1 "AB" 2 "AC" 3 "AD" 4 "AE" 5 "AF" 6 "AG" 7 "AH" 8 "AI" 9 "AJ" 10 "AK" 11 "AL" 12 "AM" 13 "AN" 14 "AO" 15 "AP" 16 "AQ" 17 "AR" 18 "AS" 19 "AT" 20 "AU" 21 "AV" 22 "AW" 23 "AX" 24 "AY" 25 "AZ" 32 "BA" 33 "BB" 34 "BC" 35 "BD" 36 "BE" 37 "BF" 38 "BG" 39 "BH" 40 "BI" 41 "BJ" 42 "BK" 43 "BL" 44 "BM" 45 "BN" 46 "BO" 47 "BP" 48 "BQ" 49 "BR" 50 "BS" 51 "BT" 52 "BU" 53 "BV" 54 "BW" 55 "BX" 56 "BY" 57 "BZ" 64 "CA" 65 "CB" 66 "CC" 67 "CD" 68 "CE" 69 "CF" 70 "CG" 71 "CH" 72 "CI" 73 "CJ" 74 "CK" 75 "CL" 76 "CM" 77 "CN" 78 "CO" 79 "CP" 80 "CQ" 81 "CR" 82 "CS" 83 "CT" 84 "CU" 85 "CV" 86 "CW" 87 "CX" 88 "CY" 89 "CZ" 96 "DA" 97 "DB" 98 "DC" 99 "DD" 100 "DE" 101 "DF" 102 "DG" 103 "DH" 104 "DI" 105 "DJ" 106 "DK" 107 "DL" 108 "DM" 109 "DN" 110 "DO" 111 "DP" 112 "DQ" 113 "DR" 114 "DS" 115 "DT" 116 "DU" 117 "DV" 118 "DW" 119 "DX" 120 "DY" 121 "DZ" 128 "EA" 129 "EB" 130 "EC" 131 "ED" 132 "EE" 133 "EF" 134 "EG" 135 "EH" 136 "EI" 137 "EJ" 138 "EK" 139 "EL" 140 "EM" 141 "EN" 142 "EO" 143 "EP" 144 "EQ" 145 "ER" 146 "ES" 147 "ET" 148 "EU" 149 "EV" 150 "EW" 151 "EX" 152 "EY" 153 "EZ" 160 "FA" 161 "FB" 162 "FC" 163 "FD" 164 "FE" 165 "FF" 166 "FG" 167 "FH" 168 "FI" 169 "FJ" 170 "FK" 171 "FL" 172 "FM" 173 "FN" 174 "FO" 175 "FP" 176 "FQ" 177 "FR" 178 "FS" 179 "FT" 180 "FU" 181 "FV" 182 "FW" 183 "FX" 184 "FY" 185 "FZ" 192 "GA" 193 "GB" 194 "GC" 195 "GD" 196 "GE" 197 "GF" 198 "GG" 199 "GH" 200 "GI" 201 "GJ" 202 "GK" 203 "GL" 204 "GM" 205 "GN" 206 "GO" 207 "GP" 208 "GQ" 209 "GR" 210 "GS" 211 "GT" 212 "GU" 213 "GV" 214 "GW" 215 "GX" 216 "GY" 217 "GZ" 224 "HA" 225 "HB" 226 "HC" 227 "HD" 228 "HE" 229 "HF" 230 "HG" 231 "HH" 232 "HI" 233 "HJ" 234 "HK" 235 "HL" 236 "HM" 237 "HN" 238 "HO" 239 "HP" 240 "HQ" 241 "HR" 242 "HS" 243 "HT" 244 "HU" 245 "HV" 246 "HW" 247 "HX" 248 "HY" 249 "HZ" 256 "IA" 257 "IB" 258 "IC" 259 "ID" 260 "IE" 261 "IF" 262 "IG" 263 "IH" 264 "II" 265 "IJ" 266 "IK" 267 "IL" 268 "IM" 269 "IN" 270 "IO" 271 "IP" 272 "IQ" 273 "IR" 274 "IS" 275 "IT" 276 "IU" 277 "IV" 278 "IW" 279 "IX" 280 "IY" 281 "IZ" 288 "JA" 289 "JB" 290 "JC" 291 "JD" 292 "JE" 293 "JF" 294 "JG" 295 "JH" 296 "JI" 297 "JJ" 298 "JK" 299 "JL" 300 "JM" 301 "JN" 302 "JO" 303 "JP" 304 "JQ" 305 "JR" 306 "JS" 307 "JT" 308 "JU" 309 "JV" 310 "JW" 311 "JX" 312 "JY" 313 "JZ" 320 "KA" 321 "KB" 322 "KC" 323 "KD" 324 "KE" 325 "KF" 326 "KG" 327 "KH" 328 "KI" 329 "KJ" 330 "KK" 331 "KL" 332 "KM" 333 "KN" 334 "KO" 335 "KP" 336 "KQ" 337 "KR" 338 "KS" 339 "KT" 340 "KU" 341 "KV" 342 "KW" 343 "KX" 344 "KY" 345 "KZ" 352 "LA" 353 "LB" 354 "LC" 355 "LD" 356 "LE" 357 "LF" 358 "LG" 359 "LH" 360 "LI" 361 "LJ" 362 "LK" 363 "LL" 364 "LM" 365 "LN" 366 "LO" 367 "LP" 368 "LQ" 369 "LR" 370 "LS" 371 "LT" 372 "LU" 373 "LV" 374 "LW" 375 "LX" 376 "LY" 377 "LZ" 384 "MA" 385 "MB" 386 "MC" 387 "MD" 388 "ME" 389 "MF" 390 "MG" 391 "MH" 392 "MI" 393 "MJ" 394 "MK" 395 "ML" 396 "MM" 397 "MN" 398 "MO" 399 "MP" 400 "MQ" 401 "MR" 402 "MS" 403 "MT" 404 "MU" 405 "MV" 406 "MW" 407 "MX" 408 "MY" 409 "MZ" 416 "NA" 417 "NB" 418 "NC" 419 "ND" 420 "NE" 421 "NF" 422 "NG" 423 "NH" 424 "NI" 425 "NJ" 426 "NK" 427 "NL" 428 "NM" 429 "NN" 430 "NO" 431 "NP" 432 "NQ" 433 "NR" 434 "NS" 435 "NT" 436 "NU" 437 "NV" 438 "NW" 439 "NX" 440 "NY" 441 "NZ" 448 "OA" 449 "OB" 450 "OC" 451 "OD" 452 "OE" 453 "OF" 454 "OG" 455 "OH" 456 "OI" 457 "OJ" 458 "OK" 459 "OL" 460 "OM" 461 "ON" 462 "OO" 463 "OP" 464 "OQ" 465 "OR" 466 "OS" 467 "OT" 468 "OU" 469 "OV" 470 "OW" 471 "OX" 472 "OY" 473 "OZ" 480 "PA" 481 "PB" 482 "PC" 483 "PD" 484 "PE" 485 "PF" 486 "PG" 487 "PH" 488 "PI" 489 "PJ" 490 "PK" 491 "PL" 492 "PM" 493 "PN" 494 "PO" 495 "PP" 496 "PQ" 497 "PR" 498 "PS" 499 "PT" 500 "PU" 501 "PV" 502 "PW" 503 "PX" 504 "PY" 505 "PZ" 512 "QA" 513 "QB" 514 "QC" 515 "QD" 516 "QE" 517 "QF" 518 "QG" 519 "QH" 520 "QI" 521 "QJ" 522 "QK" 523 "QL" 524 "QM" 525 "QN" 526 "QO" 527 "QP" 528 "QQ" 529 "QR" 530 "QS" 531 "QT" 532 "QU" 533 "QV" 534 "QW" 535 "QX" 536 "QY" 537 "QZ" 544 "RA" 545 "RB" 546 "RC" 547 "RD" 548 "RE" 549 "RF" 550 "RG" 551 "RH" 552 "RI" 553 "RJ" 554 "RK" 555 "RL" 556 "RM" 557 "RN" 558 "RO" 559 "RP" 560 "RQ" 561 "RR" 562 "RS" 563 "RT" 564 "RU" 565 "RV" 566 "RW" 567 "RX" 568 "RY" 569 "RZ" 576 "SA" 577 "SB" 578 "SC" 579 "SD" 580 "SE" 581 "SF" 582 "SG" 583 "SH" 584 "SI" 585 "SJ" 586 "SK" 587 "SL" 588 "SM" 589 "SN" 590 "SO" 591 "SP" 592 "SQ" 593 "SR" 594 "SS" 595 "ST" 596 "SU" 597 "SV" 598 "SW" 599 "SX" 600 "SY" 601 "SZ" 608 "TA" 609 "TB" 610 "TC" 611 "TD" 612 "TE" 613 "TF" 614 "TG" 615 "TH" 616 "TI" 617 "TJ" 618 "TK" 619 "TL" 620 "TM" 621 "TN" 622 "TO" 623 "TP" 624 "TQ" 625 "TR" 626 "TS" 627 "TT" 628 "TU" 629 "TV" 630 "TW" 631 "TX" 632 "TY" 633 "TZ" 640 "UA" 641 "UB" 642 "UC" 643 "UD" 644 "UE" 645 "UF" 646 "UG" 647 "UH" 648 "UI" 649 "UJ" 650 "UK" 651 "UL" 652 "UM" 653 "UN" 654 "UO" 655 "UP" 656 "UQ" 657 "UR" 658 "US" 659 "UT" 660 "UU" 661 "UV" 662 "UW" 663 "UX" 664 "UY" 665 "UZ" 672 "VA" 673 "VB" 674 "VC" 675 "VD" 676 "VE" 677 "VF" 678 "VG" 679 "VH" 680 "VI" 681 "VJ" 682 "VK" 683 "VL" 684 "VM" 685 "VN" 686 "VO" 687 "VP" 688 "VQ" 689 "VR" 690 "VS" 691 "VT" 692 "VU" 693 "VV" 694 "VW" 695 "VX" 696 "VY" 697 "VZ" 704 "WA" 705 "WB" 706 "WC" 707 "WD" 708 "WE" 709 "WF" 710 "WG" 711 "WH" 712 "WI" 713 "WJ" 714 "WK" 715 "WL" 716 "WM" 717 "WN" 718 "WO" 719 "WP" 720 "WQ" 721 "WR" 722 "WS" 723 "WT" 724 "WU" 725 "WV" 726 "WW" 727 "WX" 728 "WY" 729 "WZ" 736 "XA" 737 "XB" 738 "XC" 739 "XD" 740 "XE" 741 "XF" 742 "XG" 743 "XH" 744 "XI" 745 "XJ" 746 "XK" 747 "XL" 748 "XM" 749 "XN" 750 "XO" 751 "XP" 752 "XQ" 753 "XR" 754 "XS" 755 "XT" 756 "XU" 757 "XV" 758 "XW" 759 "XX" 760 "XY" 761 "XZ" 768 "YA" 769 "YB" 770 "YC" 771 "YD" 772 "YE" 773 "YF" 774 "YG" 775 "YH" 776 "YI" 777 "YJ" 778 "YK" 779 "YL" 780 "YM" 781 "YN" 782 "YO" 783 "YP" 784 "YQ" 785 "YR" 786 "YS" 787 "YT" 788 "YU" 789 "YV" 790 "YW" 791 "YX" 792 "YY" 793 "YZ" 800 "ZA" 801 "ZB" 802 "ZC" 803 "ZD" 804 "ZE" 805 "ZF" 806 "ZG" 807 "ZH" 808 "ZI" 809 "ZJ" 810 "ZK" 811 "ZL" 812 "ZM" 813 "ZN" 814 "ZO" 815 "ZP" 816 "ZQ" 817 "ZR" 818 "ZS" 819 "ZT" 820 "ZU" 821 "ZV" 822 "ZW" 823 "ZX" 824 "ZY" 825 "ZZ" ;
+VAL_ 2499742821 HVESP01_fcposPackConStatusReq 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2499742821 HVESP01_fcnegPackConStatusReq 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2499742821 HVESP01_packstate 7 "Disengage" 6 "Connected" 5 "ExternalIsolationCheck" 4 "PrepareBusJoin" 3 "PrepareBusPrecharge" 2 "StandbyReady" 1 "StandbyNotReady" 0 "StandbyInit" ;
+VAL_ 2499742821 HVESP01_negPackConStatusReq 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2499742821 HVESP01_posPackConStatusReq 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2499742821 HVESP01_prechargeConStatusReq 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2485806436 HVESP01_systemHvStatus 3 "DontCare" 2 "Reserved" 1 "Active" 0 "Inactive" ;
+VAL_ 2485806436 HVESP01_hvBusPassveIsoTest 3 "DontCare" 2 "Reserved" 1 "PassiveIsolationTestRequested" 0 "PassiveIsolationTestNotRequested" ;
+VAL_ 2485806436 HVESP01_hvBusActiveIsoTest 3 "DontCare" 2 "Reserved" 1 "ActiveIsoTestRequested" 0 "ActiveIsoTestNotRequested" ;
+VAL_ 2485806436 HVESP01_powerDownCmd 3 "DontCare" 2 "EmergencyPowerDown" 1 "NormalPowerDown" 0 "PowerDownNotRequested" ;
+VAL_ 2485806436 HVESP01_hvBusConnectCmd 3 "DontCare" 2 "EmergencyContactorClose" 1 "CloseContactor" 0 "OpenContactor" ;
+VAL_ 2498860901 HVESP01_operationalStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "DisabledInt" 5 "DisabledExtCmd" 4 "EmergencyPowerDown" 3 "NormalPowerDown" 2 "Operational" 1 "InitComplete" 0 "InitInProcess" ;
+VAL_ 2498860901 HVESP01_hvBusConnectionStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "FastChgDisconnectioninProgress" 6 "FastChgConnectioninProgress" 5 "FastChgConnected" 4 "DisconnectedPreChgFail" 3 "DisconnectionInProcess" 2 "ConnectionInProcess" 1 "Connected" 0 "Disconnected" ;
+VAL_ 2498860901 HVESP01_cellBalancingActive 3 "NA" 2 "Error" 1 "CellBalancingActive" 0 "CellBalancingNotActive" ;
+VAL_ 2498860901 HVESP01_hvilStatus 3 "NA" 2 "Error" 1 "HvilOpen" 0 "HvilClosed" ;
+VAL_ 2498860901 HVESP01_hvBusPassveIsoTestStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "TestCompleteFault" 4 "TestCompleteMarginal" 3 "TestCompleteAcceptable" 2 "TestInProcess" 1 "TestRequestedNotInProgress" 0 "NoTestRequested" ;
+VAL_ 2498860901 HVESP01_hvBusActiveIsoTestStatus 15 "NA" 14 "Error" 13 "Reserved" 12 "Reserved" 11 "Reserved" 10 "Reserved" 9 "Reserved" 8 "Reserved" 7 "Reserved" 6 "Reserved" 5 "TestCompleteFault" 4 "TestCompleteMarginal" 3 "TestCompleteAcceptable" 2 "TestInProcess" 1 "TestRequestedNotInProgress" 0 "NoTestRequested" ;
+VAL_ 2498860901 HVESP01_hvBusPrechgRelayState 3 "NA" 2 "Error" 1 "RelayClosed" 0 "RelayOpen" ;
+VAL_ 2499764325 HVESP01_DPP_Data_ID 1 "Batt_Life_Status" 2 "Batt_Capacity" 3 "SocHisto_0To20" 4 "SocHisto_20To40" 5 "SocHisto_40To60" 6 "SocHisto_60To80" 7 "SocHisto_80To100" 8 "20SOC_PowerCap" 9 "50SOC_PowerCap" 10 "80SOC_PowerCap" 11 "Chg_Dchg_Counter" 12 "TEMP_LT_M20" 13 "TEMP_M20_0" 14 "TEMP_0_20" 15 "TEMP_20_40" 16 "TEMP_40_60" 17 "TEMP_GT_60" 18 "Deep_Dchg_Evt_Cnt" 19 "Overchg_Evt_Cnt" 20 "Post_Evt_Status" ;
+VAL_ 2499764325 HVESP01_DPP_Data_Status 0 "Valid" 1 "Invalid / not available" ;
+

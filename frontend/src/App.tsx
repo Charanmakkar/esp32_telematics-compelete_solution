@@ -9,6 +9,7 @@ import { AnalyticsPage } from "./pages/AnalyticsPage";
 import { ControlsPage } from "./pages/ControlsPage";
 import { AccountPage } from "./pages/AccountPage";
 import { CanPage } from "./pages/CanPage";
+import { BmsPage } from "./pages/BmsPage";
 
 function Protected() {
   const { user, loading } = useAuth();
@@ -39,6 +40,7 @@ export function App() {
             <Route path="analytics/:channelId" element={<AnalyticsPage />} />
             <Route path="controls" element={<ControlsPage />} />
             <Route path="can" element={<CanPage />} />
+            <Route path="bms" element={<BmsPage />} />
             <Route path="account" element={<AccountPage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>

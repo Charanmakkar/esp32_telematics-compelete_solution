@@ -1,6 +1,7 @@
 #include "mqtt_manager.h"
 #include "adc_manager.h"
 #include "command_handler.h"
+#include "diagnostic_manager.h"
 #include "wifi_manager.h"
 #include <inttypes.h>
 #include <stdarg.h>
@@ -25,6 +26,7 @@ typedef struct {
     char command_topic[NAV_TOPIC_CAPACITY];
     char ack_topic[NAV_TOPIC_CAPACITY];
     char status_topic[NAV_TOPIC_CAPACITY];
+    char diagnostic_topic[NAV_TOPIC_CAPACITY];
     char boot_id[37];
     char will[160];
     char incoming[NAV_COMMAND_CAPACITY];
@@ -33,27 +35,53 @@ typedef struct {
     bool incoming_retained;
     portMUX_TYPE counter_lock;
     uint32_t dropped;
+    bool diagnostic_reply_pending;
 } mqtt_context_t;
 static mqtt_context_t context = { .counter_lock = portMUX_INITIALIZER_UNLOCKED };
 
 bool mqtt_manager_publish_can(const char *frames, uint32_t queue_drops, uint32_t serial_drops,
-    uint32_t publish_drops, uint32_t missed, uint32_t overruns, uint32_t bus_errors)
+    uint32_t publish_drops, const char *statistics)
 {
     if (!context.client || !context.events ||
         !(xEventGroupGetBits(context.events) & NAV_MQTT_CONNECTED_BIT)) { return false; }
+    portENTER_CRITICAL(&context.counter_lock);
+    bool reply_pending = context.diagnostic_reply_pending;
+    portEXIT_CRITICAL(&context.counter_lock);
+    if (reply_pending) { return false; }
     char topic[NAV_TOPIC_CAPACITY];
-    char payload[7168];
+    char payload[8192];
     (void)snprintf(topic, sizeof(topic), "%s/%s/can", CONFIG_NAV_MQTT_TOPIC_PREFIX, context.config->device_id);
     const int n = snprintf(payload, sizeof(payload),
         "{\"schema_version\":1,\"device_id\":\"%s\",\"boot_id\":\"%s\",\"frames\":[%s],"
         "\"stats\":{\"queue_drops\":%" PRIu32 ",\"serial_drops\":%" PRIu32 ",\"publish_drops\":%" PRIu32
-        ",\"rx_missed\":%" PRIu32 ",\"rx_overruns\":%" PRIu32 ",\"bus_errors\":%" PRIu32 "}}",
+        ",%s}}",
         context.config->device_id, context.boot_id, frames, queue_drops, serial_drops,
-        publish_drops, missed, overruns, bus_errors);
+        publish_drops, statistics);
     if (n < 0 || (size_t)n >= sizeof(payload)) { return false; }
     /* Reserve half the shared outbox for existing telemetry and control acknowledgements. */
     if (esp_mqtt_client_get_outbox_size(context.client) > NAV_MQTT_OUTBOX_BYTES / 2) { return false; }
     return esp_mqtt_client_enqueue(context.client, topic, payload, n, MQTT_QOS, 0, true) >= 0;
+}
+
+bool mqtt_manager_is_connected(void)
+{
+    return context.events && (xEventGroupGetBits(context.events) & NAV_MQTT_CONNECTED_BIT);
+}
+
+const char *mqtt_manager_boot_id(void) { return context.boot_id; }
+void mqtt_manager_reserve_diagnostic_reply(bool reserve)
+{
+    portENTER_CRITICAL(&context.counter_lock);
+    context.diagnostic_reply_pending = reserve;
+    portEXIT_CRITICAL(&context.counter_lock);
+}
+
+bool mqtt_manager_diagnostic_publish(const char *json)
+{
+    if (!mqtt_manager_is_connected()) { return false; }
+    char topic[NAV_TOPIC_CAPACITY];
+    snprintf(topic, sizeof(topic), "%s/%s/diagnostic/response", CONFIG_NAV_MQTT_TOPIC_PREFIX, context.config->device_id);
+    return esp_mqtt_client_enqueue(context.client, topic, json, 0, MQTT_QOS, 0, true) >= 0;
 }
 
 static void count_dropped(mqtt_context_t *state, uint32_t count)
@@ -155,6 +183,7 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
     switch (id) {
     case MQTT_EVENT_CONNECTED:
         (void)xEventGroupSetBits(state->events, NAV_MQTT_CONNECTED_BIT);
+        (void)esp_mqtt_client_subscribe(state->client, state->diagnostic_topic, MQTT_QOS);
         if (esp_mqtt_client_subscribe(state->client, state->command_topic, MQTT_QOS) < 0) {
             ESP_LOGE("mqtt", "Command subscription enqueue failed");
         }
@@ -166,7 +195,12 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
         ESP_LOGW("mqtt", "Disconnected");
         break;
     case MQTT_EVENT_DATA:
-        if (event != NULL) { receive_fragment(state, event); }
+        if (event != NULL) {
+            bool matches = event->topic && event->topic_len == (int)strlen(state->diagnostic_topic) &&
+                memcmp(event->topic, state->diagnostic_topic, event->topic_len) == 0;
+            diagnostic_manager_fragment(event, matches);
+            receive_fragment(state, event);
+        }
         break;
     case MQTT_EVENT_ERROR:
         ESP_LOGW("mqtt", "Transport or broker error (credentials never logged)");
@@ -282,6 +316,8 @@ esp_err_t mqtt_manager_start(const app_config_t *config)
         random_words[0], (unsigned int)(random_words[1] >> 16U), (unsigned int)(random_words[1] & UINT32_C(0xffff)),
         (unsigned int)(random_words[2] >> 16U), (unsigned int)(random_words[2] & UINT32_C(0xffff)), random_words[3]);
     if (uuid_count != 36) { return ESP_FAIL; }
+    snprintf(context.diagnostic_topic, sizeof(context.diagnostic_topic), "%s/%s/diagnostic/request",
+        CONFIG_NAV_MQTT_TOPIC_PREFIX, config->device_id);
     const char *suffixes[] = { "telemetry", "command", "ack", "status" };
     char *topics[] = { context.telemetry_topic, context.command_topic, context.ack_topic, context.status_topic };
     for (size_t index = 0U; index < 4U; ++index) {
@@ -313,6 +349,7 @@ esp_err_t mqtt_manager_start(const app_config_t *config)
     context.client = esp_mqtt_client_init(&mqtt_config);
     if (context.client == NULL) { return ESP_ERR_NO_MEM; }
     ESP_RETURN_ON_ERROR(command_handler_init(acknowledge), "mqtt", "commands");
+    ESP_RETURN_ON_ERROR(diagnostic_manager_init(), "mqtt", "diagnostics");
     ESP_RETURN_ON_ERROR(esp_mqtt_client_register_event(context.client, ESP_EVENT_ANY_ID, mqtt_event, &context), "mqtt", "events");
     ESP_RETURN_ON_ERROR(esp_mqtt_client_start(context.client), "mqtt", "start");
     if (xTaskCreate(vMqttPublishTask, "nav_publish", 6144U, &context, 4U, NULL) != pdPASS) { return ESP_ERR_NO_MEM; }
