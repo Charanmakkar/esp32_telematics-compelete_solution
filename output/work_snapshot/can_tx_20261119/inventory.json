@@ -1,0 +1,206 @@
+{
+  "release": {
+    "sw_version": "1.1.8",
+    "source_sha256": "8148c3afe9b8fa5a0046a5f4b05c47ce58531288b845d8e405aea63358d0038b",
+    "built_at_utc": "2026-11-19T11:11:48+00:00"
+  },
+  "hardware_flashed": false,
+  "files": [
+    {
+      "source": ".runtime/can-tx-arbitration-build.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-arbitration-build.log.txt",
+      "redacted_values": 0,
+      "sha256": "ca428ff78adbf3a6bcb8c7a02aa3380172510825553b81f74180b21aa8ec6a47"
+    },
+    {
+      "source": ".runtime/can-tx-backend-tests.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-backend-tests.log.txt",
+      "redacted_values": 0,
+      "sha256": "7329b5d699401f6e668b2eeea5be216cbb651e596aa9e044f41b70b4ffdf7038"
+    },
+    {
+      "source": ".runtime/can-tx-build.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-build.log.txt",
+      "redacted_values": 0,
+      "sha256": "4757ddbb38f35704b2c64885a80869dd08d645da340ae1228a93d1b2205016fe"
+    },
+    {
+      "source": ".runtime/can-tx-flash.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-flash.log.txt",
+      "redacted_values": 0,
+      "sha256": "ffb6923120a4340d2cc66187a96715783af549a3d8cf119c0db18d0c10708cec"
+    },
+    {
+      "source": ".runtime/can-tx-frontend-tests.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-frontend-tests.log.txt",
+      "redacted_values": 0,
+      "sha256": "de035b011740093c5b53218accad254f1da27f2139a585b93fe758e7a9af7941"
+    },
+    {
+      "source": ".runtime/can-tx-live-serial.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-live-serial.log.txt",
+      "redacted_values": 0,
+      "sha256": "ed13ba25ff89c1e3e2d487cc8f6c1b00c66a253140df1645f14170e24f7c29af"
+    },
+    {
+      "source": ".runtime/can-tx-pin-build.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-pin-build.log.txt",
+      "redacted_values": 0,
+      "sha256": "b4f3d683216ecd1420c522eae8384121a595c45d82499a6dd9cea02d43de5f4f"
+    },
+    {
+      "source": ".runtime/can-tx-pin-flash.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-pin-flash.log.txt",
+      "redacted_values": 0,
+      "sha256": "5009472e0cf1f8e0a33b02b720c377044bdf4d796aa0188d4bb4b751567556d3"
+    },
+    {
+      "source": ".runtime/can-tx-serial.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can-tx-serial.log.txt",
+      "redacted_values": 0,
+      "sha256": "c5bcee1d2c140ee58c388f8ec6bedb7a57df2d30348eb5e64a418cb3b683b761"
+    },
+    {
+      "source": ".runtime/can_tx_pin_probe.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can_tx_pin_probe.py",
+      "redacted_values": 0,
+      "sha256": "213570ecf53c634247d10f13b54ae6bd7d0627e97058f522032a459c0ae035cc"
+    },
+    {
+      "source": ".runtime/can_tx_serial_check.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/can_tx_serial_check.py",
+      "redacted_values": 0,
+      "sha256": "b527ba794392c14b1a6f13a658d7e9a9eb141c3c9f1e16fa1ae69f5cd6cac1b9"
+    },
+    {
+      "source": ".runtime/capture_redeploy_serial.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/capture_redeploy_serial.py",
+      "redacted_values": 0,
+      "sha256": "76015a62662223a464098b3c109610d9639a141655adf9f03700f0b377f14bb6"
+    },
+    {
+      "source": ".runtime/redeploy-20261119-can-check.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/redeploy-20261119-can-check.log.txt",
+      "redacted_values": 0,
+      "sha256": "ec0dc81e21cdb471d21f432433305490f5c9d5e4d73354260bc24db041c318db"
+    },
+    {
+      "source": ".runtime/redeploy-20261119-flash.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/redeploy-20261119-flash.log.txt",
+      "redacted_values": 0,
+      "sha256": "e10a14f7ab448ae9120fa7abb0e7c3d809a1290c361617ae1aae712d682a774d"
+    },
+    {
+      "source": ".runtime/redeploy-20261119-serial.log",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/redeploy-20261119-serial.log.txt",
+      "redacted_values": 0,
+      "sha256": "53a16386750b8c089df67643860adc6f5dc7797f6831baa630ad21e62bb27ebf"
+    },
+    {
+      "source": ".runtime/restart_tx_services.ps1",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/restart_tx_services.ps1",
+      "redacted_values": 0,
+      "sha256": "6a5588290b69fa7b7065082ef27fab35aa54ad019a3d964c0290c4a7b5558253"
+    },
+    {
+      "source": ".runtime/run_pcan_receiver.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/run_pcan_receiver.py",
+      "redacted_values": 0,
+      "sha256": "65874903e7e3e3b2604db4225b1d6231c124e2f697356a4c9ee9b72021abd667"
+    },
+    {
+      "source": ".runtime/test_can_tx_live.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/test_can_tx_live.py",
+      "redacted_values": 0,
+      "sha256": "07f5a8efc2e5688ec9313d4a44afaec57a09b76e48180274067247279ad88d3e"
+    },
+    {
+      "source": ".runtime/verify_can_tx_deployment.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/verify_can_tx_deployment.py",
+      "redacted_values": 0,
+      "sha256": "86e08a90e45977db0cc22309c484043698defccf8a86b7714002958eb5b9eb4a"
+    },
+    {
+      "source": ".runtime/verify_redeploy.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/verify_redeploy.py",
+      "redacted_values": 0,
+      "sha256": "530db3d4cf3eab51272b096cbe97f9265b04432f03e8cb8b8f5f366bbc4e1194"
+    },
+    {
+      "source": ".runtime/verify_redeploy_can_live.py",
+      "copy": "output/work_snapshot/can_tx_20261119/runtime/verify_redeploy_can_live.py",
+      "redacted_values": 0,
+      "sha256": "5b1a9d5fcb3d7531dda1b5c7e8ae64950a67bf175c90b6bb968cef50c2bcff7b"
+    },
+    {
+      "source": "frontend/dist/assets/charts-ck5tuIFq.js",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/charts-ck5tuIFq.js",
+      "sha256": "4d8191291a0aa1aaf527803f140b4429ed33759632c9ba2b5cb0f250c6af4b4a"
+    },
+    {
+      "source": "frontend/dist/assets/index-BGX-DLtX.js",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/index-BGX-DLtX.js",
+      "sha256": "2bcee20293f7b64f76c45ac7e3b6082ce7a236f9a42c195cd99c75ce42c526a6"
+    },
+    {
+      "source": "frontend/dist/assets/index-BYd0GGdF.css",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/index-BYd0GGdF.css",
+      "sha256": "d52ac2527f6683b6a823876dc3b7f14de4f3a692a484fbc8d5e8875a8240b0a3"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-400-normal-C38fXH4l.woff2",
+      "sha256": "8909904ab6c872eb994093482a88a28eca2cd95912d7b6fecd72103b0dc07edc"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-400-normal-CyCys3Eg.woff",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-400-normal-CyCys3Eg.woff",
+      "sha256": "e20fa0b4fd2dd26e4d14b3ac3cc922509c3a63fa5e910e90c614544aa042dd45"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-500-normal-BL9OpVg8.woff",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-500-normal-BL9OpVg8.woff",
+      "sha256": "9b42c108da48b5ed55a3072e815ffee2d271562e6c0dd6998910e8f9c09e0a3d"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-500-normal-Cerq10X2.woff2",
+      "sha256": "f3779f1efccc4bdcdf9c0a02ab95bf6bd092ed09c48c08cedc725889edd1d19f"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-600-normal-CiBQ2DWP.woff",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-600-normal-CiBQ2DWP.woff",
+      "sha256": "6a9cb3a509b4eeaf12b7dda6c4aacac3e85d07f4201bf4dd716e332e692b87bd"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-600-normal-LgqL8muc.woff2",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-600-normal-LgqL8muc.woff2",
+      "sha256": "f9a06e79cd3a2a20951c0f0e28f66dd0e6d3fda73911d640a2125c8fcb78f21a"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-700-normal-BLAVimhd.woff",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-700-normal-BLAVimhd.woff",
+      "sha256": "7c5ed5655730de337704d3fc94628515cd7e3d8d32368871709bf56ac0397e7a"
+    },
+    {
+      "source": "frontend/dist/assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/inter-latin-700-normal-Yt3aPRUw.woff2",
+      "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491"
+    },
+    {
+      "source": "frontend/dist/assets/react-8Vnhhkrm.js",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/assets/react-8Vnhhkrm.js",
+      "sha256": "e0adcdef8e43d27336c4e39ab90b05ae4f9402a9796ba2de086c5e2004f2796b"
+    },
+    {
+      "source": "frontend/dist/index.html",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/index.html",
+      "sha256": "3d6696b5afa303f1c5ad3334069359cfd027eebe5fa1a540e50f9cca6a56f473"
+    },
+    {
+      "source": "frontend/dist/sw-version.json",
+      "copy": "output/work_snapshot/can_tx_20261119/gui/sw-version.json",
+      "sha256": "7f116520e5f56f78c9bfd0da1f232f952c523a9b13f0cdd013ed118918be2288"
+    }
+  ]
+}

@@ -423,3 +423,92 @@ included files and items retained locally: credentials/NVS, database backups,
 private reference security extraction, installed tools/dependencies and caches.
 Included text copies have credential values redacted; original local files are
 preserved. BMS diagnostic transmission remains unresolved as previously recorded.
+
+### Application flash and GUI redeployment — 19 November 2026
+
+Flashed application version **1.1.4**, build `2ae749ea5903`, to COM3 at
+115200 baud, application offset `0x10000`. The flash hash verified and startup
+reported the matching version/build. ESP32 MAC: `ec:62:60:9c:40:84`.
+Application SHA-256:
+`0af7b4d2a54b7c70838652a6b0bcb6914c9bd8e561ad3274bd059e5983c9e03c`.
+Bootloader, partition table and provisioned NVS were not written during this
+application-only flash. The production GUI build passed and the existing GUI
+service was relaunched on port 5173 with LAN access.
+
+The services were stopped at the start. Restarted the existing XAMPP MariaDB
+database (`C:/xampp/mysql/data/navsphere`), MQTT broker, backend and frontend.
+Mosquitto initially rejected its persisted state as an unrecognized format.
+Preserved the remaining state file as
+`.runtime/mqtt/mosquitto.db.unreadable-20261119-142547` and restarted the broker
+with fresh state. Existing database history and credentials were preserved.
+
+Initial CAN capture was empty. Once the bus was active, receive traffic became
+dominated by repeated transmissions and dashboard delivery was delayed. A PCAN
+comparison isolated missing acknowledgements: five seconds in listen-only mode
+received **18,524 identical 0x06E frames** plus 17 error frames. Five seconds
+with a normal-mode PCAN receiver received **2,640 frames across 29 CAN IDs**,
+with zero error frames. No application CAN messages or BMS commands were sent.
+
+Left a PCAN normal-mode receive helper running to supply acknowledgements for
+this bench setup: `.runtime/run_pcan_receiver.py`, process record
+`.runtime/pcan-receiver-process.json`, status `.runtime/pcan-receiver-status.json`.
+Keep PCAN connected and this receiver running while the BMS and listen-only
+ESP32 are the only other nodes. A normal-mode node on the real CAN network can
+supply these acknowledgements instead. The ESP32 remains listen-only at
+500 kbit/s, GPIO25 TX/GPIO26 RX.
+
+After this correction, the direct backend and laptop LAN URL both returned
+33 current-run IDs and retained 71 saved IDs. Four-second comparisons confirmed
+advancing sequences and database receive timestamps for seven CAN IDs.
+Browser samples showed 0x06E changing from `BB DB FF 03 00 81 16 00` to
+`9E D3 FF 03 00 81 16 00`, with its saved count increasing. The GUI showed
+matching **v1.1.4** versions and CAN logger online. The follow-up serial capture
+contained **1,633 CAN lines in 12 seconds**. Analog records also continued to
+persist. COM3 was released and an exclusive open/close check passed.
+
+Existing bounded serial/MQTT delivery drops remain visible; this deployment
+does not establish lossless logging. BMS diagnostic transmission was not retested.
+The offline package now records the verified application as flashed.
+
+Evidence: `output/testing/redeploy-20261119-verification.json`,
+`output/testing/redeploy-20261119-can-live.json`,
+`output/testing/redeploy-20261119-can-serial.json`,
+`output/testing/redeploy-20261119-pcan-comparison.json`,
+`output/testing/redeploy-20261119-browser.json`, and
+`output/testing/bms/redeploy-20261119-gui.jpg`.
+
+### Periodic CAN transmission — 19 November 2026
+
+Added one CAN-page ON/OFF control for two fixed standard CAN messages at
+500 kbit/s: `0x014`, payload `00 60 00`, every 100 ms; and `0x548`, payload
+`00 00 00 00 00 00 00 08`, every 10 ms. The second identifier follows the
+user's explicit payload instruction, superseding `0x584` in the screenshot.
+Both messages start OFF after reboot. The GUI displays device-confirmed state,
+successful-send counts and failures. Admin authentication, CSRF protection,
+boot-bound expiring commands and audit records protect the new control route.
+Transmission stops after MQTT disconnection or repeated send failures.
+Existing CAN receive, DBC, GPIO, telemetry and diagnostic request behavior
+remain in place; diagnostics and periodic transmission cannot own the bus
+controller simultaneously.
+
+After the transceiver voltage correction, PCAN received both exact payloads
+from firmware v1.1.7 with no observed PCAN error frames. The 10-second capture
+contained 100 frames for `0x014` (mean period 99.982 ms) and 813 frames for
+`0x548` (mean period 12.301 ms). The timing check failed: ordinary arbitration
+losses dropped single-shot attempts. Version **1.1.8**, build `8148c3afe9b8`,
+adds bounded retries for arbitration losses only, retaining immediate failure
+handling for bus/ACK errors. Firmware host tests and firmware/GUI builds passed.
+The backend suite previously passed 89 tests, followed by 11 targeted tests;
+the GUI suite passed 38 tests, followed by 14 targeted CAN/control tests.
+
+**Hardware validation remains incomplete for v1.1.8.** Both USB devices
+disconnected before this build could be flashed. The last verified device
+version is v1.1.7; its final acknowledged transmission state was OFF. Flashing
+v1.1.8 and repeating wire timing, GUI ON/OFF and persistence checks remain
+pending. The packaged v1.1.8 manifest therefore records `hardware_flashed: false`.
+Do not interpret earlier v1.1.4 deployment evidence as validation of v1.1.8.
+
+Evidence: `output/testing/can-tx-voltage-corrected-before-arbitration-fix.json`,
+`output/testing/can-tx-live.json`, and
+`output/testing/can-tx-awaiting-flash.jpg`. Relevant temporary scripts/logs and
+the built GUI are preserved in `output/work_snapshot/can_tx_20261119/`.

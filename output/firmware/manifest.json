@@ -1,7 +1,7 @@
 {
-  "sw_version": "1.1.4",
-  "sw_build": "2ae749ea5903",
-  "version_prepared_at_utc": "2026-11-18T17:48:31+00:00",
+  "sw_version": "1.1.8",
+  "sw_build": "8148c3afe9b8",
+  "version_prepared_at_utc": "2026-11-19T11:11:48+00:00",
   "target": "esp32",
   "module": "ESP32S-WROOM",
   "esp_idf": "6.0.2",
@@ -62,9 +62,9 @@
       "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
     },
     "navsphere.bin": {
-      "bytes": 1009440,
-      "sha256": "0af7b4d2a54b7c70838652a6b0bcb6914c9bd8e561ad3274bd059e5983c9e03c"
+      "bytes": 1014592,
+      "sha256": "5f48790458c4f0903e2ce1249dd9ba49b8e5b3d0a625fd5781c3d88160166ced"
     }
   },
-  "packaged_at_utc": "2026-11-18T17:57:38.937615+00:00"
+  "packaged_at_utc": "2026-11-19T13:08:23.566814+00:00"
 }

@@ -3,6 +3,7 @@ import { useTelemetry } from "../hooks/useTelemetry";
 import { useAuth } from "../hooks/useAuth";
 import { request } from "../services/api";
 import { CanStatistics } from "../components/CanStatistics";
+import { CanTransmit } from "../components/CanTransmit";
 
 type Signal = { name: string; value: number | null; unit?: string; label?: string };
 type Frame = { can_id: number; extended: boolean; rtr: boolean; dlc: number; data: string;
@@ -94,7 +95,8 @@ export function CanPage() {
   const filtering = search.trim() !== resultQuery;
   return <section className="can-page">
     <div className="page-heading"><div><h1>CAN data</h1>
-      <p>500 kbit/s · {snapshot?.status?.mode === "diagnostic" ? "Diagnostics active" : "Listen only"} · GPIO25 TX / GPIO26 RX · Classic CAN</p></div></div>
+      <p>500 kbit/s · {snapshot?.status?.mode === "periodic_tx" ? "Periodic transmission active" : snapshot?.status?.mode === "diagnostic" ? "Diagnostics active" : "Listen only"} · GPIO25 TX / GPIO26 RX · Classic CAN</p></div></div>
+    <CanTransmit deviceId={deviceId} canControl={user?.role === "admin" && !user.must_change_password} />
     <p role="status" className={connected ? "can-good" : "can-warning"}>
       {connected ? "CAN logger online" : "Waiting for CAN logger / stale connection"} — latest values refresh every second.
     </p>

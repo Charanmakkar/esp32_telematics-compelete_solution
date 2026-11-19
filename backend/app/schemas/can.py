@@ -5,6 +5,19 @@ from pydantic import BaseModel, ConfigDict, Field, model_validator
 UInt = Annotated[int, Field(strict=True, ge=0, le=4294967295)]
 
 
+class CanTxState(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    enabled: bool
+    command_id: str = Field(max_length=36)
+    reason: Literal[
+        "off", "on", "connection_lost", "transmit_failed", "controller_busy_or_unavailable"
+    ]
+    sent_014: UInt
+    sent_548: UInt
+    failures: UInt
+    skipped: UInt
+
+
 class CanSample(BaseModel):
     model_config = ConfigDict(extra="forbid", strict=True)
     sequence: UInt
@@ -49,7 +62,8 @@ class CanStats(BaseModel):
     rx_error_counter: int | None = Field(default=None, ge=0, le=65535)
     tx_error_counter: int | None = Field(default=None, ge=0, le=65535)
     controller_state: int | None = Field(default=None, ge=0, le=3)
-    mode: Literal["listen_only", "diagnostic", "unavailable"] | None = None
+    mode: Literal["listen_only", "diagnostic", "periodic_tx", "unavailable"] | None = None
+    periodic_tx: CanTxState | None = None
     mode_changes: int | None = Field(default=None, ge=0)
     mode_switch_drops: int | None = Field(default=None, ge=0)
     diag_supported: bool = False

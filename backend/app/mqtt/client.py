@@ -77,3 +77,12 @@ class MqttClient:
             retain=False,
         )
         return info.rc == mqtt.MQTT_ERR_SUCCESS
+
+    def publish_can_tx(self, device_id: str, payload: dict) -> bool:
+        if not self.connected:
+            return False
+        info = self.client.publish(
+            f"{self.settings.mqtt_topic_prefix}/{device_id}/can/tx/request",
+            json.dumps(payload, separators=(",", ":")), qos=1, retain=False,
+        )
+        return info.rc == mqtt.MQTT_ERR_SUCCESS

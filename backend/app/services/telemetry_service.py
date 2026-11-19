@@ -18,6 +18,7 @@ from app.schemas.commands import CommandAck
 from app.schemas.telemetry import Telemetry
 from app.services.bms_service import BmsService
 from app.services.can_service import CanService
+from app.services.can_tx_service import CanTxService
 from app.services.command_service import CommandService
 from app.services.websocket_manager import WebSocketManager
 
@@ -30,6 +31,7 @@ class Runtime:
         self.db = Database(settings)
         self.repository = Repository(self.db)
         self.can = CanService(self)
+        self.can_tx = CanTxService(self)
         self.queue: Queue = Queue(maxsize=settings.ingest_queue_size)
         self.hub = WebSocketManager()
         self.mqtt = MqttClient(settings, self.enqueue)

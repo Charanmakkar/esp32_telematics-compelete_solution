@@ -1,0 +1,10316 @@
+{
+  "time_utc": "2026-11-19T11:09:09.239732+00:00",
+  "release": {
+    "sw_version": "1.1.7",
+    "source_sha256": "b323d1f42a84b788de9592f4e0c48493d7b52ed0ac0543707d6a1cb8d7eec68e",
+    "built_at_utc": "2026-11-19T10:56:01+00:00"
+  },
+  "firmware_sha256": "fccb4e9c5525b4fd61432f38290cc68c9af8b667bdeeeea748230ca9ca3df6ff",
+  "initial": {
+    "profiles": [
+      {
+        "can_id": 20,
+        "data": "006000",
+        "dlc": 3,
+        "period_ms": 100
+      },
+      {
+        "can_id": 1352,
+        "data": "0000000000000008",
+        "dlc": 8,
+        "period_ms": 10
+      }
+    ],
+    "supported": true,
+    "clock_ready": true,
+    "fresh": true,
+    "age_seconds": 0.185228,
+    "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+    "mode": "listen_only",
+    "state": {
+      "enabled": false,
+      "command_id": "",
+      "reason": "off",
+      "sent_014": 0,
+      "sent_548": 0,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "baseline_target_frames": [],
+  "baseline_frames": 399,
+  "can_before": {
+    "available": true,
+    "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+    "age_seconds": 0.14,
+    "uptime_seconds": 116.3,
+    "window_seconds": 10,
+    "received_fps": 14.7,
+    "received_bytes_per_second": 93.6,
+    "hardware_fps": 347.19,
+    "hardware_bytes_per_second": 2171.13,
+    "load_min_percent": 6.83,
+    "load_max_percent": 8.27,
+    "unique_ids": 29,
+    "totals": {
+      "frames": 2912,
+      "bytes": 18247,
+      "standard": 2732,
+      "data": 2912,
+      "dlc_4": 505,
+      "dlc_3": 450,
+      "dlc_8": 1370,
+      "dlc_7": 491,
+      "extended": 180,
+      "dlc_5": 96
+    },
+    "dlc_distribution": [
+      0,
+      0,
+      0,
+      450,
+      505,
+      96,
+      0,
+      491,
+      1370
+    ],
+    "device": {
+      "queue_drops": 0,
+      "serial_drops": 36010,
+      "publish_drops": 48190,
+      "rx_missed": 0,
+      "rx_overruns": 0,
+      "bus_errors": 1,
+      "uptime_ms": 124444,
+      "rx_total": 51102,
+      "rx_bytes": 319514,
+      "standard_frames": 47814,
+      "extended_frames": 3288,
+      "rtr_frames": 0,
+      "wire_bits_min": 5023666,
+      "wire_bits_max": 6087950,
+      "tx_frames": 0,
+      "tx_failed": 0,
+      "arb_lost": 0,
+      "rx_error_counter": 0,
+      "tx_error_counter": 0,
+      "controller_state": 1,
+      "mode": "listen_only",
+      "periodic_tx": {
+        "enabled": false,
+        "command_id": "",
+        "reason": "off",
+        "sent_014": 0,
+        "sent_548": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "mode_changes": 0,
+      "mode_switch_drops": 0,
+      "diag_supported": true,
+      "diag_version": 3,
+      "sw_version": "1.1.7",
+      "sw_build": "b323d1f42a84"
+    },
+    "ids": [
+      {
+        "can_id": 110,
+        "extended": false,
+        "rtr": false,
+        "frames": 450,
+        "dlc": 8,
+        "age_seconds": 2.47,
+        "changes": 437,
+        "mean_interval_ms": 287,
+        "min_interval_ms": 8,
+        "max_interval_ms": 2953,
+        "jitter_ms": 626.84,
+        "frequency_hz": 3.48
+      },
+      {
+        "can_id": 111,
+        "extended": false,
+        "rtr": false,
+        "frames": 450,
+        "dlc": 3,
+        "age_seconds": 2.47,
+        "changes": 437,
+        "mean_interval_ms": 281.98,
+        "min_interval_ms": 8,
+        "max_interval_ms": 2952,
+        "jitter_ms": 627.69,
+        "frequency_hz": 3.55
+      },
+      {
+        "can_id": 272,
+        "extended": false,
+        "rtr": false,
+        "frames": 450,
+        "dlc": 4,
+        "age_seconds": 2.47,
+        "changes": 191,
+        "mean_interval_ms": 282,
+        "min_interval_ms": 7,
+        "max_interval_ms": 2953,
+        "jitter_ms": 627.77,
+        "frequency_hz": 3.55
+      },
+      {
+        "can_id": 160,
+        "extended": false,
+        "rtr": false,
+        "frames": 441,
+        "dlc": 7,
+        "age_seconds": 2.47,
+        "changes": 430,
+        "mean_interval_ms": 299.62,
+        "min_interval_ms": 8,
+        "max_interval_ms": 2953,
+        "jitter_ms": 626.04,
+        "frequency_hz": 3.34
+      },
+      {
+        "can_id": 130,
+        "extended": false,
+        "rtr": false,
+        "frames": 221,
+        "dlc": 8,
+        "age_seconds": 2.47,
+        "changes": 211,
+        "mean_interval_ms": 569.39,
+        "min_interval_ms": 19,
+        "max_interval_ms": 2964,
+        "jitter_ms": 774.38,
+        "frequency_hz": 1.76
+      },
+      {
+        "can_id": 296,
+        "extended": false,
+        "rtr": false,
+        "frames": 51,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 45,
+        "mean_interval_ms": 2229.26,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2709.51,
+        "frequency_hz": 0.45
+      },
+      {
+        "can_id": 120,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 47,
+        "mean_interval_ms": 2274.76,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2726.57,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 121,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 7,
+        "age_seconds": 4.02,
+        "changes": 47,
+        "mean_interval_ms": 2274.76,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2726.63,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 136,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 4,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2274.76,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14810,
+        "jitter_ms": 2726.69,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 259,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 23,
+        "mean_interval_ms": 2274.76,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14808,
+        "jitter_ms": 2726.45,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 1584,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2274.76,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2726.69,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 1585,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2274.73,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14810,
+        "jitter_ms": 2726.76,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 308,
+        "extended": false,
+        "rtr": false,
+        "frames": 49,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 13,
+        "mean_interval_ms": 2322.12,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 3045.11,
+        "frequency_hz": 0.43
+      },
+      {
+        "can_id": 473956352,
+        "extended": true,
+        "rtr": false,
+        "frames": 49,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 25,
+        "mean_interval_ms": 2322.12,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2786.2,
+        "frequency_hz": 0.43
+      },
+      {
+        "can_id": 297,
+        "extended": false,
+        "rtr": false,
+        "frames": 48,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 42,
+        "mean_interval_ms": 2371.53,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14808,
+        "jitter_ms": 2823.91,
+        "frequency_hz": 0.42
+      },
+      {
+        "can_id": 416,
+        "extended": false,
+        "rtr": false,
+        "frames": 48,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2371.55,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 3058.69,
+        "frequency_hz": 0.42
+      },
+      {
+        "can_id": 432,
+        "extended": false,
+        "rtr": false,
+        "frames": 48,
+        "dlc": 5,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2371.55,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 3058.67,
+        "frequency_hz": 0.42
+      },
+      {
+        "can_id": 437,
+        "extended": false,
+        "rtr": false,
+        "frames": 48,
+        "dlc": 5,
+        "age_seconds": 4.02,
+        "changes": 0,
+        "mean_interval_ms": 2371.53,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17713,
+        "jitter_ms": 3058.54,
+        "frequency_hz": 0.42
+      },
+      {
+        "can_id": 295,
+        "extended": false,
+        "rtr": false,
+        "frames": 47,
+        "dlc": 8,
+        "age_seconds": 2.47,
+        "changes": 37,
+        "mean_interval_ms": 2438.3,
+        "min_interval_ms": 99,
+        "max_interval_ms": 12608,
+        "jitter_ms": 3044.59,
+        "frequency_hz": 0.41
+      },
+      {
+        "can_id": 457179137,
+        "extended": true,
+        "rtr": false,
+        "frames": 47,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 20,
+        "mean_interval_ms": 2423.07,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2822.99,
+        "frequency_hz": 0.41
+      },
+      {
+        "can_id": 490733568,
+        "extended": true,
+        "rtr": false,
+        "frames": 47,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 30,
+        "mean_interval_ms": 2423.09,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 3119.3,
+        "frequency_hz": 0.41
+      },
+      {
+        "can_id": 294,
+        "extended": false,
+        "rtr": false,
+        "frames": 42,
+        "dlc": 8,
+        "age_seconds": 2.47,
+        "changes": 40,
+        "mean_interval_ms": 2735.68,
+        "min_interval_ms": 100,
+        "max_interval_ms": 11608,
+        "jitter_ms": 3226.24,
+        "frequency_hz": 0.37
+      },
+      {
+        "can_id": 524288000,
+        "extended": true,
+        "rtr": false,
+        "frames": 34,
+        "dlc": 8,
+        "age_seconds": 4.02,
+        "changes": 24,
+        "mean_interval_ms": 3377.64,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17716,
+        "jitter_ms": 4427.36,
+        "frequency_hz": 0.3
+      },
+      {
+        "can_id": 1413,
+        "extended": false,
+        "rtr": false,
+        "frames": 16,
+        "dlc": 8,
+        "age_seconds": 0.14,
+        "changes": 0,
+        "mean_interval_ms": 7400.87,
+        "min_interval_ms": 1012,
+        "max_interval_ms": 14828,
+        "jitter_ms": 2542.92,
+        "frequency_hz": 0.14
+      },
+      {
+        "can_id": 150,
+        "extended": false,
+        "rtr": false,
+        "frames": 8,
+        "dlc": 8,
+        "age_seconds": 35.04,
+        "changes": 6,
+        "mean_interval_ms": 11320.86,
+        "min_interval_ms": 500,
+        "max_interval_ms": 33616,
+        "jitter_ms": 11877.8,
+        "frequency_hz": 0.09
+      },
+      {
+        "can_id": 260,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 4,
+        "age_seconds": 17.02,
+        "changes": 0,
+        "mean_interval_ms": 23988.75,
+        "min_interval_ms": 8305,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9739.6,
+        "frequency_hz": 0.04
+      },
+      {
+        "can_id": 261,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 8,
+        "age_seconds": 17.02,
+        "changes": 0,
+        "mean_interval_ms": 23988.75,
+        "min_interval_ms": 8304,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9740.03,
+        "frequency_hz": 0.04
+      },
+      {
+        "can_id": 262,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 8,
+        "age_seconds": 17.02,
+        "changes": 0,
+        "mean_interval_ms": 23988.5,
+        "min_interval_ms": 8304,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9739.94,
+        "frequency_hz": 0.04
+      },
+      {
+        "can_id": 511705088,
+        "extended": true,
+        "rtr": false,
+        "frames": 3,
+        "dlc": 8,
+        "age_seconds": 13.85,
+        "changes": 2,
+        "mean_interval_ms": 24514.5,
+        "min_interval_ms": 8002,
+        "max_interval_ms": 41027,
+        "jitter_ms": 16512.5,
+        "frequency_hz": 0.04
+      }
+    ],
+    "timing_note": "Per-ID timing uses the last 64 delivered intervals; capture drops affect these values.",
+    "load_note": "Estimated wire-time bounds for hardware-captured valid frames, including possible bit stuffing and intermission. Missed frames and error frames are excluded.",
+    "server": {
+      "persisted": 54000,
+      "duplicates": 12,
+      "invalid": 0,
+      "dropped_batches": 0,
+      "database_errors": 0,
+      "database_dropped_frames": 0
+    }
+  },
+  "telemetry_before": {
+    "received": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+      "sequence": 1243,
+      "timestamp_ms": 1795086552750,
+      "time_valid": true,
+      "uptime_ms": 124338,
+      "channels": {
+        "analog_1": 3079,
+        "analog_2": 749,
+        "analog_3": 211,
+        "analog_4": 337,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        3952,
+        749,
+        85,
+        241,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 89,
+      "source": "hardware",
+      "stale": false,
+      "id": null,
+      "received_at": "2026-11-19T11:09:13.644471Z",
+      "persisted_at": null
+    },
+    "persisted": {
+      "schema_version": 1,
+      "device_id": "ESP32_001",
+      "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+      "sequence": 1243,
+      "timestamp_ms": 1795086552750,
+      "time_valid": true,
+      "uptime_ms": 124338,
+      "channels": {
+        "analog_1": 3079,
+        "analog_2": 749,
+        "analog_3": 211,
+        "analog_4": 337,
+        "analog_5": 142,
+        "analog_6": 142
+      },
+      "raw": [
+        3952,
+        749,
+        85,
+        241,
+        0,
+        0
+      ],
+      "valid_mask": 63,
+      "mqtt_connected": true,
+      "dropped_samples": 89,
+      "source": "hardware",
+      "stale": false,
+      "id": 618937,
+      "received_at": "2026-11-19T11:09:13.644000Z",
+      "persisted_at": "2026-11-19T11:09:13.645000Z"
+    }
+  },
+  "commands": [
+    {
+      "profiles": [
+        {
+          "can_id": 20,
+          "data": "006000",
+          "dlc": 3,
+          "period_ms": 100
+        },
+        {
+          "can_id": 1352,
+          "data": "0000000000000008",
+          "dlc": 8,
+          "period_ms": 10
+        }
+      ],
+      "supported": true,
+      "clock_ready": true,
+      "fresh": true,
+      "age_seconds": 0.066085,
+      "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+      "mode": "periodic_tx",
+      "state": {
+        "enabled": true,
+        "command_id": "8acd7221-e918-4aaa-b2e9-5f734262054d",
+        "reason": "on",
+        "sent_014": 1,
+        "sent_548": 3,
+        "failures": 0,
+        "skipped": 0
+      }
+    },
+    {
+      "profiles": [
+        {
+          "can_id": 20,
+          "data": "006000",
+          "dlc": 3,
+          "period_ms": 100
+        },
+        {
+          "can_id": 1352,
+          "data": "0000000000000008",
+          "dlc": 8,
+          "period_ms": 10
+        }
+      ],
+      "supported": true,
+      "clock_ready": true,
+      "fresh": true,
+      "age_seconds": 0.033097,
+      "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+      "mode": "listen_only",
+      "state": {
+        "enabled": false,
+        "command_id": "5173b326-8f9c-4db1-8182-e2ad82717bc5",
+        "reason": "off",
+        "sent_014": 112,
+        "sent_548": 896,
+        "failures": 84,
+        "skipped": 135
+      }
+    }
+  ],
+  "timing": {
+    "0x014": {
+      "frames": 100,
+      "payload": "006000",
+      "dlc": 3,
+      "requested_period_ms": 100,
+      "mean_ms": 99.98220202021801,
+      "median_ms": 99.96700000192504,
+      "min_ms": 72.91600000462495,
+      "max_ms": 129.70399999903748,
+      "p95_ms": 116.22199999692384
+    },
+    "0x548": {
+      "frames": 813,
+      "payload": "0000000000000008",
+      "dlc": 8,
+      "requested_period_ms": 10,
+      "mean_ms": 12.301342364529944,
+      "median_ms": 9.98299999628216,
+      "min_ms": 2.1340000021154992,
+      "max_ms": 76.37200000317534,
+      "p95_ms": 39.850000001024455
+    }
+  },
+  "passed": false,
+  "error": "{'frames': 813, 'payload': '0000000000000008', 'dlc': 8, 'requested_period_ms': 10, 'mean_ms': 12.301342364529944, 'median_ms': 9.98299999628216, 'min_ms': 2.1340000021154992, 'max_ms': 76.37200000317534, 'p95_ms': 39.850000001024455}",
+  "failed_can_status": {
+    "available": true,
+    "boot_id": "f0ad746a-ffa1-2343-0705-66ad82efda00",
+    "age_seconds": 0.81,
+    "uptime_seconds": 127.4,
+    "window_seconds": 10,
+    "received_fps": 49.4,
+    "received_bytes_per_second": 313.9,
+    "hardware_fps": 438.23,
+    "hardware_bytes_per_second": 2740.02,
+    "load_min_percent": 8.62,
+    "load_max_percent": 10.44,
+    "unique_ids": 29,
+    "totals": {
+      "frames": 3580,
+      "bytes": 22452,
+      "standard": 3348,
+      "data": 3580,
+      "dlc_4": 619,
+      "dlc_3": 550,
+      "dlc_8": 1689,
+      "dlc_7": 602,
+      "extended": 232,
+      "dlc_5": 120
+    },
+    "dlc_distribution": [
+      0,
+      0,
+      0,
+      550,
+      619,
+      120,
+      0,
+      602,
+      1689
+    ],
+    "device": {
+      "queue_drops": 0,
+      "serial_drops": 39233,
+      "publish_drops": 51815,
+      "rx_missed": 0,
+      "rx_overruns": 0,
+      "bus_errors": 1,
+      "uptime_ms": 133510,
+      "rx_total": 55395,
+      "rx_bytes": 346343,
+      "standard_frames": 51833,
+      "extended_frames": 3562,
+      "rtr_frames": 0,
+      "wire_bits_min": 5445549,
+      "wire_bits_max": 6599205,
+      "tx_frames": 758,
+      "tx_failed": 62,
+      "arb_lost": 62,
+      "rx_error_counter": 0,
+      "tx_error_counter": 0,
+      "controller_state": 1,
+      "mode": "periodic_tx",
+      "periodic_tx": {
+        "enabled": true,
+        "command_id": "8acd7221-e918-4aaa-b2e9-5f734262054d",
+        "reason": "on",
+        "sent_014": 84,
+        "sent_548": 674,
+        "failures": 62,
+        "skipped": 98
+      },
+      "mode_changes": 1,
+      "mode_switch_drops": 0,
+      "diag_supported": true,
+      "diag_version": 3,
+      "sw_version": "1.1.7",
+      "sw_build": "b323d1f42a84"
+    },
+    "ids": [
+      {
+        "can_id": 272,
+        "extended": false,
+        "rtr": false,
+        "frames": 551,
+        "dlc": 4,
+        "age_seconds": 0.81,
+        "changes": 244,
+        "mean_interval_ms": 102.72,
+        "min_interval_ms": 7,
+        "max_interval_ms": 2314,
+        "jitter_ms": 307.77,
+        "frequency_hz": 9.74
+      },
+      {
+        "can_id": 110,
+        "extended": false,
+        "rtr": false,
+        "frames": 550,
+        "dlc": 8,
+        "age_seconds": 0.81,
+        "changes": 535,
+        "mean_interval_ms": 103.03,
+        "min_interval_ms": 7,
+        "max_interval_ms": 2314,
+        "jitter_ms": 307.86,
+        "frequency_hz": 9.71
+      },
+      {
+        "can_id": 111,
+        "extended": false,
+        "rtr": false,
+        "frames": 550,
+        "dlc": 3,
+        "age_seconds": 0.81,
+        "changes": 535,
+        "mean_interval_ms": 102.89,
+        "min_interval_ms": 8,
+        "max_interval_ms": 2314,
+        "jitter_ms": 307.74,
+        "frequency_hz": 9.72
+      },
+      {
+        "can_id": 160,
+        "extended": false,
+        "rtr": false,
+        "frames": 539,
+        "dlc": 7,
+        "age_seconds": 0.81,
+        "changes": 526,
+        "mean_interval_ms": 103.03,
+        "min_interval_ms": 8,
+        "max_interval_ms": 2323,
+        "jitter_ms": 308.78,
+        "frequency_hz": 9.71
+      },
+      {
+        "can_id": 130,
+        "extended": false,
+        "rtr": false,
+        "frames": 269,
+        "dlc": 8,
+        "age_seconds": 0.81,
+        "changes": 258,
+        "mean_interval_ms": 329.89,
+        "min_interval_ms": 19,
+        "max_interval_ms": 3044,
+        "jitter_ms": 600.42,
+        "frequency_hz": 3.03
+      },
+      {
+        "can_id": 296,
+        "extended": false,
+        "rtr": false,
+        "frames": 66,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 60,
+        "mean_interval_ms": 1940.19,
+        "min_interval_ms": 18,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2551.94,
+        "frequency_hz": 0.52
+      },
+      {
+        "can_id": 120,
+        "extended": false,
+        "rtr": false,
+        "frames": 63,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 59,
+        "mean_interval_ms": 2006,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2572.5,
+        "frequency_hz": 0.5
+      },
+      {
+        "can_id": 121,
+        "extended": false,
+        "rtr": false,
+        "frames": 63,
+        "dlc": 7,
+        "age_seconds": 2.73,
+        "changes": 59,
+        "mean_interval_ms": 2006,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2572.54,
+        "frequency_hz": 0.5
+      },
+      {
+        "can_id": 136,
+        "extended": false,
+        "rtr": false,
+        "frames": 63,
+        "dlc": 4,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2006,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14810,
+        "jitter_ms": 2572.61,
+        "frequency_hz": 0.5
+      },
+      {
+        "can_id": 1584,
+        "extended": false,
+        "rtr": false,
+        "frames": 63,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2006,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2572.59,
+        "frequency_hz": 0.5
+      },
+      {
+        "can_id": 1585,
+        "extended": false,
+        "rtr": false,
+        "frames": 63,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2006.02,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14810,
+        "jitter_ms": 2572.68,
+        "frequency_hz": 0.5
+      },
+      {
+        "can_id": 259,
+        "extended": false,
+        "rtr": false,
+        "frames": 62,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 25,
+        "mean_interval_ms": 2038.85,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14808,
+        "jitter_ms": 2594.59,
+        "frequency_hz": 0.49
+      },
+      {
+        "can_id": 473956352,
+        "extended": true,
+        "rtr": false,
+        "frames": 62,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 25,
+        "mean_interval_ms": 2038.89,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2623.48,
+        "frequency_hz": 0.49
+      },
+      {
+        "can_id": 308,
+        "extended": false,
+        "rtr": false,
+        "frames": 61,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 17,
+        "mean_interval_ms": 2072.85,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 2865.19,
+        "frequency_hz": 0.48
+      },
+      {
+        "can_id": 297,
+        "extended": false,
+        "rtr": false,
+        "frames": 60,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 54,
+        "mean_interval_ms": 2107.98,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14808,
+        "jitter_ms": 2666.21,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 416,
+        "extended": false,
+        "rtr": false,
+        "frames": 60,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2107.98,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 2876.91,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 432,
+        "extended": false,
+        "rtr": false,
+        "frames": 60,
+        "dlc": 5,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2108,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 2876.89,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 437,
+        "extended": false,
+        "rtr": false,
+        "frames": 60,
+        "dlc": 5,
+        "age_seconds": 2.73,
+        "changes": 0,
+        "mean_interval_ms": 2107.98,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17713,
+        "jitter_ms": 2876.78,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 490733568,
+        "extended": true,
+        "rtr": false,
+        "frames": 60,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 40,
+        "mean_interval_ms": 2108,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17714,
+        "jitter_ms": 2903.73,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 457179137,
+        "extended": true,
+        "rtr": false,
+        "frames": 59,
+        "dlc": 8,
+        "age_seconds": 2.73,
+        "changes": 28,
+        "mean_interval_ms": 2144.33,
+        "min_interval_ms": 100,
+        "max_interval_ms": 14809,
+        "jitter_ms": 2679.51,
+        "frequency_hz": 0.47
+      },
+      {
+        "can_id": 295,
+        "extended": false,
+        "rtr": false,
+        "frames": 54,
+        "dlc": 8,
+        "age_seconds": 6.7,
+        "changes": 44,
+        "mean_interval_ms": 2263.53,
+        "min_interval_ms": 99,
+        "max_interval_ms": 12608,
+        "jitter_ms": 2911.26,
+        "frequency_hz": 0.44
+      },
+      {
+        "can_id": 294,
+        "extended": false,
+        "rtr": false,
+        "frames": 50,
+        "dlc": 8,
+        "age_seconds": 0.81,
+        "changes": 48,
+        "mean_interval_ms": 2536.16,
+        "min_interval_ms": 100,
+        "max_interval_ms": 11608,
+        "jitter_ms": 3057.24,
+        "frequency_hz": 0.39
+      },
+      {
+        "can_id": 524288000,
+        "extended": true,
+        "rtr": false,
+        "frames": 45,
+        "dlc": 8,
+        "age_seconds": 3.13,
+        "changes": 31,
+        "mean_interval_ms": 2813.05,
+        "min_interval_ms": 100,
+        "max_interval_ms": 17716,
+        "jitter_ms": 4022.99,
+        "frequency_hz": 0.36
+      },
+      {
+        "can_id": 1413,
+        "extended": false,
+        "rtr": false,
+        "frames": 17,
+        "dlc": 8,
+        "age_seconds": 3.64,
+        "changes": 0,
+        "mean_interval_ms": 7395.44,
+        "min_interval_ms": 1012,
+        "max_interval_ms": 14828,
+        "jitter_ms": 2462.26,
+        "frequency_hz": 0.14
+      },
+      {
+        "can_id": 150,
+        "extended": false,
+        "rtr": false,
+        "frames": 9,
+        "dlc": 8,
+        "age_seconds": 8.36,
+        "changes": 7,
+        "mean_interval_ms": 14645.88,
+        "min_interval_ms": 500,
+        "max_interval_ms": 37921,
+        "jitter_ms": 14171.7,
+        "frequency_hz": 0.07
+      },
+      {
+        "can_id": 511705088,
+        "extended": true,
+        "rtr": false,
+        "frames": 6,
+        "dlc": 8,
+        "age_seconds": 8.12,
+        "changes": 5,
+        "mean_interval_ms": 13207.4,
+        "min_interval_ms": 1000,
+        "max_interval_ms": 41027,
+        "jitter_ms": 14847.96,
+        "frequency_hz": 0.08
+      },
+      {
+        "can_id": 260,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 4,
+        "age_seconds": 28.12,
+        "changes": 0,
+        "mean_interval_ms": 23988.75,
+        "min_interval_ms": 8305,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9739.6,
+        "frequency_hz": 0.04
+      },
+      {
+        "can_id": 261,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 8,
+        "age_seconds": 28.12,
+        "changes": 0,
+        "mean_interval_ms": 23988.75,
+        "min_interval_ms": 8304,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9740.03,
+        "frequency_hz": 0.04
+      },
+      {
+        "can_id": 262,
+        "extended": false,
+        "rtr": false,
+        "frames": 5,
+        "dlc": 8,
+        "age_seconds": 28.12,
+        "changes": 0,
+        "mean_interval_ms": 23988.5,
+        "min_interval_ms": 8304,
+        "max_interval_ms": 34921,
+        "jitter_ms": 9739.94,
+        "frequency_hz": 0.04
+      }
+    ],
+    "timing_note": "Per-ID timing uses the last 64 delivered intervals; capture drops affect these values.",
+    "load_note": "Estimated wire-time bounds for hardware-captured valid frames, including possible bit stuffing and intermission. Missed frames and error frames are excluded.",
+    "server": {
+      "persisted": 54668,
+      "duplicates": 12,
+      "invalid": 0,
+      "dropped_batches": 0,
+      "database_errors": 0,
+      "database_dropped_frames": 0
+    }
+  },
+  "wire_target_frames": [
+    [
+      56046.174352,
+      56046.173229,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.1743733,
+      56046.173826,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.1848382,
+      56046.183725,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.1945757,
+      56046.19341,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2032515,
+      56046.202114,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2124378,
+      56046.211244,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2244554,
+      56046.223361,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2344145,
+      56046.233174,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2741648,
+      56046.273067,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.2742024,
+      56046.273409,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2843751,
+      56046.283179,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.2944641,
+      56046.293163,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.3024652,
+      56046.301269,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.3122836,
+      56046.311168,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.3242994,
+      56046.323157,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.3343172,
+      56046.333184,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.3978405,
+      56046.396671,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.4243715,
+      56046.423251,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.4343061,
+      56046.43315,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.467391,
+      56046.466259,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.4724189,
+      56046.471165,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.4724411,
+      56046.47172,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.4843203,
+      56046.483197,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.4922079,
+      56046.49109,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.502323,
+      56046.501245,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5127486,
+      56046.511527,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5243733,
+      56046.523218,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5343389,
+      56046.533159,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5674511,
+      56046.566311,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5722029,
+      56046.571089,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.5722217,
+      56046.571559,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5875506,
+      56046.586364,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.5953868,
+      56046.594257,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6065092,
+      56046.60535,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6129343,
+      56046.611793,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6244882,
+      56046.62327,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6342629,
+      56046.633168,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6773012,
+      56046.67609,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.6773464,
+      56046.676901,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6842755,
+      56046.683173,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.6942911,
+      56046.693157,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.7027642,
+      56046.701562,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.712319,
+      56046.711162,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.7243392,
+      56046.723151,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.7342725,
+      56046.733177,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.7747884,
+      56046.773667,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.7748119,
+      56046.774094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.7842945,
+      56046.783225,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.794331,
+      56046.793166,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8027535,
+      56046.801614,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8123814,
+      56046.811256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8224561,
+      56046.821325,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8343322,
+      56046.833229,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8755091,
+      56046.874359,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8786438,
+      56046.877175,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.878702,
+      56046.877687,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.884627,
+      56046.883319,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.8956808,
+      56046.894497,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9024682,
+      56046.901281,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9129211,
+      56046.91182,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9226793,
+      56046.921505,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9343785,
+      56046.933281,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9742793,
+      56046.973131,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56046.9743262,
+      56046.973472,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9843653,
+      56046.983157,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56046.9950262,
+      56046.993653,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0032152,
+      56047.002058,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0123875,
+      56047.011189,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0243261,
+      56047.023178,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0342989,
+      56047.033162,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0750122,
+      56047.073823,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.0775321,
+      56047.076169,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0843617,
+      56047.083167,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.0930254,
+      56047.091188,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1024109,
+      56047.101172,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1129551,
+      56047.111655,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1255689,
+      56047.124412,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1346409,
+      56047.133414,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1714695,
+      56047.170278,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1742523,
+      56047.173094,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.1743037,
+      56047.173392,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.184338,
+      56047.183248,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.1944655,
+      56047.193275,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.2024393,
+      56047.201296,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.212254,
+      56047.211195,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.2242877,
+      56047.223184,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.23432,
+      56047.233168,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.271314,
+      56047.270244,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.2743912,
+      56047.273103,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.2744326,
+      56047.273444,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.2843332,
+      56047.283215,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.2943794,
+      56047.293199,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3023641,
+      56047.301305,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.312329,
+      56047.311161,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3242877,
+      56047.323193,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3342043,
+      56047.333177,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3741758,
+      56047.373112,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.3741989,
+      56047.373411,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3821736,
+      56047.380963,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.3945947,
+      56047.393165,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4029114,
+      56047.401784,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4124394,
+      56047.411298,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4242987,
+      56047.423159,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4320373,
+      56047.430924,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4712451,
+      56047.47022,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4742022,
+      56047.473078,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.4742215,
+      56047.473377,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4842701,
+      56047.48319,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.4945137,
+      56047.493387,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5023041,
+      56047.501195,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5123539,
+      56047.511179,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5244004,
+      56047.523296,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5343896,
+      56047.533237,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5742188,
+      56047.57313,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.5742369,
+      56047.573813,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5842825,
+      56047.583199,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.5946355,
+      56047.593482,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6025972,
+      56047.60146,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6125373,
+      56047.611359,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6245552,
+      56047.623433,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6328848,
+      56047.631796,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6722614,
+      56047.671219,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6751899,
+      56047.674078,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.675227,
+      56047.674377,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6843221,
+      56047.683208,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.6944688,
+      56047.693192,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7026179,
+      56047.701256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7123539,
+      56047.71124,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7242638,
+      56047.723187,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7342692,
+      56047.73317,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7712756,
+      56047.770162,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7741791,
+      56047.773063,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.7742124,
+      56047.773362,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7850762,
+      56047.783943,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.7951969,
+      56047.793969,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8031262,
+      56047.802033,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8138184,
+      56047.8127,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8233879,
+      56047.8223,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.833012,
+      56047.831771,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8451952,
+      56047.84295,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8523035,
+      56047.851185,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8643804,
+      56047.863216,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8726131,
+      56047.871408,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.8726549,
+      56047.871707,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.884281,
+      56047.883184,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.8957739,
+      56047.893595,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9025895,
+      56047.901445,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9124603,
+      56047.911344,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9223878,
+      56047.921285,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9325645,
+      56047.931397,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9753872,
+      56047.974191,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56047.9754205,
+      56047.97466,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9842682,
+      56047.98315,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56047.9922069,
+      56047.991044,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0023959,
+      56048.001241,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.012541,
+      56048.011182,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0242487,
+      56048.023171,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0342789,
+      56048.033155,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0672985,
+      56048.066178,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0722153,
+      56048.071085,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.0722527,
+      56048.071384,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0843313,
+      56048.08316,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.0943789,
+      56048.093186,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.103083,
+      56048.101933,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.1124671,
+      56048.11134,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.1244971,
+      56048.123329,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.1349918,
+      56048.133867,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.1974538,
+      56048.196074,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.1974923,
+      56048.196416,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2031395,
+      56048.201962,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2127562,
+      56048.211264,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2243057,
+      56048.22321,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2323449,
+      56048.231146,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2683862,
+      56048.267199,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.273058,
+      56048.271423,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.2731145,
+      56048.271764,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2864644,
+      56048.283156,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.2945644,
+      56048.29314,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.3023582,
+      56048.301203,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.3124389,
+      56048.311315,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.324396,
+      56048.323262,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.3324667,
+      56048.331368,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4023133,
+      56048.401127,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.4023541,
+      56048.401469,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4138025,
+      56048.412306,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4225411,
+      56048.421266,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4343636,
+      56048.433212,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4752229,
+      56048.474043,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.4752661,
+      56048.474385,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.484258,
+      56048.483131,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.4943012,
+      56048.493115,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5029356,
+      56048.501563,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5125082,
+      56048.511291,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5242653,
+      56048.523152,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5342474,
+      56048.533136,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5773243,
+      56048.576015,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.5773652,
+      56048.576399,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5842503,
+      56048.58314,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.5943076,
+      56048.593124,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6023535,
+      56048.601188,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6131365,
+      56048.61194,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6219979,
+      56048.621284,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6344384,
+      56048.633273,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6684342,
+      56048.667278,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6728289,
+      56048.671587,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.6729353,
+      56048.671928,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6842428,
+      56048.68315,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.6933375,
+      56048.691171,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7022293,
+      56048.701112,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7123175,
+      56048.711181,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7243498,
+      56048.72317,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7342492,
+      56048.733111,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7752258,
+      56048.774071,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.7752548,
+      56048.774369,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7842874,
+      56048.783116,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.7925084,
+      56048.79118,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8023468,
+      56048.801121,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8124022,
+      56048.811233,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8242995,
+      56048.823179,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8323801,
+      56048.831201,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8674616,
+      56048.866272,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.872626,
+      56048.871435,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.8726577,
+      56048.871861,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8846159,
+      56048.883125,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.8943175,
+      56048.893109,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9023146,
+      56048.901173,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9123296,
+      56048.911157,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.925252,
+      56048.924127,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9342755,
+      56048.93313,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9751669,
+      56048.974046,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56048.975205,
+      56048.974345,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9842277,
+      56048.983134,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56048.9930295,
+      56048.991155,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0022648,
+      56049.001139,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0122002,
+      56049.011123,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0254909,
+      56049.024264,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0325004,
+      56049.031304,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0706007,
+      56049.06949,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0732022,
+      56049.072093,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.0732457,
+      56049.072775,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0824001,
+      56049.081181,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.0923993,
+      56049.091122,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1022763,
+      56049.101106,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1122827,
+      56049.111129,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1220409,
+      56049.1209,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1323636,
+      56049.131225,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1724283,
+      56049.171118,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1752012,
+      56049.174019,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.1752434,
+      56049.174318,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1842538,
+      56049.183107,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.1930494,
+      56049.191171,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2022865,
+      56049.201112,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2122324,
+      56049.211138,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2242895,
+      56049.223127,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2343574,
+      56049.233239,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2441167,
+      56049.24318,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2544839,
+      56049.253292,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2650335,
+      56049.263447,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2731175,
+      56049.272023,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.2754081,
+      56049.274241,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2843422,
+      56049.283201,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.2933063,
+      56049.291478,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3022376,
+      56049.301121,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3123734,
+      56049.311105,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3242818,
+      56049.323137,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3335707,
+      56049.332395,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.346622,
+      56049.34528,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3523216,
+      56049.351253,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3642901,
+      56049.3632,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3721963,
+      56049.371093,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.3722204,
+      56049.371562,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3842326,
+      56049.383125,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.3923985,
+      56049.391146,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.4022736,
+      56049.40113,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.4122748,
+      56049.411114,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.4242562,
+      56049.423103,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.432299,
+      56049.431209,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.4724994,
+      56049.471401,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.4725299,
+      56049.471742,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.484303,
+      56049.483091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.4928685,
+      56049.491155,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5021546,
+      56049.501096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5122173,
+      56049.511123,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5241708,
+      56049.523112,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5343873,
+      56049.533309,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5631716,
+      56049.562023,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5724438,
+      56049.571282,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.5724754,
+      56049.571879,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5822655,
+      56049.581138,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.5927369,
+      56049.591292,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6022964,
+      56049.601191,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6123222,
+      56049.611089,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6219562,
+      56049.621116,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6322146,
+      56049.631142,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6463939,
+      56049.645265,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6526735,
+      56049.651494,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.662375,
+      56049.661222,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6733179,
+      56049.672144,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.6733435,
+      56049.672998,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6825169,
+      56049.681403,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.6932142,
+      56049.691216,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.7022196,
+      56049.701115,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.712257,
+      56049.711098,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.7241675,
+      56049.723088,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.7323767,
+      56049.731279,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.7751013,
+      56049.774031,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.7751313,
+      56049.774372,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.7841937,
+      56049.783119,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.792269,
+      56049.79114,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8022219,
+      56049.801081,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8122402,
+      56049.811108,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8242757,
+      56049.823097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8326673,
+      56049.831545,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8725853,
+      56049.871395,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.875359,
+      56049.874211,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.8753894,
+      56049.874637,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8853433,
+      56049.884237,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.8925169,
+      56049.891277,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9028484,
+      56049.901602,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9122406,
+      56049.911117,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9242677,
+      56049.923148,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9322965,
+      56049.931084,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9440052,
+      56049.942903,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9521923,
+      56049.951095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9621301,
+      56049.961036,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9721797,
+      56049.97102,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56049.9722217,
+      56049.971489,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9842018,
+      56049.983094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56049.9925974,
+      56049.991457,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0023412,
+      56050.001099,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.012208,
+      56050.011083,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0242777,
+      56050.023115,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0322902,
+      56050.031136,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0751458,
+      56050.074058,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.0751663,
+      56050.074869,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0841686,
+      56050.083103,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.0922132,
+      56050.091125,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1021568,
+      56050.101108,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1122486,
+      56050.111105,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1243014,
+      56050.123094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1321953,
+      56050.131116,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1723993,
+      56050.171136,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.1724218,
+      56050.171776,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.1831837,
+      56050.182059,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.193016,
+      56050.191659,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2023061,
+      56050.20113,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2124337,
+      56050.211114,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2243053,
+      56050.223189,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2322468,
+      56050.231125,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2751699,
+      56050.274047,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.2751927,
+      56050.274388,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2842256,
+      56050.283092,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.2924279,
+      56050.291198,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3021621,
+      56050.301097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3122364,
+      56050.311081,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3241695,
+      56050.323113,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3322117,
+      56050.331091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3762791,
+      56050.37508,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.3789417,
+      56050.37781,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3843549,
+      56050.383229,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.3924088,
+      56050.391207,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4023222,
+      56050.401191,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4128342,
+      56050.411687,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4243988,
+      56050.423164,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4322386,
+      56050.4311,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4673304,
+      56050.466257,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4730431,
+      56050.471974,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.4730634,
+      56050.472742,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.482231,
+      56050.481147,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.4943032,
+      56050.493179,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5033587,
+      56050.502224,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5123365,
+      56050.511184,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5244047,
+      56050.523259,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5331569,
+      56050.532091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5422003,
+      56050.541136,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5542006,
+      56050.553082,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5633754,
+      56050.562255,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5737838,
+      56050.572709,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.5763878,
+      56050.575226,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5826074,
+      56050.581413,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.5945864,
+      56050.593359,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6039357,
+      56050.602831,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6130289,
+      56050.611876,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6241678,
+      56050.623097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6332384,
+      56050.6321,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.642387,
+      56050.641188,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6542515,
+      56050.653091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6642264,
+      56050.663075,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6731159,
+      56050.671992,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.673154,
+      56050.672291,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6823303,
+      56050.681208,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.6943862,
+      56050.693112,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7031765,
+      56050.702072,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.712929,
+      56050.711842,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7241935,
+      56050.723064,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7332239,
+      56050.732066,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7424684,
+      56050.741154,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7549719,
+      56050.753911,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7641839,
+      56050.763084,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.772136,
+      56050.77102,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.7721592,
+      56050.771362,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7842264,
+      56050.783095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.7932521,
+      56050.79214,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8021518,
+      56050.8011,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8142176,
+      56050.813089,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.823198,
+      56050.822091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8322674,
+      56050.831094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8443213,
+      56050.843083,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8531797,
+      56050.852086,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8623458,
+      56050.861216,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8742023,
+      56050.872992,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.8742237,
+      56050.873333,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8832668,
+      56050.88208,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.8923382,
+      56050.891168,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9045591,
+      56050.903072,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9132684,
+      56050.912074,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.922282,
+      56050.921077,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9342287,
+      56050.933066,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9433667,
+      56050.942068,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9523315,
+      56050.951113,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.964357,
+      56050.96306,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9731518,
+      56050.971977,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56050.9731763,
+      56050.972276,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9823856,
+      56050.981193,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56050.9942591,
+      56050.993097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0032597,
+      56051.002057,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0122276,
+      56051.011102,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.024321,
+      56051.023091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0332029,
+      56051.032093,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0423854,
+      56051.041096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0542442,
+      56051.053085,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0631846,
+      56051.062088,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.072199,
+      56051.07109,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.0722213,
+      56051.071389,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0842694,
+      56051.083079,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.0933752,
+      56051.092125,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1022393,
+      56051.101084,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.114225,
+      56051.113027,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1231854,
+      56051.122029,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.132293,
+      56051.131032,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1442355,
+      56051.143021,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1532505,
+      56051.152023,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1627726,
+      56051.161495,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1743752,
+      56051.173186,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.1744005,
+      56051.173527,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1832016,
+      56051.182017,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.1922584,
+      56051.191063,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2042647,
+      56051.203009,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2131947,
+      56051.212012,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.222203,
+      56051.221014,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2342293,
+      56051.233046,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2433392,
+      56051.242006,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.252272,
+      56051.251051,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2643054,
+      56051.26304,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2730845,
+      56051.271957,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.2731073,
+      56051.272256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2823401,
+      56051.281088,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.2942827,
+      56051.293034,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3031797,
+      56051.302037,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3121853,
+      56051.311039,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3241743,
+      56051.323029,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3332443,
+      56051.332031,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.34229,
+      56051.341076,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.354229,
+      56051.353023,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3631605,
+      56051.362025,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3721664,
+      56051.370943,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.3721989,
+      56051.371241,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3843424,
+      56051.383017,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.3933574,
+      56051.392062,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4022231,
+      56051.401022,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4142054,
+      56051.413011,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4232229,
+      56051.422014,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4323495,
+      56051.431016,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4443057,
+      56051.443005,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4532339,
+      56051.452008,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4622119,
+      56051.461053,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4741794,
+      56051.472914,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.4741983,
+      56051.473213,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.483257,
+      56051.482002,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.4923372,
+      56051.49109,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5042392,
+      56051.503036,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5131831,
+      56051.511996,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5221817,
+      56051.521042,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5341776,
+      56051.533031,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5432879,
+      56051.542033,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5523127,
+      56051.551036,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5641748,
+      56051.563025,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5738177,
+      56051.57271,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.5738385,
+      56051.573009,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5823719,
+      56051.581201,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.5942628,
+      56051.593019,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6031901,
+      56051.602022,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6122993,
+      56051.611024,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6245145,
+      56051.623312,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6337127,
+      56051.63257,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6423157,
+      56051.641061,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6543058,
+      56051.65305,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.663156,
+      56051.66201,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6722837,
+      56051.670927,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.6723029,
+      56051.671226,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6846348,
+      56051.683428,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.6940579,
+      56051.692857,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7023393,
+      56051.701135,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7143471,
+      56051.713124,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7232358,
+      56051.722041,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7332006,
+      56051.732068,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7422561,
+      56051.741113,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7542289,
+      56051.753017,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7632177,
+      56051.762019,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7721778,
+      56051.770936,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.7722041,
+      56051.771235,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7822947,
+      56051.781133,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.7943059,
+      56051.793123,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8032901,
+      56051.80204,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8123624,
+      56051.81117,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8243839,
+      56051.823202,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8342343,
+      56051.833058,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.843919,
+      56051.842487,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8522295,
+      56051.85102,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.864244,
+      56051.863095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8731781,
+      56051.871927,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.8732038,
+      56051.872225,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8822835,
+      56051.8811,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.8950912,
+      56051.893857,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9035449,
+      56051.902262,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9127583,
+      56051.911307,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9242481,
+      56051.923126,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9362299,
+      56051.935072,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.942325,
+      56051.941174,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9543527,
+      56051.95312,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9632054,
+      56051.961995,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9721947,
+      56051.970912,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56051.9722164,
+      56051.971253,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9842009,
+      56051.983029,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56051.9934774,
+      56051.992245,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0025088,
+      56052.001205,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0142134,
+      56052.013066,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0242699,
+      56052.023092,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0331681,
+      56052.03201,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0424236,
+      56052.041097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.054223,
+      56052.053001,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0632306,
+      56052.062004,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0721483,
+      56052.070921,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.0721852,
+      56052.07122,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0842763,
+      56052.082995,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.0939711,
+      56052.092809,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.102296,
+      56052.101128,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1145289,
+      56052.113281,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.12318,
+      56052.122028,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.132297,
+      56052.131116,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1442302,
+      56052.143062,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1531865,
+      56052.151979,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1638269,
+      56052.16256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1723129,
+      56052.170966,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.1723375,
+      56052.171307,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1842155,
+      56052.182998,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.1932777,
+      56052.192043,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2022428,
+      56052.201045,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2142244,
+      56052.212992,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2231599,
+      56052.221994,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2321897,
+      56052.230997,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2441668,
+      56052.242986,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2531736,
+      56052.251988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2622992,
+      56052.261076,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2741343,
+      56052.272895,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.2741571,
+      56052.273193,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2831893,
+      56052.281983,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.2922668,
+      56052.291156,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3042348,
+      56052.303017,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.31318,
+      56052.312019,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3222926,
+      56052.321022,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3341989,
+      56052.333011,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3432973,
+      56052.342014,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3521858,
+      56052.351059,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3642058,
+      56052.363005,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3731363,
+      56052.37188,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.3731688,
+      56052.372179,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3822167,
+      56052.381053,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.3941801,
+      56052.393,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4032534,
+      56052.402002,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4123277,
+      56052.41109,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4242407,
+      56052.422994,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4331788,
+      56052.431996,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4423635,
+      56052.441041,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4542456,
+      56052.452988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4631584,
+      56052.46199,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4720277,
+      56052.470908,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.4720522,
+      56052.471206,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4842981,
+      56052.482982,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.4933255,
+      56052.492027,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5026696,
+      56052.501457,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.514214,
+      56052.512976,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5232258,
+      56052.521979,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5322788,
+      56052.531109,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5441535,
+      56052.542971,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5531475,
+      56052.551973,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5622795,
+      56052.561018,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5741918,
+      56052.572879,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.574215,
+      56052.573178,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5832649,
+      56052.581967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.5921826,
+      56052.591012,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6042399,
+      56052.603087,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6131738,
+      56052.612004,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6221576,
+      56052.621007,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6342457,
+      56052.632996,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6432882,
+      56052.641998,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6522667,
+      56052.651001,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6641722,
+      56052.66299,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6730524,
+      56052.671907,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.673077,
+      56052.672206,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6822065,
+      56052.681038,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.6942547,
+      56052.692984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7164416,
+      56052.701987,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.716482,
+      56052.711032,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7279363,
+      56052.723021,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7331978,
+      56052.731981,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7423131,
+      56052.741026,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7542616,
+      56052.752973,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7632226,
+      56052.761975,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7721832,
+      56052.770892,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.7722117,
+      56052.771234,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7821479,
+      56052.781047,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.7921885,
+      56052.790988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8026644,
+      56052.801441,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8122869,
+      56052.811126,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8221531,
+      56052.820982,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8326684,
+      56052.831435,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8422331,
+      56052.841035,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8890342,
+      56052.887925,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.8890567,
+      56052.888266,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.8922558,
+      56052.890997,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9026539,
+      56052.901322,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9121762,
+      56052.91105,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9222572,
+      56052.921119,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9321803,
+      56052.930975,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9425425,
+      56052.941002,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9860173,
+      56052.984905,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56052.9860498,
+      56052.985204,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56052.9922531,
+      56052.991049,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0021529,
+      56053.00099,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0122828,
+      56053.011102,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0226825,
+      56053.02147,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0322975,
+      56053.031155,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0423213,
+      56053.041053,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.0860489,
+      56053.084914,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.0860772,
+      56053.085255,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.09223,
+      56053.091015,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1020982,
+      56053.100999,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1123021,
+      56053.111066,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1225252,
+      56053.121306,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1321947,
+      56053.130948,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1422941,
+      56053.14106,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1793819,
+      56053.178222,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.1794193,
+      56053.178734,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.1827227,
+      56053.181465,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.192256,
+      56053.190937,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2020996,
+      56053.200921,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.212171,
+      56053.21099,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2222766,
+      56053.221059,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2327108,
+      56053.231469,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2422234,
+      56053.240984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2832082,
+      56053.282285,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.2841852,
+      56053.28301,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.2925106,
+      56053.291287,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3021493,
+      56053.30093,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3121566,
+      56053.310956,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3228486,
+      56053.321623,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3322773,
+      56053.331052,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3421696,
+      56053.34095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3821651,
+      56053.380928,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.3821996,
+      56053.381696,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.3922742,
+      56053.390955,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4021559,
+      56053.400939,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4121289,
+      56053.410923,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4249453,
+      56053.420992,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4329535,
+      56053.431402,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4424847,
+      56053.44096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4820645,
+      56053.480895,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.4820935,
+      56053.481322,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.4924524,
+      56053.490921,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5021133,
+      56053.500948,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5121431,
+      56053.510932,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5222452,
+      56053.521044,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5322225,
+      56053.530985,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5423545,
+      56053.541097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5791983,
+      56053.57796,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.5792372,
+      56053.578813,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5821572,
+      56053.580947,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.5921604,
+      56053.590931,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6024653,
+      56053.601256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6122035,
+      56053.610941,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6221999,
+      56053.620967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.63209,
+      56053.630866,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6423701,
+      56053.640978,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6564438,
+      56053.655313,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6622311,
+      56053.661031,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6720098,
+      56053.670844,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.6720347,
+      56053.671185,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6822021,
+      56053.680998,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.6922472,
+      56053.69094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.7021175,
+      56053.700923,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.7121804,
+      56053.71095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.72207,
+      56053.720934,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.7661109,
+      56053.764965,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.7730313,
+      56053.771834,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.8364986,
+      56053.835321,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.8424648,
+      56053.841209,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.8762343,
+      56053.874915,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.8762744,
+      56053.875299,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.8827991,
+      56053.881486,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.8922566,
+      56053.891043,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9021318,
+      56053.900984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9121444,
+      56053.910926,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9220807,
+      56053.920952,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9321195,
+      56053.930936,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9421975,
+      56053.941005,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9795796,
+      56053.978252,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56053.9796269,
+      56053.978722,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56053.9822738,
+      56053.981068,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.026062,
+      56054.024929,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.0321837,
+      56054.030988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.0437756,
+      56054.042977,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.0821457,
+      56054.08095,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.0821751,
+      56054.081376,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.0924108,
+      56054.091104,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.1021751,
+      56054.10096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.1121437,
+      56054.110931,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.1223994,
+      56054.121256,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.1320612,
+      56054.130984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.142361,
+      56054.141139,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.1792402,
+      56054.178087,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.179265,
+      56054.178514,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.182128,
+      56054.180989,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.250307,
+      56054.249169,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.253205,
+      56054.251942,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.2622311,
+      56054.260987,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.2719829,
+      56054.270843,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.272006,
+      56054.271185,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.2820922,
+      56054.280998,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.2921036,
+      56054.290939,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3021226,
+      56054.300965,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3124523,
+      56054.311248,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3220699,
+      56054.320933,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3320943,
+      56054.33096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3422766,
+      56054.341071,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3832423,
+      56054.382543,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.3861659,
+      56054.38506,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.3922728,
+      56054.391076,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4022664,
+      56054.40106,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4121613,
+      56054.410958,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4225712,
+      56054.421412,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.432061,
+      56054.430969,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4421919,
+      56054.440995,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4766395,
+      56054.475043,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.476714,
+      56054.475725,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4831845,
+      56054.482893,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.4923396,
+      56054.490957,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5020704,
+      56054.500941,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5120876,
+      56054.510967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5220946,
+      56054.520951,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5324493,
+      56054.531276,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5421595,
+      56054.541004,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5860157,
+      56054.584865,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.5860366,
+      56054.585164,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.5921292,
+      56054.591009,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.6021213,
+      56054.60095,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.6131557,
+      56054.611915,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.6221248,
+      56054.62096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.659088,
+      56054.657952,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.662167,
+      56054.661066,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.6719379,
+      56054.67088,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.6719566,
+      56054.671178,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.6822064,
+      56054.681034,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.692127,
+      56054.690933,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.702092,
+      56054.700916,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7120632,
+      56054.710943,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7220647,
+      56054.720927,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7324652,
+      56054.731252,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7421277,
+      56054.74098,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7530593,
+      56054.751945,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7889616,
+      56054.78787,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.7889782,
+      56054.788211,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.7921412,
+      56054.790984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.8021052,
+      56054.800968,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.8720513,
+      56054.870941,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.8720875,
+      56054.871282,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.8820654,
+      56054.880967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.8924657,
+      56054.891292,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9022115,
+      56054.901063,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9120869,
+      56054.911004,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9220898,
+      56054.920945,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9321103,
+      56054.930929,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9420798,
+      56054.940955,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.953065,
+      56054.951963,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9623537,
+      56054.961264,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9719909,
+      56054.970822,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56054.9720116,
+      56054.971163,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9821087,
+      56054.980976,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56054.9924221,
+      56054.991301,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0021496,
+      56055.000944,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0121623,
+      56055.011013,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0221277,
+      56055.020954,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0320505,
+      56055.030938,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.042586,
+      56055.041391,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0820032,
+      56055.080857,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.082023,
+      56055.081241,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.0922111,
+      56055.091012,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1021077,
+      56055.100953,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1121207,
+      56055.110967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1220642,
+      56055.120951,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1320577,
+      56055.130977,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1426382,
+      56055.141388,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1531164,
+      56055.151969,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1621881,
+      56055.161057,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.1720448,
+      56055.170955,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.2321872,
+      56055.231072,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.2635154,
+      56055.263156,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.272017,
+      56055.270879,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.272057,
+      56055.27122,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.282093,
+      56055.280991,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.2921607,
+      56055.290975,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3020657,
+      56055.300958,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3121022,
+      56055.310942,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3224264,
+      56055.321267,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3321534,
+      56055.330953,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.342179,
+      56055.340979,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3530214,
+      56055.351944,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3628519,
+      56055.361715,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3723567,
+      56055.371229,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.3723891,
+      56055.371528,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3821711,
+      56055.381085,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.3925605,
+      56055.390941,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4021084,
+      56055.400968,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.412107,
+      56055.410951,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4222688,
+      56055.421106,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4325241,
+      56055.431388,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4422184,
+      56055.440988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4860583,
+      56055.484934,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.4860951,
+      56055.485276,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.4941862,
+      56055.491078,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5021238,
+      56055.500977,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5120754,
+      56055.510961,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.522101,
+      56055.520944,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5320538,
+      56055.530971,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5421201,
+      56055.540997,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5530244,
+      56055.551963,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5620997,
+      56055.560965,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5720592,
+      56055.570949,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.5720826,
+      56055.57129,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.582171,
+      56055.581018,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.5920628,
+      56055.590959,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6024913,
+      56055.60137,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6122803,
+      56055.61114,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6222894,
+      56055.621209,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6320452,
+      56055.630895,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6422886,
+      56055.641049,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.6860674,
+      56055.68491,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.6861463,
+      56055.685208,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.692713,
+      56055.691096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7021067,
+      56055.700952,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7124424,
+      56055.711363,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7222673,
+      56055.721091,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7320894,
+      56055.730989,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7420943,
+      56055.740973,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.753035,
+      56055.751938,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7620797,
+      56055.760941,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.7727831,
+      56055.77165,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.8060787,
+      56055.804972,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8125597,
+      56055.811372,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8222197,
+      56055.820972,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8326709,
+      56055.831467,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8434561,
+      56055.84111,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8890518,
+      56055.887872,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.889088,
+      56055.888213,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.8926568,
+      56055.890987,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9021521,
+      56055.901013,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9120593,
+      56055.910954,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9221292,
+      56055.920981,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9321681,
+      56055.93105,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9437915,
+      56055.941802,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9860357,
+      56055.984894,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56055.9860717,
+      56055.985236,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56055.9922987,
+      56055.990996,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0022804,
+      56056.00115,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0120997,
+      56056.010963,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.022086,
+      56056.020947,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0321005,
+      56056.030974,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0427324,
+      56056.041427,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0531121,
+      56056.051965,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.062068,
+      56056.060968,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0719951,
+      56056.070824,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.0720705,
+      56056.071165,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0821981,
+      56056.081064,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.0930179,
+      56056.091389,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1021452,
+      56056.100946,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1120888,
+      56056.110933,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1221447,
+      56056.120959,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1322125,
+      56056.130943,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.143305,
+      56056.141396,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1792212,
+      56056.178004,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.1793241,
+      56056.178601,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1820746,
+      56056.180948,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.1944263,
+      56056.193065,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.202269,
+      56056.201043,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2122544,
+      56056.211027,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2223413,
+      56056.221182,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2321181,
+      56056.230995,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2425923,
+      56056.241405,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2530286,
+      56056.251987,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2621152,
+      56056.260946,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2719556,
+      56056.270845,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.2719795,
+      56056.271186,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2822123,
+      56056.280957,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.2921323,
+      56056.290983,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3021116,
+      56056.300967,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3120951,
+      56056.310951,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3220706,
+      56056.320935,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3320584,
+      56056.330961,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.342607,
+      56056.341415,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3530891,
+      56056.351996,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3620784,
+      56056.360956,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3719333,
+      56056.370854,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.3719543,
+      56056.371195,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.3825561,
+      56056.38135,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.392636,
+      56056.391035,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4020736,
+      56056.400976,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4120201,
+      56056.410917,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4225041,
+      56056.421328,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4323526,
+      56056.431141,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4421573,
+      56056.440997,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4819924,
+      56056.48089,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.4820177,
+      56056.481274,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.4925994,
+      56056.490959,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5023019,
+      56056.500985,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5121387,
+      56056.510969,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5220179,
+      56056.520953,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5321116,
+      56056.53098,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5434911,
+      56056.541433,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5531186,
+      56056.551929,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5620986,
+      56056.560974,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5719189,
+      56056.57083,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.571956,
+      56056.571171,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5820883,
+      56056.580984,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.5930163,
+      56056.591096,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6025205,
+      56056.601336,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6121402,
+      56056.610978,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6220523,
+      56056.620962,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6622168,
+      56056.661111,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6719756,
+      56056.670839,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.6720053,
+      56056.671265,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6820645,
+      56056.680993,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.6935289,
+      56056.691276,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.7030226,
+      56056.701857,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.7790602,
+      56056.777888,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.779087,
+      56056.778229,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.7820547,
+      56056.781002,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.7925184,
+      56056.791327,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8021109,
+      56056.80097,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8150421,
+      56056.810997,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8233412,
+      56056.820938,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.833014,
+      56056.83105,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8421526,
+      56056.840948,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8789749,
+      56056.877897,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.8789983,
+      56056.878238,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8820983,
+      56056.881011,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.8924588,
+      56056.891251,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9021443,
+      56056.900979,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9130163,
+      56056.911859,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9231572,
+      56056.922013,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9322096,
+      56056.931059,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9422835,
+      56056.940957,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9531294,
+      56056.951965,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.962049,
+      56056.960968,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9719311,
+      56056.970823,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56056.9719682,
+      56056.971165,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9820604,
+      56056.980978,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56056.9933553,
+      56056.990919,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0020864,
+      56057.000988,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0121824,
+      56057.010972,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0229552,
+      56057.021596,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0320683,
+      56057.03094,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.043697,
+      56057.040966,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0831405,
+      56057.082352,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56057.0841413,
+      56057.083035,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.0922577,
+      56057.090928,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.102056,
+      56057.100912,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1121691,
+      56057.111053,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1220439,
+      56057.120909,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1320414,
+      56057.130893,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1420623,
+      56057.14092,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.156367,
+      56057.155255,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1624705,
+      56057.161314,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1724657,
+      56057.171341,
+      20,
+      "006000",
+      3,
+      false,
+      false
+    ],
+    [
+      56057.1724853,
+      56057.171938,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ],
+    [
+      56057.1830455,
+      56057.181922,
+      1352,
+      "0000000000000008",
+      8,
+      false,
+      false
+    ]
+  ],
+  "error_frames": 0,
+  "serial_tx_failures": [
+    "W (125784) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=1 pending=0",
+    "W (125884) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=2 pending=0",
+    "W (125911) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=3 pending=0",
+    "W (125941) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=4 pending=0",
+    "W (125984) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=5 pending=0",
+    "W (126084) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=6 pending=0",
+    "W (126184) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=7 pending=0",
+    "W (126284) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=8 pending=0",
+    "W (126384) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=9 pending=0",
+    "W (126484) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=10 pending=0",
+    "W (126584) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=11 pending=0",
+    "W (126684) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=12 pending=0",
+    "W (126784) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=13 pending=0",
+    "W (126884) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=14 pending=0",
+    "W (126984) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=15 pending=0",
+    "W (127085) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=16 pending=0",
+    "W (127184) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=17 pending=0",
+    "W (127284) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=18 pending=0",
+    "W (127485) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=19 pending=0",
+    "W (127584) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=20 pending=0",
+    "W (127685) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=21 pending=0",
+    "W (127711) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=22 pending=0",
+    "W (127784) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=23 pending=0",
+    "W (127884) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=24 pending=0",
+    "W (127911) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=25 pending=0",
+    "W (127985) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=26 pending=0",
+    "W (128084) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=27 pending=0",
+    "W (128184) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=28 pending=0",
+    "W (128284) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=29 pending=0",
+    "W (128385) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=30 pending=0",
+    "W (128485) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=31 pending=0",
+    "W (128584) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=32 pending=0",
+    "W (128684) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=33 pending=0",
+    "W (128984) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=34 pending=0",
+    "W (129085) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=35 pending=0",
+    "W (129284) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=36 pending=0",
+    "W (129385) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=37 pending=0",
+    "W (129584) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=38 pending=0",
+    "W (129684) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=39 pending=0",
+    "W (129784) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=40 pending=0",
+    "W (129884) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=41 pending=0",
+    "W (129984) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=42 pending=0",
+    "W (132395) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=43 pending=0",
+    "W (132495) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=44 pending=0",
+    "W (132595) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=45 pending=0",
+    "W (132695) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=46 pending=0",
+    "W (132795) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=47 pending=0",
+    "W (132896) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=48 pending=0",
+    "W (132995) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=49 pending=0",
+    "W (133095) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=50 pending=0",
+    "W (133276) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=51 pending=0",
+    "W (133315) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=52 pending=0",
+    "W (133346) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=53 pending=0",
+    "W (133395) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=54 pending=0",
+    "W (133495) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=55 pending=0",
+    "W (133536) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=56 pending=0",
+    "W (133595) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=57 pending=0",
+    "W (133695) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=58 pending=0",
+    "W (133735) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=59 pending=0",
+    "W (133765) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=60 pendng=0",
+    "W (133895) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=61 pending=0",
+    "W (133995) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=62 pending=0",
+    "W (134095) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=63 pending=0",
+    "W (134175) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=64 pending=0",
+    "W (134306) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=65 pending=0",
+    "W (134355) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=66 pending=0",
+    "W (134386) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=67 pending=0",
+    "W (134595) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=68 pending=0",
+    "W (134715) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=69 pending=0",
+    "W (134746) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=70 pending=0",
+    "W (134776) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=71 pending=0",
+    "W (134995) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=72 pending=0",
+    "W (135195) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=73 pending=0",
+    "W (135316) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=74 pending=0",
+    "W (135395) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=75 pending=0",
+    "W (135496) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=76 pending=0",
+    "W (135695) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=77 pending=0",
+    "W (135995) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=78 pending=0",
+    "W (136175) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=79 pending=0",
+    "W (136255) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=80 pending=0",
+    "W (136288) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=81 pending=0",
+    "W (136395) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=82 pending=0",
+    "W (136595) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=83 pending=0",
+    "W (136857) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=0 REC=0 bus_errors=0 arb_lost=84 pending=0"
+  ],
+  "serial_tx_pin": [
+    "W (125799) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (125899) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (125925) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (125953) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (125997) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126097) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126201) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126300) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126396) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126500) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126596) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126696) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126797) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126897) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (126995) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127097) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127196) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127297) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127501) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127596) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127700) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127726) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127798) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127900) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127926) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (127997) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128100) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128196) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128301) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128398) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128498) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128600) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128696) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (128996) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129093) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129298) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129398) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129598) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129698) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129798) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129899) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (129997) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132411) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132509) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132608) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132710) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132807) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (132912) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133008) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133108) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133290) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133329) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133361) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133406) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133507) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133550) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133612) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133708) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133749) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133781) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (133907) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134007) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134109) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134188) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134320) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134369) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134403) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134612) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134729) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134761) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (134788) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135011) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135209) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135330) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135412) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135509) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (135707) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136006) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136187) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136271) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136304) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136408) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136608) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (136869) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0"
+  ]
+}

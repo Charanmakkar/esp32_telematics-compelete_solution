@@ -1,6 +1,10 @@
 $ErrorActionPreference = 'Stop'
 Push-Location (Split-Path $PSScriptRoot -Parent)
 try {
+    & gcc -std=c11 -Wall -Wextra -Werror -Imain -Imanaged_components/espressif__cjson/cJSON main/can_tx_rules.c managed_components/espressif__cjson/cJSON/cJSON.c test/test_can_tx_rules.c -lm -o test/can_tx_rules_test.exe
+    if ($LASTEXITCODE -ne 0) { throw 'CAN TX test compilation failed' }
+    & ./test/can_tx_rules_test.exe
+    if ($LASTEXITCODE -ne 0) { throw 'CAN TX tests failed' }
     & gcc -std=c11 -Wall -Wextra -Werror -Imain main/diagnostic_isotp.c test/test_diagnostic_isotp.c -o test/diagnostic_isotp_test.exe
     if ($LASTEXITCODE -ne 0) { throw 'ISO-TP test compilation failed' }
     & ./test/diagnostic_isotp_test.exe

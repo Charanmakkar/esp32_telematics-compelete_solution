@@ -1,0 +1,85 @@
+{
+  "version": {
+    "sw_version": "1.1.7",
+    "source_sha256": "b323d1f42a84b788de9592f4e0c48493d7b52ed0ac0543707d6a1cb8d7eec68e",
+    "built_at_utc": "2026-11-19T10:56:01+00:00"
+  },
+  "interfaces": {
+    "http://127.0.0.1:8000": {
+      "new_analog_database_rows": 34,
+      "new_can_database_rows": 100,
+      "device_state": {
+        "profiles": [
+          {
+            "can_id": 20,
+            "data": "006000",
+            "dlc": 3,
+            "period_ms": 100
+          },
+          {
+            "can_id": 1352,
+            "data": "0000000000000008",
+            "dlc": 8,
+            "period_ms": 10
+          }
+        ],
+        "supported": true,
+        "clock_ready": true,
+        "fresh": true,
+        "age_seconds": 0.455931,
+        "boot_id": "8bbd1aa8-2e79-53b1-5851-64724bb58bdc",
+        "mode": "listen_only",
+        "state": {
+          "enabled": false,
+          "command_id": "4afaa366-43f5-48c8-ad49-def63ddc1710",
+          "reason": "off",
+          "sent_014": 0,
+          "sent_548": 0,
+          "failures": 6,
+          "skipped": 9
+        }
+      },
+      "version_matched": true
+    },
+    "http://192.168.9.59:5173": {
+      "new_analog_database_rows": 19,
+      "new_can_database_rows": 28,
+      "device_state": {
+        "profiles": [
+          {
+            "can_id": 20,
+            "data": "006000",
+            "dlc": 3,
+            "period_ms": 100
+          },
+          {
+            "can_id": 1352,
+            "data": "0000000000000008",
+            "dlc": 8,
+            "period_ms": 10
+          }
+        ],
+        "supported": true,
+        "clock_ready": true,
+        "fresh": true,
+        "age_seconds": 0.285148,
+        "boot_id": "8bbd1aa8-2e79-53b1-5851-64724bb58bdc",
+        "mode": "listen_only",
+        "state": {
+          "enabled": false,
+          "command_id": "4afaa366-43f5-48c8-ad49-def63ddc1710",
+          "reason": "off",
+          "sent_014": 0,
+          "sent_548": 0,
+          "failures": 6,
+          "skipped": 9
+        }
+      },
+      "version_matched": true
+    }
+  },
+  "firmware_sha256": "fccb4e9c5525b4fd61432f38290cc68c9af8b667bdeeeea748230ca9ca3df6ff",
+  "live_transmission_verified": false,
+  "live_test_result": "Driver accepted frames but transmission failed and returned OFF. User confirmed TXD/STB wiring; measured chip supply voltages are pending.",
+  "com3_released": true
+}

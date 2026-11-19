@@ -9,7 +9,7 @@ from fastapi.security import APIKeyCookie
 from sqlalchemy.exc import SQLAlchemyError
 from starlette.responses import JSONResponse
 
-from app.api import auth, bms, can, commands, devices, health, telemetry
+from app.api import auth, bms, can, can_tx, commands, devices, health, telemetry
 from app.core.config import Settings
 from app.core.logging import configure_logging
 from app.core.security import COOKIE_NAME, authenticate
@@ -57,6 +57,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         devices.router,
         telemetry.router,
         can.router,
+        can_tx.router,
         bms.router,
     ):
         app.include_router(router, dependencies=[Depends(cookie_scheme)])

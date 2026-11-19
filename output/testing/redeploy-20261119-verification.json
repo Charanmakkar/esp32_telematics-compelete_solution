@@ -1,0 +1,203 @@
+{
+  "time_utc": "2026-11-19T09:06:39.954126+00:00",
+  "version": {
+    "sw_version": "1.1.4",
+    "source_sha256": "2ae749ea5903e1f3befe0151d211d792abe63b9cbb47db1bd083e0331b52f5fe",
+    "built_at_utc": "2026-11-18T17:48:31+00:00"
+  },
+  "firmware_sha256": "0af7b4d2a54b7c70838652a6b0bcb6914c9bd8e561ad3274bd059e5983c9e03c",
+  "application_offset": "0x10000",
+  "port": "COM3",
+  "mac": "ec:62:60:9c:40:84",
+  "nvs_written": false,
+  "interfaces": {
+    "http://127.0.0.1:8000": {
+      "analog_rows_persisted_in_3_seconds": 5,
+      "current_can_ids": 33,
+      "saved_can_ids": 71,
+      "can_status": {
+        "boot_id": "cb92eb42-bf8b-4147-a54b-46ebe06384bb",
+        "received_at": "2026-11-19T09:06:43.024782+00:00",
+        "queue_drops": 97639,
+        "serial_drops": 1119202,
+        "publish_drops": 1048737,
+        "rx_missed": 0,
+        "rx_overruns": 2,
+        "bus_errors": 719,
+        "uptime_ms": 674589,
+        "rx_total": 1165374,
+        "rx_bytes": 9288901,
+        "standard_frames": 1163201,
+        "extended_frames": 2173,
+        "rtr_frames": 0,
+        "wire_bits_min": 129127246,
+        "wire_bits_max": 157038905,
+        "tx_frames": 0,
+        "tx_failed": 0,
+        "arb_lost": 0,
+        "rx_error_counter": 0,
+        "tx_error_counter": 0,
+        "controller_state": 1,
+        "mode": "listen_only",
+        "mode_changes": 0,
+        "mode_switch_drops": 0,
+        "diag_supported": true,
+        "diag_version": 3,
+        "sw_version": "1.1.4",
+        "sw_build": "2ae749ea5903"
+      },
+      "health": {
+        "status": "ok",
+        "mqtt_connected": true,
+        "database_connected": true,
+        "database_engine": "mysql",
+        "metrics": {
+          "received": 5979,
+          "persisted": 5930,
+          "invalid": 0,
+          "duplicates": 49,
+          "dropped": 0,
+          "database_errors": 0,
+          "last_received_at": "2026-11-19T09:06:42.762706+00:00",
+          "last_persisted_at": "2026-11-19T09:06:42.764080+00:00",
+          "frequency_hz": 0.0,
+          "queue_depth": 0,
+          "websocket_dropped": 0
+        }
+      }
+    },
+    "http://192.168.9.59:5173": {
+      "analog_rows_persisted_in_3_seconds": 8,
+      "current_can_ids": 33,
+      "saved_can_ids": 71,
+      "can_status": {
+        "boot_id": "cb92eb42-bf8b-4147-a54b-46ebe06384bb",
+        "received_at": "2026-11-19T09:06:45.980672+00:00",
+        "queue_drops": 97639,
+        "serial_drops": 1119202,
+        "publish_drops": 1048737,
+        "rx_missed": 0,
+        "rx_overruns": 2,
+        "bus_errors": 719,
+        "uptime_ms": 674637,
+        "rx_total": 1165399,
+        "rx_bytes": 9289051,
+        "standard_frames": 1163226,
+        "extended_frames": 2173,
+        "rtr_frames": 0,
+        "wire_bits_min": 129129621,
+        "wire_bits_max": 157041780,
+        "tx_frames": 0,
+        "tx_failed": 0,
+        "arb_lost": 0,
+        "rx_error_counter": 0,
+        "tx_error_counter": 0,
+        "controller_state": 1,
+        "mode": "listen_only",
+        "mode_changes": 0,
+        "mode_switch_drops": 0,
+        "diag_supported": true,
+        "diag_version": 3,
+        "sw_version": "1.1.4",
+        "sw_build": "2ae749ea5903"
+      },
+      "health": {
+        "status": "ok",
+        "mqtt_connected": true,
+        "database_connected": true,
+        "database_engine": "mysql",
+        "metrics": {
+          "received": 5988,
+          "persisted": 5939,
+          "invalid": 0,
+          "duplicates": 49,
+          "dropped": 0,
+          "database_errors": 0,
+          "last_received_at": "2026-11-19T09:06:48.956666+00:00",
+          "last_persisted_at": "2026-11-19T09:06:48.957284+00:00",
+          "frequency_hz": 4.07,
+          "queue_depth": 0,
+          "websocket_dropped": 0
+        }
+      }
+    }
+  },
+  "serial": {
+    "time_utc": "2026-11-19T08:55:46.950405+00:00",
+    "port": "COM3",
+    "baud": 115200,
+    "seconds": 20,
+    "sw_version": "1.1.4",
+    "sw_build": "2ae749ea5903",
+    "identity": [
+      "I (552) navsphere: SW_VERSION=1.1.4 BUILD=2ae749ea5903 UTC=2026-11-18T17:48:31+00:00",
+      "I (778) can: CAN_BUILD SW_VERSION=1.1.4 BUILD=2ae749ea5903 diag_version=3 ELF=d5bd2b7c2; serial CAN ID/data enabled"
+    ],
+    "can_serial_frames": 0,
+    "examples": [],
+    "status": [
+      "I (5773) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1",
+      "I (11774) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1",
+      "I (17775) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1"
+    ]
+  },
+  "new_analog_database_rows": 24,
+  "com3_released": true,
+  "can_receive_verified": true,
+  "follow_up_serial": {
+    "time_utc": "2026-11-19T09:03:28.872928+00:00",
+    "seconds": 12,
+    "can_serial_frames": 1633,
+    "examples": [
+      "CAN seq=262930 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+      "CAN seq=262954 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+      "CAN seq=262979 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+      "CAN seq=263003 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+      "CAN seq=263028 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 "
+    ],
+    "status": [
+      "I (398296) can: CAN_STATUS mode=listen_only state=1 rx=274669 tx=0 bus_errors=174 REC=0 TEC=0 serial_drops=265278 RXD26_now=1",
+      "I (404125) can: CAN_STATUS mode=listen_only state=1 rx=296159 tx=0 bus_errors=191 REC=0 TEC=0 serial_drops=286009 RXD26_now=0"
+    ]
+  },
+  "pcan_acknowledgement_receiver": {
+    "time_utc": "2026-11-19T09:10:15.727642+00:00",
+    "mode": "normal receiver (ACK enabled)",
+    "application_messages_sent": 0,
+    "frames": 103638,
+    "ids": {
+      "0x6E": 16256,
+      "0x6F": 16261,
+      "0x82": 8130,
+      "0x78": 1626,
+      "0x79": 1626,
+      "0x88": 1626,
+      "0xA0": 16260,
+      "0x103": 1626,
+      "0x110": 16261,
+      "0x126": 1627,
+      "0x127": 1625,
+      "0x128": 1789,
+      "0x129": 1626,
+      "0x134": 1626,
+      "0x1A0": 1626,
+      "0x1B0": 1626,
+      "0x1B5": 1626,
+      "0x585": 65,
+      "0x630": 1626,
+      "0x631": 1626,
+      "0x1B400001": 1626,
+      "0x1C400000": 1626,
+      "0x1D400000": 1626,
+      "0x1F400000": 1626,
+      "0x1E800000": 163,
+      "0x96": 325,
+      "0x104": 162,
+      "0x105": 162,
+      "0x106": 162
+    },
+    "error_frames": 0,
+    "pcan_status": "OK"
+  },
+  "can_receive_note": "Initially no frames; later verified live with PCAN normal-mode receiver supplying ACK. ESP32 stays listen-only."
+}

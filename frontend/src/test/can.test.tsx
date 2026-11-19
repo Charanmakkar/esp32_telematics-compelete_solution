@@ -94,6 +94,7 @@ it("a stalled poll times out and retries while displayed ages continue advancing
   let polls = 0;
   mocks.request.mockImplementation((url: string, options?: RequestInit) => {
     if (url.includes("/statistics")) return Promise.resolve({ available: false });
+    if (url.includes("/can/tx")) return Promise.resolve({ supported: false, fresh: false, state: null });
     polls++;
     if (polls === 1) return Promise.resolve({ ...data, server_time: data.frames[0].received_at });
     if (polls === 2) return new Promise((_, reject) => options?.signal?.addEventListener("abort", () => reject(new DOMException("Aborted", "AbortError"))));

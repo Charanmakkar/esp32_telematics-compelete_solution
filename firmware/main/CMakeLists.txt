@@ -1,5 +1,5 @@
 idf_component_register(SRCS "diagnostic_isotp.c" "diagnostic_manager.c" "main.c" "app_config.c" "adc_manager.c"
-    "wifi_manager.c" "mqtt_manager.c" "command_handler.c" "command_rules.c" "can_manager.c"
+    "wifi_manager.c" "mqtt_manager.c" "command_handler.c" "command_rules.c" "can_manager.c" "can_tx.c" "can_tx_rules.c"
     INCLUDE_DIRS "."
     REQUIRES esp_wifi esp_event esp_netif nvs_flash esp_adc esp_driver_gpio
              esp_timer esp_system lwip mqtt cjson mbedtls driver

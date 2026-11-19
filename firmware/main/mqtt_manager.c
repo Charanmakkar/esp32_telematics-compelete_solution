@@ -2,6 +2,7 @@
 #include "adc_manager.h"
 #include "command_handler.h"
 #include "diagnostic_manager.h"
+#include "can_tx.h"
 #include "wifi_manager.h"
 #include <inttypes.h>
 #include <stdarg.h>
@@ -27,6 +28,7 @@ typedef struct {
     char ack_topic[NAV_TOPIC_CAPACITY];
     char status_topic[NAV_TOPIC_CAPACITY];
     char diagnostic_topic[NAV_TOPIC_CAPACITY];
+    char can_tx_topic[NAV_TOPIC_CAPACITY];
     char boot_id[37];
     char will[160];
     char incoming[NAV_COMMAND_CAPACITY];
@@ -184,6 +186,7 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
     case MQTT_EVENT_CONNECTED:
         (void)xEventGroupSetBits(state->events, NAV_MQTT_CONNECTED_BIT);
         (void)esp_mqtt_client_subscribe(state->client, state->diagnostic_topic, MQTT_QOS);
+        (void)esp_mqtt_client_subscribe(state->client, state->can_tx_topic, MQTT_QOS);
         if (esp_mqtt_client_subscribe(state->client, state->command_topic, MQTT_QOS) < 0) {
             ESP_LOGE("mqtt", "Command subscription enqueue failed");
         }
@@ -191,11 +194,20 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
         break;
     case MQTT_EVENT_DISCONNECTED:
         (void)xEventGroupClearBits(state->events, NAV_MQTT_CONNECTED_BIT);
+        can_tx_disconnect();
         state->incoming_total = 0U;
         ESP_LOGW("mqtt", "Disconnected");
         break;
     case MQTT_EVENT_DATA:
         if (event != NULL) {
+            /* Bounded control fits within one MQTT input buffer. Partial or
+               oversized input is rejected, never interpreted as GPIO/UDS. */
+            if (event->topic && event->topic_len==(int)strlen(state->can_tx_topic) &&
+                memcmp(event->topic,state->can_tx_topic,event->topic_len)==0 &&
+                event->current_data_offset==0 && event->data_len==event->total_data_len &&
+                event->data_len>0) {
+                can_tx_receive(event->data,(size_t)event->data_len,event->retain);
+            }
             bool matches = event->topic && event->topic_len == (int)strlen(state->diagnostic_topic) &&
                 memcmp(event->topic, state->diagnostic_topic, event->topic_len) == 0;
             diagnostic_manager_fragment(event, matches);
@@ -318,6 +330,8 @@ esp_err_t mqtt_manager_start(const app_config_t *config)
     if (uuid_count != 36) { return ESP_FAIL; }
     snprintf(context.diagnostic_topic, sizeof(context.diagnostic_topic), "%s/%s/diagnostic/request",
         CONFIG_NAV_MQTT_TOPIC_PREFIX, config->device_id);
+    snprintf(context.can_tx_topic,sizeof(context.can_tx_topic),"%s/%s/can/tx/request",
+        CONFIG_NAV_MQTT_TOPIC_PREFIX,config->device_id);
     const char *suffixes[] = { "telemetry", "command", "ack", "status" };
     char *topics[] = { context.telemetry_topic, context.command_topic, context.ack_topic, context.status_topic };
     for (size_t index = 0U; index < 4U; ++index) {
