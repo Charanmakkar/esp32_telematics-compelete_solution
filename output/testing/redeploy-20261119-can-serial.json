@@ -1,0 +1,16 @@
+{
+  "time_utc": "2026-11-19T09:03:28.872928+00:00",
+  "seconds": 12,
+  "can_serial_frames": 1633,
+  "examples": [
+    "CAN seq=262930 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+    "CAN seq=262954 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+    "CAN seq=262979 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+    "CAN seq=263003 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 ",
+    "CAN seq=263028 ID=0x0000006E STD DATA DLC=8 DATA=39 E1 FF 01 00 00 DE 00 "
+  ],
+  "status": [
+    "I (398296) can: CAN_STATUS mode=listen_only state=1 rx=274669 tx=0 bus_errors=174 REC=0 TEC=0 serial_drops=265278 RXD26_now=1",
+    "I (404125) can: CAN_STATUS mode=listen_only state=1 rx=296159 tx=0 bus_errors=191 REC=0 TEC=0 serial_drops=286009 RXD26_now=0"
+  ]
+}

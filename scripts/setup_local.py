@@ -83,7 +83,7 @@ def main() -> None:
         f"acl_file {posix(ROOT / 'mqtt' / 'acl.example')}\n"
         "persistence true\n"
         f"persistence_location {posix(broker_dir)}/\n"
-        "max_queued_messages 100\nmax_inflight_messages 20\nmessage_size_limit 8192\n"
+        "max_queued_messages 100\nmax_inflight_messages 20\nmessage_size_limit 12288\n"
         "log_dest stdout\nlog_type error\nlog_type warning\nlog_type notice\n", encoding="utf-8")
     print("Created NavSphere database, restricted application user and ignored local credential files.")
     print("Default development login: admin / admin (password change required before commands).")

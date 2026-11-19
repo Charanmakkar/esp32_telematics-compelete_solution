@@ -1,0 +1,239 @@
+{
+  "time_utc": "2026-11-18T10:22:48.805724+00:00",
+  "application_bytes": 1007952,
+  "application_sha256": "5c8e29e622356d3a69a6891b62e12e27528ed0f0acce7a7d0e68a26942d95957",
+  "flash": {
+    "port": "COM5",
+    "baud": 115200,
+    "esptool_hash_verified": true
+  },
+  "diagnostic_requests_sent_by_this_check": 0,
+  "software_checks": {
+    "backend_pytest_passed": 58,
+    "frontend_vitest_passed": 25,
+    "ruff": "passed",
+    "firmware_host_tests": "passed",
+    "esp_idf_build": "passed",
+    "typescript_vite_build": "passed"
+  },
+  "checks": {
+    "health": {
+      "status": "ok",
+      "mqtt_connected": true,
+      "database_connected": true,
+      "database_engine": "mysql",
+      "metrics": {
+        "received": 6232,
+        "persisted": 6179,
+        "invalid": 0,
+        "duplicates": 53,
+        "dropped": 0,
+        "database_errors": 0,
+        "last_received_at": "2026-11-18T10:22:46.692740+00:00",
+        "last_persisted_at": "2026-11-18T10:22:46.695616+00:00",
+        "frequency_hz": 10.04,
+        "queue_depth": 0,
+        "websocket_dropped": 0
+      }
+    },
+    "ready": {
+      "ready": true,
+      "database_connected": true,
+      "mqtt_connected": true
+    },
+    "statistics": {
+      "available": true,
+      "boot_id": "98e4e53d-b0d8-c4e0-c5c8-99b1c982ead5",
+      "age_seconds": 0.08,
+      "uptime_seconds": 423.4,
+      "window_seconds": 10,
+      "received_fps": 374.4,
+      "received_bytes_per_second": 2995.2,
+      "hardware_fps": 3715.38,
+      "hardware_bytes_per_second": 29723.03,
+      "load_min_percent": 82.48,
+      "load_max_percent": 100,
+      "unique_ids": 1,
+      "totals": {
+        "frames": 55213,
+        "bytes": 441704,
+        "standard": 55213,
+        "data": 55213,
+        "dlc_8": 55213
+      },
+      "dlc_distribution": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        55213
+      ],
+      "device": {
+        "queue_drops": 649805,
+        "serial_drops": 1539832,
+        "publish_drops": 897638,
+        "rx_missed": 0,
+        "rx_overruns": 0,
+        "bus_errors": 954,
+        "uptime_ms": 433273,
+        "rx_total": 1602907,
+        "rx_bytes": 12823256,
+        "standard_frames": 1602907,
+        "extended_frames": 0,
+        "rtr_frames": 0,
+        "wire_bits_min": 177922677,
+        "wire_bits_max": 216392445,
+        "tx_frames": 0,
+        "tx_failed": 0,
+        "arb_lost": 0,
+        "rx_error_counter": 0,
+        "tx_error_counter": 0,
+        "controller_state": 1,
+        "mode": "listen_only",
+        "mode_changes": 0,
+        "mode_switch_drops": 0,
+        "diag_supported": true
+      },
+      "ids": [
+        {
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "frames": 55213,
+          "dlc": 8,
+          "age_seconds": 0.08,
+          "changes": 0,
+          "mean_interval_ms": 1.38,
+          "min_interval_ms": 0,
+          "max_interval_ms": 41,
+          "jitter_ms": 5.48,
+          "frequency_hz": 727.27
+        }
+      ],
+      "timing_note": "Per-ID timing uses the last 64 delivered intervals; capture drops affect these values.",
+      "load_note": "Estimated wire-time bounds for hardware-captured valid frames, including possible bit stuffing and intermission. Missed frames and error frames are excluded.",
+      "server": {
+        "persisted": 72445,
+        "duplicates": 0,
+        "invalid": 0,
+        "dropped_batches": 0,
+        "database_errors": 0,
+        "database_dropped_frames": 0
+      }
+    },
+    "can_history": {
+      "frames": [
+        {
+          "id": 4499202,
+          "sequence": 1602182,
+          "uptime_ms": 433080,
+          "timestamp_ms": 1794997366331,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "39E1FF010000DE00",
+          "device_id": "ESP32_001",
+          "boot_id": "98e4e53d-b0d8-c4e0-c5c8-99b1c982ead5",
+          "received_at": "2026-11-18T10:22:46.691779+00:00"
+        },
+        {
+          "id": 4499201,
+          "sequence": 1602181,
+          "uptime_ms": 433080,
+          "timestamp_ms": 1794997366331,
+          "can_id": 110,
+          "extended": false,
+          "rtr": false,
+          "dlc": 8,
+          "data": "39E1FF010000DE00",
+          "device_id": "ESP32_001",
+          "boot_id": "98e4e53d-b0d8-c4e0-c5c8-99b1c982ead5",
+          "received_at": "2026-11-18T10:22:46.691779+00:00"
+        }
+      ],
+      "next_before_id": 4499201
+    },
+    "analog_latest": {
+      "received": {
+        "schema_version": 1,
+        "device_id": "ESP32_001",
+        "boot_id": "98e4e53d-b0d8-c4e0-c5c8-99b1c982ead5",
+        "sequence": 4333,
+        "timestamp_ms": 1794997366583,
+        "time_valid": true,
+        "uptime_ms": 433331,
+        "channels": {
+          "analog_1": 142,
+          "analog_2": 343,
+          "analog_3": 142,
+          "analog_4": 142,
+          "analog_5": 142,
+          "analog_6": 142
+        },
+        "raw": [
+          0,
+          246,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid_mask": 63,
+        "mqtt_connected": true,
+        "dropped_samples": 192,
+        "source": "hardware",
+        "stale": false,
+        "id": null,
+        "received_at": "2026-11-18T10:22:46.811705Z",
+        "persisted_at": null
+      },
+      "persisted": {
+        "schema_version": 1,
+        "device_id": "ESP32_001",
+        "boot_id": "98e4e53d-b0d8-c4e0-c5c8-99b1c982ead5",
+        "sequence": 4333,
+        "timestamp_ms": 1794997366583,
+        "time_valid": true,
+        "uptime_ms": 433331,
+        "channels": {
+          "analog_1": 142,
+          "analog_2": 343,
+          "analog_3": 142,
+          "analog_4": 142,
+          "analog_5": 142,
+          "analog_6": 142
+        },
+        "raw": [
+          0,
+          246,
+          0,
+          0,
+          0,
+          0
+        ],
+        "valid_mask": 63,
+        "mqtt_connected": true,
+        "dropped_samples": 192,
+        "source": "hardware",
+        "stale": false,
+        "id": 305136,
+        "received_at": "2026-11-18T10:22:46.811000Z",
+        "persisted_at": "2026-11-18T10:22:46.815000Z"
+      }
+    },
+    "catalog_counts": {
+      "services": 111,
+      "presets": 42
+    },
+    "lan_pages": {
+      "can": 200,
+      "bms": 200
+    },
+    "lan_scope": "Requested through the laptop's LAN address from this laptop; remote PC not retested."
+  }
+}

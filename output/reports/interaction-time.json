@@ -1,82 +1,1098 @@
 {
-  "completed_turns": 9,
-  "total_ms": 6400122,
+  "schema_version": 2,
+  "audited_at_utc": "2026-11-19T15:50:22.384Z",
+  "scope": "Two project chats; completed turn durations through the preceding commit/push. Current documentation turn excluded from time. User inputs include the two current documentation requests.",
+  "method": "Sum app-recorded durationMs; includes tools and waits, excludes gaps. Not AI compute, human labor, or billed tokens. Text is Unicode characters and whitespace-separated words, HTML space entities normalized; clarification answer text only; attachments not added to message text.",
+  "completed_turns": 44,
+  "total_ms": 22882384,
   "first": 1794384619,
-  "last": 1794460768,
-  "elapsed_seconds": 76149,
+  "last": 1795093786,
+  "user_message_count": 74,
+  "user_message_characters": 7791,
+  "user_message_words": 1313,
+  "truncated_messages": 0,
+  "total_credits_used": null,
+  "exact_model_tokens": null,
   "by_chat": [
     {
       "title": "Recover missing project files",
-      "total_ms": 2313844
+      "completed_turns": 40,
+      "total_ms": 18796106,
+      "user_message_count": 65
     },
     {
       "title": "Build NavSphere telemetry platform",
-      "total_ms": 4086278
+      "completed_turns": 4,
+      "total_ms": 4086278,
+      "user_message_count": 9
     }
   ],
   "turns": [
     {
-      "id": "01a1c9a8-66ac-7e72-ba65-50fc11f0357b",
-      "status": "completed",
-      "startedAt": 1794384619,
-      "completedAt": 1794386832,
-      "durationMs": 2213145
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f47c-5885-7ee0-a9cb-abf37ca6f17d",
+      "status": "inProgress",
+      "startedAt": 1795103152,
+      "completedAt": null,
+      "durationMs": null,
+      "user_messages": [
+        {
+          "id": "01a1f47c-5a20-7203-88a0-4e2e342d3288",
+          "kind": "text_or_attachment",
+          "characters": 138,
+          "words": 26,
+          "truncated": false
+        },
+        {
+          "id": "01a1f47c-a51c-7880-a018-95d7136c35c3",
+          "kind": "text_or_attachment",
+          "characters": 34,
+          "words": 6,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1ca03-e557-7db0-98e0-916be23e5678",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f3ea-4e94-7440-8f96-5c40cf0a3641",
       "status": "completed",
-      "startedAt": 1794390615,
-      "completedAt": 1794391063,
-      "durationMs": 448145
+      "startedAt": 1795093581,
+      "completedAt": 1795093786,
+      "durationMs": 204608,
+      "user_messages": [
+        {
+          "id": "01a1f3ea-4f4b-7d30-a44f-9509fe159bcc",
+          "kind": "text_or_attachment",
+          "characters": 15,
+          "words": 3,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1ca0c-6262-7581-bc37-a49675e5ab49",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f37e-62aa-7110-9b46-580b766927dd",
       "status": "completed",
-      "startedAt": 1794391171,
-      "completedAt": 1794391988,
-      "durationMs": 816758
+      "startedAt": 1795086508,
+      "completedAt": 1795087201,
+      "durationMs": 693187,
+      "user_messages": [
+        {
+          "id": "01a1f37e-6346-7ae0-9452-2b0bf9942c7c",
+          "kind": "clarification",
+          "characters": 44,
+          "words": 7,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1ca36-0665-7672-9d37-d855f048345e",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f36f-7df5-7762-836e-4f69ce2dd4bd",
       "status": "completed",
-      "startedAt": 1794393900,
-      "completedAt": 1794394509,
-      "durationMs": 608230
+      "startedAt": 1795085532,
+      "completedAt": 1795086167,
+      "durationMs": 634555,
+      "user_messages": [
+        {
+          "id": "01a1f36f-7ef9-72c3-b5ca-7f5ce25c32c8",
+          "kind": "text_or_attachment",
+          "characters": 4,
+          "words": 1,
+          "truncated": false
+        },
+        {
+          "id": "01a1f36f-afbc-7e43-97b7-0bf0b0fda128",
+          "kind": "clarification",
+          "characters": 4,
+          "words": 1,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1cddb-14f3-7b00-a92a-11ba92e132b1",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f352-7e87-77c3-8823-b664a91adeb0",
       "status": "completed",
-      "startedAt": 1794455049,
-      "completedAt": 1794455658,
-      "durationMs": 608650
+      "startedAt": 1795083632,
+      "completedAt": 1795085289,
+      "durationMs": 1657161,
+      "user_messages": [
+        {
+          "id": "01a1f352-8035-7430-92f9-04aa4fd05673",
+          "kind": "text_or_attachment",
+          "characters": 651,
+          "words": 87,
+          "truncated": false
+        },
+        {
+          "id": "01a1f355-55c8-7a21-84a1-e4a11e18c084",
+          "kind": "clarification",
+          "characters": 70,
+          "words": 15,
+          "truncated": false
+        },
+        {
+          "id": "01a1f35b-960e-79e0-98b1-9aa737a7f2a0",
+          "kind": "text_or_attachment",
+          "characters": 9,
+          "words": 1,
+          "truncated": false
+        },
+        {
+          "id": "01a1f35b-c3d0-7992-80bf-31e8fc3e8021",
+          "kind": "clarification",
+          "characters": 9,
+          "words": 1,
+          "truncated": false
+        },
+        {
+          "id": "01a1f35f-0f13-79f1-b119-4d0fc7f3be96",
+          "kind": "clarification",
+          "characters": 3,
+          "words": 1,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1cdeb-88b5-76d0-8fc4-a9c4a2748ea8",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1f302-447c-7520-b5fa-5140c172712a",
       "status": "completed",
-      "startedAt": 1794456127,
-      "completedAt": 1794456464,
-      "durationMs": 337121
+      "startedAt": 1795078374,
+      "completedAt": 1795079460,
+      "durationMs": 1085242,
+      "user_messages": [
+        {
+          "id": "01a1f302-489e-7ec3-87f9-fc42b7b1a1dc",
+          "kind": "text_or_attachment",
+          "characters": 46,
+          "words": 8,
+          "truncated": false
+        },
+        {
+          "id": "01a1f309-57a4-7b60-90e9-30fc24ddfaef",
+          "kind": "clarification",
+          "characters": 22,
+          "words": 5,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1cdf9-e18f-7413-8ee9-4d51033502a4",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1effc-a7bb-79d2-a12d-22f509552cea",
       "status": "completed",
-      "startedAt": 1794457067,
-      "completedAt": 1794457442,
-      "durationMs": 374516
+      "startedAt": 1795027675,
+      "completedAt": 1795027700,
+      "durationMs": 25046,
+      "user_messages": [
+        {
+          "id": "01a1effc-a86f-7950-b22c-fecc8d60d5d8",
+          "kind": "text_or_attachment",
+          "characters": 32,
+          "words": 6,
+          "truncated": false
+        }
+      ]
     },
     {
-      "id": "01a1ce20-0993-7190-8945-da98024a8920",
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efe5-ac85-7e80-9051-149e612039ff",
       "status": "completed",
-      "startedAt": 1794459568,
-      "completedAt": 1794460242,
-      "durationMs": 673653
+      "startedAt": 1795026169,
+      "completedAt": 1795026263,
+      "durationMs": 94053,
+      "user_messages": [
+        {
+          "id": "01a1efe5-ad18-71c0-886a-f2a362dd6017",
+          "kind": "text_or_attachment",
+          "characters": 64,
+          "words": 14,
+          "truncated": false
+        }
+      ]
     },
     {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efd1-fd89-7a70-bc76-6bd429f57640",
+      "status": "completed",
+      "startedAt": 1795024879,
+      "completedAt": 1795024951,
+      "durationMs": 72032,
+      "user_messages": [
+        {
+          "id": "01a1efd1-fe10-7273-a176-63f5dcb631f0",
+          "kind": "text_or_attachment",
+          "characters": 21,
+          "words": 5,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efd1-3b06-7eb0-94b1-bd258f6d7754",
+      "status": "completed",
+      "startedAt": 1795024829,
+      "completedAt": 1795024836,
+      "durationMs": 6790,
+      "user_messages": [
+        {
+          "id": "01a1efd1-3bd6-71b2-b00d-4a670f333302",
+          "kind": "text_or_attachment",
+          "characters": 13,
+          "words": 3,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efd0-53f8-7233-9ee9-6e0c773261cd",
+      "status": "completed",
+      "startedAt": 1795024770,
+      "completedAt": 1795024773,
+      "durationMs": 3796,
+      "user_messages": [
+        {
+          "id": "01a1efd0-54ba-7461-8e64-5ad4f33448a1",
+          "kind": "clarification",
+          "characters": 54,
+          "words": 7,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efc2-d89b-7101-b6c1-49f4576a5b91",
+      "status": "completed",
+      "startedAt": 1795023886,
+      "completedAt": 1795024742,
+      "durationMs": 855913,
+      "user_messages": [
+        {
+          "id": "01a1efc2-d90a-73e0-a7fc-d3703142b5fb",
+          "kind": "text_or_attachment",
+          "characters": 51,
+          "words": 11,
+          "truncated": false
+        },
+        {
+          "id": "01a1efc6-8522-76a2-8ebf-c4e24794190d",
+          "kind": "text_or_attachment",
+          "characters": 100,
+          "words": 19,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efb6-b138-7cc0-a5ca-3792e3ac102d",
+      "status": "completed",
+      "startedAt": 1795023090,
+      "completedAt": 1795023096,
+      "durationMs": 6697,
+      "user_messages": [
+        {
+          "id": "01a1efb6-b1a5-71e3-b32d-0e1fc8b9579a",
+          "kind": "text_or_attachment",
+          "characters": 69,
+          "words": 16,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1efb0-8e1a-7b63-a23d-fab058b27bb8",
+      "status": "completed",
+      "startedAt": 1795022687,
+      "completedAt": 1795023050,
+      "durationMs": 362184,
+      "user_messages": [
+        {
+          "id": "01a1efb0-8e7b-7e12-90e0-4ffad2f35840",
+          "kind": "clarification",
+          "characters": 4,
+          "words": 1,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ef9f-2fe3-7151-a798-07c01f3d80f0",
+      "status": "completed",
+      "startedAt": 1795021549,
+      "completedAt": 1795022660,
+      "durationMs": 1111140,
+      "user_messages": [
+        {
+          "id": "01a1ef9f-313c-78c3-8c9c-c21a5363f81b",
+          "kind": "text_or_attachment",
+          "characters": 61,
+          "words": 14,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ef89-fc4a-7273-ab98-2a8f45d04e44",
+      "status": "completed",
+      "startedAt": 1795020160,
+      "completedAt": 1795020984,
+      "durationMs": 823538,
+      "user_messages": [
+        {
+          "id": "01a1ef89-fe9a-7b20-a9da-5df62fb469bd",
+          "kind": "text_or_attachment",
+          "characters": 161,
+          "words": 33,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ef79-d5e9-7440-9049-2b7dadd864f8",
+      "status": "completed",
+      "startedAt": 1795019101,
+      "completedAt": 1795019127,
+      "durationMs": 25780,
+      "user_messages": [
+        {
+          "id": "01a1ef79-d7db-7792-87e0-35c65a35df9f",
+          "kind": "text_or_attachment",
+          "characters": 20,
+          "words": 4,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1eebe-9945-70b0-b5c8-385bf59b4aa4",
+      "status": "completed",
+      "startedAt": 1795006830,
+      "completedAt": 1795009103,
+      "durationMs": 2272358,
+      "user_messages": [
+        {
+          "id": "01a1eebe-99d9-79c2-b86a-98a02d190882",
+          "kind": "text_or_attachment",
+          "characters": 230,
+          "words": 31,
+          "truncated": false
+        },
+        {
+          "id": "01a1eecb-0cfc-7db2-81af-5c7111bb8d2d",
+          "kind": "clarification",
+          "characters": 47,
+          "words": 9,
+          "truncated": false
+        },
+        {
+          "id": "01a1eecd-4a6e-72c1-9ef6-d6b7d2b76961",
+          "kind": "clarification",
+          "characters": 14,
+          "words": 2,
+          "truncated": false
+        },
+        {
+          "id": "01a1eece-9c94-75e1-bb0f-5c1572905839",
+          "kind": "clarification",
+          "characters": 17,
+          "words": 3,
+          "truncated": false
+        },
+        {
+          "id": "01a1eed0-3cd6-7d91-9021-e9c172b21f7b",
+          "kind": "clarification",
+          "characters": 13,
+          "words": 3,
+          "truncated": false
+        },
+        {
+          "id": "01a1eed1-50ec-7920-8f9e-b2841029e6b0",
+          "kind": "clarification",
+          "characters": 15,
+          "words": 2,
+          "truncated": false
+        },
+        {
+          "id": "01a1eed8-669b-7d80-ac24-177df062d53f",
+          "kind": "clarification",
+          "characters": 899,
+          "words": 106,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1eea8-5be4-77b3-be5d-7a936786ade1",
+      "status": "interrupted",
+      "startedAt": 1795005373,
+      "completedAt": 1795006486,
+      "durationMs": 1113494,
+      "user_messages": [
+        {
+          "id": "01a1eea8-5c3f-7cb2-93aa-ca2a77b9534e",
+          "kind": "text_or_attachment",
+          "characters": 458,
+          "words": 86,
+          "truncated": false
+        },
+        {
+          "id": "01a1eeb8-3d7c-7ab2-87fc-a9b49f303475",
+          "kind": "clarification",
+          "characters": 51,
+          "words": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1eea0-6914-7463-a0c5-f6651970bcf1",
+      "status": "completed",
+      "startedAt": 1795004852,
+      "completedAt": 1795005027,
+      "durationMs": 174803,
+      "user_messages": [
+        {
+          "id": "01a1eea0-6a18-7c30-a257-3c15de63e9e1",
+          "kind": "text_or_attachment",
+          "characters": 110,
+          "words": 24,
+          "truncated": false
+        },
+        {
+          "id": "01a1eea0-d1a7-7950-bc0c-ec927eca5f30",
+          "kind": "clarification",
+          "characters": 39,
+          "words": 10,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1edfb-01d7-7490-a71f-ccf147480bb5",
+      "status": "completed",
+      "startedAt": 1794994012,
+      "completedAt": 1794997442,
+      "durationMs": 3429693,
+      "user_messages": [
+        {
+          "id": "01a1edfb-0287-7672-bf4e-836dbf5e90fa",
+          "kind": "text_or_attachment",
+          "characters": 809,
+          "words": 117,
+          "truncated": false
+        },
+        {
+          "id": "01a1edfc-6bfa-7e71-a108-a40eed055df6",
+          "kind": "clarification",
+          "characters": 67,
+          "words": 9,
+          "truncated": false
+        },
+        {
+          "id": "01a1ee14-e148-7301-862b-d00c472092b1",
+          "kind": "clarification",
+          "characters": 9,
+          "words": 1,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ed92-fa91-76a2-b4fe-1c54026b44ab",
+      "status": "completed",
+      "startedAt": 1794987195,
+      "completedAt": 1794987329,
+      "durationMs": 135882,
+      "user_messages": [
+        {
+          "id": "01a1ed92-fe02-7712-be90-53b4a42bba47",
+          "kind": "text_or_attachment",
+          "characters": 59,
+          "words": 13,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e972-cd41-7fd0-8632-f226d0c2d553",
+      "status": "completed",
+      "startedAt": 1794917977,
+      "completedAt": 1794917982,
+      "durationMs": 5310,
+      "user_messages": [
+        {
+          "id": "01a1e972-cde3-7140-908c-568df126f736",
+          "kind": "clarification",
+          "characters": 12,
+          "words": 3,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e967-514e-7cf3-afa9-e54e19398543",
+      "status": "completed",
+      "startedAt": 1794917224,
+      "completedAt": 1794917974,
+      "durationMs": 749423,
+      "user_messages": [
+        {
+          "id": "01a1e967-522b-7341-bcee-d246bf60e464",
+          "kind": "text_or_attachment",
+          "characters": 271,
+          "words": 55,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e95c-df03-7da3-9b15-cf916e8c6401",
+      "status": "completed",
+      "startedAt": 1794916540,
+      "completedAt": 1794916603,
+      "durationMs": 63285,
+      "user_messages": [
+        {
+          "id": "01a1e95c-e161-7533-baba-8e148cdeb432",
+          "kind": "clarification",
+          "characters": 33,
+          "words": 7,
+          "truncated": false
+        },
+        {
+          "id": "01a1e95d-1e09-7612-bd47-5a3f114662b9",
+          "kind": "text_or_attachment",
+          "characters": 30,
+          "words": 7,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e934-9bec-7422-b558-042c0e173e00",
+      "status": "completed",
+      "startedAt": 1794913901,
+      "completedAt": 1794914627,
+      "durationMs": 725806,
+      "user_messages": [
+        {
+          "id": "01a1e934-9e21-7921-b86d-880c6b1626fe",
+          "kind": "text_or_attachment",
+          "characters": 17,
+          "words": 3,
+          "truncated": false
+        },
+        {
+          "id": "01a1e936-7ca2-7f02-8d61-1e2b8d8fe0b2",
+          "kind": "clarification",
+          "characters": 9,
+          "words": 2,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e857-d30b-7c43-aeb7-6b913b33f312",
+      "status": "failed",
+      "startedAt": 1794899432,
+      "completedAt": 1794900054,
+      "durationMs": 622485,
+      "user_messages": []
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e857-ae47-7b23-a162-46edac61e7a7",
+      "status": "interrupted",
+      "startedAt": 1794899422,
+      "completedAt": 1794899424,
+      "durationMs": 1841,
+      "user_messages": [
+        {
+          "id": "01a1e857-aec4-7d21-a36d-7978699c1e67",
+          "kind": "text_or_attachment",
+          "characters": 526,
+          "words": 104,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e818-857d-7490-ae2c-cc115617fe56",
+      "status": "completed",
+      "startedAt": 1794895283,
+      "completedAt": 1794895308,
+      "durationMs": 24480,
+      "user_messages": [
+        {
+          "id": "01a1e818-87ab-7c02-b41f-5d2298ea757b",
+          "kind": "text_or_attachment",
+          "characters": 54,
+          "words": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e3a6-5236-7113-a529-fcf3fd5f82b8",
+      "status": "completed",
+      "startedAt": 1794820690,
+      "completedAt": 1794820832,
+      "durationMs": 142113,
+      "user_messages": [
+        {
+          "id": "01a1e3a6-528e-74c1-b94f-b87d65f93867",
+          "kind": "text_or_attachment",
+          "characters": 83,
+          "words": 15,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e39f-ded3-7e10-bb9e-4478310340c6",
+      "status": "completed",
+      "startedAt": 1794820267,
+      "completedAt": 1794820418,
+      "durationMs": 150230,
+      "user_messages": []
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e39f-d3ee-7a81-9932-806388c6e706",
+      "status": "interrupted",
+      "startedAt": 1794820265,
+      "completedAt": 1794820266,
+      "durationMs": 1051,
+      "user_messages": []
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e39f-c07e-7b50-9b37-d6f232f4d53b",
+      "status": "interrupted",
+      "startedAt": 1794820260,
+      "completedAt": 1794820264,
+      "durationMs": 4108,
+      "user_messages": [
+        {
+          "id": "01a1e39f-c179-7ce3-ada7-403280ab25ac",
+          "kind": "text_or_attachment",
+          "characters": 38,
+          "words": 8,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e336-b9cc-7293-b44a-9cbcc6f7d899",
+      "status": "completed",
+      "startedAt": 1794813377,
+      "completedAt": 1794813525,
+      "durationMs": 148228,
+      "user_messages": [
+        {
+          "id": "01a1e336-ba3c-7782-9c01-830317a5023c",
+          "kind": "text_or_attachment",
+          "characters": 45,
+          "words": 8,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e334-7cd2-7ea3-bc11-9902f3a4b5d1",
+      "status": "completed",
+      "startedAt": 1794813230,
+      "completedAt": 1794813350,
+      "durationMs": 120508,
+      "user_messages": [
+        {
+          "id": "01a1e334-7dd6-7292-9a3a-836f5f1ea3f6",
+          "kind": "text_or_attachment",
+          "characters": 89,
+          "words": 18,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e330-1478-7a82-b042-f0a610fe05f1",
+      "status": "completed",
+      "startedAt": 1794812941,
+      "completedAt": 1794812952,
+      "durationMs": 11426,
+      "user_messages": [
+        {
+          "id": "01a1e330-14f0-76a2-9791-0a16c90bcb1c",
+          "kind": "text_or_attachment",
+          "characters": 76,
+          "words": 16,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1e31a-9cf5-7323-9ffb-86e8fc5762db",
+      "status": "completed",
+      "startedAt": 1794811534,
+      "completedAt": 1794811731,
+      "durationMs": 197340,
+      "user_messages": [
+        {
+          "id": "01a1e31a-9f18-7322-b1c6-27ce7029e325",
+          "kind": "text_or_attachment",
+          "characters": 129,
+          "words": 22,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1dbc3-d529-7b81-af91-95e8bdee6b15",
+      "status": "completed",
+      "startedAt": 1794688406,
+      "completedAt": 1794688548,
+      "durationMs": 141402,
+      "user_messages": [
+        {
+          "id": "01a1dbc3-d5a2-7840-9398-9efc7dee3f75",
+          "kind": "text_or_attachment",
+          "characters": 40,
+          "words": 9,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1dbc1-e9bf-78b3-87e1-ba0cafb4149e",
+      "status": "completed",
+      "startedAt": 1794688281,
+      "completedAt": 1794688287,
+      "durationMs": 6197,
+      "user_messages": [
+        {
+          "id": "01a1dbc1-ecb3-70f2-bc37-60f0ef750b6e",
+          "kind": "text_or_attachment",
+          "characters": 19,
+          "words": 5,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1d851-c615-7e20-9443-1d65aa1ce830",
+      "status": "completed",
+      "startedAt": 1794630600,
+      "completedAt": 1794630850,
+      "durationMs": 250148,
+      "user_messages": [
+        {
+          "id": "01a1d851-c907-75a3-a62c-dd2f44b9fc27",
+          "kind": "text_or_attachment",
+          "characters": 134,
+          "words": 21,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ce50-79cc-7bb0-8d1c-df5652fdc89b",
+      "status": "completed",
+      "startedAt": 1794462743,
+      "completedAt": 1794462814,
+      "durationMs": 71908,
+      "user_messages": [
+        {
+          "id": "01a1ce50-7a78-71e0-a154-69903e700ebf",
+          "kind": "text_or_attachment",
+          "characters": 52,
+          "words": 10,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
       "id": "01a1ce2d-75e1-7b61-8b43-0ac6c83e775a",
       "status": "completed",
       "startedAt": 1794460448,
       "completedAt": 1794460768,
-      "durationMs": 319904
+      "durationMs": 319904,
+      "user_messages": [
+        {
+          "id": "01a1ce2d-765a-76b1-815a-b21e6d9729ea",
+          "kind": "text_or_attachment",
+          "characters": 71,
+          "words": 14,
+          "truncated": false
+        },
+        {
+          "id": "01a1ce31-3dd3-7cb2-ad79-a2ca947d20db",
+          "kind": "clarification",
+          "characters": 13,
+          "words": 1,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1ce20-0993-7190-8945-da98024a8920",
+      "status": "completed",
+      "startedAt": 1794459568,
+      "completedAt": 1794460242,
+      "durationMs": 673653,
+      "user_messages": [
+        {
+          "id": "01a1ce20-09ee-70d1-9bfc-3705d53d694c",
+          "kind": "text_or_attachment",
+          "characters": 60,
+          "words": 11,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1cdf9-e18f-7413-8ee9-4d51033502a4",
+      "status": "completed",
+      "startedAt": 1794457067,
+      "completedAt": 1794457442,
+      "durationMs": 374516,
+      "user_messages": [
+        {
+          "id": "01a1cdf9-e1f5-7b50-b292-e9aa1b5b36cf",
+          "kind": "text_or_attachment",
+          "characters": 115,
+          "words": 20,
+          "truncated": false
+        },
+        {
+          "id": "01a1cdfc-4125-7781-8e5d-0ee7178c5351",
+          "kind": "text_or_attachment",
+          "characters": 54,
+          "words": 13,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1cdeb-88b5-76d0-8fc4-a9c4a2748ea8",
+      "status": "completed",
+      "startedAt": 1794456127,
+      "completedAt": 1794456464,
+      "durationMs": 337121,
+      "user_messages": [
+        {
+          "id": "01a1cdeb-8904-7823-bd95-07194b0bfe59",
+          "kind": "text_or_attachment",
+          "characters": 221,
+          "words": 40,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Recover missing project files",
+      "thread_id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+      "id": "01a1cddb-14f3-7b00-a92a-11ba92e132b1",
+      "status": "completed",
+      "startedAt": 1794455049,
+      "completedAt": 1794455658,
+      "durationMs": 608650,
+      "user_messages": [
+        {
+          "id": "01a1cddb-1998-79c0-a627-e7b00b14568b",
+          "kind": "text_or_attachment",
+          "characters": 243,
+          "words": 37,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "thread_id": "01a1c9a5-ca20-76b0-b272-16a200bdee46",
+      "id": "01a1ca36-0665-7672-9d37-d855f048345e",
+      "status": "completed",
+      "startedAt": 1794393900,
+      "completedAt": 1794394509,
+      "durationMs": 608230,
+      "user_messages": [
+        {
+          "id": "item-34",
+          "kind": "text_or_attachment",
+          "characters": 31,
+          "words": 5,
+          "truncated": false
+        },
+        {
+          "id": "item-37",
+          "kind": "clarification",
+          "characters": 36,
+          "words": 5,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "thread_id": "01a1c9a5-ca20-76b0-b272-16a200bdee46",
+      "id": "01a1ca0c-6262-7581-bc37-a49675e5ab49",
+      "status": "completed",
+      "startedAt": 1794391171,
+      "completedAt": 1794391988,
+      "durationMs": 816758,
+      "user_messages": [
+        {
+          "id": "item-26",
+          "kind": "text_or_attachment",
+          "characters": 16,
+          "words": 3,
+          "truncated": false
+        },
+        {
+          "id": "item-30",
+          "kind": "text_or_attachment",
+          "characters": 0,
+          "words": 0,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "thread_id": "01a1c9a5-ca20-76b0-b272-16a200bdee46",
+      "id": "01a1ca03-e557-7db0-98e0-916be23e5678",
+      "status": "completed",
+      "startedAt": 1794390615,
+      "completedAt": 1794391063,
+      "durationMs": 448145,
+      "user_messages": [
+        {
+          "id": "item-21",
+          "kind": "text_or_attachment",
+          "characters": 56,
+          "words": 11,
+          "truncated": false
+        }
+      ]
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "thread_id": "01a1c9a5-ca20-76b0-b272-16a200bdee46",
+      "id": "01a1c9a8-66ac-7e72-ba65-50fc11f0357b",
+      "status": "completed",
+      "startedAt": 1794384619,
+      "completedAt": 1794386832,
+      "durationMs": 2213145,
+      "user_messages": [
+        {
+          "id": "item-1",
+          "kind": "text_or_attachment",
+          "characters": 470,
+          "words": 65,
+          "truncated": false
+        },
+        {
+          "id": "item-7",
+          "kind": "clarification",
+          "characters": 133,
+          "words": 30,
+          "truncated": false
+        },
+        {
+          "id": "item-8",
+          "kind": "text_or_attachment",
+          "characters": 6,
+          "words": 1,
+          "truncated": false
+        },
+        {
+          "id": "item-11",
+          "kind": "clarification",
+          "characters": 73,
+          "words": 15,
+          "truncated": false
+        }
+      ]
     }
-  ]
+  ],
+  "elapsed_seconds": 709167
 }

@@ -1,0 +1,37 @@
+{
+    "rules":  [
+                  {
+                      "action":  "Allow",
+                      "name":  "NavSphere-Office-Dashboard",
+                      "interface":  "Wi-Fi",
+                      "remote_address":  "LocalSubnet",
+                      "port":  5173,
+                      "enabled":  "True"
+                  },
+                  {
+                      "action":  "Allow",
+                      "name":  "NavSphere-Office-MQTT",
+                      "interface":  "Wi-Fi",
+                      "remote_address":  "LocalSubnet",
+                      "port":  1883,
+                      "enabled":  "True"
+                  },
+                  {
+                      "action":  "Allow",
+                      "name":  "NavSphere-Ethernet-Dashboard",
+                      "interface":  "Ethernet",
+                      "remote_address":  "LocalSubnet",
+                      "port":  5173,
+                      "enabled":  "True"
+                  },
+                  {
+                      "action":  "Allow",
+                      "name":  "NavSphere-Ethernet-MQTT",
+                      "interface":  "Ethernet",
+                      "remote_address":  "LocalSubnet",
+                      "port":  1883,
+                      "enabled":  "True"
+                  }
+              ],
+    "verified_at":  "2026-11-17T12:14:57.8654148Z"
+}

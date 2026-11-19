@@ -1,0 +1,144 @@
+1794996048: New connection from 127.0.0.1:64708 on port 1883.
+1794996048: New client connected from 127.0.0.1:64708 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1794996273: New connection from 192.168.10.60:51938 on port 1883.
+1794996273: New client connected from 192.168.10.60:51938 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794996567: Client ESP32_001 [192.168.10.60:51938] disconnected: connection closed by client.
+1794996618: New connection from 192.168.10.60:61947 on port 1883.
+1794996618: New client connected from 192.168.10.60:61947 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794996634: Client navsphere-backend [127.0.0.1:64708] disconnected: connection closed by client.
+1794996638: New connection from 127.0.0.1:57667 on port 1883.
+1794996638: New client connected from 127.0.0.1:57667 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1794996886: Client ESP32_001 [192.168.10.60:61947] disconnected: connection closed by client.
+1794996939: New connection from 192.168.10.60:49843 on port 1883.
+1794996939: New client connected from 192.168.10.60:49843 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794998003: New connection from 192.168.10.60:49844 on port 1883.
+1794998004: Client ESP32_001 [192.168.10.60:49843] disconnected: session taken over.
+1794998004: New client connected from 192.168.10.60:49844 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794998630: New connection from 192.168.10.60:49847 on port 1883.
+1794998630: Client ESP32_001 [192.168.10.60:49844] disconnected: session taken over.
+1794998630: New client connected from 192.168.10.60:49847 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794998871: New connection from 192.168.10.60:49849 on port 1883.
+1794998871: Client ESP32_001 [192.168.10.60:49847] disconnected: connection closed by client.
+1794998871: New client connected from 192.168.10.60:49849 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794998875: Client ESP32_001 [192.168.10.60:49849] disconnected: connection closed by client.
+1794998876: New connection from 192.168.10.60:49850 on port 1883.
+1794998876: New client connected from 192.168.10.60:49850 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1794999889: Client ESP32_001 [192.168.10.60:49850] disconnected: connection closed by client.
+1794999889: New connection from 192.168.10.60:49851 on port 1883.
+1794999889: New client connected from 192.168.10.60:49851 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795000310: Client ESP32_001 [192.168.10.60:49851] disconnected: connection closed by client.
+1795000326: New connection from 192.168.10.60:49856 on port 1883.
+1795000326: New client connected from 192.168.10.60:49856 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795000654: Client ESP32_001 [192.168.10.60:49856] disconnected: connection closed by client.
+1795000654: New connection from 192.168.10.60:49857 on port 1883.
+1795000654: New client connected from 192.168.10.60:49857 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795000943: Client ESP32_001 [192.168.10.60:49857] disconnected: connection closed by client.
+1795000943: New connection from 192.168.10.60:49858 on port 1883.
+1795000943: New client connected from 192.168.10.60:49858 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001096: Client ESP32_001 [192.168.10.60:49858] disconnected: connection closed by client.
+1795001096: New connection from 192.168.10.60:49859 on port 1883.
+1795001096: New client connected from 192.168.10.60:49859 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001418: Client ESP32_001 [192.168.10.60:49859] disconnected: connection closed by client.
+1795001419: New connection from 192.168.10.60:49860 on port 1883.
+1795001419: New client connected from 192.168.10.60:49860 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001559: Client ESP32_001 [192.168.10.60:49860] disconnected: connection closed by client.
+1795001564: New connection from 192.168.10.60:49862 on port 1883.
+1795001564: New client connected from 192.168.10.60:49862 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001670: New connection from 192.168.10.60:64007 on port 1883.
+1795001670: Client ESP32_001 [192.168.10.60:49862] disconnected: session taken over.
+1795001670: New client connected from 192.168.10.60:64007 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001758: New connection from 192.168.10.60:64008 on port 1883.
+1795001758: Client ESP32_001 [192.168.10.60:64007] disconnected: session taken over.
+1795001758: New client connected from 192.168.10.60:64008 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001883: Client ESP32_001 [192.168.10.60:64008] disconnected: connection closed by client.
+1795001883: New connection from 192.168.10.60:64009 on port 1883.
+1795001883: New client connected from 192.168.10.60:64009 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001929: New connection from 192.168.10.60:54239 on port 1883.
+1795001929: Client ESP32_001 [192.168.10.60:64009] disconnected: session taken over.
+1795001929: New client connected from 192.168.10.60:54239 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795001998: Client ESP32_001 [192.168.10.60:54239] disconnected: connection closed by client.
+1795001999: New connection from 192.168.10.60:51425 on port 1883.
+1795001999: New client connected from 192.168.10.60:51425 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795002265: Client ESP32_001 [192.168.10.60:51425] disconnected: connection closed by client.
+1795006511: New connection from 192.168.10.60:56631 on port 1883.
+1795006511: New client connected from 192.168.10.60:56631 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795007220: Client ESP32_001 [192.168.10.60:56631] disconnected: exceeded timeout.
+1795007393: Client navsphere-backend [127.0.0.1:57667] disconnected: connection closed by client.
+1795007397: New connection from 127.0.0.1:62412 on port 1883.
+1795007397: New client connected from 127.0.0.1:62412 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1795007417: New connection from 192.168.10.57:57489 on port 1883.
+1795007417: New client connected from 192.168.10.57:57489 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795007849: New connection from 192.168.10.57:57492 on port 1883.
+1795007849: Client ESP32_001 [192.168.10.57:57489] disconnected: session taken over.
+1795007849: New client connected from 192.168.10.57:57492 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795008222: Client navsphere-backend [127.0.0.1:62412] disconnected: connection closed by client.
+1795008226: New connection from 127.0.0.1:53483 on port 1883.
+1795008226: New client connected from 127.0.0.1:53483 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1795008293: New connection from 192.168.10.57:53198 on port 1883.
+1795008293: Client ESP32_001 [192.168.10.57:57492] disconnected: session taken over.
+1795008293: New client connected from 192.168.10.57:53198 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795008634: New connection from 192.168.10.57:65461 on port 1883.
+1795008634: Client ESP32_001 [192.168.10.57:53198] disconnected: session taken over.
+1795008634: New client connected from 192.168.10.57:65461 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795008652: New connection from 192.168.10.57:65462 on port 1883.
+1795008652: Client ESP32_001 [192.168.10.57:65461] disconnected: session taken over.
+1795008652: New client connected from 192.168.10.57:65462 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795008746: New connection from 192.168.10.57:62910 on port 1883.
+1795008746: Client ESP32_001 [192.168.10.57:65462] disconnected: session taken over.
+1795008746: New client connected from 192.168.10.57:62910 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795008958: New connection from 192.168.10.57:60312 on port 1883.
+1795008958: Client ESP32_001 [192.168.10.57:62910] disconnected: session taken over.
+1795008958: New client connected from 192.168.10.57:60312 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795009342: New connection from 192.168.10.57:52902 on port 1883.
+1795009342: Client ESP32_001 [192.168.10.57:60312] disconnected: session taken over.
+1795009342: New client connected from 192.168.10.57:52902 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795013902: Client ESP32_001 [192.168.10.57:52902] disconnected: connection closed by client.
+1795013902: New connection from 192.168.10.57:52903 on port 1883.
+1795013902: New client connected from 192.168.10.57:52903 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795017717: New connection from 192.168.10.57:55809 on port 1883.
+1795017717: Client ESP32_001 [192.168.10.57:52903] disconnected: session taken over.
+1795017717: New client connected from 192.168.10.57:55809 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795017878: New connection from 192.168.10.57:55810 on port 1883.
+1795017878: Client ESP32_001 [192.168.10.57:55809] disconnected: session taken over.
+1795017878: New client connected from 192.168.10.57:55810 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795019135: New connection from 192.168.10.57:64531 on port 1883.
+1795019135: Client ESP32_001 [192.168.10.57:55810] disconnected: session taken over.
+1795019135: New client connected from 192.168.10.57:64531 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795019171: New connection from 192.168.10.57:50879 on port 1883.
+1795019171: Client ESP32_001 [192.168.10.57:64531] disconnected: session taken over.
+1795019171: New client connected from 192.168.10.57:50879 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795019179: New connection from 192.168.10.57:60154 on port 1883.
+1795019179: Client ESP32_001 [192.168.10.57:50879] disconnected: session taken over.
+1795019179: New client connected from 192.168.10.57:60154 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795019396: New connection from 192.168.10.57:56615 on port 1883.
+1795019396: Client ESP32_001 [192.168.10.57:60154] disconnected: session taken over.
+1795019396: New client connected from 192.168.10.57:56615 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795019911: New connection from 192.168.10.57:60650 on port 1883.
+1795019911: Client ESP32_001 [192.168.10.57:56615] disconnected: session taken over.
+1795019911: New client connected from 192.168.10.57:60650 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795020552: New connection from 192.168.10.57:50793 on port 1883.
+1795020552: Client ESP32_001 [192.168.10.57:60650] disconnected: session taken over.
+1795020552: New client connected from 192.168.10.57:50793 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795020612: Client navsphere-backend [127.0.0.1:53483] disconnected: connection closed by client.
+1795020626: New connection from 127.0.0.1:60029 on port 1883.
+1795020626: New client connected from 127.0.0.1:60029 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1795020715: Client ESP32_001 [192.168.10.57:50793] disconnected: connection closed by client.
+1795020768: New connection from 192.168.10.57:53919 on port 1883.
+1795020768: New client connected from 192.168.10.57:53919 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795021960: Client navsphere-backend [127.0.0.1:60029] disconnected: connection closed by client.
+1795021971: New connection from 127.0.0.1:59065 on port 1883.
+1795021971: New client connected from 127.0.0.1:59065 as navsphere-backend (p4, c1, k60, u'navsphere_backend').
+1795022408: Client ESP32_001 [192.168.10.57:53919] disconnected: exceeded timeout.
+1795022904: New connection from 192.168.10.57:62305 on port 1883.
+1795022904: New client connected from 192.168.10.57:62305 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795023247: New connection from 192.168.10.57:62307 on port 1883.
+1795023247: Client ESP32_001 [192.168.10.57:62305] disconnected: session taken over.
+1795023247: New client connected from 192.168.10.57:62307 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795023319: New connection from 192.168.10.57:62308 on port 1883.
+1795023319: Client ESP32_001 [192.168.10.57:62307] disconnected: session taken over.
+1795023319: New client connected from 192.168.10.57:62308 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795023653: New connection from 192.168.10.57:54311 on port 1883.
+1795023653: Client ESP32_001 [192.168.10.57:62308] disconnected: session taken over.
+1795023653: New client connected from 192.168.10.57:54311 as ESP32_001 (p4, c1, k60, u'ESP32_001').
+1795024121: Client navsphere-backend [127.0.0.1:59065] disconnected: connection closed by client.
+1795024127: New connection from 127.0.0.1:65121 on port 188

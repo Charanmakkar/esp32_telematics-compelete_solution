@@ -7,6 +7,7 @@ from fastapi.testclient import TestClient
 from app.api.auth import limiter
 from app.core.config import Settings
 from app.main import create_app
+from app.services.dbc_folder import DbcFolder
 
 
 @pytest.fixture
@@ -22,6 +23,7 @@ def application(tmp_path):
         )
     )
     with TestClient(app) as client:
+        app.state.runtime.can.dbc_folder = DbcFolder(tmp_path / "can_dbc")
         yield app, client
 
 

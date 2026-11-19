@@ -36,6 +36,7 @@ class Settings(BaseSettings):
     ingest_queue_size: int = Field(default=2048, ge=10, le=65536)
     database_retry_seconds: int = Field(default=10, ge=0, le=300)
     device_stale_seconds: int = Field(default=3, ge=1, le=300)
+    bms_reference_root: str = ""
 
     @property
     def allowed_devices(self) -> tuple[str, ...]:

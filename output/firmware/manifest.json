@@ -1,4 +1,7 @@
 {
+  "sw_version": "1.1.8",
+  "sw_build": "8148c3afe9b8",
+  "version_prepared_at_utc": "2026-11-19T11:11:48+00:00",
   "target": "esp32",
   "module": "ESP32S-WROOM",
   "esp_idf": "6.0.2",
@@ -14,6 +17,59 @@
   "control_gpio": {
     "A": 2,
     "B": 0
+  },
+  "can": {
+    "bitrate": 500000,
+    "tx_gpio": 25,
+    "rx_gpio": 26,
+    "mode": "listen_only",
+    "classic_only": true,
+    "diagnostics": {
+      "enabled": true,
+      "transport": "ISO-TP",
+      "maximum_payload_bytes": 4095,
+      "temporary_normal_mode": true,
+      "request_ids": "0x640-0x64F, 0x7E4, 0x7DF",
+      "protocol_version": 3,
+      "be_request_id": "0x7E4",
+      "be_response_id": "0x7EC",
+      "tester_present_burst": {
+        "count": 20,
+        "interval_ms": 100
+      },
+      "idle_return_to_listen_only_seconds": 15
+    },
+    "mode_is_startup_default": true,
+    "periodic_transmission": {
+      "available": true,
+      "default_enabled": false,
+      "mutually_exclusive_with_diagnostics": true,
+      "profiles": [
+        {
+          "can_id": "0x014",
+          "dlc": 3,
+          "data": "006000",
+          "period_ms": 100
+        },
+        {
+          "can_id": "0x548",
+          "dlc": 8,
+          "data": "0000000000000008",
+          "period_ms": 10
+        }
+      ],
+      "gui_path": "/can",
+      "request_topic": "navsphere/<device_id>/can/tx/request",
+      "stops_on": [
+        "MQTT disconnection",
+        "three consecutive failed sends",
+        "reboot"
+      ],
+      "arbitration_retry_budget_us": 5000,
+      "maximum_attempts": 16,
+      "latest_payload_delivery_verified_version": "1.1.7",
+      "current_build_wire_timing_verified": false
+    }
   },
   "flash_mode": "dio",
   "flash_size": "4MB",
@@ -37,9 +93,15 @@
       "sha256": "73c0b5c3e5fcba3a151cc70c453c93dd5f4798899e7f2f8cca76da1f32ffc501"
     },
     "navsphere.bin": {
-      "bytes": 988272,
-      "sha256": "3516dcf5b5249abeeace3bdd7ae20d240b2f2647b8e1e306e8d77f69c18ce906"
+      "bytes": 1014592,
+      "sha256": "5f48790458c4f0903e2ce1249dd9ba49b8e5b3d0a625fd5781c3d88160166ced"
     }
   },
-  "packaged_at_utc": "2026-11-16T07:17:21.412277+00:00"
+  "packaged_at_utc": "2026-11-19T16:10:25.395138+00:00",
+  "documentation": {
+    "reviewed_utc": "2026-11-19T16:10:44.317967+00:00",
+    "index": "docs/README.md",
+    "release_status": "docs/RELEASE_STATUS.md",
+    "validation": "docs/testing/documentation-review.json"
+  }
 }

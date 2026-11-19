@@ -1,0 +1,13 @@
+
+> navsphere-dashboard@1.0.0 test
+> vitest run --run
+
+
+ RUN  v5.1.0 C:/Users/charanpreet/Documents/ChatGPT/esp32_telematics-compelete_solution/frontend
+
+
+ Test Files  7 passed (7)
+      Tests  38 passed (38)
+   Start at  16:01:38
+   Duration  20.15s (environment 68%, setup 18%, tests 10%, import 2%, transform 1%)
+

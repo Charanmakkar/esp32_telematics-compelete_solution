@@ -1,5 +1,7 @@
 # NavSphere complete implementation report
 
+Current documentation review: 19 November 2026. The dated sections below are chronological evidence; docs/RELEASE_STATUS.md summarizes the latest v1.1.8 build and pending hardware tests. docs/README.md indexes the refreshed instructions and offline reports.
+
 11 November 2026 · ESP32S-WROOM · Six onboard ADC1 channels
 
 ## 1. Delivered scope
@@ -293,3 +295,242 @@ than completed features.
 - [Node official downloads](https://nodejs.org/en/download)
 
 Firmware API choices were also checked against installed ESP-IDF headers.
+
+## 16. CAN statistics and BMS diagnostics update — 18 November 2026
+
+This section supersedes earlier no-board-flashed/browser-unverified statements
+for the CAN/BMS delivery. The original simulator measurements above remain
+historical evidence and are not presented as new hardware benchmarks.
+
+Added a separate CAN statistics section and a new BMS diagnostics page. The
+local reference catalogue exposes 111 actual CDD services and 42 batch-script
+workflows, with source-based codecs, image validation, temporary ESP32 ISO-TP
+transmission, session/security handling, previews, decoded/raw responses and
+persistent jobs/exchanges. Migration 0004 adds two BMS tables after a database
+backup. Existing analog, GPIO2/GPIO0, CAN history and DBC features remain.
+
+Verification: 58 backend tests, 25 frontend tests, firmware host tests, Ruff,
+TypeScript/Vite and ESP-IDF builds passed. The 1,007,952-byte firmware was flashed
+on COM5 with hash verification. MQTT, database and physical CAN reception are
+live; both GUI additions were visually inspected and screenshots saved.
+
+Live BMS read requests failed at CAN transmission; failed request history and
+listen-only restoration were verified. Heavy repeated 0x06E traffic, bus errors
+and substantial capture/publish losses are visible. Successful BMS hardware
+responses, destructive workflows and lossless full-load capture are not claimed.
+One script-referenced boot-updater image is missing and requires a replacement.
+
+The [detailed work record](docs/development/CAN_BMS_IMPLEMENTATION.md) contains
+AI work performed, source discrepancies, usage, test evidence, screenshots,
+firmware hash, reference/image locations and outstanding physical checks.
+
+### Superseding BE reference update — 18 November 2026
+
+At the user's request, the active BMS reference is now `HVBEOSK/be_repo`.
+AMP Client 15.0.4, 55 CDD services and all 44 BAT workflows were inspected;
+the current CAN pair is 0x7E4/0x7EC, with 0x640/0x650 retained for the migration
+scripts that explicitly select the old profile. All six supplied programming
+images pass preparation, including relocated bootloader updater images.
+
+The page adds one-click application-mode reads and automatic preparation,
+session/security, bootloader authentication and programming steps. Existing
+analog/GPIO/raw-CAN/DBC functionality remains. The new firmware is flashed and
+hash verified on COM3. Validation passed: 75 backend tests, 27 frontend tests,
+firmware host tests, Ruff, frontend production build and ESP-IDF build.
+
+Live PCAN reads returned serial, QR and manufacturing-serial data. Original EXE
+codec failures were identified and handled in the web decoder. ESP32 hardware
+reads still fail to transmit and receive no frames despite PCAN bus activity;
+the transceiver supply and wiring are being checked. No live BMS write, erase,
+security unlock or programming is claimed. This update supersedes the previous
+reference counts, missing-image note and COM5 firmware details for this task.
+See [the BE report](docs/development/BE_CLIENT_IMPLEMENTATION.md) for evidence,
+workflow details, observed timing and AI work attribution.
+
+Firmware regression check: the flashed COM3 image matched the intended build;
+CAN ID/data prints were still present. A temporary test of the pre-BMS Git
+image also received zero frames while PCAN received 8,467 in 20 seconds.
+The current firmware was restored with a build fingerprint and periodic CAN
+status output; all three flash components verified. The final comparison still
+received zero ESP32 frames versus 9,263 PCAN frames. MQTT, fresh analog database
+delivery and the LAN dashboard remained working. The offline package was
+refreshed to match the flashed application (`bd1af2db...`, 1,009,264 bytes).
+See the BE report's firmware investigation and `output/testing/be-firmware-audit.json`.
+
+### Software version 1.1.0 and restored CAN reception
+
+Added shared `SW_VERSION` firmware macros and GUI constants, automatic patch
+increments for changed source builds, matching/stale/missing device-version
+display and release packaging checks. Version 1.1.0 (source build
+`2e6876f40c71`) was flashed to COM3 and all component hashes verified. The
+terminal and GUI both reported the intended version. A 20-second serial capture
+contained 2,415 CAN lines; a separate six-second comparison captured 3,425
+frames and persisted 674 new CAN database records. CAN reception is now live;
+existing serial/MQTT delivery drops remain visible in statistics. The follow-up
+read still failed to transmit, so BMS diagnostics are not claimed as working.
+Validation: 3 versioning tests, 48 relevant backend tests, 30 frontend tests,
+Ruff, production GUI/firmware builds and firmware host checks passed. Details,
+screenshots and machine-readable evidence are linked in the BE report.
+
+### CAN GUI current-value correction — software 1.1.3
+
+Live inspection found that incoming CAN values were advancing, but yesterday's
+inactive IDs appeared first and 79 DBC conflict notices preceded the table.
+The corrected page defaults to the current ESP32 run, places the latest values
+first, retains All saved IDs/history, and makes DBC details and longer signal
+lists expandable. It shows refresh time and byte-change highlighting. Request
+timeouts retry automatically, while frame ages keep advancing independently.
+Server timestamps avoid remote-PC clock differences affecting freshness.
+Sixteen CAN backend tests, 32 frontend tests, lint and production builds validate
+the change. The shared release version is 1.1.3, source build `8097dcac11e0`.
+Firmware capture, GPIO assignments, Wi-Fi credentials and DBC files were not
+changed for this display correction. See the final live verification evidence
+in the BE report for the deployed version and actual changing values.
+
+The interrupted USB flash was recovered after reconnection on 18 November.
+All three firmware components passed flash verification, and startup plus the
+GUI confirmed version 1.1.3. Live checks found 31 current-run CAN IDs, retained
+69 saved IDs, and verified advancing database records through both the backend
+and the laptop's LAN dashboard address. A 20-second serial capture contained
+2,806 CAN frame lines. Actual browser samples confirmed changing 0x06E bytes
+and counts. COM3 is released; the offline package records this verified flash.
+Existing delivery drops and the unresolved BMS diagnostic TX failure remain
+documented in the BE report.
+
+### Live CAN search and requested project commit — software 1.1.4
+
+Added a search field above the live CAN table for hexadecimal IDs, message and
+signal names, DBC filenames, and raw bytes. Searches are case-insensitive and
+run across all latest IDs before pagination. Input is debounced; live polling,
+history, current/all-run selection and whole-bus statistics remain available.
+Clear search restores the full view and a no-match message explains empty results.
+
+Validation: 18 CAN backend tests, 33 frontend tests, Ruff, the production GUI
+build and the ESP32 firmware build passed. Live API tests through the direct
+backend and laptop LAN address confirmed ID/name/raw searches, fresh database
+timestamps while filtered, no-match results and clearing back to 31 current IDs.
+The browser independently confirmed changing bytes/counts under `0x06E`.
+Evidence is in `output/testing/can-search-live-verification.json`,
+`output/testing/can-search-browser-verification.json` and
+`output/testing/bms/can-search-live.jpg`.
+
+GUI/source release 1.1.4 has build ID `2ae749ea5903`. The running ESP32 remains
+on verified 1.1.3; search requires no device change. The compiled 1.1.4 firmware
+is included offline but was not flashed, and its manifest records that fact.
+The prior verified 1.1.3 source/firmware archive is preserved in `output/releases`.
+
+At the user's request, the commit includes accumulated project work and a
+temporary-work snapshot in `output/work_snapshot`. Its inventory accounts for
+included files and items retained locally: credentials/NVS, database backups,
+private reference security extraction, installed tools/dependencies and caches.
+Included text copies have credential values redacted; original local files are
+preserved. BMS diagnostic transmission remains unresolved as previously recorded.
+
+### Application flash and GUI redeployment — 19 November 2026
+
+Flashed application version **1.1.4**, build `2ae749ea5903`, to COM3 at
+115200 baud, application offset `0x10000`. The flash hash verified and startup
+reported the matching version/build. ESP32 MAC: `ec:62:60:9c:40:84`.
+Application SHA-256:
+`0af7b4d2a54b7c70838652a6b0bcb6914c9bd8e561ad3274bd059e5983c9e03c`.
+Bootloader, partition table and provisioned NVS were not written during this
+application-only flash. The production GUI build passed and the existing GUI
+service was relaunched on port 5173 with LAN access.
+
+The services were stopped at the start. Restarted the existing XAMPP MariaDB
+database (`C:/xampp/mysql/data/navsphere`), MQTT broker, backend and frontend.
+Mosquitto initially rejected its persisted state as an unrecognized format.
+Preserved the remaining state file as
+`.runtime/mqtt/mosquitto.db.unreadable-20261119-142547` and restarted the broker
+with fresh state. Existing database history and credentials were preserved.
+
+Initial CAN capture was empty. Once the bus was active, receive traffic became
+dominated by repeated transmissions and dashboard delivery was delayed. A PCAN
+comparison isolated missing acknowledgements: five seconds in listen-only mode
+received **18,524 identical 0x06E frames** plus 17 error frames. Five seconds
+with a normal-mode PCAN receiver received **2,640 frames across 29 CAN IDs**,
+with zero error frames. No application CAN messages or BMS commands were sent.
+
+Left a PCAN normal-mode receive helper running to supply acknowledgements for
+this bench setup: `.runtime/run_pcan_receiver.py`, process record
+`.runtime/pcan-receiver-process.json`, status `.runtime/pcan-receiver-status.json`.
+Keep PCAN connected and this receiver running while the BMS and listen-only
+ESP32 are the only other nodes. A normal-mode node on the real CAN network can
+supply these acknowledgements instead. The ESP32 remains listen-only at
+500 kbit/s, GPIO25 TX/GPIO26 RX.
+
+After this correction, the direct backend and laptop LAN URL both returned
+33 current-run IDs and retained 71 saved IDs. Four-second comparisons confirmed
+advancing sequences and database receive timestamps for seven CAN IDs.
+Browser samples showed 0x06E changing from `BB DB FF 03 00 81 16 00` to
+`9E D3 FF 03 00 81 16 00`, with its saved count increasing. The GUI showed
+matching **v1.1.4** versions and CAN logger online. The follow-up serial capture
+contained **1,633 CAN lines in 12 seconds**. Analog records also continued to
+persist. COM3 was released and an exclusive open/close check passed.
+
+Existing bounded serial/MQTT delivery drops remain visible; this deployment
+does not establish lossless logging. BMS diagnostic transmission was not retested.
+The offline package now records the verified application as flashed.
+
+Evidence: `output/testing/redeploy-20261119-verification.json`,
+`output/testing/redeploy-20261119-can-live.json`,
+`output/testing/redeploy-20261119-can-serial.json`,
+`output/testing/redeploy-20261119-pcan-comparison.json`,
+`output/testing/redeploy-20261119-browser.json`, and
+`output/testing/bms/redeploy-20261119-gui.jpg`.
+
+### Periodic CAN transmission — 19 November 2026
+
+Added one CAN-page ON/OFF control for two fixed standard CAN messages at
+500 kbit/s: `0x014`, payload `00 60 00`, every 100 ms; and `0x548`, payload
+`00 00 00 00 00 00 00 08`, every 10 ms. The second identifier follows the
+user's explicit payload instruction, superseding `0x584` in the screenshot.
+Both messages start OFF after reboot. The GUI displays device-confirmed state,
+successful-send counts and failures. Admin authentication, CSRF protection,
+boot-bound expiring commands and audit records protect the new control route.
+Transmission stops after MQTT disconnection or repeated send failures.
+Existing CAN receive, DBC, GPIO, telemetry and diagnostic request behavior
+remain in place; diagnostics and periodic transmission cannot own the bus
+controller simultaneously.
+
+After the transceiver voltage correction, PCAN received both exact payloads
+from firmware v1.1.7 with no observed PCAN error frames. The 10-second capture
+contained 100 frames for `0x014` (mean period 99.982 ms) and 813 frames for
+`0x548` (mean period 12.301 ms). The timing check failed: ordinary arbitration
+losses dropped single-shot attempts. Version **1.1.8**, build `8148c3afe9b8`,
+adds bounded retries for arbitration losses only, retaining immediate failure
+handling for bus/ACK errors. Firmware host tests and firmware/GUI builds passed.
+The backend suite previously passed 89 tests, followed by 11 targeted tests;
+the GUI suite passed 38 tests, followed by 14 targeted CAN/control tests.
+
+**Hardware validation remains incomplete for v1.1.8.** Both USB devices
+disconnected before this build could be flashed. The last verified device
+version is v1.1.7; its final acknowledged transmission state was OFF. Flashing
+v1.1.8 and repeating wire timing, GUI ON/OFF and persistence checks remain
+pending. The packaged v1.1.8 manifest therefore records `hardware_flashed: false`.
+Do not interpret earlier v1.1.4 deployment evidence as validation of v1.1.8.
+
+Evidence: `output/testing/can-tx-voltage-corrected-before-arbitration-fix.json`,
+`output/testing/can-tx-live.json`, and
+`output/testing/can-tx-awaiting-flash.jpg`. Relevant temporary scripts/logs and
+the built GUI are preserved in `output/work_snapshot/can_tx_20261119/`.
+
+### Documentation reconciliation — 19 November 2026
+
+Reviewed all maintained guides, READMEs, contracts, checklists and offline editions
+against source commit `c272b05` (v1.1.8). Corrected stale control-pin references,
+LAN and flashing instructions; documented CAN search/statistics, fixed periodic
+TX behavior, ACK and transceiver supply requirements, storage semantics and the
+separate unresolved BMS work. Added a documentation index, current release status
+and detailed CAN TX operating/acceptance guide. Generated OpenAPI now covers 25
+paths; the SQL schema reference contains all 11 application tables through migration
+0004. These exports do not change the running database or application.
+
+Refreshed four engineering PDFs, the project/AI report, five-slide stakeholder
+presentation and source/docs ZIP. The audit covers 74 user-message records and
+44 completed turns across two chats, totaling 6h 21m 22s of recorded session time.
+The current documentation turn is excluded from completed time. Credits and billed
+tokens remain unavailable. Dated screenshots and failed tests remain accurately
+labeled. Documentation helpers and validation evidence are included. Application
+version/source fingerprint remains v1.1.8 / 8148c3afe9b8; no firmware was flashed,
+CAN control toggled or BMS diagnostic behavior changed during this review.

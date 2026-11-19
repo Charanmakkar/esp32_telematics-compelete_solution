@@ -1,10 +1,19 @@
-# Run as Administrator to allow dashboard access from the Wi-Fi local subnet.
+# Run as Administrator to allow dashboard/MQTT access from the office local subnet.
 $ErrorActionPreference = 'Stop'
-$RuleName = 'NavSphere-Office-Dashboard'
-if (-not (Get-NetFirewallRule -Name $RuleName -ErrorAction SilentlyContinue)) {
-    New-NetFirewallRule -Name $RuleName -DisplayName 'NavSphere office dashboard TCP 5173' -Direction Inbound -Action Allow -Protocol TCP -LocalPort 5173 -RemoteAddress LocalSubnet -InterfaceAlias 'Wi-Fi' -Profile Any | Out-Null
+$VerifiedRules = @()
+foreach ($Interface in @('Wi-Fi', 'Ethernet')) {
+    $Prefix = if ($Interface -eq 'Wi-Fi') { 'NavSphere-Office' } else { 'NavSphere-Ethernet' }
+    foreach ($Service in @(@{ Name = 'Dashboard'; Port = 5173 }, @{ Name = 'MQTT'; Port = 1883 })) {
+        $RuleName = "$Prefix-$($Service.Name)"
+        if (Get-NetFirewallRule -Name $RuleName -ErrorAction SilentlyContinue) {
+            Set-NetFirewallRule -Name $RuleName -Enabled True -Direction Inbound -Action Allow -Protocol TCP -LocalPort $Service.Port -RemoteAddress LocalSubnet -InterfaceAlias $Interface -Profile Any | Out-Null
+        } else {
+            New-NetFirewallRule -Name $RuleName -DisplayName "NavSphere $Interface $($Service.Name) TCP $($Service.Port)" -Enabled True -Direction Inbound -Action Allow -Protocol TCP -LocalPort $Service.Port -RemoteAddress LocalSubnet -InterfaceAlias $Interface -Profile Any | Out-Null
+        }
+        $Rule = Get-NetFirewallRule -Name $RuleName
+        $VerifiedRules += @{ name = $RuleName; enabled = [string]$Rule.Enabled; action = [string]$Rule.Action; port = $Service.Port; remote_address = 'LocalSubnet'; interface = $Interface }
+    }
 }
-$Rule = Get-NetFirewallRule -Name $RuleName
 $Receipt = Join-Path (Split-Path $PSScriptRoot -Parent) '.runtime/office-firewall.json'
-@{ verified_at = (Get-Date).ToUniversalTime().ToString('o'); enabled = [string]$Rule.Enabled; action = [string]$Rule.Action; port = 5173; remote_address = 'LocalSubnet'; interface = 'Wi-Fi' } | ConvertTo-Json | Set-Content -LiteralPath $Receipt
-Write-Output 'Office Wi-Fi dashboard access enabled on TCP port 5173.'
+@{ verified_at = (Get-Date).ToUniversalTime().ToString('o'); rules = $VerifiedRules } | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath $Receipt
+Write-Output 'Office Wi-Fi and Ethernet dashboard access enabled on TCP port 5173.'

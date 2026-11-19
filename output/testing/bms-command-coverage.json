@@ -1,0 +1,2062 @@
+{
+  "generated_at": "2026-11-18T10:09:53.647764+00:00",
+  "metadata": {
+    "cdd_sha256": "5fc254d6f8240ad3e4cbf85b8473cf8eee29d6ed71f82f1f1d0dc3f76ab0d463",
+    "cdd_instances": 79,
+    "services": 111,
+    "scripts": 42,
+    "reference_root": "C:\\Users\\charanpreet\\Documents\\ChatGPT\\HVP\\hv_core",
+    "targets": [
+      {
+        "instance": 0,
+        "name": "abs_hv_string_00",
+        "tx_id": 1600,
+        "rx_id": 1616
+      },
+      {
+        "instance": 1,
+        "name": "abs_hv_string_01",
+        "tx_id": 1601,
+        "rx_id": 1617
+      },
+      {
+        "instance": 2,
+        "name": "abs_hv_string_02",
+        "tx_id": 1602,
+        "rx_id": 1618
+      },
+      {
+        "instance": 3,
+        "name": "abs_hv_string_03",
+        "tx_id": 1603,
+        "rx_id": 1619
+      },
+      {
+        "instance": 4,
+        "name": "abs_hv_string_04",
+        "tx_id": 1604,
+        "rx_id": 1620
+      },
+      {
+        "instance": 5,
+        "name": "abs_hv_string_05",
+        "tx_id": 1605,
+        "rx_id": 1621
+      },
+      {
+        "instance": 6,
+        "name": "abs_hv_string_06",
+        "tx_id": 1606,
+        "rx_id": 1622
+      },
+      {
+        "instance": 7,
+        "name": "abs_hv_string_07",
+        "tx_id": 1607,
+        "rx_id": 1623
+      },
+      {
+        "instance": 8,
+        "name": "abs_hv_string_08",
+        "tx_id": 1608,
+        "rx_id": 1624
+      },
+      {
+        "instance": 9,
+        "name": "abs_hv_string_09",
+        "tx_id": 1609,
+        "rx_id": 1625
+      },
+      {
+        "instance": 10,
+        "name": "abs_hv_string_10",
+        "tx_id": 1610,
+        "rx_id": 1626
+      }
+    ],
+    "bitrate": 500000,
+    "source_read_only": true
+  },
+  "services": [
+    {
+      "id": "_2629",
+      "name": "Default Session",
+      "action": "Start",
+      "group": "Sessions",
+      "request_prefix": "1001",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2631",
+      "name": "Programming Session",
+      "action": "Start",
+      "group": "Sessions",
+      "request_prefix": "1002",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2633",
+      "name": "Extended Session",
+      "action": "Start",
+      "group": "Sessions",
+      "request_prefix": "1003",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2635",
+      "name": "Tester Present",
+      "action": "Send",
+      "group": "Tester Present",
+      "request_prefix": "3E00",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2638",
+      "name": "Hard Reset",
+      "action": "Reset",
+      "group": "Reset",
+      "request_prefix": "1101",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2640",
+      "name": "Soft Reset",
+      "action": "Reset",
+      "group": "Reset",
+      "request_prefix": "1103",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2643",
+      "name": "RequestSeedProgramming",
+      "action": "Request",
+      "group": "Security Access",
+      "request_prefix": "2701",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2645",
+      "name": "SendKeyProgramming",
+      "action": "Send",
+      "group": "Security Access",
+      "request_prefix": "2702",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2647",
+      "name": "RequestSeedExtended",
+      "action": "Request",
+      "group": "Security Access",
+      "request_prefix": "2703",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2649",
+      "name": "SendKeyExtended",
+      "action": "Send",
+      "group": "Security Access",
+      "request_prefix": "2704",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2651",
+      "name": "RequestSeedManufacturing",
+      "action": "Request",
+      "group": "Security Access",
+      "request_prefix": "2705",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2653",
+      "name": "SendKeyManufacturing",
+      "action": "Send",
+      "group": "Security Access",
+      "request_prefix": "2706",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2890",
+      "name": "QR Code",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22C000",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2759",
+      "name": "Event Testing",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EC010",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2758",
+      "name": "Event Testing",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22C010",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2837",
+      "name": "Erase NVM",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECE00",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2836",
+      "name": "Erase NVM",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CE00",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2840",
+      "name": "Clear Persistent Events",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECE01",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2839",
+      "name": "Clear Persistent Events",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CE01",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2843",
+      "name": "Sox Ocv Reset",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECE02",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2842",
+      "name": "Sox Ocv Reset",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CE02",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2825",
+      "name": "Curr Sensor Gain",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF01",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2824",
+      "name": "Curr Sensor Gain",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF01",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2828",
+      "name": "Curr Sensor Offset",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF02",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2827",
+      "name": "Curr Sensor Offset",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF02",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2831",
+      "name": "Temp Sensor Gain",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF03",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2830",
+      "name": "Temp Sensor Gain",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF03",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2834",
+      "name": "Temp Sensor Offset",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF04",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2833",
+      "name": "Temp Sensor Offset",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF04",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2762",
+      "name": "Normal Event",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF99",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2761",
+      "name": "Normal Event",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF99",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2765",
+      "name": "Critical Event",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2ECF9A",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2764",
+      "name": "Critical Event",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22CF9A",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2882",
+      "name": "Energy CHG Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22D002",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2884",
+      "name": "Energy DCHG Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22D003",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2887",
+      "name": "Energy Regen Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22D004",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2805",
+      "name": "Irregular Reset count",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22D006",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2767",
+      "name": "Boot Version",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E000",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2770",
+      "name": "Update Counter",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E001",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2779",
+      "name": "Cal Update Counter",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E002",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2774",
+      "name": "Num App",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E003",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2776",
+      "name": "Num Cal",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E004",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2799",
+      "name": "App Id Checksum",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E010",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2865",
+      "name": "App ID version",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E030",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2772",
+      "name": "App Update id Counter",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E040",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2803",
+      "name": "Cal Id Checksum",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E110",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2859",
+      "name": "Cal ID Version",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E130",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2781",
+      "name": "Cal Update Id Counter",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22E140",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2792",
+      "name": "Run Mode",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F010",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2790",
+      "name": "Usage",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF013",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2789",
+      "name": "Usage",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F013",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2801",
+      "name": "Cal Checksum",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F0FE",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2797",
+      "name": "App Checksum",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F0FF",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2795",
+      "name": "Secret key",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF16A",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2845",
+      "name": "Boot SW ID",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F180",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2848",
+      "name": "App Part ID",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F181",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2851",
+      "name": "Cal Part ID",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F182",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2854",
+      "name": "Diag Session",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F186",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2856",
+      "name": "HW Part Number",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F187",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2857",
+      "name": "HW Part Number",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF187",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2862",
+      "name": "App Version",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F189",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2868",
+      "name": "HW Man Date",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F18B",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2869",
+      "name": "HW Man Date",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF18B",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2871",
+      "name": "HW SerialNumber",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F18C",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2872",
+      "name": "HW SerialNumber",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF18C",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2874",
+      "name": "HW Part Id",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F191",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2877",
+      "name": "HW Revision",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F193",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2783",
+      "name": "Update Timestamp",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F199",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2784",
+      "name": "Update Timestamp",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF199",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2786",
+      "name": "Cal Update Timestamp",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22F19B",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2787",
+      "name": "Cal Update Timestamp",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EF19B",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2822",
+      "name": "Update RTC",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD00",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2656",
+      "name": "Update RTC",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD00",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2777",
+      "name": "App Balance Cmd",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD06",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2714",
+      "name": "App Balance Cmd",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD06",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2716",
+      "name": "App OpenWire Cmd",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD07",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2720",
+      "name": "Allow Debug",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD08",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2719",
+      "name": "Allow Debug",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD08",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2806",
+      "name": "Reset Histogram",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD09",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2725",
+      "name": "Reset Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD09",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2808",
+      "name": "Avg Cell Temp Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0A",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2810",
+      "name": "Avg Cell Temp vs SOC Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0B",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2815",
+      "name": "Avg Cell Temp vs Charge Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0C",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2817",
+      "name": "Avg Cell Temp vs Discharge Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0D",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2819",
+      "name": "Soc vs Charge Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0E",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2821",
+      "name": "Soc vs Discharge Histogram",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD0F",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD layout may differ from the supplied firmware. Raw response is authoritative; script presets also provide source-based decoding."
+      ]
+    },
+    {
+      "id": "_2812",
+      "name": "Serial Num",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD20",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2813",
+      "name": "Serial Num",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD20",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2905",
+      "name": "Passport Battery Life Status",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD21",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2906",
+      "name": "Passport Battery Life Status",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD21",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2908",
+      "name": "Passport Post-event Status",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD22",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2909",
+      "name": "Passport Post-event Status",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD22",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2912",
+      "name": "Passport DPP ID",
+      "action": "Write",
+      "group": "Identification",
+      "request_prefix": "2EFD23",
+      "risk": "change",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2913",
+      "name": "Passport DPP ID",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD23",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2916",
+      "name": "Passport Archive ID",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FD24",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2879",
+      "name": "UDS Version",
+      "action": "Read",
+      "group": "Identification",
+      "request_prefix": "22FF00",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2663",
+      "name": "Erase Calibration",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "31010201",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2664",
+      "name": "Erase Calibration",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "31030201",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2666",
+      "name": "Application Integrity",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "31010210",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2667",
+      "name": "Application Integrity",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "31030210",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2669",
+      "name": "Application Compatibility",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "31010211",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2670",
+      "name": "Application Compatibility",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "31030211",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2672",
+      "name": "Erase Memory",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "3101FF00",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2673",
+      "name": "Erase Memory",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "3103FF00",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2675",
+      "name": "Calibration Integrity",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "31010212",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2676",
+      "name": "Calibration Integrity",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "31030212",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2678",
+      "name": "Calibration Compatibility",
+      "action": "Start",
+      "group": "Routine Control",
+      "request_prefix": "31010213",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2679",
+      "name": "Calibration Compatibility",
+      "action": "Request Results",
+      "group": "Routine Control",
+      "request_prefix": "31030213",
+      "risk": "read",
+      "source": "BMS.cdd",
+      "notes": [
+        "CDD routine IDs differ from the application F200\u2013F205 table. This entry sends the CDD definition exactly; use verified script presets for programming."
+      ]
+    },
+    {
+      "id": "_2681",
+      "name": "Software Update",
+      "action": "RequestDownload",
+      "group": "Software Update",
+      "request_prefix": "34",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2682",
+      "name": "Software Update",
+      "action": "Transmit",
+      "group": "Software Update",
+      "request_prefix": "36",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    },
+    {
+      "id": "_2683",
+      "name": "Software Update",
+      "action": "Stop",
+      "group": "Software Update",
+      "request_prefix": "37",
+      "risk": "critical",
+      "source": "BMS.cdd",
+      "notes": []
+    }
+  ],
+  "scripts": [
+    {
+      "id": "abs_erase_nvm",
+      "name": "abs erase nvm",
+      "operation": "write",
+      "did": 52736,
+      "risk": "critical",
+      "source": "abs_erase_nvm.bat",
+      "source_sha256": "c055eade4f955f963a702408ed0c9272cdd73bbafd840a6b9206f0b1c73d5e4a",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "amp_erase_nvm_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_disable_event_testing",
+      "name": "disable event testing",
+      "operation": "write",
+      "did": 49168,
+      "risk": "change",
+      "source": "abs_hv_disable_event_testing.bat",
+      "source_sha256": "5cd2cdb7542027c06d7b8d8127b4ab4be2c2b20c3e8c127e512d6a7696a088fd",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_uds_did_event_testing"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_enable_event_testing",
+      "name": "enable event testing",
+      "operation": "write",
+      "did": 49168,
+      "risk": "change",
+      "source": "abs_hv_enable_event_testing.bat",
+      "source_sha256": "5e2da08008e56bd3d2ac2b7e720d69341818c5fceccf0d85e33ff942a2041782",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_uds_did_event_testing"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_erase_app",
+      "name": "erase app",
+      "operation": "erase_app",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_erase_app.bat",
+      "source_sha256": "4d2d61975657945cb67a6a817ffb7746ff497b3441201bf754e8b36371583e1b",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_mute_all",
+      "name": "mute all",
+      "operation": "mute",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_mute_all.bat",
+      "source_sha256": "c946e2c5a44c32d9bcb301e7ab8667dbf97ed1857fd2c6dd8c4a67d5b7d6ced6",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_app",
+      "name": "program app",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_app.bat",
+      "source_sha256": "652124b23661994d1772c0685c726389d148aa97ef2fb3a346dd6f8961658e71",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_boot_updater_ff_4_0",
+      "name": "program boot updater ff 4 0",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_boot_updater_ff_4_0.bat",
+      "source_sha256": "a3eb6e4170029993775b3992d8ac00dedca35ef8707f7f0ef280b1289bffbe60",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_bootloader_0_5_0",
+      "name": "program bootloader 0 5 0",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_bootloader_0_5_0.bat",
+      "source_sha256": "2e34a8a9b2df74e13664cdc86b89038c5993e265814e63e15fa5ab182ba76d5e",
+      "source_contract": null,
+      "notes": [
+        "Script filename omits 'v'; using the supplied abs_hv_bootloader_v0_5_0.hex. Verify its fingerprint before programming."
+      ]
+    },
+    {
+      "id": "abs_hv_program_dcfc_cal",
+      "name": "program dcfc cal",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_dcfc_cal.bat",
+      "source_sha256": "1dddc0820e682269ce9b66ffd651aba7b7b3c4712db5546fe7c0111a35a133a4",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_dcfc_dc_cal",
+      "name": "program dcfc dc cal",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_dcfc_dc_cal.bat",
+      "source_sha256": "78a06c58c7eea889d50ae4d51e3184f214e330db5c7b886018fc8d72985915f1",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_gen_1_5_cal",
+      "name": "program gen 1 5 cal",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_gen_1_5_cal.bat",
+      "source_sha256": "10fbf550b3d0c6ed5e1e081702d2b3947c45bf07b08391c152fbd392eac6bf79",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_jb_cal",
+      "name": "program jb cal",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_jb_cal.bat",
+      "source_sha256": "d5cd42bae973448d84e067680b77c9bf18563d7d99c724bb1694a5ba320ad283",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_program_jb_hp_cal",
+      "name": "program jb hp cal",
+      "operation": "program",
+      "did": null,
+      "risk": "critical",
+      "source": "abs_hv_program_jb_hp_cal.bat",
+      "source_sha256": "db4d848734f5a67b010c60dc07c206c8735fb341d3c1c5768a1ef8a008b729f7",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_read_event_testing_status",
+      "name": "read event testing status",
+      "operation": "read",
+      "did": 49168,
+      "risk": "read",
+      "source": "abs_hv_read_event_testing_status.bat",
+      "source_sha256": "057e5268a49828b1b29277b502565129c3a0373a933e69c125aa46f1005c23a6",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_uds_did_event_testing"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_read_instance",
+      "name": "read instance",
+      "operation": "read",
+      "did": 61459,
+      "risk": "read",
+      "source": "abs_hv_read_instance.bat",
+      "source_sha256": "e221f8c3bc2c9c2a8b571333979660f346df1734c29ed17f46071dccf055398b",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 0,
+        "handler": "amp_instance_id_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_read_instance_default",
+      "name": "read instance default",
+      "operation": "read",
+      "did": 61459,
+      "risk": "read",
+      "source": "abs_hv_read_instance_default.bat",
+      "source_sha256": "95426a67d6cff1393f958222519dc18114d2ac9e66b0c7b2820b64657fc14e37",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 0,
+        "handler": "amp_instance_id_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_read_qr_code",
+      "name": "read qr code",
+      "operation": "read",
+      "did": 49152,
+      "risk": "read",
+      "source": "abs_hv_read_qr_code.bat",
+      "source_sha256": "250988a1af1218666ea43ba3c3f80e71580c81327d988d5fc6d0598b9ae97b68",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_qr_code_did_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_read_sn",
+      "name": "read sn",
+      "operation": "read",
+      "did": 61836,
+      "risk": "read",
+      "source": "abs_hv_read_sn.bat",
+      "source_sha256": "adb2d6a8cdf03585932380490e5639a5901ff8b66213605b1041e39ae4e29938",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 3,
+        "handler": "amp_hw_sn_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_serial_number_read",
+      "name": "serial number read",
+      "operation": "read",
+      "did": 64800,
+      "risk": "read",
+      "source": "abs_hv_serial_number_read.bat",
+      "source_sha256": "8b05b8cd6206e6a6cbcbe6db8a759fdd1c54e15f3f6300f55e15d62812c3d912",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_serial_number_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_serial_number_write",
+      "name": "serial number write",
+      "operation": "write",
+      "did": 64800,
+      "risk": "change",
+      "source": "abs_hv_serial_number_write.bat",
+      "source_sha256": "6e6e905846d31e0e41d0c443a7132ca894cdd51d487f38e99ab379ef21afd693",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_serial_number_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_soc_reset",
+      "name": "soc reset",
+      "operation": "write",
+      "did": 52738,
+      "risk": "critical",
+      "source": "abs_hv_soc_reset.bat",
+      "source_sha256": "5f9d1cc2b0af915db063916b777207679e4ef23d928e62fd05c43c4ce9eab804",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "amp_sox_ocv_reset_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_unmute_all",
+      "name": "unmute all",
+      "operation": "unmute",
+      "did": null,
+      "risk": "change",
+      "source": "abs_hv_unmute_all.bat",
+      "source_sha256": "1bf388191c2c30998ab2db091e509342720cafc96b53c95dea9d95229d19a1d3",
+      "source_contract": null,
+      "notes": []
+    },
+    {
+      "id": "abs_hv_write_instance",
+      "name": "write instance",
+      "operation": "write",
+      "did": 61459,
+      "risk": "change",
+      "source": "abs_hv_write_instance.bat",
+      "source_sha256": "5534b7c15682cae6bda3ce8fc61c6d06b2aff45f239fcf1ae4671cd609d280a0",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 0,
+        "handler": "amp_instance_id_handler"
+      },
+      "notes": [
+        "Source uses two big-endian bytes and programming session 02, unlike the script's extended session. Application firmware ignores the supplied instance and learns its pack ID from ADC straps; readback may differ. Bootloader behavior depends on its version."
+      ]
+    },
+    {
+      "id": "abs_hv_write_instance_recover_from_pack_id_00",
+      "name": "write instance recover from pack id 00",
+      "operation": "write",
+      "did": 61459,
+      "risk": "change",
+      "source": "abs_hv_write_instance_recover_from_pack_id_00.bat",
+      "source_sha256": "b10a48df241a74d2f250558bb740590a529719b5e43e6309cd8b8ca5d2546001",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 0,
+        "handler": "amp_instance_id_handler"
+      },
+      "notes": [
+        "Source uses two big-endian bytes and programming session 02, unlike the script's extended session. Application firmware ignores the supplied instance and learns its pack ID from ADC straps; readback may differ. Bootloader behavior depends on its version."
+      ]
+    },
+    {
+      "id": "abs_hv_write_qr_code",
+      "name": "write qr code",
+      "operation": "write",
+      "did": 49152,
+      "risk": "change",
+      "source": "abs_hv_write_qr_code.bat",
+      "source_sha256": "3c928e2e49d9e708e7ebd70644b928ede79b09817c6e6fcedad2a453b3386ac8",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_qr_code_did_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "abs_hv_write_sn",
+      "name": "write sn",
+      "operation": "write",
+      "did": 61836,
+      "risk": "change",
+      "source": "abs_hv_write_sn.bat",
+      "source_sha256": "2ec7e2898d8c508bb616adb0691a4afcfb283d523e560fb4f2b58ae65f632874",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 2,
+        "write_security": 3,
+        "handler": "amp_hw_sn_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "balance_cmd_disable_algo",
+      "name": "balance cmd disable algo",
+      "operation": "write",
+      "did": 64774,
+      "risk": "critical",
+      "source": "balance_cmd_disable_algo.bat",
+      "source_sha256": "9657a13d3facc8404de7ca1eb1f1a3e92d3a2ffde5e1cbedab73ae17c08cd686",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_balanace_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "balance_cmd_disable_all",
+      "name": "balance cmd disable all",
+      "operation": "write",
+      "did": 64774,
+      "risk": "critical",
+      "source": "balance_cmd_disable_all.bat",
+      "source_sha256": "49cad74154f37862cec4adfac45b4bc9388e97111c69039b32028dc6c0c07962",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_balanace_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "balance_cmd_enable_algo",
+      "name": "balance cmd enable algo",
+      "operation": "write",
+      "did": 64774,
+      "risk": "critical",
+      "source": "balance_cmd_enable_algo.bat",
+      "source_sha256": "9a5eb84c3ebaa290696cafbe4602696f026ca0c9889e2713a9b7d8d8b7b6a0f1",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_balanace_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "balance_cmd_enable_all",
+      "name": "balance cmd enable all",
+      "operation": "write",
+      "did": 64774,
+      "risk": "critical",
+      "source": "balance_cmd_enable_all.bat",
+      "source_sha256": "eb1a2ec9dec2d906ac3cde71c49193315a758a9c10005a42106ed481751a6bf7",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_balanace_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "balance_cmd_read",
+      "name": "balance cmd read",
+      "operation": "read",
+      "did": 64774,
+      "risk": "read",
+      "source": "balance_cmd_read.bat",
+      "source_sha256": "740e833991d4a9310fdf62d830c02d78a7ade22bca331ec069cb1241db93b7fa",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_balanace_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "can_debug_disable",
+      "name": "can debug disable",
+      "operation": "write",
+      "did": 64776,
+      "risk": "change",
+      "source": "can_debug_disable.bat",
+      "source_sha256": "134b88924bddd3ac84ad18d170e0e9d15f667eeaf1eaf3cd7fee469aea4d5990",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 0,
+        "handler": "app_allow_debug_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "can_debug_enable",
+      "name": "can debug enable",
+      "operation": "write",
+      "did": 64776,
+      "risk": "change",
+      "source": "can_debug_enable.bat",
+      "source_sha256": "562ea93583a41d45a1ded3cf293769c55082dfc80ed2be08bda2eb0c10fa00a7",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 3,
+        "write_security": 0,
+        "handler": "app_allow_debug_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_avg_temp",
+      "name": "histo avg temp",
+      "operation": "read",
+      "did": 64778,
+      "risk": "read",
+      "source": "histo_avg_temp.bat",
+      "source_sha256": "2e8c70ef2be32005c76f49176452c66880cdea2882ffc2a80986edb729aab578",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_avg_temp_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_soc_vs_CCurr",
+      "name": "histo soc vs CCurr",
+      "operation": "read",
+      "did": 64782,
+      "risk": "read",
+      "source": "histo_soc_vs_CCurr.bat",
+      "source_sha256": "953378ff69523320168421fdb041ecdf8998af1e0b061dbf0eba671f011d07ed",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_soc_vs_charge_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_soc_vs_DCurr",
+      "name": "histo soc vs DCurr",
+      "operation": "read",
+      "did": 64783,
+      "risk": "read",
+      "source": "histo_soc_vs_DCurr.bat",
+      "source_sha256": "5caef09487c6297c28dfb1a96e3f0cc0fdb4a04480fc85b561cfd0e06fe5a927",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_soc_vs_discharge_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_temp_vs_CCurr",
+      "name": "histo temp vs CCurr",
+      "operation": "read",
+      "did": 64780,
+      "risk": "read",
+      "source": "histo_temp_vs_CCurr.bat",
+      "source_sha256": "420bc639b03b8d5a10039acae82fd52ede0fbda6569d1debb28354e91596a660",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_avg_temp_vs_c_charge_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_temp_vs_DCurr",
+      "name": "histo temp vs DCurr",
+      "operation": "read",
+      "did": 64781,
+      "risk": "read",
+      "source": "histo_temp_vs_DCurr.bat",
+      "source_sha256": "8ba87ca3b8d6e46d7a9233df182b7aaea4ed29f9b087c5c6353285637e9ecef5",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_avg_temp_vs_discharge_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "histo_temp_vs_soc",
+      "name": "histo temp vs soc",
+      "operation": "read",
+      "did": 64779,
+      "risk": "read",
+      "source": "histo_temp_vs_soc.bat",
+      "source_sha256": "d3e920f09cc66ad5b567ec6f0534119e0dddffbf4f87b1a00769f7406c9c8655",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_avg_temp_vs_soc_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "open_wire_read",
+      "name": "open wire read",
+      "operation": "read",
+      "did": 64775,
+      "risk": "read",
+      "source": "open_wire_read.bat",
+      "source_sha256": "93a39a5a7dc909a4a8bf3a469feadc474490b4dbecd87420606740d4418b69e4",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": false,
+        "write_session": 3,
+        "write_security": 3,
+        "handler": "app_openwire_cmd_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "reset_all_histo",
+      "name": "reset all histo",
+      "operation": "write",
+      "did": 64777,
+      "risk": "critical",
+      "source": "reset_all_histo.bat",
+      "source_sha256": "06bbcb8f40d24e294c3109c8c1dbcc19288c2ae7a06b487da30d7f3eefa5b872",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_reset_histo_handler"
+      },
+      "notes": []
+    },
+    {
+      "id": "reset_histo",
+      "name": "reset histo",
+      "operation": "write",
+      "did": 64777,
+      "risk": "critical",
+      "source": "reset_histo.bat",
+      "source_sha256": "84246e1dbf10c7c0496fc8f8d27415b2a0676d7f7227a2db87f7137a9d3cae1b",
+      "source_contract": {
+        "read_allowed": true,
+        "read_session": 1,
+        "read_security": 0,
+        "write_allowed": true,
+        "write_session": 1,
+        "write_security": 0,
+        "handler": "app_reset_histo_handler"
+      },
+      "notes": []
+    }
+  ],
+  "images": [
+    {
+      "preset": "abs_hv_program_app",
+      "status": "validated",
+      "name": "abs_app.hex",
+      "sha256": "ef9f661318d92e0be220ddf4db86fa7d3d0548ba32b7fbefd092ccb4ee003632",
+      "bytes": 917504,
+      "segments": [
+        {
+          "address": 16777216,
+          "length": 917504
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_boot_updater_ff_4_0",
+      "status": "missing",
+      "reason": "Image is missing: abs_hv_boot_updater_ff_4_0.hex. Place a replacement in bms_images and select its filename."
+    },
+    {
+      "preset": "abs_hv_program_bootloader_0_5_0",
+      "status": "validated",
+      "name": "abs_hv_bootloader_v0_5_0.hex",
+      "sha256": "8656833f16e526d18a8c90634b93871c19ba8294f652f550d6a4a172ab6d9c16",
+      "bytes": 98304,
+      "segments": [
+        {
+          "address": 16351232,
+          "length": 98304
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_dcfc_cal",
+      "status": "validated",
+      "name": "hva_cal_dcfc.hex",
+      "sha256": "518682eede1156829a0c1f4d69b0fe2ddd306615e66e5f6e61ba875adf6f518b",
+      "bytes": 65536,
+      "segments": [
+        {
+          "address": 16580608,
+          "length": 65536
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_dcfc_dc_cal",
+      "status": "validated",
+      "name": "hva_cal_dcfc_dc.hex",
+      "sha256": "ae1aa9aecfd40f41742fd67d84c3fdcef0e1c59de9c2066dcb45f1107c9cb6bf",
+      "bytes": 65536,
+      "segments": [
+        {
+          "address": 16580608,
+          "length": 65536
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_gen_1_5_cal",
+      "status": "validated",
+      "name": "hva_cal_gen_1_5.hex",
+      "sha256": "7213e6eccdc3ea5601de9579c5506ff2ed4c73dedbdba2a3d7ccbeb430470c3c",
+      "bytes": 65536,
+      "segments": [
+        {
+          "address": 16580608,
+          "length": 65536
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_jb_cal",
+      "status": "validated",
+      "name": "hva_cal_jb.hex",
+      "sha256": "96be81b685ddb1d62fd6bd2f1a1772a56aa409a6fb615660bcbc884d18d51a3a",
+      "bytes": 65536,
+      "segments": [
+        {
+          "address": 16580608,
+          "length": 65536
+        }
+      ]
+    },
+    {
+      "preset": "abs_hv_program_jb_hp_cal",
+      "status": "validated",
+      "name": "hva_cal_jb_hp.hex",
+      "sha256": "c94990d030672709e2b838ebd1e8948af878770e8d171c0b7c184674355a941e",
+      "bytes": 65536,
+      "segments": [
+        {
+          "address": 16580608,
+          "length": 65536
+        }
+      ]
+    }
+  ]
+}

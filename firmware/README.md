@@ -1,5 +1,7 @@
 # NavSphere ESP32-WROOM firmware
 
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+
 The supplied project was an ESP-IDF CMake skeleton with an empty `app_main()`.
 It had no Wi-Fi code, target selection, pin map, SDK version or credentials.
 The existing CMake project is extended in native C11 and FreeRTOS. ESP-IDF
@@ -135,7 +137,7 @@ ACLs authorize senders; there is no application-layer command signature.
 From repository root on this machine:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/build.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/build.ps1 -ProjectDirectory .
 gcc -std=c11 -Wall -Wextra -Werror -Ifirmware/main firmware/main/command_rules.c firmware/test/test_command_rules.c -o firmware/test/command_rules_test.exe
 firmware/test/command_rules_test.exe
 powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/test_host.ps1
@@ -145,8 +147,8 @@ The full platform root is also an ESP-IDF entry point using this same
 `firmware/main` component. When the repository root is open in VS Code, its
 ESP-IDF build button and default task use root `sdkconfig` and `build/`.
 Run `firmware/tools/build.ps1 -ProjectDirectory .` from the repository root to
-build that configuration. The standalone command above uses `firmware/sdkconfig`
-and `firmware/build/`; edit the configuration for the project you are building.
+build that configuration. Omit -ProjectDirectory for the standalone firmware build, which uses
+`firmware/sdkconfig` and `firmware/build/`; edit the matching configuration.
 Both load the same firmware defaults and use the same partition CSV.
 
 The build helper sets environment variables only in its own process and uses
@@ -168,8 +170,9 @@ The checked partition table reserves nvs at 0x9000, length 0x6000. Back up any
 existing device NVS before replacing it. Once wiring and serial port are verified,
 from an IDF terminal in firmware run `idf.py -p COMx flash`, then
 `python -m esptool --chip esp32 --port COMx write-flash 0x9000 .local/nvs.bin`,
-then `idf.py -p COMx monitor`. These are explicit device-writing operations;
-no board was flashed automatically during this implementation.
+then `idf.py -p COMx monitor`. These are explicit device-writing operations.
+For the current COM3 flash and CAN/BMS verification record, see
+`docs/development/BE_CLIENT_IMPLEMENTATION.md` from the project root.
 
 Set `CONFIG_NAV_REQUIRE_TLS=y` for protected deployments. TLS uses ESP-IDF's
 trusted root bundle and hostname validation; the broker certificate must chain
@@ -199,3 +202,33 @@ not establish these hardware properties.
 - [ESP-MQTT configuration and nonblocking enqueue](https://docs.espressif.com/projects/esp-idf/en/v5.4/esp32/api-reference/protocols/mqtt.html)
 
 All cited APIs were also checked against the installed IDF 6.0.2 headers.
+
+## CAN and shared software version extensions
+
+Classic CAN is 500 kbit/s on GPIO25 TX/GPIO26 RX. It starts listen-only; diagnostic
+jobs or explicit periodic ON temporarily own normal mode, mutually exclusively.
+Accept-all standard/extended DATA/RTR receive uses separate bounded MQTT/serial
+queues. UART 115200 prints CAN frames when capacity allows; CAN_STATUS exposes
+counters even with no frames. Mode switches and busy queues can lose frames.
+
+The can_tx_rules/can_tx modules define 0x014 (00 60 00, 100 ms) and
+0x548 (00 00 00 00 00 00 00 08, 10 ms), a priority-5 4096-byte task and
+eight-command queue. Default OFF; stop on MQTT disconnect or three consecutive
+failures; skip missed slots. v1.1.8 retries arbitration-only loss within
+5 ms/16 attempts. Exact payloads have no changing counter/checksum. State is
+confirmed in CAN stats; GPIO and BMS request protocols are retained. Read the
+root docs/firmware/CAN_TX_GUIDE.md for full behavior, VCC/VIO wiring and tests.
+
+version.json generates SW_VERSION, SW_BUILD_ID and SW_BUILD_UTC and matching
+GUI constants. The UI compares its own build with actual device reports.
+Root builds use build/ and sdkconfig; standalone builds use firmware/build/
+and independent firmware/sdkconfig. Do not mix them. An already provisioned
+board needs only the application update, from the repository root in an IDF terminal:
+
+```powershell
+python -m esptool --chip esp32 --port COMx --baud 115200 write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x10000 output/firmware/navsphere.bin
+```
+
+Detect the actual port, close monitors, verify written hash and startup identity,
+then release the port. Preserve NVS; do not erase or reprovision for routine updates.
+New-board provisioning is separate. No OTA flashing workflow is implemented.

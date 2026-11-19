@@ -33,10 +33,21 @@ version, wiring, calibration source, instrument and test duration.
 9. Run at least24hours. Record minimum heap, task high-water marks, watchdog
    resets, ADC failures, publish drops and reconnection counts under load.
 
-These hardware checks are pending until a board, wiring and serial port are
-available. See integration-results.json for the separately measured host path.
+Earlier firmware was flashed and CAN/telemetry tested, but full electrical/calibration/soak acceptance is incomplete. See ../RELEASE_STATUS.md. integration-results.json is historical simulator evidence.
 
 
 ### Control pin update 12 November 2026
 
 Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.
+
+## Periodic CAN TX acceptance, v1.1.8
+
+The v1.1.7 test delivered exact bytes after power correction but failed timing.
+v1.1.8 arbitration retry correction needs a physical test. Follow the root
+docs/firmware/CAN_TX_GUIDE.md: verify exact image/hash, supplies, bitrate and ACK;
+OFF baseline with no duplicate source; 10 s ON with exact IDs/DLC/bytes;
+mean periods within 5% of 100/10 ms, max below twice period, no new failures;
+OFF plus 300 ms grace and 3 s without either ID. Exercise actual GUI controls,
+verify RX/ADC persistence, reboot default OFF and MQTT disconnect stopping TX.
+Reconnect must not re-enable it. Leave OFF and release COM. Diagnostic success
+is a separate unresolved check; no BMS programming/erase/reset belongs here.

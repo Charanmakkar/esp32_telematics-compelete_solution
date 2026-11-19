@@ -1,5 +1,7 @@
 # Existing codebase assessment
 
+Historical baseline assessment, 11 November 2026. Current extension map follows below; current validation is in ../RELEASE_STATUS.md.
+
 Inspected before implementation on 11 November 2026.
 
 The repository originally contained an ESP-IDF CMake project named `firmware`, a
@@ -42,3 +44,13 @@ host builds and synthetic end-to-end tests.
 
 Hardware basis: [Espressif ESP32 ADC guidance](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/adc_oneshot.html)
 and [ESP32-WROOM-32 datasheet](https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf).
+
+## Current extensions, 19 November 2026
+
+The native C/FreeRTOS, FastAPI, MariaDB and React foundation remains. Independent
+CAN queues/worker feed raw history/latest and shared DBC decoding. The CAN page
+adds search, statistics and confirmed fixed-frame TX. can_tx_rules/can_tx use
+CAN manager ownership shared exclusively with diagnostics. The BE BMS service
+prepares 55 CDD services/44 BAT workflows, ESP32 ISO-TP and persistent jobs;
+hardware diagnostic success remains unverified. Shared release identity covers
+firmware/GUI. Reports and snapshots document scope without altering runtime behavior.

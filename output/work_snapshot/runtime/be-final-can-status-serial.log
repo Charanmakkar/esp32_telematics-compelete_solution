@@ -1,0 +1,68 @@
+ (598) wifi:wifi firmware version: 00ad238
+I (599) wifi:wifi certification version: v7.0
+I (599) wifi:config NVS flash: enabled
+I (601) wifi:config nano formatting: disabled
+I (605) wifi:Init data frame dynamic rx buffer num: 32
+I (610) wifi:Init static rx mgmt buffer num: 5
+I (614) wifi:Init management short buffer num: 32
+I (618) wifi:Init dynamic tx buffer num: 32
+I (623) wifi:Init static rx buffer size: 1600
+I (627) wifi:Init static rx buffer num: 10
+I (630) wifi:Init dynamic rx buffer num: 32
+I (636) wifi_init: rx ba win: 6
+I (637) wifi_init: accept mbox: 6
+I (640) wifi_init: tcpip mbox: 32
+I (643) wifi_init: udp mbox: 6
+I (646) wifi_init: tcp mbox: 6
+I (649) wifi_init: tcp tx win: 5760
+I (652) wifi_init: tcp rx win: 5760
+I (655) wifi_init: tcp mss: 1440
+I (658) wifi_init: WiFi IRAM OP enabled
+I (662) wifi_init: WiFi RX IRAM OP enabled
+I (667) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06
+I (748) wifi:mode : sta (ec:62:60:9c:40:84)
+I (749) wifi:enable tsf
+E (763) esp-tls: [sock=54] connect() error: Host is unreachable
+E (765) transport_base: Failed to open a new connection: 32772
+E (765) mqtt_client: Error transport connect
+W (768) mqtt: Transport or broker error (credentials never logged)
+I (768) can: Listen-only classic CAN 500 kbit/s TX=25 RX=26; accepting all IDs
+W (773) mqtt: Disconnected
+I (783) can: CAN_BUILD diag_version=3 built=Nov 18 2026 15:26:09 ELF=fe42bcd4b; serial CAN ID/data enabled
+I (792) main_task: Returned from app_main()
+E (1757) wifi:sta is connecting, return error
+I (2358) wifi:new:<12,0>, old:<1,0>, ap:<255,255>, sta:<12,0>, prof:1, snd_ch_cfg:0x0
+I (2360) wifi:state: init -> auth (0xb0)
+I (2371) wifi:state: auth -> init (0x8a0)
+W (2374) wifi: Disconnected; bounded reconnect worker will retry
+I (5768) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1
+I (5902) wifi:state: init -> auth (0xb0)
+I (5907) wifi:state: auth -> assoc (0x0)
+I (5914) wifi:state: assoc -> run (0x10)
+I (5938) wifi:connected with Navtech_Wifi5G, aid = 4, channel 12, BW20, bssid = dc:ea:e7:98:f4:40
+I (5939) wifi:security: WPA2-PSK, phy: bgn, rssi: -70, cipher(pairwise:0x3, group:0x1), pmf:0
+I (5945) wifi:pm start, type: 1
+
+I (5947) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+I (5968) wifi:<ba-add>idx:0 (ifx:0, dc:ea:e7:98:f4:40), tid:0, ssn:0, winSize:64
+I (5989) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+I (7018) wifi:<ba-add>idx:1 (ifx:0, dc:ea:e7:98:f4:40), tid:6, ssn:2, winSize:64
+W (7760) wifi:sta is connected, disconnect before connecting to new ap
+I (8032) esp_netif_handlers: sta ip: 192.168.10.57, mask: 255.255.252.0, gw: 192.168.9.1
+I (8033) wifi: IP acquired
+I (8766) mqtt_client: Client force reconnect requested
+I (9075) mqtt: Connected and command subscription requested
+I (9167) resources: free_heap=124112 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2980
+I (10167) resources: free_heap=118056 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2916
+I (11167) resources: free_heap=120096 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2916
+I (11768) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1
+I (12167) resources: free_heap=122192 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (13167) resources: free_heap=123644 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (14169) resources: free_heap=121124 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (15267) resources: free_heap=117564 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (16267) resources: free_heap=119616 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (17267) resources: free_heap=121704 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (17769) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1
+I (18267) resources: free_heap=122676 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (19267) resources: free_heap=120984 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884
+I (20267) resources: free_heap=119132 adc_queue_drops=0 publish_drops=85 mqtt_stack_margin=2884

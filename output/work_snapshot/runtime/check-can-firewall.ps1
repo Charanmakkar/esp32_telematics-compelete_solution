@@ -1,0 +1,2 @@
+$rule=Get-NetFirewallRule -Name NavSphere-Office-MQTT
+@{enabled=[string]$rule.Enabled;action=[string]$rule.Action;port=@($rule|Get-NetFirewallPortFilter|Select-Object Protocol,LocalPort);address=@($rule|Get-NetFirewallAddressFilter|Select-Object RemoteAddress);blocks=@(Get-NetFirewallRule -Enabled True -Direction Inbound -Action Block | ForEach-Object {$r=$_; $a=$r|Get-NetFirewallApplicationFilter; if($a.Program -match 'mosquitto|node'){@{name=$r.Name;program=$a.Program}}})} | ConvertTo-Json -Depth 5 | Set-Content "$PSScriptRoot/firewall-check.json"

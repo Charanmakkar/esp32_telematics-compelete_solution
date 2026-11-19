@@ -1,0 +1,20 @@
+E501 Line too long (118 > 100)
+  --> backend\app\api\can.py:80:101
+   |
+78 |         if isinstance(exc, SQLAlchemyError):
+79 |             raise
+80 |         raise HTTPException(422, "Invalid DBC. Use a valid classic CAN DBC, up to 512 KiB, with unique IDs.") from exc
+   |                                                                                                     ^^^^^^^^^^^^^^^^^^
+
+E501 Line too long (113 > 100)
+  --> backend\app\services\can_service.py:97:101
+   |
+95 |                 batch = CanBatch.model_validate(json.loads(payload))
+96 |                 expected = f"{self.runtime.settings.mqtt_topic_prefix}/{batch.device_id}/can"
+97 |                 if retained or topic != expected or batch.device_id not in self.runtime.settings.allowed_devices:
+   |                                                                                                     ^^^^^^^^^^^^^
+98 |                     raise ValueError("Invalid CAN topic/device or retained batch")
+99 |                 # Retry a bounded interval. A database outage must not block analog ingestion.
+   |
+
+Found 8 errors (6 fixed, 2 remaining).

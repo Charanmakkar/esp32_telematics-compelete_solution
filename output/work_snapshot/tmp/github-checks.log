@@ -1,0 +1,83 @@
+............................                                             [100%]
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\Users\charanpreet\Documents\ChatGPT\esp32_telematics-compelete_solution\backend\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+28 passed, 1 warning in 14.86s
+All checks passed!
+
+> navsphere-dashboard@1.0.0 test
+> vitest run --run
+
+
+ RUN  v5.1.0 C:/Users/charanpreet/Documents/ChatGPT/esp32_telematics-compelete_solution/frontend
+
+
+ Test Files  3 passed (3)
+      Tests  15 passed (15)
+   Start at  12:47:14
+   Duration  11.64s (environment 54%, setup 25%, tests 14%, import 5%, transform 2%)
+
+
+> navsphere-dashboard@1.0.0 build
+> tsc -b && vite build
+
+vite v6.4.6 building for production...
+transforming...
+✓ 1996 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                      0.77 kB │ gzip:   0.42 kB
+dist/assets/inter-latin-400-normal-C38fXH4l.woff2   23.66 kB
+dist/assets/inter-latin-500-normal-Cerq10X2.woff2   24.27 kB
+dist/assets/inter-latin-700-normal-Yt3aPRUw.woff2   24.36 kB
+dist/assets/inter-latin-600-normal-LgqL8muc.woff2   24.45 kB
+dist/assets/inter-latin-400-normal-CyCys3Eg.woff    30.70 kB
+dist/assets/inter-latin-600-normal-CiBQ2DWP.woff    31.26 kB
+dist/assets/inter-latin-500-normal-BL9OpVg8.woff    31.28 kB
+dist/assets/inter-latin-700-normal-BLAVimhd.woff    31.32 kB
+dist/assets/index-dsC1FRIk.css                      39.49 kB │ gzip:   8.15 kB
+dist/assets/react-8Vnhhkrm.js                       51.77 kB │ gzip:  18.23 kB
+dist/assets/index-7MyifGXL.js                      273.04 kB │ gzip:  82.89 kB
+dist/assets/charts-ck5tuIFq.js                     387.98 kB │ gzip: 112.83 kB
+✓ built in 12.35s
+..........
+----------------------------------------------------------------------
+Ran 10 tests in 0.102s
+
+OK
+Executing action: all (aliases: build)
+Running ninja in directory C:\Users\charanpreet\Documents\ChatGPT\esp32_telematics-compelete_solution\firmware\build
+Executing "ninja all"...
+[1/4] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\charanpreet\Documents\ChatGPT\esp32_telematics-compelete_solution\firmware\build && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/charanpreet/Documents/ChatGPT/esp32_telematics-compelete_solution/firmware/build/partition_table/partition-table.bin C:/Users/charanpreet/Documents/ChatGPT/esp32_telematics-compelete_solution/firmware/build/firmware.bin"
+
+firmware.bin binary size 0xf1470 bytes. Smallest app partition is 0x300000 bytes. 0x20eb90 bytes (69%) free.
+
+
+[2/4] Performing build step for 'bootloader'
+
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D C:\Users\charanpreet\Documents\ChatGPT\esp32_telematics-compelete_solution\firmware\build\bootloader && C:\Espressif\tools\python\v6.0.2\venv\Scripts\python.exe C:/esp/v6.0.2/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/charanpreet/Documents/ChatGPT/esp32_telematics-compelete_solution/firmware/build/bootloader/bootloader.bin"
+
+
+Bootloader binary size 0x65f0 bytes. 0xa10 bytes (9%) free.
+
+
+
+[3/4] No install step for 'bootloader'
+
+[4/4] Completed 'bootloader'
+
+
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32 -b 460800 --before default-reset --after hard-reset write-flash --flash-mode dio --flash-size 4MB --flash-freq 40m 0x1000 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x10000 build\firmware.bin
+or from the "C:\Users\charanpreet\Documents\ChatGPT\esp32_telematics-compelete_solution\firmware\build" directory
+ python -m esptool --chip esp32 -b 460800 --before default-reset --after hard-reset write-flash "@flash_args"
+13 command rule assertions passed
+Command parser, duplicate, expiry, safe-state, and bounded queue tests passed

@@ -1,0 +1,157 @@
+{
+  "messages": [
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794384619,
+      "kind": "text",
+      "text": "use the above prompt and give your best outcome, keepting all different items in different segregates and use the firmware for esp32 code.\nyou have complete access to my laptop for test and execution and Internet for research and implementation.",
+      "characters": 245,
+      "words": 40,
+      "bytes": 245
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794384619,
+      "kind": "clarification",
+      "text": "esp32S wroom . on board GPIO for ADC, A and B connected to LED and 1 more output GPIO (any). set or clear GPIO on 1, 0 on MQTT signal",
+      "characters": 133,
+      "words": 30,
+      "bytes": 133
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794384619,
+      "kind": "text",
+      "text": "esp32s",
+      "characters": 6,
+      "words": 1,
+      "bytes": 6
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794384619,
+      "kind": "clarification",
+      "text": "use six only and update the value in promt to six only, NO extra hardware",
+      "characters": 73,
+      "words": 15,
+      "bytes": 73
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794390615,
+      "kind": "text",
+      "text": "my build for esp32 is not working, check the config file",
+      "characters": 56,
+      "words": 11,
+      "bytes": 56
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794391171,
+      "kind": "text",
+      "text": "build is failing",
+      "characters": 16,
+      "words": 3,
+      "bytes": 16
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794391171,
+      "kind": "image",
+      "text": "",
+      "characters": 0,
+      "words": 0,
+      "bytes": 0
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794393900,
+      "kind": "text",
+      "text": "esp32 quick button not working,",
+      "characters": 31,
+      "words": 5,
+      "bytes": 31
+    },
+    {
+      "chat": "Build NavSphere telemetry platform",
+      "time": 1794393900,
+      "kind": "clarification",
+      "text": "SDK Configuration Editor (gear icon)",
+      "characters": 36,
+      "words": 5,
+      "bytes": 36
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794455049,
+      "kind": "text",
+      "text": "check all the file, and recover if any file is missing or builds are required, \n\nmy orignal files were kept at \"D:\\Masters\\esp32_telematics-compelete_solution\"\nso you can directly copy any required file from above location as well if required.",
+      "characters": 243,
+      "words": 37,
+      "bytes": 243
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794456127,
+      "kind": "text",
+      "text": "Now start the application and run the live database and MQTT integration tests to check everything is working.\nESP32 is connected to the laptop, \nverify my wifi creds going to esp32, I want to see the live data on webpage",
+      "characters": 221,
+      "words": 40,
+      "bytes": 221
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794457067,
+      "kind": "text",
+      "text": "make a report on Size of Prompt, \nnumber of prompt, \ntotal credits used, \nadd proper screen short of Telematic GUI.",
+      "characters": 115,
+      "words": 20,
+      "bytes": 115
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794457067,
+      "kind": "text",
+      "text": "do add all the fearutres and work done by AI to do it.",
+      "characters": 54,
+      "words": 13,
+      "bytes": 54
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794459568,
+      "kind": "text",
+      "text": "update the GPIO to GPIO2 for ControlA and GPIO0 for ControlB",
+      "characters": 60,
+      "words": 11,
+      "bytes": 60
+    },
+    {
+      "chat": "Recover missing project files",
+      "time": 1794460448,
+      "kind": "text",
+      "text": "relaunch the projects, and update the report of work done and AI used !",
+      "characters": 71,
+      "words": 14,
+      "bytes": 71
+    }
+  ],
+  "master": {
+    "original_attachment": {
+      "characters": 32235,
+      "words": 4338,
+      "file_bytes": 32289,
+      "normalized_utf8_bytes": 32289
+    },
+    "current_master": {
+      "words": 4365,
+      "characters": 32389,
+      "file_bytes": 33604
+    }
+  },
+  "totals": {
+    "characters": 1360,
+    "words": 245,
+    "bytes": 1360
+  }
+}

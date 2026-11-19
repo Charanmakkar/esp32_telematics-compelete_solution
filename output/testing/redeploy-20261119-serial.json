@@ -1,0 +1,19 @@
+{
+  "time_utc": "2026-11-19T08:55:46.950405+00:00",
+  "port": "COM3",
+  "baud": 115200,
+  "seconds": 20,
+  "sw_version": "1.1.4",
+  "sw_build": "2ae749ea5903",
+  "identity": [
+    "I (552) navsphere: SW_VERSION=1.1.4 BUILD=2ae749ea5903 UTC=2026-11-18T17:48:31+00:00",
+    "I (778) can: CAN_BUILD SW_VERSION=1.1.4 BUILD=2ae749ea5903 diag_version=3 ELF=d5bd2b7c2; serial CAN ID/data enabled"
+  ],
+  "can_serial_frames": 0,
+  "examples": [],
+  "status": [
+    "I (5773) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1",
+    "I (11774) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1",
+    "I (17775) can: CAN_STATUS mode=listen_only state=1 rx=0 tx=0 bus_errors=0 REC=0 TEC=0 serial_drops=0 RXD26_now=1"
+  ]
+}

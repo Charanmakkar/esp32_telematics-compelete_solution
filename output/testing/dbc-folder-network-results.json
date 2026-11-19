@@ -1,0 +1,96 @@
+{
+  "http://192.168.9.253:5173": {
+    "page": 200,
+    "health": {
+      "status": "ok",
+      "mqtt_connected": true,
+      "database_connected": true,
+      "database_engine": "mysql",
+      "metrics": {
+        "received": 140,
+        "persisted": 106,
+        "invalid": 0,
+        "duplicates": 34,
+        "dropped": 0,
+        "database_errors": 0,
+        "last_received_at": "2026-11-17T12:16:54.958688+00:00",
+        "last_persisted_at": "2026-11-17T12:16:54.959281+00:00",
+        "frequency_hz": 9.91,
+        "queue_depth": 0,
+        "websocket_dropped": 0
+      }
+    },
+    "login": 200,
+    "can_api": 200,
+    "dbc_folder": "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\can_dbc",
+    "dbc_files": [],
+    "can_ids": 65,
+    "protected_upload_validation": 422,
+    "websocket_event_type": "telemetry"
+  },
+  "http://192.168.9.59:5173": {
+    "page": 200,
+    "health": {
+      "status": "ok",
+      "mqtt_connected": true,
+      "database_connected": true,
+      "database_engine": "mysql",
+      "metrics": {
+        "received": 141,
+        "persisted": 106,
+        "invalid": 0,
+        "duplicates": 35,
+        "dropped": 0,
+        "database_errors": 0,
+        "last_received_at": "2026-11-17T12:16:55.329740+00:00",
+        "last_persisted_at": "2026-11-17T12:16:54.959281+00:00",
+        "frequency_hz": 9.71,
+        "queue_depth": 0,
+        "websocket_dropped": 0
+      }
+    },
+    "login": 200,
+    "can_api": 200,
+    "dbc_folder": "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\can_dbc",
+    "dbc_files": [],
+    "can_ids": 65,
+    "protected_upload_validation": 422,
+    "websocket_event_type": "telemetry"
+  },
+  "scope": "Automated checks from the server laptop using both LAN URLs. Remote-PC access subsequently confirmed by the user.",
+  "folder_live_verification": {
+    "verified_at_utc": "2026-11-17T12:18:58.418437+00:00",
+    "library": {
+      "folder": "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\can_dbc",
+      "files": [
+        {
+          "filename": "powertrain_HVA.dbc",
+          "messages": 93,
+          "status": "loaded",
+          "sha256": "0380593973b884538ae10f7c52dfd3044be73bddafaff084e47be60b3f421477"
+        }
+      ],
+      "errors": [],
+      "conflicts": [],
+      "messages": 93,
+      "source": "project_folder"
+    },
+    "decoded_latest_ids": 64,
+    "persisted_frames_in_3_seconds": 48,
+    "database_errors": 0,
+    "server_dropped_batches": 0,
+    "software_tests": {
+      "backend": 42,
+      "frontend": 20,
+      "simulator": 10,
+      "lint": "pass",
+      "frontend_build": "pass"
+    }
+  },
+  "remote_pc_verification": {
+    "status": "passed",
+    "method": "user_confirmation",
+    "confirmation": "It opens now",
+    "url": "http://192.168.9.253:5173/can"
+  }
+}

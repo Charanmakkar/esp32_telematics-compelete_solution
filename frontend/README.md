@@ -1,6 +1,8 @@
 # NavSphere dashboard
 
-React + TypeScript + Vite dashboard for the local ESP32 telemetry platform. The current hardware contract has **six ADC1 inputs**: GPIO32, GPIO33, GPIO34, GPIO35, GPIO36, and GPIO39. Output A is GPIO25 and output B is GPIO26.
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+
+React + TypeScript + Vite dashboard for the local ESP32 telemetry platform. The current hardware contract has **six ADC1 inputs**: GPIO32, GPIO33, GPIO34, GPIO35, GPIO36, and GPIO39. Output A is GPIO2 and output B is GPIO0. GPIO25 TX and GPIO26 RX are reserved for CAN.
 
 ## Run
 
@@ -51,3 +53,21 @@ See `backend/API_CONTRACT.md` for exact request and event schemas. Frontend test
 The frontend production build and 15 automated tests passed during implementation. `npm audit` reported zero known dependency vulnerabilities for the installed lockfile. These checks cover source/type correctness and component behavior; browser visual and responsive verification was not completed in this environment.
 
 Before production use, verify the overview and all six analytics pages at desktop, tablet, and phone widths; keyboard navigation, theme contrast, graph brush zoom/pan, and CSV download; session expiration and logout; and the simulator-to-dashboard telemetry and command acknowledgement paths. Repeat the output check with the real ESP32 and LEDs before connecting loads.
+
+## CAN and BMS pages
+
+`/can` adds latest/history per ID, DBC signals, current-run/all-saved views,
+search by ID/name/signal/DBC/raw bytes, and expandable CAN statistics. Search
+applies before pagination while live updates continue; statistics cover the bus.
+Multiple definitions are read from project `can_dbc/` with explicit conflicts.
+
+Periodic CAN transmission polls confirmed state every second and controls the
+two fixed frames together. ON requires admin, changed password, synchronized
+clock, fresh state and idle diagnostics. Known stale state still permits a
+best-effort OFF, but acknowledgement is required. See
+[CAN TX guide](../docs/firmware/CAN_TX_GUIDE.md). GUI and device versions are
+independent; updating the GUI does not flash firmware.
+
+`/bms` provides 55 CDD services, 44 BAT workflows, five Quick reads, previews,
+guarded changes and saved responses from HVBEOSK/be_repo. Successful diagnostic
+responses through ESP32 remain unverified. Turn periodic TX OFF before BMS work.

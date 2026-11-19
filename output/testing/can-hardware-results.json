@@ -1,0 +1,95 @@
+{
+  "software_tests": {
+    "mariadb_can_storage": "passed using isolated test device, removed after check",
+    "firmware_host": "passed",
+    "frontend": 18,
+    "backend": 39,
+    "simulator": 10
+  },
+  "mode": "listen_only",
+  "port": "COM5",
+  "analog": {
+    "schema_version": 1,
+    "device_id": "ESP32_001",
+    "boot_id": "37ecc37e-8365-1b16-98be-b425b8d67a67",
+    "sequence": 1331,
+    "timestamp_ms": 1794914610474,
+    "time_valid": true,
+    "uptime_ms": 133136,
+    "channels": {
+      "analog_1": 450,
+      "analog_2": 180,
+      "analog_3": 142,
+      "analog_4": 142,
+      "analog_5": 142,
+      "analog_6": 142
+    },
+    "raw": [
+      378,
+      46,
+      0,
+      0,
+      0,
+      0
+    ],
+    "valid_mask": 63,
+    "mqtt_connected": true,
+    "dropped_samples": 241,
+    "source": "hardware",
+    "stale": false,
+    "id": 149696,
+    "received_at": "2026-11-17T11:23:30.619Z",
+    "persisted_at": "2026-11-17T11:23:30.619Z"
+  },
+  "can": {
+    "frames": [],
+    "has_more": false,
+    "dbc": null,
+    "status": {
+      "boot_id": "37ecc37e-8365-1b16-98be-b425b8d67a67",
+      "received_at": "2026-11-17T16:53:30.370446+05:30",
+      "queue_drops": 0,
+      "serial_drops": 0,
+      "publish_drops": 0,
+      "rx_missed": 0,
+      "rx_overruns": 0,
+      "bus_errors": 0
+    },
+    "metrics": {
+      "persisted": 0,
+      "duplicates": 0,
+      "invalid": 0,
+      "dropped_batches": 0,
+      "database_errors": 0,
+      "database_dropped_frames": 0
+    }
+  },
+  "pins": {
+    "RX": 26,
+    "TX": 25
+  },
+  "bitrate": 500000,
+  "firmware_sha256": "4E2DF9C13970FDE83D1FDC57B93AC7EC8E1DE25880E48DDE6E8C4FB5FDC6C85D",
+  "checked_at": "2026-11-17T11:23:31.2572944Z",
+  "dbc_loaded": false,
+  "physical_can_frames_verified": false,
+  "health": {
+    "status": "ok",
+    "mqtt_connected": true,
+    "database_connected": true,
+    "database_engine": "mysql",
+    "metrics": {
+      "received": 459,
+      "persisted": 459,
+      "invalid": 0,
+      "duplicates": 0,
+      "dropped": 0,
+      "database_errors": 0,
+      "last_received_at": "2026-11-17T16:53:30.619291+05:30",
+      "last_persisted_at": "2026-11-17T16:53:30.619837+05:30",
+      "frequency_hz": 11.99,
+      "queue_depth": 0,
+      "websocket_dropped": 0
+    }
+  }
+}

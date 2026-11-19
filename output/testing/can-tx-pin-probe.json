@@ -1,0 +1,74 @@
+{
+  "kind": "pin_configuration_only",
+  "wire_delivery_verified": false,
+  "on_response": {
+    "profiles": [
+      {
+        "can_id": 20,
+        "data": "006000",
+        "dlc": 3,
+        "period_ms": 100
+      },
+      {
+        "can_id": 1352,
+        "data": "0000000000000008",
+        "dlc": 8,
+        "period_ms": 10
+      }
+    ],
+    "supported": true,
+    "clock_ready": true,
+    "fresh": true,
+    "age_seconds": 0.143321,
+    "boot_id": "8bbd1aa8-2e79-53b1-5851-64724bb58bdc",
+    "mode": "listen_only",
+    "state": {
+      "enabled": false,
+      "command_id": "70d53ecd-fa1e-47ca-ad7f-8482b3ee0249",
+      "reason": "transmit_failed",
+      "sent_014": 0,
+      "sent_548": 0,
+      "failures": 6,
+      "skipped": 9
+    }
+  },
+  "off_response": {
+    "profiles": [
+      {
+        "can_id": 20,
+        "data": "006000",
+        "dlc": 3,
+        "period_ms": 100
+      },
+      {
+        "can_id": 1352,
+        "data": "0000000000000008",
+        "dlc": 8,
+        "period_ms": 10
+      }
+    ],
+    "supported": true,
+    "clock_ready": true,
+    "fresh": true,
+    "age_seconds": 0.088958,
+    "boot_id": "8bbd1aa8-2e79-53b1-5851-64724bb58bdc",
+    "mode": "listen_only",
+    "state": {
+      "enabled": false,
+      "command_id": "4afaa366-43f5-48c8-ad49-def63ddc1710",
+      "reason": "off",
+      "sent_014": 0,
+      "sent_548": 0,
+      "failures": 6,
+      "skipped": 9
+    }
+  },
+  "serial": [
+    "W (114729) can_tx: CAN_TX_FAILED id=0x014 submit=ESP_OK alerts=0x00000400 state=1 TEC=136 REC=0 bus_errors=1 arb_lost=0 pending=0",
+    "W (114740) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (114756) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=144 REC=0 bus_errors=2 arb_lost=0 pending=0",
+    "W (114772) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0",
+    "W (114792) can_tx: CAN_TX_FAILED id=0x548 submit=ESP_OK alerts=0x00000400 state=1 TEC=152 REC=0 bus_errors=3 arb_lost=0 pending=0",
+    "W (114806) can_tx: CAN_TX_PIN gpio=25 function=2 out_sig=123 oe=1 peripheral_oe=1 inverted=0 open_drain=0 rtc_mux=0"
+  ]
+}

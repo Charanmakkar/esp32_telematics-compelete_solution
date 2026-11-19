@@ -1,0 +1,16 @@
+{
+  "samples": [
+    {
+      "time_utc": "2026-11-18T17:50:08.510Z",
+      "search": "0x06E",
+      "table": "CAN ID\tTYPE / DLC\tLAST RAW BYTES\tDECODED SIGNALS\tSEEN / COUNT\tHISTORY\n0x06E\nBMS_VCU_INV_DCDC_01\npowertrain_HVA.dbc\n\tStandard\nDLC 8\n\tC5 DD FF 03 00 81 16 00\t\nChecksum_6E: 197 no unit (-) (197)\nMessageCounter_6E: 13 no unit (-) (13)\n9 more signals\n\t1.0s ago\n2227143 frames\n\tView"
+    },
+    {
+      "time_utc": "2026-11-18T17:51:28.288Z",
+      "search": "0x06E",
+      "table": "CAN ID\tTYPE / DLC\tLAST RAW BYTES\tDECODED SIGNALS\tSEEN / COUNT\tHISTORY\n0x06E\nBMS_VCU_INV_DCDC_01\npowertrain_HVA.dbc\n\tStandard\nDLC 8\n\t38 DE FF 03 00 81 16 00\t\nChecksum_6E: 56 no unit (-) (56)\nMessageCounter_6E: 14 no unit (-) (14)\n9 more signals\n\t5.3s ago\n2228287 frames\n\tView"
+    }
+  ],
+  "empty_result_verified": true,
+  "clear_restored_full_list": true
+}

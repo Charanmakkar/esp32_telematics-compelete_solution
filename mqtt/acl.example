@@ -3,11 +3,19 @@ user navsphere_backend
 topic read navsphere/+/telemetry
 topic read navsphere/+/ack
 topic read navsphere/+/status
+topic read navsphere/+/can
 topic write navsphere/+/command
+topic read navsphere/+/diagnostic/response
+topic write navsphere/+/diagnostic/request
+topic write navsphere/+/can/tx/request
 
 # Every device username must equal its provisioned device_id.
 # These pattern grants also apply to other users but are scoped to their username.
 pattern write navsphere/%u/telemetry
 pattern write navsphere/%u/status
 pattern write navsphere/%u/ack
+pattern write navsphere/%u/can
 pattern read navsphere/%u/command
+pattern write navsphere/%u/diagnostic/response
+pattern read navsphere/%u/diagnostic/request
+pattern read navsphere/%u/can/tx/request

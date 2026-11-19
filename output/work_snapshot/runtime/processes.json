@@ -1,0 +1,20 @@
+[
+    {
+        "created":  "2026-11-18T10:00:47.2084220Z",
+        "pid":  30788,
+        "name":  "mqtt",
+        "script":  "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\scripts\\start_mqtt.ps1"
+    },
+    {
+        "created":  "2026-11-18T17:48:41.0815410Z",
+        "pid":  14788,
+        "name":  "backend",
+        "script":  "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\scripts\\start_backend.ps1"
+    },
+    {
+        "created":  "2026-11-17T11:22:42.2333040Z",
+        "pid":  5756,
+        "name":  "frontend",
+        "script":  "C:\\Users\\charanpreet\\Documents\\ChatGPT\\esp32_telematics-compelete_solution\\scripts\\start_frontend.ps1"
+    }
+]

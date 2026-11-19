@@ -1,7 +1,7 @@
 from datetime import datetime
 
-from sqlalchemy import JSON, BigInteger, Boolean, DateTime, ForeignKey, Index, Integer, String
-from sqlalchemy.dialects.mysql import BIGINT, DATETIME, INTEGER, SMALLINT
+from sqlalchemy import JSON, BigInteger, Boolean, DateTime, ForeignKey, Index, Integer, String, Text
+from sqlalchemy.dialects.mysql import BIGINT, DATETIME, INTEGER, MEDIUMTEXT, SMALLINT
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 
@@ -14,6 +14,44 @@ SERIAL = BIG.with_variant(Integer, "sqlite")
 UINT = Integer().with_variant(INTEGER(unsigned=True), "mysql")
 USHORT = Integer().with_variant(SMALLINT(unsigned=True), "mysql")
 TIME = DateTime().with_variant(DATETIME(fsp=3), "mysql")
+
+
+class CanFrame(Base):
+    __tablename__ = "can_frames"
+    id: Mapped[int] = mapped_column(SERIAL, primary_key=True, autoincrement=True)
+    device_id: Mapped[str] = mapped_column(String(64))
+    boot_id: Mapped[str] = mapped_column(String(64))
+    sequence: Mapped[int] = mapped_column(BIG)
+    can_id: Mapped[int] = mapped_column(UINT)
+    extended: Mapped[bool] = mapped_column(Boolean)
+    rtr: Mapped[bool] = mapped_column(Boolean)
+    received_at: Mapped[datetime] = mapped_column(TIME)
+    payload: Mapped[dict] = mapped_column(JSON)
+    __table_args__ = (
+        Index("uq_can_frame_sequence", "device_id", "boot_id", "sequence", unique=True),
+        Index("ix_can_history", "device_id", "can_id", "extended", "id"),
+        Index("ix_can_received", "received_at"),
+    )
+
+
+class CanLatest(Base):
+    __tablename__ = "can_latest"
+    device_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    can_id: Mapped[int] = mapped_column(UINT, primary_key=True)
+    extended: Mapped[bool] = mapped_column(Boolean, primary_key=True)
+    rtr: Mapped[bool] = mapped_column(Boolean, primary_key=True)
+    received_at: Mapped[datetime] = mapped_column(TIME)
+    payload: Mapped[dict] = mapped_column(JSON)
+    frame_count: Mapped[int] = mapped_column(BIG, default=0)
+
+
+class CanDbc(Base):
+    __tablename__ = "can_dbc"
+    device_id: Mapped[str] = mapped_column(String(64), primary_key=True)
+    filename: Mapped[str] = mapped_column(String(128))
+    content: Mapped[str] = mapped_column(Text().with_variant(MEDIUMTEXT(), "mysql"))
+    sha256: Mapped[str] = mapped_column(String(64))
+    updated_at: Mapped[datetime] = mapped_column(TIME)
 
 
 class TelemetryReading(Base):
@@ -93,4 +131,24 @@ class AuditEvent(Base):
     created_at: Mapped[datetime] = mapped_column(TIME, index=True)
     actor: Mapped[str] = mapped_column(String(64))
     action: Mapped[str] = mapped_column(String(64))
+    details: Mapped[dict] = mapped_column(JSON)
+
+
+class BmsJob(Base):
+    __tablename__ = "bms_jobs"
+    id: Mapped[str] = mapped_column(String(36), primary_key=True)
+    device_id: Mapped[str] = mapped_column(String(64), index=True)
+    actor: Mapped[str] = mapped_column(String(64))
+    created_at: Mapped[datetime] = mapped_column(TIME, index=True)
+    updated_at: Mapped[datetime] = mapped_column(TIME)
+    status: Mapped[str] = mapped_column(String(24))
+    summary: Mapped[dict] = mapped_column(JSON)
+    result: Mapped[dict] = mapped_column(JSON)
+
+
+class BmsExchange(Base):
+    __tablename__ = "bms_exchanges"
+    id: Mapped[int] = mapped_column(SERIAL, primary_key=True, autoincrement=True)
+    job_id: Mapped[str] = mapped_column(ForeignKey("bms_jobs.id"), index=True)
+    created_at: Mapped[datetime] = mapped_column(TIME)
     details: Mapped[dict] = mapped_column(JSON)
