@@ -17,3 +17,7 @@ same filename replaces that file; raw frame history is never changed.
 DBC files are ignored by Git to avoid publishing proprietary bus definitions.
 If the folder is empty, a previously uploaded database-backed DBC remains a
 compatibility fallback until files are placed here.
+
+The library decodes received frames. Adding a DBC does not change fixed periodic
+TX payloads or firmware. Search/statistics remain on /can; see the root
+docs/firmware/CAN_TX_GUIDE.md for the separate transmission feature.

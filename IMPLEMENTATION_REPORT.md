@@ -1,5 +1,7 @@
 # NavSphere complete implementation report
 
+Current documentation review: 19 November 2026. The dated sections below are chronological evidence; docs/RELEASE_STATUS.md summarizes the latest v1.1.8 build and pending hardware tests. docs/README.md indexes the refreshed instructions and offline reports.
+
 11 November 2026 · ESP32S-WROOM · Six onboard ADC1 channels
 
 ## 1. Delivered scope
@@ -512,3 +514,23 @@ Evidence: `output/testing/can-tx-voltage-corrected-before-arbitration-fix.json`,
 `output/testing/can-tx-live.json`, and
 `output/testing/can-tx-awaiting-flash.jpg`. Relevant temporary scripts/logs and
 the built GUI are preserved in `output/work_snapshot/can_tx_20261119/`.
+
+### Documentation reconciliation — 19 November 2026
+
+Reviewed all maintained guides, READMEs, contracts, checklists and offline editions
+against source commit `c272b05` (v1.1.8). Corrected stale control-pin references,
+LAN and flashing instructions; documented CAN search/statistics, fixed periodic
+TX behavior, ACK and transceiver supply requirements, storage semantics and the
+separate unresolved BMS work. Added a documentation index, current release status
+and detailed CAN TX operating/acceptance guide. Generated OpenAPI now covers 25
+paths; the SQL schema reference contains all 11 application tables through migration
+0004. These exports do not change the running database or application.
+
+Refreshed four engineering PDFs, the project/AI report, five-slide stakeholder
+presentation and source/docs ZIP. The audit covers 74 user-message records and
+44 completed turns across two chats, totaling 6h 21m 22s of recorded session time.
+The current documentation turn is excluded from completed time. Credits and billed
+tokens remain unavailable. Dated screenshots and failed tests remain accurately
+labeled. Documentation helpers and validation evidence are included. Application
+version/source fingerprint remains v1.1.8 / 8148c3afe9b8; no firmware was flashed,
+CAN control toggled or BMS diagnostic behavior changed during this review.

@@ -8,3 +8,8 @@ Images are local only and excluded from Git. The server validates record checksu
 overlaps and 8-byte alignment and shows a SHA-256 fingerprint before confirmation.
 Only use images intended for the connected BMS and selected application/calibration.
 The reference project is never modified.
+
+Status, 19 November 2026: successful ESP32 diagnostic responses remain unverified.
+Turn periodic CAN TX OFF before BMS work. Active reference: HVBEOSK/be_repo,
+55 CDD services and 44 BAT workflows. No BMS erase/program/reset validation was
+performed for the periodic TX feature.

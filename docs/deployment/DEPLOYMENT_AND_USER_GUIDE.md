@@ -1,6 +1,6 @@
 # NavSphere deployment and user guide
 
-Six onboard ADC channels, ESP32S-WROOM. Updated 11 November 2026.
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
 
 ## Prerequisites and local environment
 
@@ -10,7 +10,7 @@ MariaDB 10.4.32 on127.0.0.1:3306 and Apache on80; both are reused. Portable
 Mosquitto 2.1.2 and Node 24.22.2 are stored in ignored `.tools/`.
 No global PATH, Windows service, firewall or database-server setting is changed
 by the native setup. The current Wi-Fi address observed during setup was
-192.168.31.50, different from the original prompt's192.168.9.59 example.
+192.168.31.50 at initial setup; the last verified office Wi-Fi address on 19 November was 192.168.9.59.
 Check the current adapter address before configuring an ESP32 on the LAN.
 
 ## Native Windows setup
@@ -72,13 +72,11 @@ their foreground processes. The stop helper manages only its recorded stack.
 
 ## Browser access and login
 
-Open http://localhost:5173. The initial local development account is admin/admin.
+Open http://localhost:5173. A new development database seeds admin/admin; the existing installation has a changed password.
 The backend stores a salted password hash, not plaintext. The login response
 sets an HttpOnly session cookie. Account lets you change the initial password;
 commands remain blocked until that change is completed. Logout revokes the
-database session. Browser visual QA could not be completed in the agent's
-Computer Use session; automated component and integration tests are reported
-separately.
+database session. Browser checks and genuine dated screenshots are preserved under output/testing and output/reports; consult their actual firmware versions.
 
 The overview shows broker/backend/database health, live frequency, current-run
 counters, receipt and persistence times, and six signal cards. Simulator
@@ -101,7 +99,7 @@ confirms software latch state; verify electrical behavior on the actual board.
 
 ## Broker and LAN configuration
 
-Native development binds MQTT1883, API8000 and frontend5173 to loopback. All
+The native frontend defaults to 0.0.0.0:5173; backend remains loopback:8000. MQTT1883 must be reachable from the physical ESP32. All
 ports and hosts are configurable. For a physical ESP32, edit the generated
 broker config's listener address to the actual LAN IP, or a reviewed0.0.0.0
 binding, and restart the broker. Keep anonymous access disabled. Grant device
@@ -148,7 +146,7 @@ GPIO0 is B. High-current loads require a suitable driver circuit.
 Build with the existing IDF installation:
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/build.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/build.ps1 -ProjectDirectory .
 powershell -NoProfile -ExecutionPolicy Bypass -File firmware/tools/test_host.ps1
 ```
 
@@ -161,8 +159,7 @@ the supplied ACL. Obtain its generated password privately from device.env.
 Then run `python firmware/tools/provision_nvs.py`. The ignored NVS image
 contains credentials; do not distribute it with source.
 
-After checking the physical wiring, actual serial port and any existing NVS
-backup, run from firmware in the IDF terminal:
+For a NEW board only, check wiring, actual serial port and NVS backup, build the standalone configuration, then run from firmware in the IDF terminal:
 
 ```powershell
 idf.py -p COMx flash
@@ -170,7 +167,7 @@ python -m esptool --chip esp32 --port COMx write-flash 0x9000 .local/nvs.bin
 idf.py -p COMx monitor
 ```
 
-Replace COMx with the detected port. Flashing was not performed by the agent.
+Replace COMx with the detected port. Earlier firmware was verified on COM3; v1.1.8 flashing is pending. Use the application-only procedure below for the existing provisioned board.
 Run the hardware acceptance plan before relying on measurements or outputs.
 
 ## API documentation
@@ -243,3 +240,59 @@ system-wide kills and does not stop Apache or MariaDB.
 ### Control pin update 12 November 2026
 
 Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boot selection. Keep GPIO0 HIGH during reset for normal boot; do not add a Control B pull-down. GPIO2 must be LOW or floating for serial flashing. Firmware sets both outputs LOW after startup. An attached load must tolerate reset-time levels or use a separately enabled driver.
+
+## Current application update and CAN operation
+
+Source, GUI and packaged application are v1.1.8 / 8148c3afe9b8. The manifest
+records hardware_flashed=false. Last verified device firmware is v1.1.7. Close
+serial monitors, detect the port (previously COM3) and run from root in an IDF terminal:
+
+```powershell
+[System.IO.Ports.SerialPort]::GetPortNames()
+python -m esptool --chip esp32 --port COMx --baud 115200 write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x10000 output/firmware/navsphere.bin
+```
+
+This preserves NVS, bootloader and partition table. Verify the hash and startup
+version/build. Do not erase flash. Updating the GUI does not flash the device.
+
+On /can select Current ESP32 run or All saved IDs, search CAN messages, inspect
+raw history and expand CAN statistics & protocol details. Put multiple DBC files
+directly in can_dbc/; changes reload automatically and conflicts are explicit.
+Periodic CAN transmission controls standard 0x014 / 00 60 00 / 100 ms and
+0x548 / 00 00 00 00 00 00 00 08 / 10 ms together. Use changed-password admin,
+fresh synchronized status and idle diagnostics. Wait for actual ON/OFF confirmation.
+Closing the browser does not stop enabled TX. See
+[full instructions and acceptance](../firmware/CAN_TX_GUIDE.md).
+
+/bms provides the BE reference's 55 CDD services and 44 workflows. Keep the local
+HVBEOSK/be_repo reference and private keys/images available. ESP32 diagnostic
+response success remains unverified; turn periodic TX OFF before BMS work.
+Programming/erase/reset commands are not connectivity tests.
+
+The database is navsphere on existing XAMPP MariaDB at 127.0.0.1:3306, data
+under C:/xampp/mysql/data/navsphere. Received CAN goes to can_frames/can_latest;
+ADC goes to telemetry_readings; BMS jobs/exchanges and audits are separate.
+TX counters do not imply a durable per-frame TX log. Check advancing persisted
+counters and row timestamps, not only an online badge. See database/README.md.
+
+Remote PCs must use the laptop's CURRENT IPv4 address with HTTP and port 5173.
+192.168.9.59 was last verified; 192.168.9.253 is historical. Check frontend binding,
+LocalSubnet firewall rules and FRONTEND_ORIGINS. The proxy keeps port 8000 private.
+Office VLAN/client isolation may require an office network rule.
+
+RX without TX: check TJA1042/3 VCC=5 V, VIO=3.3 V, STB LOW, GPIO25->TXD,
+GPIO26<-RXD, ground, termination and another normal-mode node supplying ACK.
+PCAN active receive can supply ACK without application messages; listen-only cannot.
+The preserved receiver helper is in output/work_snapshot/can_tx_20261119/runtime;
+restore it to .runtime before use. Only one test/helper should own PCAN.
+Do not stop unrelated processes. Power correction restored payload delivery on
+v1.1.7, but v1.1.8 timing acceptance is still pending.
+
+## Documentation and release refresh
+
+Use [documentation index](../README.md) for current/historical scope and
+[document export tools](../tools/README.md) for reproducible offline editions.
+After application changes, rebuild firmware and GUI, check their shared identity,
+then run `backend/.venv/Scripts/python.exe scripts/package_release.py --build-directory build`.
+Use --hardware-flashed only after verifying this exact image on hardware; it
+does not itself certify CAN timing or BMS behavior. Preserve historical evidence.

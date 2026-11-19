@@ -1,5 +1,7 @@
 # CAN statistics and BMS diagnostics work record
 
+Historical HVP work record. Current status is in ../RELEASE_STATUS.md and BE_CLIENT_IMPLEMENTATION.md. Preserve old counts and results as dated evidence, not current instructions.
+
 > Historical HVP implementation record. On 18 November the user replaced the
 > active reference with `HVBEOSK/be_repo`. See
 > [BE client implementation and current verification](BE_CLIENT_IMPLEMENTATION.md).

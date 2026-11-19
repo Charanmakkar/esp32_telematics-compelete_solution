@@ -1,5 +1,7 @@
 # NavSphere
 
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+
 **360° Visibility and Comprehensive Tracking**
 
 An ESP32S-WROOM telemetry and control platform: six onboard ADC1 inputs ->
@@ -18,7 +20,7 @@ ADC hardware** requirement.
 | Windows setup, start, stop and tests | [scripts/](scripts/setup_windows.ps1) |
 | Reports, specifications and guides | [docs/](docs/deployment/DEPLOYMENT_AND_USER_GUIDE.md) |
 
-On this laptop, Apache and MariaDB are already running. Setup reuses that
+This laptop uses the existing XAMPP MariaDB server; ensure it is running before startup. Setup reuses that
 database server and creates only the NavSphere database and a restricted local
 application account. Secrets are generated into ignored local configuration.
 No second MySQL instance is started.
@@ -33,7 +35,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start_simulator.ps1
 
 Dashboard: <http://localhost:5173> · API: <http://localhost:8000/docs> ·
 [ReDoc](http://localhost:8000/redoc) · [OpenAPI](http://localhost:8000/openapi.json).
-Local development login is `admin` / `admin`; change the password in Account
+A new development database seeds `admin` / `admin`; the existing account has a changed password. Change the initial password in Account
 before sending commands. Production configuration rejects these defaults.
 
 With the repository root open in VS Code, use **ESP-IDF: Build your Project**
@@ -106,7 +108,7 @@ Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boo
 # CAN bus support
 
 The `feature/add_CAN` branch adds classic CAN capture at 500 kbit/s using
-GPIO25 (TX) and GPIO26 (RX), in listen-only mode. Open `/can` for the latest
+GPIO25 (TX) and GPIO26 (RX), starting in listen-only mode. Diagnostics or periodic TX temporarily enable normal mode. Open `/can` for the latest
 raw frame per CAN ID, history, capture diagnostics and administrator DBC upload.
 Raw CAN history is stored independently of analog telemetry. See the
 [CAN setup and data guide](docs/firmware/CAN_GUIDE.md) for wiring, database
@@ -144,10 +146,9 @@ Quick reads provide one-button QR, serial, hardware-part, manufacturing-serial
 and mode requests. The current BMS uses `0x7E4 → 0x7EC`; migration scripts select
 their required current or legacy address automatically. The page provides
 confirmation for state changes, decoded/raw responses and saved job history.
-ESP32 transmission is enabled only during diagnostic jobs and returns to
-listen-only afterward. Optional replacement images go in `bms_images`.
+Diagnostic transmission is enabled during its job and returns to listen-only afterward. Periodic TX is a separate, mutually exclusive control. Optional replacement images go in `bms_images`.
 
-The updated firmware is flashed on COM3; 75 backend and 27 frontend tests,
+Historical verification on 18 November: firmware was flashed on COM3; 75 backend and 27 frontend tests,
 firmware host tests and builds passed. All 44 workflows and six programming
 images pass offline preparation. PCAN successfully reads the physical BMS;
 ESP32 CAN reception is now verified live with software version 1.1.0;
@@ -177,3 +178,25 @@ rejects outdated source, firmware or GUI versions. The release manifest records
 the shared version, source build ID and exact binary SHA-256. On serial at
 115200 baud, look for `SW_VERSION=...` at startup and `CAN_BUILD` for the running
 firmware identity. CAN data output and GPIO assignments remain unchanged.
+
+## Current instructions and periodic transmission
+
+The [documentation index](docs/README.md) lists setup, API, firmware, database,
+test plans, reports and offline editions. Read [release status](docs/RELEASE_STATUS.md)
+before interpreting a historical capture or deploying a packaged binary.
+
+On `/can`, **Periodic CAN transmission** switches both standard CAN frames:
+
+| CAN ID | Bytes | Period |
+|---|---|---|
+| `0x014` | `00 60 00` | 100 ms |
+| `0x548` | `00 00 00 00 00 00 00 08` | 10 ms |
+
+Use a changed-password admin account, wait for fresh synchronized device status,
+then click ON/OFF and wait for device confirmation. Both start OFF after reboot;
+MQTT disconnect or three consecutive failures stop them. Closing the browser
+does not stop an enabled device. Unknown status is not confirmation of OFF.
+There are no counter/checksum changes or arbitrary-payload controls.
+See [wiring, operation and acceptance](docs/firmware/CAN_TX_GUIDE.md).
+The v1.1.7 wire test received both payloads but failed timing; v1.1.8's bounded
+arbitration retry correction is built and packaged, not yet flashed.

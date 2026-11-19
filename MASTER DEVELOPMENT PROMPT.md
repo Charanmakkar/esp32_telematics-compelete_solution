@@ -1,4 +1,6 @@
 # MASTER DEVELOPMENT PROMPT
+
+Historical requirements with later scope appended below. Original implementation directives are background, not permission to rerun programming/hardware actions. Current status: docs/RELEASE_STATUS.md.
 ## NavSphere — ESP32 IoT Telemetry, MQTT, Python Backend & React Dashboard
 
 **Confirmed scope (user update, 11 November 2026):** ESP32S-WROOM, six onboard ADC1 channels only (GPIO32, 33, 34, 35, 36, 39), no extra ADC hardware. A = GPIO2 and B = GPIO0, active-high with safe LOW defaults. The supplied firmware is an empty ESP-IDF skeleton; extend it in native C/FreeRTOS.
@@ -1160,3 +1162,17 @@ Use actual tools and execute builds/tests whenever available.
 Do not state that a component works without testing it or clearly marking it as unverified.
 
 **Expected final outcome: A complete, maintainable, testable ESP32-to-NavSphere IoT telemetry and control platform.**
+
+# Scope additions through 19 November 2026
+
+Preserve six ADC1 inputs and GPIO2/GPIO0 controls. Add 500 kbit/s classic CAN on
+GPIO25 TX/GPIO26 RX, raw history/latest, multiple project can_dbc files, search
+and separate statistics. The active BMS reference is HVBEOSK/be_repo, replacing
+HVP: 55 CDD services, 44 BAT workflows, ESP32 ISO-TP, responses and saved history.
+BMS diagnostic hardware success remains unresolved and was deferred by the user.
+
+Latest feature: one ON/OFF button for standard 0x014 = 00 60 00 every 100 ms
+and 0x548 = 00 00 00 00 00 00 00 08 every 10 ms. Repeat exact bytes; 0x548
+supersedes the screenshot's 0x584. Keep prior features intact and use shared
+SW_VERSION. Track code, failures, tests, screenshots, instructions and AI effort;
+do not invent credits or label pending hardware tests as passed.

@@ -38,6 +38,37 @@
         "interval_ms": 100
       },
       "idle_return_to_listen_only_seconds": 15
+    },
+    "mode_is_startup_default": true,
+    "periodic_transmission": {
+      "available": true,
+      "default_enabled": false,
+      "mutually_exclusive_with_diagnostics": true,
+      "profiles": [
+        {
+          "can_id": "0x014",
+          "dlc": 3,
+          "data": "006000",
+          "period_ms": 100
+        },
+        {
+          "can_id": "0x548",
+          "dlc": 8,
+          "data": "0000000000000008",
+          "period_ms": 10
+        }
+      ],
+      "gui_path": "/can",
+      "request_topic": "navsphere/<device_id>/can/tx/request",
+      "stops_on": [
+        "MQTT disconnection",
+        "three consecutive failed sends",
+        "reboot"
+      ],
+      "arbitration_retry_budget_us": 5000,
+      "maximum_attempts": 16,
+      "latest_payload_delivery_verified_version": "1.1.7",
+      "current_build_wire_timing_verified": false
     }
   },
   "flash_mode": "dio",
@@ -66,5 +97,11 @@
       "sha256": "5f48790458c4f0903e2ce1249dd9ba49b8e5b3d0a625fd5781c3d88160166ced"
     }
   },
-  "packaged_at_utc": "2026-11-19T13:08:23.566814+00:00"
+  "packaged_at_utc": "2026-11-19T16:10:25.395138+00:00",
+  "documentation": {
+    "reviewed_utc": "2026-11-19T16:10:44.317967+00:00",
+    "index": "docs/README.md",
+    "release_status": "docs/RELEASE_STATUS.md",
+    "validation": "docs/testing/documentation-review.json"
+  }
 }

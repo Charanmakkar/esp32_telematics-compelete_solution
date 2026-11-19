@@ -1,5 +1,7 @@
 # CAN capture and dashboard
 
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+
 The CAN feature is additive. Analog acquisition, existing MQTT telemetry,
 GPIO2/GPIO0 controls and their existing pages are unchanged.
 
@@ -12,9 +14,9 @@ must be 3.3 V compatible: use a VIO variant supplied at 3.3 V or appropriate
 level translation; a plain 5 V RXD must not drive an ESP32 pin.
 See [NXP TJA1042 data sheet](https://www.nxp.com/docs/en/data-sheet/TJA1042.pdf).
 
-The ESP32 TWAI controller runs in LISTEN_ONLY with an accept-all filter for
+The ESP32 TWAI controller starts in LISTEN_ONLY with an accept-all filter for
 11-bit standard and 29-bit extended IDs, including remote requests. It sends
-no CAN data or acknowledgements. Other active nodes must acknowledge traffic.
+no CAN data or acknowledgements in that mode. Diagnostics or periodic TX temporarily enables normal mode. Other active nodes must acknowledge traffic while ESP32 listens only.
 CAN FD is not supported by the classic ESP32 controller. The installed IDF 6.0.2
 HAL includes the ESP32 listen-only dominant-error-bit erratum workaround.
 The compatible legacy TWAI API is used with its deprecation warning suppressed.
@@ -92,8 +94,7 @@ per-device DBC. That is used only when the project folder contains no DBC files.
 ## Office network access
 
 The frontend must listen on `0.0.0.0:5173` (the start script's default).
-On another PC use `http://192.168.9.253:5173/can` for this laptop's Ethernet
-address, or `http://192.168.9.59:5173/can` for Wi-Fi. Use the explicit HTTP scheme
+The last verified office Wi-Fi URL was `http://192.168.9.59:5173/can`. The older Ethernet address 192.168.9.253 was disconnected; select the current active adapter address. Use the explicit HTTP scheme
 and port; `localhost` on another PC refers to that PC. These DHCP addresses may change.
 The backend stays on loopback and is reached through the frontend proxy.
 
@@ -108,8 +109,24 @@ network isolation. Check the remote PC's IP/subnet if both addresses fail.
 
 Install backend requirements, run `alembic upgrade head` from backend, and
 restart the broker/backend/frontend to load the updated ACL and subscription.
-Build with `firmware/tools/build.ps1` and flash the firmware, retaining NVS.
+Build from root with `firmware/tools/build.ps1 -ProjectDirectory .` and flash the firmware, retaining NVS.
 Use `scripts/test_system.ps1 -Firmware` for regressions and CAN software tests.
 An actual powered CAN bus with at least two active communicating nodes is
 required to verify the physical receive path. Software-generated fixtures are
 not evidence of hardware reception.
+
+## Search, statistics and transmission
+
+Search CAN messages by hexadecimal ID, message/signal name, DBC filename or
+spaced/compact raw bytes. Search precedes pagination; live refresh continues.
+Current ESP32 run is the GUI default; All saved IDs retains prior-boot values.
+Statistics cover all traffic, not just search matches. Expand CAN statistics &
+protocol details for hardware/server rates, throughput, utilization bounds,
+standard/extended/RTR counts, DLC distribution, per-ID timing, errors and drops.
+Per-ID intervals use the last 64 delivered intervals. Estimated load excludes
+error-frame wire time; no voltage/termination/ACK waveform measurement is provided.
+
+The new Periodic CAN transmission section controls 0x014 at 100 ms and 0x548
+at 10 ms together. Read [CAN TX guide](CAN_TX_GUIDE.md) for exact payloads,
+TJA1042/3 VCC/VIO wiring, GUI operation, command limits and remaining tests.
+Successful periodic frames do not establish successful BMS diagnostic responses.

@@ -1,0 +1,100 @@
+{
+  "reviewed_utc": "2026-11-19T16:08:44.523447+00:00",
+  "application_release": {
+    "sw_version": "1.1.8",
+    "source_sha256": "8148c3afe9b8fa5a0046a5f4b05c47ce58531288b845d8e405aea63358d0038b",
+    "built_at_utc": "2026-11-19T11:11:48+00:00"
+  },
+  "source_commit": "c272b057ccbc3c86b27d0bb96a545ee407c330bb",
+  "maintained_documents": [
+    "IMPLEMENTATION_REPORT.md",
+    "MASTER DEVELOPMENT PROMPT.md",
+    "README.md",
+    "backend/API_CONTRACT.md",
+    "backend/README.md",
+    "bms_images/README.txt",
+    "can_dbc/README.md",
+    "database/README.md",
+    "docs/README.md",
+    "docs/RELEASE_STATUS.md",
+    "docs/api/API_REFERENCE.md",
+    "docs/architecture/CODEBASE_ASSESSMENT.md",
+    "docs/deployment/DEPLOYMENT_AND_USER_GUIDE.md",
+    "docs/development/BE_CLIENT_IMPLEMENTATION.md",
+    "docs/development/CAN_BMS_IMPLEMENTATION.md",
+    "docs/firmware/CAN_GUIDE.md",
+    "docs/firmware/CAN_TX_GUIDE.md",
+    "docs/firmware/FIRMWARE_TECHNICAL_SPECIFICATION.md",
+    "docs/reports/PROJECT_AND_AI_USAGE.md",
+    "docs/testing/HARDWARE_TEST_PLAN.md",
+    "docs/tools/README.md",
+    "firmware/README.md",
+    "firmware/test/HARDWARE_TEST_PLAN.md",
+    "frontend/README.md",
+    "output/firmware/README.md"
+  ],
+  "local_markdown_links": "passed",
+  "openapi_paths": 25,
+  "api_contract_route_coverage": "passed",
+  "schema_tables": [
+    "audit_events",
+    "bms_jobs",
+    "can_dbc",
+    "can_frames",
+    "can_latest",
+    "devices",
+    "telemetry_readings",
+    "users",
+    "bms_exchanges",
+    "commands",
+    "login_sessions"
+  ],
+  "pdf_editions": [
+    {
+      "path": "output/pdf/NavSphere_API_Reference.pdf",
+      "pages": 5,
+      "sha256": "c27afb7cd634ba755041a4f837f901604bec37cde519fdb08e1f21ad302a18c8",
+      "text_outside_page": []
+    },
+    {
+      "path": "output/pdf/NavSphere_Deployment_and_User_Guide.pdf",
+      "pages": 6,
+      "sha256": "203f116ee59ae73e8592e5616ee6fc1ad9bf49ec81e5b01cf19b0e890c0a885e",
+      "text_outside_page": []
+    },
+    {
+      "path": "output/pdf/NavSphere_Firmware_Technical_Specification.pdf",
+      "pages": 5,
+      "sha256": "1c3801a0002bc5039a398fe3685e6d5caf5a92c541cf9abd31e526872f5e6ad8",
+      "text_outside_page": []
+    },
+    {
+      "path": "output/pdf/NavSphere_Implementation_Report.pdf",
+      "pages": 10,
+      "sha256": "327ca421f18af79298c7942831dd9bd9e3f052ef1a3f8488d2d49d48a00a9786",
+      "text_outside_page": []
+    },
+    {
+      "path": "output/reports/NavSphere_Project_and_AI_Usage_Report.pdf",
+      "pages": 10,
+      "sha256": "8d7184ade53331f3f32a454cff0b052045ac6f28abf042074778bf2b63208751",
+      "text_outside_page": []
+    }
+  ],
+  "presentation": {
+    "slides": 5,
+    "sha256": "90cb3f98e5ed39881dada2d6f03b5abb333241edc7f72d3a33ad70270a4eb651",
+    "package_and_layout": "passed",
+    "render_review": "All five slides inspected; template and editable text retained."
+  },
+  "visual_review": "All 36 PDF pages reviewed in rendered contact sheets; current report/screenshot pages checked. Updated implementation final page re-rendered.",
+  "time_audit": {
+    "completed_turns": 44,
+    "total_ms": 22882384,
+    "user_message_count": 74,
+    "current_documentation_turn_included_in_time": false
+  },
+  "hardware_status": "v1.1.8 built, not flashed; final CAN timing/GUI acceptance pending; BMS unverified",
+  "historical_records": "Dated tests, screenshots, prior releases and prior work snapshots retained without fabricated success.",
+  "application_changes": false
+}

@@ -1,5 +1,7 @@
 # Backend
 
+Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+
 Python3.13 was used for the executed tests. From this directory:
 
 ```powershell
@@ -29,3 +31,16 @@ The tested dependency set is pinned in `requirements.lock`; `requirements.txt` e
 Sessions are random tokens whose hashes are stored in the database, with HttpOnly/SameSite cookies and per-session CSRF tokens. Passwords use salted scrypt. Production configuration prohibits default credentials, insecure cookies, plaintext MQTT, SQLite, or HTTP frontend origins. Production startup also checks every active stored account for the default password, in bounded batches; changing the seed environment variable does not replace existing passwords. Change those passwords or disable those accounts before promoting a development database. Put HTTPS in front of backend/frontend and configure origins to the exact browser origins. The application trusts authenticated per-device MQTT ACLs; it does not implement cryptographic signing of individual payloads. Protect the broker network and credentials. Login, password changes, command submissions, acknowledgements and timeouts are audited.
 
 Dockerfile migrates and starts one worker. It does not start another database. Supply deployment environment variables and configure MySQL/MQTT endpoints from the host or Compose network. The production TLS settings require certificates and a trusted HTTPS reverse proxy.
+
+## CAN and BMS backend
+
+Migration head is 0004: 0003 adds CAN history/latest/legacy DBC, and 0004 adds
+BMS job/exchange history. CAN uses a separate bounded worker and shared project
+DBC folder. See API_CONTRACT.md for CAN/BMS routes and validation.
+
+GET/POST `/api/v1/can/tx` exposes fixed periodic transmission. POST requires
+changed-password admin and CSRF, publishes a boot-bound four-second request to
+`navsphere/<device_id>/can/tx/request`, and waits up to five seconds for matching
+device state. Apply the updated MQTT ACL. Toggle submissions are audited as
+`can_tx_toggle`; no new table/migration or durable per-frame TX log is added.
+Do not run the simulator under the physical device ID during hardware tests.
