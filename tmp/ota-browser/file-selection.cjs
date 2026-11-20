@@ -1,0 +1,48 @@
+const {chromium}=require('playwright-core');
+const fs=require('fs');
+const path=require('path');
+const assert=require('assert');
+(async()=>{
+ const auth=JSON.parse(fs.readFileSync('.runtime/ota-session.json'));
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ try {
+  const context=await browser.newContext({viewport:{width:1440,height:1050}});
+  await context.addCookies(Object.entries(auth.cookie).map(([name,value])=>({name,value,url:'http://127.0.0.1:5173',httpOnly:true,sameSite:'Lax'})));
+  const page=await context.newPage(),errors=[],starts=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  page.on('request',r=>{if(new URL(r.url()).pathname==='/api/v1/ota/start')starts.push(r.method())});
+  await page.goto('http://127.0.0.1:5173/ota');
+  await page.getByText('Live report from chip',{exact:true}).waitFor({timeout:20000});
+  const status=async()=>{const r=await context.request.get('http://127.0.0.1:5173/api/v1/ota');assert.equal(r.status(),200);return r.json()};
+  const before=await status();assert(!before.busy);
+  let responsePromise=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/v1/ota/image');
+  await page.getByLabel('Firmware file',{exact:true}).setInputFiles({name:'firmware.bin',mimeType:'application/octet-stream',buffer:fs.readFileSync('.runtime/ota-test-images/legacy-firmware-before-rebuild.bin')});
+  const rejected=await responsePromise;assert.equal(rejected.status(),400);
+  await page.getByText('File not accepted: firmware.bin',{exact:true}).waitFor();
+  const alert=page.getByRole('alert');const rejectedMessage=await alert.innerText();assert(rejectedMessage.includes('legacy images would remove OTA'));
+  assert(await page.getByTestId('firmware-drop-zone').evaluate((el)=>el.parentElement.querySelector('[role=alert]')!==null));
+  assert.equal(await page.getByText('Target version',{exact:true}).count(),0);
+  assert(!await page.getByRole('button',{name:'Install firmware over Wi-Fi'}).isEnabled());
+  await page.screenshot({path:'output/testing/screenshots/ota-file-rejected-desktop.png',fullPage:true});
+  responsePromise=page.waitForResponse(r=>new URL(r.url()).pathname==='/api/v1/ota/image');
+  await page.getByLabel('Firmware file',{exact:true}).setInputFiles(path.resolve('firmware/build/firmware.bin'));
+  const accepted=await responsePromise;assert.equal(accepted.status(),200);const metadata=(await status()).prepared;assert(metadata);
+  await page.getByText('File accepted: firmware.bin',{exact:true}).waitFor();
+  assert((await page.getByLabel('Firmware file',{exact:true}).inputValue()).endsWith('firmware.bin'));
+  await page.getByText(`v${metadata.version}`,{exact:true}).last().waitFor();
+  assert.equal(await page.getByRole('alert').count(),0);
+  assert(!await page.getByRole('button',{name:'Install firmware over Wi-Fi'}).isEnabled());
+  await page.getByRole('checkbox').check();
+  assert(await page.getByRole('button',{name:'Install firmware over Wi-Fi'}).isEnabled());
+  await page.getByRole('checkbox').uncheck();
+  await page.screenshot({path:'output/testing/screenshots/ota-file-accepted-desktop.png',fullPage:true});
+  await page.setViewportSize({width:390,height:844});
+  await page.waitForFunction(()=>document.querySelector('.sidebar').getBoundingClientRect().right<=1);
+  assert(!await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1));
+  await page.screenshot({path:'output/testing/screenshots/ota-file-accepted-mobile.png',fullPage:true});
+  const after=await status();assert.equal(after.chip.boot_id,before.chip.boot_id);assert(!after.busy);
+  assert.deepEqual(errors,[]);assert.deepEqual(starts,[]);
+  fs.writeFileSync('output/testing/ota-file-selection-20261120.json',JSON.stringify({passed:true,old_image_http:rejected.status(),old_image_error:{detail:rejectedMessage},new_image_http:accepted.status(),new_image:metadata,before:before.chip,after:after.chip,installation_started:false,page_errors:errors},null,2));
+  console.log(JSON.stringify({passed:true,old_image_rejected:true,new_image_accepted:true,version:metadata.version,installation_started:false}));
+ }finally{await browser.close()}
+})().catch(e=>{console.error(e);process.exit(1)});

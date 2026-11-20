@@ -1,0 +1,2 @@
+source D:/Masters/esp32_telematics-compelete_solution/firmware/build/bootloader/gdbinit/symbols
+source D:/Masters/esp32_telematics-compelete_solution/firmware/build/bootloader/gdbinit/connect

@@ -1,0 +1,1131 @@
+{
+  "recordCount": 57,
+  "records": [
+    {
+      "kind": "slide",
+      "id": "sl/y90nupkv",
+      "slideIndex": 0,
+      "layout": {
+        "id": "ly/14ra9krq",
+        "name": "Blank"
+      },
+      "title": "NAVSPHERE  /  STAKEHOLDER BRIEF",
+      "textShapes": 6,
+      "backgroundColor": "rgba(16,44,54,1)"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/sryl4zqx",
+      "slideIndex": 0,
+      "position": {
+        "left": 64,
+        "top": 48,
+        "width": 1100,
+        "height": 35
+      },
+      "text": "NAVSPHERE  /  STAKEHOLDER BRIEF",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 18,
+        "typeface": "Arial",
+        "color": "#5EE0BB",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/547294r6",
+      "slideIndex": 0,
+      "position": {
+        "left": 64,
+        "top": 130,
+        "width": 1120,
+        "height": 150
+      },
+      "text": "From requirements to\nlive ESP32 telemetry",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 54,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/k3yl0zql",
+      "slideIndex": 0,
+      "position": {
+        "left": 64,
+        "top": 305,
+        "width": 1100,
+        "height": 60
+      },
+      "text": "Time, effort and demonstrated capability",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 28,
+        "typeface": "Arial",
+        "color": "#BBD0D6",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/7qp4be9c",
+      "slideIndex": 0,
+      "position": {
+        "left": 64,
+        "top": 427,
+        "width": 650,
+        "height": 90
+      },
+      "text": "1h 46m 40s",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 66,
+        "typeface": "Arial",
+        "color": "#5EE0BB",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/65g3298r",
+      "slideIndex": 0,
+      "position": {
+        "left": 68,
+        "top": 525,
+        "width": 1000,
+        "height": 45
+      },
+      "text": "Recorded session work across 9 completed turns",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#FFFFFF",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ts7md4r2",
+      "slideIndex": 0,
+      "position": {
+        "left": 68,
+        "top": 632,
+        "width": 1100,
+        "height": 52
+      },
+      "text": "Prepared 14 Nov 2026 • Evidence: 11–12 Nov 2026\nTiming includes tools and waits; excludes gaps between turns.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#BBD0D6",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "slide",
+      "id": "sl/hwbqtkby",
+      "slideIndex": 1,
+      "layout": {
+        "id": "ly/14ra9krq",
+        "name": "Blank"
+      },
+      "title": "NAVSPHERE  /  TIME & EFFORT",
+      "textShapes": 11,
+      "backgroundColor": "rgba(245,247,246,1)"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/mtwrmxg7",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 35,
+        "width": 1100,
+        "height": 28
+      },
+      "text": "NAVSPHERE  /  TIME & EFFORT",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/9072xkry",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 90,
+        "width": 1152,
+        "height": 85
+      },
+      "text": "Measured work time: 1h 46m 40s",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 40,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ozy1ofad",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 660,
+        "width": 1080,
+        "height": 35
+      },
+      "text": "Source: interaction-time.json • 9 completed turns across two chats; presentation work excluded.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/b29kza94",
+      "slideIndex": 1,
+      "position": {
+        "left": 1160,
+        "top": 660,
+        "width": 60,
+        "height": 30
+      },
+      "text": "02",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/a10jqpsj",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 204,
+        "width": 525,
+        "height": 75
+      },
+      "text": "1h 08m 06s",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/x4r21kru",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 284,
+        "width": 530,
+        "height": 60
+      },
+      "text": "Initial implementation & build fixes",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/w3i1sfa9",
+      "slideIndex": 1,
+      "position": {
+        "left": 680,
+        "top": 204,
+        "width": 520,
+        "height": 75
+      },
+      "text": "38m 34s",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 48,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/r65knqtk",
+      "slideIndex": 1,
+      "position": {
+        "left": 680,
+        "top": 284,
+        "width": 520,
+        "height": 60
+      },
+      "text": "Recovery, live checks & reporting",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/q5wjelsz",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 397,
+        "width": 1100,
+        "height": 60
+      },
+      "text": "21h 09m 09s elapsed",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 32,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ove9o7yd",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 465,
+        "width": 1110,
+        "height": 58
+      },
+      "text": "11 Nov 13:40 → 12 Nov 10:49 IST, including gaps between turns.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/9wnqhczy",
+      "slideIndex": 1,
+      "position": {
+        "left": 64,
+        "top": 555,
+        "width": 1120,
+        "height": 72
+      },
+      "text": "Work time includes tool runs, builds and waits. It is not a measure of\npure AI compute or human hands-on hours.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 22,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "slide",
+      "id": "sl/ofy9wn61",
+      "slideIndex": 2,
+      "layout": {
+        "id": "ly/14ra9krq",
+        "name": "Blank"
+      },
+      "title": "NAVSPHERE  /  TIME & EFFORT",
+      "textShapes": 10,
+      "backgroundColor": "rgba(245,247,246,1)"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/m1c3mlsn",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 35,
+        "width": 1100,
+        "height": 28
+      },
+      "text": "NAVSPHERE  /  TIME & EFFORT",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/cza94vmx",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 90,
+        "width": 1152,
+        "height": 85
+      },
+      "text": "AI accelerated delivery; people directed the work",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 40,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/d0jax03i",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 660,
+        "width": 1080,
+        "height": 35
+      },
+      "text": "Source: project & AI usage report • Prompt audit cutoff: relaunch/report-update request.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 14,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/298ryl4v",
+      "slideIndex": 2,
+      "position": {
+        "left": 1160,
+        "top": 660,
+        "width": 60,
+        "height": 30
+      },
+      "text": "03",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3ah8rqlg",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 195,
+        "width": 535,
+        "height": 45
+      },
+      "text": "AI contribution",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 29,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/obq90bml",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 255,
+        "width": 560,
+        "height": 205
+      },
+      "text": "Firmware, backend and dashboard\nFile recovery, builds and device flashing\nIntegration checks and defect fixes\nGPIO remap, evidence and reports",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/pcjqtg36",
+      "slideIndex": 2,
+      "position": {
+        "left": 680,
+        "top": 195,
+        "width": 530,
+        "height": 45
+      },
+      "text": "User contribution",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 29,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/m5cra54z",
+      "slideIndex": 2,
+      "position": {
+        "left": 680,
+        "top": 255,
+        "width": 535,
+        "height": 205
+      },
+      "text": "Requirements and priorities\nConnected ESP32 and physical wiring\nNetwork access and sign-in\nReview, clarification and decisions",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 24,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/n6ls3alk",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 498,
+        "width": 1150,
+        "height": 55
+      },
+      "text": "15 audited inputs  •  4,338-word original master prompt",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 28,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/n2l4fq98",
+      "slideIndex": 2,
+      "position": {
+        "left": 64,
+        "top": 573,
+        "width": 1130,
+        "height": 68
+      },
+      "text": "Exact project credits and human hours were unavailable. The 4% weekly\naccount snapshot is not project cost; no time-saving percentage is claimed.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 21,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "slide",
+      "id": "sl/jyx0ra1s",
+      "slideIndex": 3,
+      "layout": {
+        "id": "ly/14ra9krq",
+        "name": "Blank"
+      },
+      "title": "NAVSPHERE  /  CAPABILITY & READINESS",
+      "textShapes": 10,
+      "backgroundColor": "rgba(245,247,246,1)"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/i94r6xgz",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 35,
+        "width": 1100,
+        "height": 28
+      },
+      "text": "NAVSPHERE  /  CAPABILITY & READINESS",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/1cj2d8b6",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 90,
+        "width": 1152,
+        "height": 85
+      },
+      "text": "A working device-to-dashboard demonstrator",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 40,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/0ba143al",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 665,
+        "width": 1080,
+        "height": 32
+      },
+      "text": "Source: project report • Actual GUI capture, 12 Nov 2026; not a current live status.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 13,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/rm1k7yt4",
+      "slideIndex": 3,
+      "position": {
+        "left": 1160,
+        "top": 660,
+        "width": 60,
+        "height": 30
+      },
+      "text": "04",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/doj29oba",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 190,
+        "width": 580,
+        "height": 42
+      },
+      "text": "Sense & stream",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/sna103ap",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 239,
+        "width": 590,
+        "height": 80
+      },
+      "text": "Six analog inputs at approximately 10 Hz\nESP32 → MQTT → SQL database → web",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/3ihk3et8",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 345,
+        "width": 580,
+        "height": 42
+      },
+      "text": "View & analyse",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ih8ju9sn",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 394,
+        "width": 590,
+        "height": 80
+      },
+      "text": "Live charts, history and CSV export\nChannel statistics and connection health",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/kbm987y5",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 500,
+        "width": 580,
+        "height": 42
+      },
+      "text": "Control & protect",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 27,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/5cva1cfq",
+      "slideIndex": 3,
+      "position": {
+        "left": 64,
+        "top": 549,
+        "width": 590,
+        "height": 80
+      },
+      "text": "Control A: GPIO2  •  Control B: GPIO0\nAcknowledgements, login and safe defaults",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "image",
+      "id": "im/b2lc3q1s",
+      "slideIndex": 3,
+      "position": {
+        "left": 690.02,
+        "top": 178,
+        "width": 499.95,
+        "height": 441
+      },
+      "name": ""
+    },
+    {
+      "kind": "slide",
+      "id": "sl/i107q5of",
+      "slideIndex": 4,
+      "layout": {
+        "id": "ly/14ra9krq",
+        "name": "Blank"
+      },
+      "title": "NAVSPHERE  /  CAPABILITY & READINESS",
+      "textShapes": 14,
+      "backgroundColor": "rgba(245,247,246,1)"
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/58vehgvy",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 35,
+        "width": 1100,
+        "height": 28
+      },
+      "text": "NAVSPHERE  /  CAPABILITY & READINESS",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/dgbulwnm",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 90,
+        "width": 1152,
+        "height": 85
+      },
+      "text": "Validated locally; next effort is hardening",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 40,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/cf2tcr61",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 665,
+        "width": 1080,
+        "height": 32
+      },
+      "text": "Sources: integration-results.json, hardware-live-results.json, gpio-remap-results.json, relaunch-results.json.",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 13,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/z2tcnm5s",
+      "slideIndex": 4,
+      "position": {
+        "left": 1160,
+        "top": 660,
+        "width": 60,
+        "height": 30
+      },
+      "text": "05",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 16,
+        "typeface": "Arial",
+        "color": "#526970",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/yhkbe1o7",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 190,
+        "width": 340,
+        "height": 85
+      },
+      "text": "53",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 64,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/l4bupwny",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 280,
+        "width": 350,
+        "height": 60
+      },
+      "text": "Application tests passed",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/032tgr6d",
+      "slideIndex": 4,
+      "position": {
+        "left": 475,
+        "top": 190,
+        "width": 370,
+        "height": 85
+      },
+      "text": "300 / 300",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 54,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/n6dcr65o",
+      "slideIndex": 4,
+      "position": {
+        "left": 475,
+        "top": 280,
+        "width": 360,
+        "height": 60
+      },
+      "text": "Simulated rows stored",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/m5kbi1oj",
+      "slideIndex": 4,
+      "position": {
+        "left": 877,
+        "top": 190,
+        "width": 350,
+        "height": 85
+      },
+      "text": "299 / 299",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 54,
+        "typeface": "Arial",
+        "color": "#247A68",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/w32dkbuh",
+      "slideIndex": 4,
+      "position": {
+        "left": 877,
+        "top": 280,
+        "width": 350,
+        "height": 75
+      },
+      "text": "Expected hardware rows\nin a 30-second check",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/x4vedgvm",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 407,
+        "width": 545,
+        "height": 45
+      },
+      "text": "Delivery evidence",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 28,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/ahkvi1cb",
+      "slideIndex": 4,
+      "position": {
+        "left": 64,
+        "top": 465,
+        "width": 550,
+        "height": 137
+      },
+      "text": "Firmware and dashboard builds passed\nBoard flashed; Wi-Fi and MQTT connected\nFresh database data after relaunch",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/v2twb6dw",
+      "slideIndex": 4,
+      "position": {
+        "left": 680,
+        "top": 407,
+        "width": 530,
+        "height": 45
+      },
+      "text": "Next investment",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 28,
+        "typeface": "Arial",
+        "color": "#102C36",
+        "bold": true,
+        "alignment": "left"
+      }
+    },
+    {
+      "kind": "textbox",
+      "id": "sh/k7mxovud",
+      "slideIndex": 4,
+      "position": {
+        "left": 680,
+        "top": 465,
+        "width": 540,
+        "height": 137
+      },
+      "text": "Sensor calibration and electrical checks\nLong-duration reliability testing\nProduction security and deployment",
+      "geometry": "rect",
+      "lineWidth": 0,
+      "style": {
+        "fontSize": 23,
+        "typeface": "Arial",
+        "color": "#183641",
+        "alignment": "left"
+      }
+    }
+  ],
+  "truncated": false,
+  "metadata": {
+    "target": {
+      "id": "pr/0p13zg"
+    },
+    "omittedRecords": 0,
+    "abbreviatedRecords": 0,
+    "notices": []
+  }
+}

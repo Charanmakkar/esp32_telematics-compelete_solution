@@ -17,16 +17,7 @@
 *.db-wal
 firmware/sdkconfig
 firmware/sdkconfig.old
-firmware/managed_components/
 sdkconfig
 sdkconfig.old
-managed_components/
 **/*.tsbuildinfo
-output/testing/screenshots/
-tmp/
 !.env.example
-can_dbc/*
-!can_dbc/README.md
-# BMS images are local proprietary inputs.
-bms_images/*
-!bms_images/README.txt

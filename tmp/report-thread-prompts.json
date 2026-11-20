@@ -1,0 +1,177 @@
+[
+  {
+    "id": "01a1cddb-0cca-70c1-8e0d-d5ea7bfc42b3",
+    "title": "Recover missing project files",
+    "complete": true,
+    "turns": [
+      {
+        "id": "01a1cdf9-e18f-7413-8ee9-4d51033502a4",
+        "startedAt": 1794457067,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "01a1cdf9-e1f5-7b50-b292-e9aa1b5b36cf",
+            "content": [
+              {
+                "type": "text",
+                "text": "make a report on Size of Prompt,&#x20;\nnumber of prompt,&#x20;\ntotal credits used,&#x20;\nadd proper screen short of Telematic GUI.\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "01a1cdeb-88b5-76d0-8fc4-a9c4a2748ea8",
+        "startedAt": 1794456127,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "01a1cdeb-8904-7823-bd95-07194b0bfe59",
+            "content": [
+              {
+                "type": "text",
+                "text": "Now start the application and run the live database and MQTT integration tests to check everything is working.\nESP32 is connected to the laptop,&#x20;\nverify my wifi creds going to esp32, I want to see the live data on webpage\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "01a1cddb-14f3-7b00-a92a-11ba92e132b1",
+        "startedAt": 1794455049,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "01a1cddb-1998-79c0-a627-e7b00b14568b",
+            "content": [
+              {
+                "type": "text",
+                "text": "check all the file, and recover if any file is missing or builds are required,&#x20;\n\nmy orignal files were kept at \"D:\\Masters\\esp32_telematics-compelete_solution\"\nso you can directly copy any required file from above location as well if required.\n"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "01a1c9a5-ca20-76b0-b272-16a200bdee46",
+    "title": "Build NavSphere telemetry platform",
+    "complete": true,
+    "turns": [
+      {
+        "id": "01a1ca36-0665-7672-9d37-d855f048345e",
+        "startedAt": 1794393900,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "item-34",
+            "content": [
+              {
+                "type": "text",
+                "text": "esp32 quick button not working,&#x20;\n\n"
+              }
+            ]
+          },
+          {
+            "type": "userMessage",
+            "id": "item-37",
+            "content": [
+              {
+                "type": "text",
+                "text": "<send_user_message_question_reply>\n[{\"questionItemId\":\"[\\\"request_user_input_async\\\",\\\"call_57fa4c6fc5a9441cb40712984aeceed1\\\",0]\",\"question\":\"Which ESP32 quick button fails?\",\"answer\":\"SDK Configuration Editor (gear icon)\"}]\n</send_user_message_question_reply>\n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "01a1ca0c-6262-7581-bc37-a49675e5ab49",
+        "startedAt": 1794391171,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "item-26",
+            "content": [
+              {
+                "type": "text",
+                "text": "build is failing \n"
+              }
+            ]
+          },
+          {
+            "type": "userMessage",
+            "id": "item-30",
+            "content": [
+              {
+                "type": "image"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "01a1ca03-e557-7db0-98e0-916be23e5678",
+        "startedAt": 1794390615,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "item-21",
+            "content": [
+              {
+                "type": "text",
+                "text": "my build for esp32 is not working, check the config file \n"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "01a1c9a8-66ac-7e72-ba65-50fc11f0357b",
+        "startedAt": 1794384619,
+        "messages": [
+          {
+            "type": "userMessage",
+            "id": "item-1",
+            "content": [
+              {
+                "type": "text",
+                "text": "\n# Files pasted by the user:\n\n## \"# MASTER DEVELOPMENT PROMPT ## NavSphere — ESP32 IoT Telemetry, MQTT, Python Ba…\": C:\\Users\\charanpreet\\.codex/attachments/35f24589-f480-4dc5-ac2c-6935a587ca73/Pasted text.txt\n\n## My request:\nuse the above prompt and give your best outcome, keepting all different items in different segregates and use the firmware for esp32 code.\nyou have complete access to my laptop for test and execution and Internet for research and implementation.\n\n\n"
+              }
+            ]
+          },
+          {
+            "type": "userMessage",
+            "id": "item-7",
+            "content": [
+              {
+                "type": "text",
+                "text": "<send_user_message_question_reply>\n[{\"questionItemId\":\"[\\\"request_user_input_async\\\",\\\"call_504e21086dcb4d178312fd94fe98bfd2\\\",0]\",\"question\":\"Which exact ESP32 board/model are you using, and how will the ten analog signals connect? Please include any external ADC or multiplexer model and wiring. Also confirm whether A/B should stay logical controls or drive specific GPIOs.\",\"answer\":\"esp32S wroom . on board GPIO for ADC, A and B connected to LED and 1 more output GPIO (any). set or clear GPIO on 1, 0 on MQTT signal\"}]\n</send_user_message_question_reply>\n"
+              }
+            ]
+          },
+          {
+            "type": "userMessage",
+            "id": "item-8",
+            "content": [
+              {
+                "type": "text",
+                "text": "esp32s\n"
+              }
+            ]
+          },
+          {
+            "type": "userMessage",
+            "id": "item-11",
+            "content": [
+              {
+                "type": "text",
+                "text": "<send_user_message_question_reply>\n[{\"questionItemId\":\"[\\\"request_user_input_async\\\",\\\"call_ec0ebb670ab140fdb61b795865caa336\\\",0]\",\"question\":\"For ten channels on your ESP32S-WROOM with Wi-Fi, which hardware arrangement should the project support?\",\"answer\":\"use six only and update the value in promt to six only, NO extra hardware\"}]\n</send_user_message_question_reply>\n"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

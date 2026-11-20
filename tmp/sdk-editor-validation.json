@@ -1,0 +1,8 @@
+{
+  "exit_code": 0,
+  "value_count": 1269,
+  "stderr": "Server running, waiting for requests on stdin...",
+  "elapsed_seconds": 3.95,
+  "target": "esp32",
+  "exact_idf_confserver_command_passed": true
+}
