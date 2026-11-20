@@ -15,9 +15,5 @@
 *.db
 *.db-shm
 *.db-wal
-firmware/sdkconfig
-firmware/sdkconfig.old
-sdkconfig
-sdkconfig.old
 **/*.tsbuildinfo
 !.env.example
