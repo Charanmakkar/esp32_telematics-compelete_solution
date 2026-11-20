@@ -1,0 +1,61 @@
+{
+  "tested_at_utc": "2026-11-20T08:46:48.473922+00:00",
+  "release": {
+    "sw_version": "1.1.20",
+    "source_sha256": "1fb9fadf201ce4deb40dca01d2c361fb96d03a147fe5534ba8d24244185a6194",
+    "built_at_utc": "2026-11-20T08:19:10+00:00"
+  },
+  "image": {
+    "filename": "navsphere.bin",
+    "version": "1.1.20",
+    "project": "firmware",
+    "size": 1038608,
+    "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa"
+  },
+  "hardware": {
+    "port": "COM3",
+    "chip": "ESP32-D0WDQ6 rev1.0",
+    "flash_bytes": 4194304,
+    "backup_bytes": 4194304,
+    "nvs_preserved": true,
+    "max_chunk_bytes": 2048,
+    "usb_migration_verified": true,
+    "bin_ota_verified": true,
+    "hex_ota_verified": true,
+    "rollback_reset_verified": true
+  },
+  "software": {
+    "backend_full_tests": 116,
+    "frontend_tests": 45,
+    "ota_backend_tests": 26,
+    "firmware_host_tests": "passed",
+    "firmware_build": "passed",
+    "frontend_build": "passed",
+    "version_tests": 3
+  },
+  "evidence_files": [
+    "ota-live-bin-verified.json",
+    "ota-live-hex-verified.json",
+    "ota-live-safety.json",
+    "ota-live-transfer-reset.json",
+    "ota-live-rollback.json",
+    "ota-live-regression.json",
+    "ota-live-gui-regression.json",
+    "ota-live-can-tx.json"
+  ],
+  "can_tx_passed": false,
+  "limits": [
+    "No physical power-cut test",
+    "No output voltage or ADC calibration measurement",
+    "No destructive BMS programming/erase",
+    "No 24-hour soak or production TLS deployment"
+  ],
+  "fixes": [
+    "15-second start deadline below chip maximum, allowing small clock skew",
+    "Pause large CAN MQTT batches during OTA only",
+    "Disable Wi-Fi modem sleep during OTA only, restoring policy on abort",
+    "Negotiate 2048-byte chunks with 768-byte fallback for older firmware"
+  ]
+}

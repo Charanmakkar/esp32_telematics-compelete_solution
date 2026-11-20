@@ -1,6 +1,6 @@
 # NavSphere deployment and user guide
 
-Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+Updated 20 November 2026 for **v1.1.22 / 1e17f3d0dbcc**. File-selection feedback is fixed and the rebuilt firmware passed live GUI upload validation. The connected chip reported v1.1.21; this new image has not been flashed. See `docs/RELEASE_STATUS.md` for evidence and limitations.
 
 ## Prerequisites and local environment
 
@@ -167,7 +167,7 @@ python -m esptool --chip esp32 --port COMx write-flash 0x9000 .local/nvs.bin
 idf.py -p COMx monitor
 ```
 
-Replace COMx with the detected port. Earlier firmware was verified on COM3; v1.1.8 flashing is pending. Use the application-only procedure below for the existing provisioned board.
+Replace COMx with the detected port. Earlier firmware was verified on COM3. Use the OTA migration procedure below for an existing provisioned board.
 Run the hardware acceptance plan before relying on measurements or outputs.
 
 ## API documentation
@@ -243,16 +243,18 @@ Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boo
 
 ## Current application update and CAN operation
 
-Source, GUI and packaged application are v1.1.8 / 8148c3afe9b8. The manifest
-records hardware_flashed=false. Last verified device firmware is v1.1.7. Close
-serial monitors, detect the port (previously COM3) and run from root in an IDF terminal:
+Source, GUI and packaged application are v1.1.22 / 1e17f3d0dbcc. The connected
+board reported v1.1.21 during final upload validation. This new image is ready for
+installation through `/ota`; the board has already received its one-time migration.
+For another board that still has the factory-only layout, close serial monitors,
+detect its port and run the one-time migration from the project root:
 
 ```powershell
 [System.IO.Ports.SerialPort]::GetPortNames()
-python -m esptool --chip esp32 --port COMx --baud 115200 write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x10000 output/firmware/navsphere.bin
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/migrate_ota.ps1 -Port COMx
 ```
 
-This preserves NVS, bootloader and partition table. Verify the hash and startup
+The migration preserves NVS and replaces the bootloader, partition table and application. Verify the hash and startup
 version/build. Do not erase flash. Updating the GUI does not flash the device.
 
 On /can select Current ESP32 run or All saved IDs, search CAN messages, inspect
@@ -296,3 +298,15 @@ After application changes, rebuild firmware and GUI, check their shared identity
 then run `backend/.venv/Scripts/python.exe scripts/package_release.py --build-directory build`.
 Use --hardware-flashed only after verifying this exact image on hardware; it
 does not itself certify CAN timing or BMS behavior. Preserve historical evidence.
+
+## Wi-Fi OTA update
+
+Open **Manage → OTA over Wi-Fi** (`/ota`) to upload an application BIN/Intel HEX,
+review its target version and update the ESP32 through the existing MQTT connection.
+The page reports the actual running chip version and image SHA-256; success requires
+a new confirmed boot with the uploaded fingerprint. See the [OTA guide](../firmware/OTA_GUIDE.md)
+for accepted files, permissions, recovery and the required initial USB migration.
+
+The packaged firmware now uses two OTA slots. Earlier factory-only flashing
+commands in this guide are historical: use `scripts/migrate_ota.ps1` for the first
+installation. Future application updates use the OTA page. Never erase NVS.

@@ -1,0 +1,92 @@
+{
+  "passed": true,
+  "method": "RTS reset before new boot confirmation; not a physical power-cut test",
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "8ffd9ee1-d35c-a341-d52f-235512cf2d04",
+    "version": "1.1.19",
+    "build": "1fb9fadf201c",
+    "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+    "partition": "ota_1",
+    "uptime_ms": 21026,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -72,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "pending": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "8fcadb27-bc37-d46e-3cc0-e488d000ec13",
+    "version": "1.1.20",
+    "build": "1fb9fadf201c",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "partition": "ota_0",
+    "uptime_ms": 18841,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -76,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": false,
+    "state": "idle"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "4f10757e-9bbc-9168-9256-3c3c7bdd31c9",
+      "version": "1.1.19",
+      "build": "1fb9fadf201c",
+      "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+      "partition": "ota_1",
+      "uptime_ms": 10309,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -91,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 0.2526100000250153,
+    "fresh": true,
+    "prepared": null,
+    "job": {
+      "id": "fa3b0586-04ec-4982-a911-372780aba17d",
+      "device_id": "ESP32_001",
+      "boot_id": "8ffd9ee1-d35c-a341-d52f-235512cf2d04",
+      "image": {
+        "filename": "rollback-test.bin",
+        "version": "1.1.20",
+        "project": "firmware",
+        "size": 1038608,
+        "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+        "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+        "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+        "upload_id": "a4bfe5e0-0362-4bde-9ac3-202ef087af70"
+      },
+      "state": "failed",
+      "progress": 100.0,
+      "message": "The chip is running a different image; possible rollback",
+      "actor": "ota_test_9ba6f2155405",
+      "chunk_bytes": 2048
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  }
+}

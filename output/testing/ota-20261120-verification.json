@@ -1,0 +1,50 @@
+{
+  "review_date": "2026-11-20",
+  "sw_version": "1.1.12",
+  "sw_build": "9ba9f7be53ad",
+  "application": {
+    "filename": "navsphere.bin",
+    "version": "1.1.12",
+    "project": "firmware",
+    "size": 1037056,
+    "sha256": "5d3cfd76f67641cfc5266e8596d3f2fdcd076d7bee60a82de19e1c908621a2b6",
+    "image_sha256": "582ded196548f673e43c9ef12967da15fa36e999ce9f4042c398c29ddac0e596",
+    "elf_sha256": "effb0c1dcc10a0e1ad82e6f2afe563aae90d3b99d4a33bf74186b243fe2eba28"
+  },
+  "backend_full_suite": {
+    "passed": 102
+  },
+  "backend_final_ota_tests": {
+    "passed": 13,
+    "overlaps_full_suite": true
+  },
+  "frontend_full_suite": {
+    "passed": 41
+  },
+  "frontend_final_ota_tests": {
+    "passed": 2,
+    "overlaps_full_suite": true
+  },
+  "firmware_host_tests": "passed; existing CAN/ISO-TP/command rules plus maintenance gate",
+  "firmware_build": "passed with ESP-IDF 6.0.2",
+  "gui_build": "passed",
+  "python_changed_file_lint": "passed",
+  "migration_powershell_syntax": "passed",
+  "image_validator_accepts_compiled_binary": true,
+  "browser": {
+    "mocked_api": true,
+    "desktop": "passed",
+    "mobile": "passed",
+    "upload_gate": "passed",
+    "reboot_confirmation_gate": "passed",
+    "no_page_errors": true,
+    "screenshots": [
+      "screenshots/ota-desktop-fixture.png",
+      "screenshots/ota-mobile-fixture.png"
+    ]
+  },
+  "hardware_flashed": false,
+  "hardware_ota_verified": false,
+  "physical_tests": "Deferred by user; USB device was not connected",
+  "existing_services_restarted": false
+}

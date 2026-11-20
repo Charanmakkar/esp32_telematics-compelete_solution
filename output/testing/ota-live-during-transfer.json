@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "during_ota_transfer": true,
+  "start_progress": 77.4,
+  "elapsed_s": 10.05126239999663,
+  "sequence_advance": 101,
+  "observed_sequence_rate_hz": 10.048489033579887,
+  "before": {
+    "schema_version": 1,
+    "device_id": "ESP32_001",
+    "boot_id": "b177280f-efae-a58a-822e-6fe05578977a",
+    "sequence": 5616,
+    "timestamp_ms": 1795161347411,
+    "time_valid": true,
+    "uptime_ms": 561638,
+    "channels": {
+      "analog_1": 3010,
+      "analog_2": 608,
+      "analog_3": 142,
+      "analog_4": 176,
+      "analog_5": 142,
+      "analog_6": 142
+    },
+    "raw": [
+      3797,
+      575,
+      0,
+      42,
+      0,
+      0
+    ],
+    "valid_mask": 63,
+    "mqtt_connected": true,
+    "dropped_samples": 261,
+    "source": "hardware",
+    "stale": false,
+    "id": 641344,
+    "received_at": "2026-11-20T07:55:48.716000Z",
+    "persisted_at": "2026-11-20T07:55:48.719000Z"
+  },
+  "after": {
+    "schema_version": 1,
+    "device_id": "ESP32_001",
+    "boot_id": "b177280f-efae-a58a-822e-6fe05578977a",
+    "sequence": 5717,
+    "timestamp_ms": 1795161357511,
+    "time_valid": true,
+    "uptime_ms": 571738,
+    "channels": {
+      "analog_1": 142,
+      "analog_2": 191,
+      "analog_3": 142,
+      "analog_4": 142,
+      "analog_5": 142,
+      "analog_6": 142
+    },
+    "raw": [
+      0,
+      60,
+      0,
+      0,
+      0,
+      0
+    ],
+    "valid_mask": 63,
+    "mqtt_connected": true,
+    "dropped_samples": 262,
+    "source": "hardware",
+    "stale": false,
+    "id": 641445,
+    "received_at": "2026-11-20T07:55:58.351000Z",
+    "persisted_at": "2026-11-20T07:55:58.352000Z"
+  },
+  "note": "Sequence advancement is not a lossless-sampling or voltage-accuracy certification."
+}

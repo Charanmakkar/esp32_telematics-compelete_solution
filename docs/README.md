@@ -1,8 +1,7 @@
 # Documentation index
 
-Reviewed 19 November 2026 against application v1.1.8 / 8148c3afe9b8.
-Start with [release status](RELEASE_STATUS.md): this build is packaged but not
-yet flashed. Earlier positive test results retain their actual version and date.
+Updated 20 November 2026 for OTA release v1.1.22 / 1e17f3d0dbcc.
+Start with [release status](RELEASE_STATUS.md): this build passed live file-upload validation; v1.1.20 remains the last fully flashed and hardware-verified release. Earlier positive test results retain their actual version and date.
 
 ## Current instructions
 
@@ -11,6 +10,7 @@ yet flashed. Earlier positive test results retain their actual version and date.
 | Project overview and commands | [Root README](../README.md) |
 | Setup, LAN, login, flash, storage and recovery | [Deployment/user guide](deployment/DEPLOYMENT_AND_USER_GUIDE.md) |
 | CAN wiring, capture, DBC and search/statistics | [CAN guide](firmware/CAN_GUIDE.md), [DBC folder](../can_dbc/README.md) |
+| Wi-Fi OTA upload, chip confirmation and USB migration | [OTA guide](firmware/OTA_GUIDE.md) |
 | Fixed periodic messages, GUI operation, API behavior and testing | [CAN TX guide](firmware/CAN_TX_GUIDE.md) |
 | Firmware architecture, pins and provisioning | [Specification](firmware/FIRMWARE_TECHNICAL_SPECIFICATION.md), [firmware README](../firmware/README.md) |
 | REST, MQTT, authentication and BMS routes | [API reference](api/API_REFERENCE.md), [backend contract](../backend/API_CONTRACT.md), [OpenAPI](api/openapi.json) |
@@ -18,14 +18,14 @@ yet flashed. Earlier positive test results retain their actual version and date.
 | Database schema, migration head 0004 and storage | [Database README](../database/README.md), [schema reference](../database/schema.sql) |
 | BMS reference and limitations | [BE implementation](development/BE_CLIENT_IMPLEMENTATION.md), [image folder](../bms_images/README.txt) |
 | Hardware acceptance | [Project checklist](testing/HARDWARE_TEST_PLAN.md), [firmware checklist](../firmware/test/HARDWARE_TEST_PLAN.md) |
-| Packaged binary and application-only update | [Firmware package README](../output/firmware/README.md), [manifest](../output/firmware/manifest.json) |
+| Packaged firmware and initial OTA installation | [Firmware package README](../output/firmware/README.md), [manifest](../output/firmware/manifest.json) |
 | Work completed and current limitations | [Implementation report](../IMPLEMENTATION_REPORT.md), [release status](RELEASE_STATUS.md) |
 | AI contribution, prompt counts, measured time and unavailable credits | [Current AI/work report](reports/PROJECT_AND_AI_USAGE.md), [metrics](../output/reports/interaction-time.json) |
 | Exporting current offline documents | [Documentation tools](tools/README.md) |
 
 ## Offline editions
 
-Four regenerated engineering PDFs are in `output/pdf/`. The current project/AI
+Historical engineering PDFs are in `output/pdf/`; they predate the OTA addition. Use the current Markdown guides for OTA instructions. The current project/AI
 report PDF and five-slide stakeholder PPTX are in `output/reports/`. Screenshots
 are genuine dated captures, not claims of current connectivity. The CAN screenshot
 shows the pending flash state. The source/docs ZIP is refreshed with this revision.

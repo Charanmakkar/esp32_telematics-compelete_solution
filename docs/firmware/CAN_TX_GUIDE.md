@@ -1,7 +1,9 @@
 # Periodic CAN transmission
 
-Updated 19 November 2026. Source/package: **v1.1.8 / 8148c3afe9b8**.
-This build has not yet been flashed or accepted on hardware.
+Current bench result, 20 November 2026 (v1.1.18): periodic transmission triggered `twai_handle_tx_buffer_frame` / `tx_msg_count >= 0` assertion and an ESP32 reset. The OFF cleanup request timed out during the reset; subsequent live status confirmed periodic TX OFF, listen-only mode and both controls OFF. The periodic-transmit implementation was not changed by OTA. Its root cause remains unresolved; keep periodic TX OFF pending investigation. See `output/testing/ota-live-can-tx.json` and `docs/RELEASE_STATUS.md`. Earlier results below remain historical.
+
+Historical 19 November 2026 source/package record: **v1.1.8 / 8148c3afe9b8**.
+That build had not been flashed or accepted at the time of the record; use the current result above.
 
 ## Fixed messages
 

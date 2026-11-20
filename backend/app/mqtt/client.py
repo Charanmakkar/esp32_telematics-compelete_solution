@@ -31,7 +31,10 @@ class MqttClient:
             topics = [
                 (f"{self.settings.mqtt_topic_prefix}/{d}/{kind}", 1)
                 for d in self.settings.allowed_devices
-                for kind in ("telemetry", "ack", "status", "can", "diagnostic/response")
+                for kind in (
+                    "telemetry", "ack", "status", "can", "diagnostic/response",
+                    "ota/status", "ota/response",
+                )
             ]
             result, _ = client.subscribe(topics)
             if result != mqtt.MQTT_ERR_SUCCESS:
@@ -83,6 +86,15 @@ class MqttClient:
             return False
         info = self.client.publish(
             f"{self.settings.mqtt_topic_prefix}/{device_id}/can/tx/request",
+            json.dumps(payload, separators=(",", ":")), qos=1, retain=False,
+        )
+        return info.rc == mqtt.MQTT_ERR_SUCCESS
+
+    def publish_ota(self, device_id: str, payload: dict) -> bool:
+        if not self.connected:
+            return False
+        info = self.client.publish(
+            f"{self.settings.mqtt_topic_prefix}/{device_id}/ota/request",
             json.dumps(payload, separators=(",", ":")), qos=1, retain=False,
         )
         return info.rc == mqtt.MQTT_ERR_SUCCESS

@@ -1,0 +1,88 @@
+{
+  "label": "bin-upgrade",
+  "live_hardware": true,
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+    "version": "1.1.12",
+    "build": "9ba9f7be53ad",
+    "image_sha256": "582ded196548f673e43c9ef12967da15fa36e999ce9f4042c398c29ddac0e596",
+    "partition": "ota_0",
+    "slot_size": 2031616,
+    "confirmed": true,
+    "state": "transferring"
+  },
+  "prepared": {
+    "filename": "firmware.bin",
+    "version": "1.1.13",
+    "project": "firmware",
+    "size": 1037984,
+    "sha256": "086949d60c8483a4df1c24b9f87c76042ac815b3f4fbcdd38d788a190ca35e45",
+    "image_sha256": "6a8e8cafde2fcdc7186f5b541bde8530d98886412038997b8e4029ef2eb9edd2",
+    "elf_sha256": "acfcff61508c0181f82950324bc1dcd0b24dea1fe58fa8e67a465b23fc978771",
+    "upload_id": "2ee278b4-6144-4cd3-b83b-3596968b6fb1"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+      "version": "1.1.12",
+      "build": "9ba9f7be53ad",
+      "image_sha256": "582ded196548f673e43c9ef12967da15fa36e999ce9f4042c398c29ddac0e596",
+      "partition": "ota_0",
+      "slot_size": 2031616,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 1.2054804000072181,
+    "fresh": true,
+    "prepared": null,
+    "job": {
+      "id": "9f805f5a-6f3b-4cd2-9e88-80446e76ab3f",
+      "device_id": "ESP32_001",
+      "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.13",
+        "project": "firmware",
+        "size": 1037984,
+        "sha256": "086949d60c8483a4df1c24b9f87c76042ac815b3f4fbcdd38d788a190ca35e45",
+        "image_sha256": "6a8e8cafde2fcdc7186f5b541bde8530d98886412038997b8e4029ef2eb9edd2",
+        "elf_sha256": "acfcff61508c0181f82950324bc1dcd0b24dea1fe58fa8e67a465b23fc978771",
+        "upload_id": "2ee278b4-6144-4cd3-b83b-3596968b6fb1"
+      },
+      "state": "failed",
+      "progress": 0,
+      "message": "Invalid image size, clock, deadline or OTA readiness",
+      "actor": "ota_test_9ba6f2155405"
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "history": [
+    {
+      "elapsed_s": 0.016,
+      "state": "starting",
+      "progress": 0,
+      "message": "Waiting for the chip to accept the update"
+    },
+    {
+      "elapsed_s": 1.037,
+      "state": "failed",
+      "progress": 0,
+      "message": "Invalid image size, clock, deadline or OTA readiness"
+    }
+  ],
+  "page_errors": []
+}

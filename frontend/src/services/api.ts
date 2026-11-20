@@ -27,7 +27,7 @@ export async function request<T>(
   options: RequestInit = {},
 ): Promise<T> {
   const headers = new Headers(options.headers);
-  if (options.body) headers.set("Content-Type", "application/json");
+  if (options.body && !headers.has("Content-Type")) headers.set("Content-Type", "application/json");
   if (options.method && options.method !== "GET" && csrfToken)
     headers.set("X-CSRF-Token", csrfToken);
   const response = await fetch(`${base}${path}`, {

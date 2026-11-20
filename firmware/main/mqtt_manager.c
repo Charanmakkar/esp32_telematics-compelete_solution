@@ -4,6 +4,7 @@
 #include "diagnostic_manager.h"
 #include "can_tx.h"
 #include "wifi_manager.h"
+#include "ota_manager.h"
 #include <inttypes.h>
 #include <stdarg.h>
 #include <stdio.h>
@@ -29,6 +30,7 @@ typedef struct {
     char status_topic[NAV_TOPIC_CAPACITY];
     char diagnostic_topic[NAV_TOPIC_CAPACITY];
     char can_tx_topic[NAV_TOPIC_CAPACITY];
+    char ota_topic[NAV_TOPIC_CAPACITY];
     char boot_id[37];
     char will[160];
     char incoming[NAV_COMMAND_CAPACITY];
@@ -38,6 +40,7 @@ typedef struct {
     portMUX_TYPE counter_lock;
     uint32_t dropped;
     bool diagnostic_reply_pending;
+    bool ota_reply_pending;
 } mqtt_context_t;
 static mqtt_context_t context = { .counter_lock = portMUX_INITIALIZER_UNLOCKED };
 
@@ -47,7 +50,7 @@ bool mqtt_manager_publish_can(const char *frames, uint32_t queue_drops, uint32_t
     if (!context.client || !context.events ||
         !(xEventGroupGetBits(context.events) & NAV_MQTT_CONNECTED_BIT)) { return false; }
     portENTER_CRITICAL(&context.counter_lock);
-    bool reply_pending = context.diagnostic_reply_pending;
+    bool reply_pending = context.diagnostic_reply_pending || context.ota_reply_pending;
     portEXIT_CRITICAL(&context.counter_lock);
     if (reply_pending) { return false; }
     char topic[NAV_TOPIC_CAPACITY];
@@ -71,6 +74,23 @@ bool mqtt_manager_is_connected(void)
 }
 
 const char *mqtt_manager_boot_id(void) { return context.boot_id; }
+bool mqtt_manager_transport_tls(void)
+{
+    return context.config && strncmp(context.config->mqtt_uri,"mqtts://",8)==0;
+}
+bool mqtt_manager_ota_publish(const char *suffix, const char *json)
+{
+    if (!mqtt_manager_is_connected()) return false;
+    char topic[NAV_TOPIC_CAPACITY];
+    snprintf(topic,sizeof(topic),"%s/%s/ota/%s",CONFIG_NAV_MQTT_TOPIC_PREFIX,context.config->device_id,suffix);
+    return esp_mqtt_client_enqueue(context.client,topic,json,0,1,0,true)>=0;
+}
+void mqtt_manager_reserve_ota_reply(bool reserve)
+{
+    portENTER_CRITICAL(&context.counter_lock);
+    context.ota_reply_pending = reserve;
+    portEXIT_CRITICAL(&context.counter_lock);
+}
 void mqtt_manager_reserve_diagnostic_reply(bool reserve)
 {
     portENTER_CRITICAL(&context.counter_lock);
@@ -187,6 +207,7 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
         (void)xEventGroupSetBits(state->events, NAV_MQTT_CONNECTED_BIT);
         (void)esp_mqtt_client_subscribe(state->client, state->diagnostic_topic, MQTT_QOS);
         (void)esp_mqtt_client_subscribe(state->client, state->can_tx_topic, MQTT_QOS);
+        (void)esp_mqtt_client_subscribe(state->client, state->ota_topic, MQTT_QOS);
         if (esp_mqtt_client_subscribe(state->client, state->command_topic, MQTT_QOS) < 0) {
             ESP_LOGE("mqtt", "Command subscription enqueue failed");
         }
@@ -200,6 +221,9 @@ static void mqtt_event(void *argument, esp_event_base_t base, int32_t id, void *
         break;
     case MQTT_EVENT_DATA:
         if (event != NULL) {
+            bool ota_matches=event->topic && event->topic_len==(int)strlen(state->ota_topic) &&
+                memcmp(event->topic,state->ota_topic,event->topic_len)==0;
+            ota_manager_fragment(event,ota_matches);
             /* Bounded control fits within one MQTT input buffer. Partial or
                oversized input is rejected, never interpreted as GPIO/UDS. */
             if (event->topic && event->topic_len==(int)strlen(state->can_tx_topic) &&
@@ -331,6 +355,8 @@ esp_err_t mqtt_manager_start(const app_config_t *config)
     snprintf(context.diagnostic_topic, sizeof(context.diagnostic_topic), "%s/%s/diagnostic/request",
         CONFIG_NAV_MQTT_TOPIC_PREFIX, config->device_id);
     snprintf(context.can_tx_topic,sizeof(context.can_tx_topic),"%s/%s/can/tx/request",
+        CONFIG_NAV_MQTT_TOPIC_PREFIX,config->device_id);
+    snprintf(context.ota_topic,sizeof(context.ota_topic),"%s/%s/ota/request",
         CONFIG_NAV_MQTT_TOPIC_PREFIX,config->device_id);
     const char *suffixes[] = { "telemetry", "command", "ack", "status" };
     char *topics[] = { context.telemetry_topic, context.command_topic, context.ack_topic, context.status_topic };

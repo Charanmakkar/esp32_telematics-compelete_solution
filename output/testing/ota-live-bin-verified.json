@@ -1,0 +1,181 @@
+{
+  "label": "bin-verified",
+  "live_hardware": true,
+  "drag_and_drop": false,
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "4f14ba03-56ca-950e-ab5b-52da6d0e36b9",
+    "version": "1.1.19",
+    "build": "1fb9fadf201c",
+    "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+    "partition": "ota_1",
+    "uptime_ms": 165755,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -73,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "prepared": {
+    "filename": "firmware.bin",
+    "version": "1.1.20",
+    "project": "firmware",
+    "size": 1038608,
+    "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+    "upload_id": "b279b9d0-20a0-4e68-9ce6-fdcfb2fa4401"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "3f0f2528-3d1d-930e-4f6c-9ed4b54f4906",
+      "version": "1.1.20",
+      "build": "1fb9fadf201c",
+      "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+      "partition": "ota_0",
+      "uptime_ms": 15251,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -76,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 0.08697559998836368,
+    "fresh": true,
+    "prepared": {
+      "filename": "firmware.bin",
+      "version": "1.1.20",
+      "project": "firmware",
+      "size": 1038608,
+      "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+      "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+      "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+      "upload_id": "b279b9d0-20a0-4e68-9ce6-fdcfb2fa4401"
+    },
+    "job": {
+      "id": "7d188bb5-771f-4eb0-b5c6-a33391d94e27",
+      "device_id": "ESP32_001",
+      "boot_id": "4f14ba03-56ca-950e-ab5b-52da6d0e36b9",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.20",
+        "project": "firmware",
+        "size": 1038608,
+        "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+        "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+        "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+        "upload_id": "b279b9d0-20a0-4e68-9ce6-fdcfb2fa4401"
+      },
+      "state": "confirmed",
+      "progress": 100,
+      "message": "The chip rebooted and confirmed the uploaded image",
+      "actor": "ota_test_9ba6f2155405",
+      "chunk_bytes": 2048
+    },
+    "busy": true,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "history": [
+    {
+      "elapsed_s": 0.017,
+      "state": "starting",
+      "progress": 0,
+      "message": "Waiting for the chip to accept the update"
+    },
+    {
+      "elapsed_s": 1.034,
+      "state": "transferring",
+      "progress": 0.2,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 33.334,
+      "state": "transferring",
+      "progress": 10.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 62.589,
+      "state": "transferring",
+      "progress": 20.3,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 90.834,
+      "state": "transferring",
+      "progress": 30.4,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 118.114,
+      "state": "transferring",
+      "progress": 40.2,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 146.417,
+      "state": "transferring",
+      "progress": 50.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 170.724,
+      "state": "transferring",
+      "progress": 60.3,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 197.936,
+      "state": "transferring",
+      "progress": 70,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 226.176,
+      "state": "transferring",
+      "progress": 80.3,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 259.539,
+      "state": "transferring",
+      "progress": 90.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 287.165,
+      "state": "transferring",
+      "progress": 100,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 288.177,
+      "state": "rebooting",
+      "progress": 100,
+      "message": "Waiting for the chip to reboot and confirm its running image"
+    },
+    {
+      "elapsed_s": 306.357,
+      "state": "confirmed",
+      "progress": 100,
+      "message": "The chip rebooted and confirmed the uploaded image"
+    }
+  ],
+  "page_errors": []
+}

@@ -1,6 +1,6 @@
 # NavSphere
 
-Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+Updated 20 November 2026 for **v1.1.22 / 1e17f3d0dbcc**. File-selection feedback is fixed and the rebuilt firmware passed live GUI upload validation. The connected chip reported v1.1.21; this new image has not been flashed. See `docs/RELEASE_STATUS.md` for evidence and limitations.
 
 **360° Visibility and Comprehensive Tracking**
 
@@ -199,4 +199,16 @@ does not stop an enabled device. Unknown status is not confirmation of OFF.
 There are no counter/checksum changes or arbitrary-payload controls.
 See [wiring, operation and acceptance](docs/firmware/CAN_TX_GUIDE.md).
 The v1.1.7 wire test received both payloads but failed timing; v1.1.8's bounded
-arbitration retry correction is built and packaged, not yet flashed.
+arbitration retry correction is included in the installed release. See the current release status for the latest wire test.
+
+## Wi-Fi OTA update
+
+Open **Manage → OTA over Wi-Fi** (`/ota`) to upload an application BIN/Intel HEX,
+review its target version and update the ESP32 through the existing MQTT connection.
+The page reports the actual running chip version and image SHA-256; success requires
+a new confirmed boot with the uploaded fingerprint. See the [OTA guide](docs/firmware/OTA_GUIDE.md)
+for accepted files, permissions, recovery and the required initial USB migration.
+
+The packaged firmware now uses two OTA slots. Earlier factory-only flashing
+commands in this guide are historical: use `scripts/migrate_ota.ps1` for the first
+installation. Future application updates use the OTA page. Never erase NVS.

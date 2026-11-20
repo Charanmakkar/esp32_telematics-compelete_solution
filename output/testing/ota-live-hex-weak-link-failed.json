@@ -1,0 +1,151 @@
+{
+  "label": "hex-verified",
+  "live_hardware": true,
+  "drag_and_drop": true,
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "2ad57ea6-d74d-bc52-ff39-e4e113a2228e",
+    "version": "1.1.18",
+    "build": "bf0559402ce2",
+    "image_sha256": "0f097ef904cae5e6700a0de46e347918f2fdbd6b59ac23a87800612a2b25ea6a",
+    "partition": "ota_1",
+    "uptime_ms": 101406,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -80,
+    "slot_size": 2031616,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "prepared": {
+    "filename": "v1.1.17.hex",
+    "version": "1.1.17",
+    "project": "firmware",
+    "size": 1038528,
+    "sha256": "58c7789d6332c2a0def73a8441e1cf312433829eea6c9a2f1b692aa79d48f31d",
+    "image_sha256": "ad988b89a71a3beb1d0e2a45cd7597486ea68e25d4fcb31fd95cc25029e31314",
+    "elf_sha256": "0787ecdb21b0c8aff97209ced4272996fb8a733edf56a72c61842ecab8d03a37",
+    "upload_id": "8a769512-94aa-4c09-8c9d-e7a2e68e7e5f"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "2ad57ea6-d74d-bc52-ff39-e4e113a2228e",
+      "version": "1.1.18",
+      "build": "bf0559402ce2",
+      "image_sha256": "0f097ef904cae5e6700a0de46e347918f2fdbd6b59ac23a87800612a2b25ea6a",
+      "partition": "ota_1",
+      "uptime_ms": 707607,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -80,
+      "slot_size": 2031616,
+      "confirmed": true,
+      "state": "transferring"
+    },
+    "age_seconds": 15.194230900000548,
+    "fresh": false,
+    "prepared": null,
+    "job": {
+      "id": "176b13a8-99e6-41a3-bf06-f8b545f64da5",
+      "device_id": "ESP32_001",
+      "boot_id": "2ad57ea6-d74d-bc52-ff39-e4e113a2228e",
+      "image": {
+        "filename": "v1.1.17.hex",
+        "version": "1.1.17",
+        "project": "firmware",
+        "size": 1038528,
+        "sha256": "58c7789d6332c2a0def73a8441e1cf312433829eea6c9a2f1b692aa79d48f31d",
+        "image_sha256": "ad988b89a71a3beb1d0e2a45cd7597486ea68e25d4fcb31fd95cc25029e31314",
+        "elf_sha256": "0787ecdb21b0c8aff97209ced4272996fb8a733edf56a72c61842ecab8d03a37",
+        "upload_id": "8a769512-94aa-4c09-8c9d-e7a2e68e7e5f"
+      },
+      "state": "failed",
+      "progress": 88.7,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out",
+      "actor": "ota_test_9ba6f2155405"
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "history": [
+    {
+      "elapsed_s": 0.01,
+      "state": "starting",
+      "progress": 0,
+      "message": "Waiting for the chip to accept the update"
+    },
+    {
+      "elapsed_s": 1.02,
+      "state": "transferring",
+      "progress": 0.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 71.758,
+      "state": "transferring",
+      "progress": 10.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 135.403,
+      "state": "transferring",
+      "progress": 20.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 194.981,
+      "state": "transferring",
+      "progress": 30,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 257.678,
+      "state": "transferring",
+      "progress": 40,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 332.401,
+      "state": "transferring",
+      "progress": 50.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 400.143,
+      "state": "transferring",
+      "progress": 60,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 471.837,
+      "state": "transferring",
+      "progress": 70,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 539.573,
+      "state": "transferring",
+      "progress": 80.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 619.441,
+      "state": "failed",
+      "progress": 88.7,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out"
+    }
+  ],
+  "page_errors": []
+}

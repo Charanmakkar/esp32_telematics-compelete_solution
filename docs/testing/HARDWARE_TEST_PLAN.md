@@ -43,7 +43,7 @@ Control A uses GPIO2 and Control B uses GPIO0, active high. Both pins affect boo
 ## Periodic CAN TX acceptance, v1.1.8
 
 The v1.1.7 test delivered exact bytes after power correction but failed timing.
-v1.1.8 arbitration retry correction needs a physical test. Follow the root
+The arbitration retry correction was exercised in v1.1.18; the periodic TX test failed with an ESP-IDF TWAI assertion/reset. See docs/RELEASE_STATUS.md before further transmission tests. Follow the root
 docs/firmware/CAN_TX_GUIDE.md: verify exact image/hash, supplies, bitrate and ACK;
 OFF baseline with no duplicate source; 10 s ON with exact IDs/DLC/bytes;
 mean periods within 5% of 100/10 ms, max below twice period, no new failures;
@@ -51,3 +51,20 @@ OFF plus 300 ms grace and 3 s without either ID. Exercise actual GUI controls,
 verify RX/ADC persistence, reboot default OFF and MQTT disconnect stopping TX.
 Reconnect must not re-enable it. Leave OFF and release COM. Diagnostic success
 is a separate unresolved check; no BMS programming/erase/reset belongs here.
+
+## OTA acceptance
+
+- USB migration preserves provisioned NVS; OTA slots and rollback bootloader match the package.
+- Upload valid BIN and Intel HEX; verify chip version, boot ID and exact image hash after reboot.
+- Update in both slot directions; verify existing ADC/CAN/control/diagnostic behavior afterward.
+- Reject corrupt, wrong-chip, oversized, merged, legacy, stale and unauthorized uploads/requests.
+- Reject OTA while GPIO outputs, periodic CAN or diagnostic sessions are active.
+- Interrupt Wi-Fi and power mid-transfer: old image boots, maintenance gates release, retry succeeds.
+- Force new-image startup failure: rollback selects prior firmware and GUI never reports success.
+- Measure heap/stack margins and CAN/ADC gaps during transfer; document observed limits.
+
+20 November bench results: see `output/testing/ota-hardware-validation-20261120.json` and
+`docs/RELEASE_STATUS.md`. BIN/HEX, both slots, invalid-file/permission checks,
+incomplete-transfer recovery, active-CAN rejection and reset-before-confirmation
+rollback were exercised. Physical power cuts and long-duration/electrical tests
+remain separate acceptance items; do not mark the entire checklist complete.

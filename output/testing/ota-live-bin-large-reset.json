@@ -1,0 +1,136 @@
+{
+  "label": "bin-verified",
+  "live_hardware": true,
+  "drag_and_drop": false,
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "70ac25ef-144c-7151-4dfd-109f3d294799",
+    "version": "1.1.19",
+    "build": "1fb9fadf201c",
+    "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+    "partition": "ota_1",
+    "uptime_ms": 134338,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -72,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "prepared": {
+    "filename": "firmware.bin",
+    "version": "1.1.20",
+    "project": "firmware",
+    "size": 1038608,
+    "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+    "upload_id": "d1154dde-b3d4-4d23-ad68-5b15f1226136"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "4f14ba03-56ca-950e-ab5b-52da6d0e36b9",
+      "version": "1.1.19",
+      "build": "1fb9fadf201c",
+      "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+      "partition": "ota_1",
+      "uptime_ms": 12578,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -67,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 1.8733612000069115,
+    "fresh": true,
+    "prepared": null,
+    "job": {
+      "id": "24bb3913-d29f-4b17-be70-621364dddefb",
+      "device_id": "ESP32_001",
+      "boot_id": "70ac25ef-144c-7151-4dfd-109f3d294799",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.20",
+        "project": "firmware",
+        "size": 1038608,
+        "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+        "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+        "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa",
+        "upload_id": "d1154dde-b3d4-4d23-ad68-5b15f1226136"
+      },
+      "state": "failed",
+      "progress": 53,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out",
+      "actor": "ota_test_9ba6f2155405",
+      "chunk_bytes": 2048
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "history": [
+    {
+      "elapsed_s": 0.012,
+      "state": "starting",
+      "progress": 0,
+      "message": "Waiting for the chip to accept the update"
+    },
+    {
+      "elapsed_s": 1.031,
+      "state": "transferring",
+      "progress": 0,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 30.375,
+      "state": "transferring",
+      "progress": 10.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 60.658,
+      "state": "transferring",
+      "progress": 20.3,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 86.881,
+      "state": "transferring",
+      "progress": 30.2,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 114.106,
+      "state": "transferring",
+      "progress": 40,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 141.369,
+      "state": "transferring",
+      "progress": 50.3,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 164.787,
+      "state": "failed",
+      "progress": 53,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out"
+    }
+  ],
+  "page_errors": []
+}

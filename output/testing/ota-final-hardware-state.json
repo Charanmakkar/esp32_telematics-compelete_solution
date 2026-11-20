@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "final_install_method": "USB restoration after intentional rollback test; same image previously passed OTA",
+  "write_offset": "0x200000",
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "4f10757e-9bbc-9168-9256-3c3c7bdd31c9",
+    "version": "1.1.19",
+    "build": "1fb9fadf201c",
+    "image_sha256": "a1add4696592bb252e5ac0e6b212dadad8e25a5bd1a1c0a223ba95e33b65468e",
+    "partition": "ota_1",
+    "uptime_ms": 22378,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -91,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "chip": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "version": "1.1.20",
+    "build": "1fb9fadf201c",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "partition": "ota_1",
+    "uptime_ms": 3641,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -78,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "nvs_byte_identical": true,
+  "original_backup_bytes": 4194304,
+  "image": {
+    "filename": "app.bin",
+    "version": "1.1.20",
+    "project": "firmware",
+    "size": 1038608,
+    "sha256": "52183f74e964206809bcf01098c14d393813281d165eae8ccf8d008854ba030d",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "elf_sha256": "66ab354c2f52b880c41050c64d2d2fe90597837f7636954be392c242f764feaa"
+  }
+}

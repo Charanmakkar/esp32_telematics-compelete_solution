@@ -1,5 +1,6 @@
 #include "wifi_manager.h"
 #include <string.h>
+#include <stdio.h>
 #include "esp_event.h"
 #include "esp_check.h"
 #include "esp_log.h"
@@ -76,4 +77,31 @@ esp_err_t wifi_manager_start(const app_config_t *config)
 bool wifi_manager_connected(void)
 {
     return (context.events != NULL) && ((xEventGroupGetBits(context.events) & NAV_WIFI_CONNECTED_BIT) != 0U);
+}
+
+bool wifi_manager_info(char ip[16], int *rssi)
+{
+    if (!ip || !rssi || !wifi_manager_connected()) return false;
+    esp_netif_t *station=esp_netif_get_handle_from_ifkey("WIFI_STA_DEF");
+    esp_netif_ip_info_t address;
+    wifi_ap_record_t access_point;
+    if (!station || esp_netif_get_ip_info(station,&address)!=ESP_OK ||
+        esp_wifi_sta_get_ap_info(&access_point)!=ESP_OK) return false;
+    snprintf(ip,16,IPSTR,IP2STR(&address.ip));
+    *rssi=access_point.rssi;
+    return true;
+}
+
+void wifi_manager_ota_mode(bool enabled)
+{
+    /* OTA worker owns this override; restore the existing power policy on abort. */
+    static wifi_ps_type_t previous;
+    static bool overridden;
+    if (enabled && !overridden) {
+        if (esp_wifi_get_ps(&previous)==ESP_OK && esp_wifi_set_ps(WIFI_PS_NONE)==ESP_OK)
+            overridden=true;
+    } else if (!enabled && overridden) {
+        (void)esp_wifi_set_ps(previous);
+        overridden=false;
+    }
 }

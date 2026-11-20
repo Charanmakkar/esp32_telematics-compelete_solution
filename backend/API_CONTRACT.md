@@ -1,6 +1,6 @@
 # NavSphere API contract
 
-Updated 19 November 2026 for application v1.1.8. Existing analog/GPIO interfaces are retained; CAN/DBC/BMS/TX extensions follow below. The generated docs/api/openapi.json matches the current routes.
+Updated 20 November 2026 for application v1.1.22 / 1e17f3d0dbcc. Existing interfaces are retained; OTA routes are additive.
 
 All URLs are relative to the configured backend. Production uses HTTPS. The final hardware requirement is **six** channels, GPIO32, GPIO33, GPIO34, GPIO35, GPIO36, GPIO39 in that order. No external acquisition hardware is used.
 
@@ -22,7 +22,7 @@ Swagger `/docs` includes a header input for CSRF on each authenticated mutation.
 - `GET /api/v1/telemetry/latest?device_id=ESP32_001` returns `{ "received": reading|null, "persisted": reading|null }`. Reading contains all MQTT fields below plus `id`, `received_at` and `persisted_at`. A received event has no database ID or persistence time. Persisted values are loaded from the database, including after a server restart.
 - `GET /api/v1/telemetry/history?device_id=ESP32_001&start_ms=...&end_ms=...&limit=600` returns `{ "points": [{ "timestamp_ms": 1790000000000, "channels": { "analog_1": 1200 } }], "statistics": { "analog_1": { "min": 1100, "max": 1300, "avg": 1200, "count": 20 } }, "count": 20, "aggregated": false, "time_basis": "device_epoch_or_server_receive" }`. Each ordinary history point has all six channels. Invalid channel values are null and excluded from statistics. An unsynchronized sample uses server receive time on the history axis.
 - `GET /api/v1/telemetry/channels/{channel_id}` has the same parameters/shape, restricted to one channel. IDs accept `1` through `6`, `analog-1` through `analog-6`, or `analog_1` through `analog_6`.
-- History defaults to five minutes. The query window is at most 31 days and `limit` is 2â€“2000. Larger result sets are averaged in SQL time buckets; min/max/average statistics still cover all valid rows in the requested range. CSV exports made by the dashboard contain the returned points and may therefore be aggregated.
+- History defaults to five minutes. The query window is at most 31 days and `limit` is 2Ã¢â‚¬â€œ2000. Larger result sets are averaged in SQL time buckets; min/max/average statistics still cover all valid rows in the requested range. CSV exports made by the dashboard contain the returned points and may therefore be aggregated.
 - `GET /api/v1/health` returns `status`, `mqtt_connected`, `database_connected`, `database_engine`, and `metrics`: `received`, `persisted`, `invalid`, `duplicates`, `dropped`, `database_errors`, `frequency_hz`, `queue_depth`, `websocket_dropped`, `last_received_at`, `last_persisted_at`. Counters cover the current backend process lifetime; frequency uses recent valid arrivals.
 - `GET /api/v1/health/ready` performs a database check and returns HTTP 200 only if both the database and MQTT connection are ready; otherwise HTTP 503.
 
@@ -32,7 +32,7 @@ Swagger `/docs` includes a header input for CSRF on each authenticated mutation.
 - Status is `pending`, `accepted`, `applied`, `rejected`, or `timed_out`. A successful MQTT publish remains pending. Only the matching, timely, boot-bound device acknowledgement permits applied status.
 - `GET /api/v1/commands/{command_id}` returns the command object. `GET /api/v1/commands?device_id=ESP32_001&limit=30` returns `{ "commands": [...] }` newest first; maximum limit 100.
 - Commands require the admin role, changed initial password, CSRF token, connected broker, and fresh device. All requests/results are audited. Terminal results cannot regress on duplicate or reordered acknowledgements.
-- Command lifetime is configurable from1â€“30seconds (default10), matching the supplied firmware/simulator maximum30seconds. If firmware `CONFIG_NAV_COMMAND_MAX_TTL_MS` is reduced, reduce backend `COMMAND_TIMEOUT_SECONDS` accordingly. Output safety leases are separate from command delivery lifetime.
+- Command lifetime is configurable from1Ã¢â‚¬â€œ30seconds (default10), matching the supplied firmware/simulator maximum30seconds. If firmware `CONFIG_NAV_COMMAND_MAX_TTL_MS` is reduced, reduce backend `COMMAND_TIMEOUT_SECONDS` accordingly. Output safety leases are separate from command delivery lifetime.
 
 ## MQTT v1
 
@@ -57,7 +57,7 @@ Topics: `navsphere/{device_id}/telemetry`, `/command`, `/ack`, `/status`; prefix
 }
 ```
 
-Example values are illustrative. Values are millivolts, 0â€“5000; raw fields are unsigned16. Firmware may enforce tighter physical voltage limits. Exactly six values are required. Bit0 of `valid_mask` represents channel1; all valid is63. Sequence is unsigned32. Deduplication is unique `(device_id, boot_id, sequence)`, preserving sequence reuse after reboot. If time is unsynchronized, set `time_valid:false` and `timestamp_ms:null`. Synchronized timestamps must be year2000â€“2100 and at most five minutes into the future. `stale:true` preserves the original sequence and timestamp, so repeats cannot create new database measurements.
+Example values are illustrative. Values are millivolts, 0Ã¢â‚¬â€œ5000; raw fields are unsigned16. Firmware may enforce tighter physical voltage limits. Exactly six values are required. Bit0 of `valid_mask` represents channel1; all valid is63. Sequence is unsigned32. Deduplication is unique `(device_id, boot_id, sequence)`, preserving sequence reuse after reboot. If time is unsynchronized, set `time_valid:false` and `timestamp_ms:null`. Synchronized timestamps must be year2000Ã¢â‚¬â€œ2100 and at most five minutes into the future. `stale:true` preserves the original sequence and timestamp, so repeats cannot create new database measurements.
 
 Commands published by the backend:
 
@@ -160,3 +160,30 @@ version, mode and periodic_tx fields preserve earlier firmware compatibility.
 five-field schema and TTL rules are in the CAN TX guide; confirmations arrive
 in CAN stats, not GPIO ack. Diagnostic transport uses diagnostic/request and
 diagnostic/response separately. Existing ADC/GPIO MQTT interfaces remain unchanged.
+
+## Firmware OTA API
+
+`GET /api/v1/ota?device_id=ESP32_001` returns live chip identity, freshness,
+prepared image and job state. Authenticated viewers may read it. It also returns
+`limits.max_application_bytes` (2031616), `limits.max_upload_bytes` (6291456),
+and `transport.server_mqtt_tls`. Optional chip fields `ip_address`,
+`wifi_rssi_dbm`, `uptime_ms` and `mqtt_tls` come from the running ESP32;
+older OTA firmware can omit them.
+`POST /api/v1/ota/image?device_id=ESP32_001&filename=app.bin` accepts a raw
+`application/octet-stream` body (6 MiB maximum); BIN or app-only Intel HEX is
+validated and staged for ten minutes. It returns `upload_id`, version, size,
+whole-file SHA-256 and image SHA-256. `POST /api/v1/ota/start` takes
+`{"device_id":"ESP32_001","upload_id":"..."}`. Both POSTs require admin,
+changed password, session and CSRF token. Busy/stale/migration-required state
+returns 409; invalid image returns 400; oversized upload returns 413.
+
+MQTT adds `{prefix}/{device}/ota/request`, `ota/response`, and `ota/status`.
+All are non-retained QoS 1. Requests are start/chunk/finish, bound to a UUID
+and boot ID. Start includes size, full-file SHA-256 and a 15-second deadline
+(chip maximum 30 seconds, leaving clock-skew margin); chunks contain offset
+and up to the chip's optional `max_chunk_bytes` (768â€“2048) encoded as hex.
+Absent that field, the server uses the original 768-byte chunks. Responses
+echo id/op/offset/boot_id, protocol=1, source=hardware, ok and optional error.
+Status contains protocol/source, boot_id, version, build, running image SHA-256,
+partition, slot_size, confirmed and state. Success requires a matching image
+and new confirmed boot. See docs/firmware/OTA_GUIDE.md for full operation.

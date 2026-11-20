@@ -1,0 +1,20 @@
+{
+  "successful_transfers": [
+    {
+      "run": "bin-verified",
+      "receiver_version": "1.1.19",
+      "samples": 288,
+      "raw_minimum_free_heap_field": 5620,
+      "raw_minimum_mqtt_stack_margin_field": 2648
+    },
+    {
+      "run": "hex-verified",
+      "receiver_version": "1.1.20",
+      "samples": 288,
+      "raw_minimum_free_heap_field": 8651,
+      "raw_minimum_mqtt_stack_margin_field": 2640
+    }
+  ],
+  "note": "Successful-transfer samples before the planned reboot only. Reliable worst-case heap and OTA worker stack measurements remain unverified.",
+  "serial_integrity": "Captured output contains missing characters, including truncated numeric fields. Raw minima are not reliable hardware resource measurements."
+}

@@ -1,5 +1,7 @@
 # BE reference implementation and verification
 
+20 November 2026 OTA regression check (v1.1.20): the existing read-only hardware-number quick read returned a positive response (`62 F1 91 ...`) and restored listen-only mode. Evidence: `output/testing/ota-live-bms-read.json`. This verifies that one read path only; earlier limitations for other diagnostic/programming workflows are not superseded. No destructive BMS operation was tested.
+
 Status update, 19 November 2026: this remains the active BMS reference. Separate periodic frames were received on v1.1.7 after supply correction; that does not verify BMS/UDS responses. Diagnostics were not rewritten or retested. v1.1.8 timing correction is unflashed. Turn periodic TX OFF before BMS jobs; see ../RELEASE_STATUS.md.
 
 Updated 18 November 2026 (India Standard Time). This record supersedes the HVP

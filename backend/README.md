@@ -1,6 +1,6 @@
 # Backend
 
-Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+Updated 20 November 2026 for **v1.1.22 / 1e17f3d0dbcc**. File-selection feedback is fixed and the rebuilt firmware passed live GUI upload validation. The connected chip reported v1.1.21; this new image has not been flashed. See `docs/RELEASE_STATUS.md` for evidence and limitations.
 
 Python3.13 was used for the executed tests. From this directory:
 
@@ -44,3 +44,15 @@ changed-password admin and CSRF, publishes a boot-bound four-second request to
 device state. Apply the updated MQTT ACL. Toggle submissions are audited as
 `can_tx_toggle`; no new table/migration or durable per-frame TX log is added.
 Do not run the simulator under the physical device ID during hardware tests.
+
+## Wi-Fi OTA update
+
+Open **Manage → OTA over Wi-Fi** (`/ota`) to upload an application BIN/Intel HEX,
+review its target version and update the ESP32 through the existing MQTT connection.
+The page reports the actual running chip version and image SHA-256; success requires
+a new confirmed boot with the uploaded fingerprint. See the [OTA guide](../docs/firmware/OTA_GUIDE.md)
+for accepted files, permissions, recovery and the required initial USB migration.
+
+The packaged firmware now uses two OTA slots. Earlier factory-only flashing
+commands in this guide are historical: use `scripts/migrate_ota.ps1` for the first
+installation. Future application updates use the OTA page. Never erase NVS.

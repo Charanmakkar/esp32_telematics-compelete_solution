@@ -1,0 +1,35 @@
+{
+  "date_local": "2026-11-20",
+  "timezone": "Asia/Calcutta",
+  "release": "1.1.12",
+  "build": "9ba9f7be53ad",
+  "scope": "Validate screenshot comparison and existing OTA software; no hardware deployment",
+  "comparison": {
+    "ip_address": "Absent from OTA status payload and page",
+    "wifi_rssi": "Absent from OTA status payload and page",
+    "uptime": "Existing telemetry contains uptime_ms; OTA page does not display it",
+    "custom_drop_area": "Absent; native file chooser is implemented",
+    "visible_application_size_limit": "Absent from page; 1984 KiB app limit enforced by backend and firmware",
+    "before_upload_panel": "Partial; brief guidance and acknowledgement exist, full numbered panel is absent",
+    "network_security_notice": "Documented in OTA guide; absent from page",
+    "separate_ota_password": "Absent by design; existing admin/session/CSRF and MQTT ACLs are used",
+    "browser_hex_conversion": "Absent by design; backend validates and converts Intel HEX",
+    "device_unavailable_state": "Present as last-seen/waiting/unreachable states",
+    "mint_theme_and_four_summary_cards": "Visual differences; current page follows existing dashboard style"
+  },
+  "validation": {
+    "backend_pytest": {"passed": 103, "failed": 0},
+    "frontend_vitest": {"passed": 41, "failed": 0, "test_files": 8},
+    "firmware_host_tests": "Passed CAN TX rules, ISO-TP, command rules, parser and maintenance gating",
+    "python_ota_lint": "Passed",
+    "source_release_fingerprint": "Matches packaged release identity",
+    "packaged_binary_validation": "Passed",
+    "actual_release_bin_hex_round_trip": "Passed; decoded Intel HEX exactly matches packaged BIN",
+    "release_file_hashes": "Passed",
+    "source_zip_firmware_and_manifest": "Match standalone release files",
+    "gui_firmware_version_build": "Match",
+    "browser_desktop_mobile": "Passed with mocked API data; upload acknowledgement and reboot confirmation gates verified",
+    "hardware_ota": "Not performed; deferred by user",
+    "hardware_reboot_rollback_power_loss": "Pending physical ESP32 testing"
+  }
+}

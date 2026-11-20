@@ -5,6 +5,7 @@
 #include "wifi_manager.h"
 #include "can_manager.h"
 #include "sw_version.h"
+#include "ota_manager.h"
 #include "esp_log.h"
 #include "nvs_flash.h"
 
@@ -27,4 +28,5 @@ void app_main(void)
     }
     const esp_err_t can_result = can_manager_start();
     if (can_result != ESP_OK) { ESP_LOGE("can", "CAN startup failed: %s", esp_err_to_name(can_result)); }
+    ESP_ERROR_CHECK(ota_manager_start(result == ESP_OK && can_result == ESP_OK));
 }

@@ -8,6 +8,9 @@ topic write navsphere/+/command
 topic read navsphere/+/diagnostic/response
 topic write navsphere/+/diagnostic/request
 topic write navsphere/+/can/tx/request
+topic write navsphere/+/ota/request
+topic read navsphere/+/ota/response
+topic read navsphere/+/ota/status
 
 # Every device username must equal its provisioned device_id.
 # These pattern grants also apply to other users but are scoped to their username.
@@ -19,3 +22,6 @@ pattern read navsphere/%u/command
 pattern write navsphere/%u/diagnostic/response
 pattern read navsphere/%u/diagnostic/request
 pattern read navsphere/%u/can/tx/request
+pattern read navsphere/%u/ota/request
+pattern write navsphere/%u/ota/response
+pattern write navsphere/%u/ota/status

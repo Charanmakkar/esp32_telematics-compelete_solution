@@ -1,6 +1,6 @@
 # NavSphere ESP32-WROOM firmware
 
-Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+Updated 20 November 2026 for **v1.1.22 / 1e17f3d0dbcc**. File-selection feedback is fixed and the rebuilt firmware passed live GUI upload validation. The connected chip reported v1.1.21; this new image has not been flashed. See `docs/RELEASE_STATUS.md` for evidence and limitations.
 
 The supplied project was an ESP-IDF CMake skeleton with an empty `app_main()`.
 It had no Wi-Fi code, target selection, pin map, SDK version or credentials.
@@ -223,12 +223,24 @@ version.json generates SW_VERSION, SW_BUILD_ID and SW_BUILD_UTC and matching
 GUI constants. The UI compares its own build with actual device reports.
 Root builds use build/ and sdkconfig; standalone builds use firmware/build/
 and independent firmware/sdkconfig. Do not mix them. An already provisioned
-board needs only the application update, from the repository root in an IDF terminal:
+board requires the one-time OTA migration below. Future updates use /ota:
 
 ```powershell
-python -m esptool --chip esp32 --port COMx --baud 115200 write-flash --flash-mode dio --flash-freq 40m --flash-size 4MB 0x10000 output/firmware/navsphere.bin
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/migrate_ota.ps1 -Port COMx
 ```
 
 Detect the actual port, close monitors, verify written hash and startup identity,
 then release the port. Preserve NVS; do not erase or reprovision for routine updates.
-New-board provisioning is separate. No OTA flashing workflow is implemented.
+New-board provisioning is separate. The OTA workflow and one-time partition migration are documented in the [OTA guide](../docs/firmware/OTA_GUIDE.md).
+
+## Wi-Fi OTA update
+
+Open **Manage → OTA over Wi-Fi** (`/ota`) to upload an application BIN/Intel HEX,
+review its target version and update the ESP32 through the existing MQTT connection.
+The page reports the actual running chip version and image SHA-256; success requires
+a new confirmed boot with the uploaded fingerprint. See the [OTA guide](../docs/firmware/OTA_GUIDE.md)
+for accepted files, permissions, recovery and the required initial USB migration.
+
+The packaged firmware now uses two OTA slots. Earlier factory-only flashing
+commands in this guide are historical: use `scripts/migrate_ota.ps1` for the first
+installation. Future application updates use the OTA page. Never erase NVS.

@@ -1,0 +1,116 @@
+{
+  "observed_during": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+      "version": "1.1.20",
+      "build": "1fb9fadf201c",
+      "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+      "partition": "ota_1",
+      "uptime_ms": 6021631,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -76,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "transferring"
+    },
+    "age_seconds": 1.5104008000053,
+    "fresh": true,
+    "prepared": {
+      "filename": "firmware.bin",
+      "version": "1.1.21",
+      "project": "firmware",
+      "size": 1038592,
+      "sha256": "b62229d029c5fa2b2b829bac8eaa1af30c7712835e89d2f6001430a9094b9e63",
+      "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+      "elf_sha256": "968c3d31e36e74c43c0855a6767bc544e62fffb627882724e18990f05aa1f837",
+      "upload_id": "43920b44-2865-4b5c-80a8-26d91a187057"
+    },
+    "job": {
+      "id": "de6adba8-e79d-40ec-94b7-257a051dce07",
+      "device_id": "ESP32_001",
+      "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.21",
+        "project": "firmware",
+        "size": 1038592,
+        "sha256": "b62229d029c5fa2b2b829bac8eaa1af30c7712835e89d2f6001430a9094b9e63",
+        "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+        "elf_sha256": "968c3d31e36e74c43c0855a6767bc544e62fffb627882724e18990f05aa1f837",
+        "upload_id": "43920b44-2865-4b5c-80a8-26d91a187057"
+      },
+      "state": "transferring",
+      "progress": 73.2,
+      "message": "Writing the inactive firmware slot",
+      "actor": "admin",
+      "chunk_bytes": 2048
+    },
+    "busy": true,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "f14c72d1-3080-3c77-c41a-81b5e3212efd",
+      "version": "1.1.21",
+      "build": "bd9ed0ad6a1b",
+      "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+      "partition": "ota_0",
+      "uptime_ms": 19152,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -71,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 0.7123497999855317,
+    "fresh": true,
+    "prepared": null,
+    "job": {
+      "id": "de6adba8-e79d-40ec-94b7-257a051dce07",
+      "device_id": "ESP32_001",
+      "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.21",
+        "project": "firmware",
+        "size": 1038592,
+        "sha256": "b62229d029c5fa2b2b829bac8eaa1af30c7712835e89d2f6001430a9094b9e63",
+        "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+        "elf_sha256": "968c3d31e36e74c43c0855a6767bc544e62fffb627882724e18990f05aa1f837",
+        "upload_id": "43920b44-2865-4b5c-80a8-26d91a187057"
+      },
+      "state": "confirmed",
+      "progress": 100,
+      "message": "The chip rebooted and confirmed the uploaded image",
+      "actor": "admin",
+      "chunk_bytes": 2048
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "passed": true
+}

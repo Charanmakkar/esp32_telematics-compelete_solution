@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "live_backend": true,
+  "pages": [
+    {
+      "route": "/",
+      "heading": "Telemetry overview"
+    },
+    {
+      "route": "/analytics/analog-1",
+      "heading": "Analog 01 analytics"
+    },
+    {
+      "route": "/analytics/analog-2",
+      "heading": "Analog 02 analytics"
+    },
+    {
+      "route": "/analytics/analog-3",
+      "heading": "Analog 03 analytics"
+    },
+    {
+      "route": "/analytics/analog-4",
+      "heading": "Analog 04 analytics"
+    },
+    {
+      "route": "/analytics/analog-5",
+      "heading": "Analog 05 analytics"
+    },
+    {
+      "route": "/analytics/analog-6",
+      "heading": "Analog 06 analytics"
+    },
+    {
+      "route": "/controls",
+      "heading": "Device controls"
+    },
+    {
+      "route": "/can",
+      "heading": "CAN data"
+    },
+    {
+      "route": "/bms",
+      "heading": "BMS diagnostics"
+    },
+    {
+      "route": "/account",
+      "heading": "Account & security"
+    },
+    {
+      "route": "/ota",
+      "heading": "OTA over Wi-Fi"
+    }
+  ],
+  "chip": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "version": "1.1.20",
+    "build": "1fb9fadf201c",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "partition": "ota_1",
+    "uptime_ms": 82413,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -74,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "page_errors": []
+}

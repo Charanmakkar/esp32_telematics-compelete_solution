@@ -1,6 +1,6 @@
 # NavSphere complete implementation report
 
-Current documentation review: 19 November 2026. The dated sections below are chronological evidence; docs/RELEASE_STATUS.md summarizes the latest v1.1.8 build and pending hardware tests. docs/README.md indexes the refreshed instructions and offline reports.
+Current documentation review: 20 November 2026. Dated sections below are chronological evidence; docs/RELEASE_STATUS.md records the current v1.1.20 hardware validation.
 
 11 November 2026 · ESP32S-WROOM · Six onboard ADC1 channels
 
@@ -534,3 +534,40 @@ tokens remain unavailable. Dated screenshots and failed tests remain accurately
 labeled. Documentation helpers and validation evidence are included. Application
 version/source fingerprint remains v1.1.8 / 8148c3afe9b8; no firmware was flashed,
 CAN control toggled or BMS diagnostic behavior changed during this review.
+
+## Wi-Fi OTA addition — 20 November 2026
+
+Added /ota, authenticated BIN/Intel HEX validation and staging, MQTT chunk
+transfer, inactive-slot firmware writes, SHA-256 checks, startup rollback and
+live chip version/hash confirmation. Existing control/CAN logic has only
+maintenance gates required to prevent concurrent actuation during OTA. NVS
+offsets are preserved. Added broker ACLs, migration backup helper, API schema,
+release packaging and OTA operation/acceptance documentation. No serial device
+was connected during implementation; physical migration and OTA acceptance
+remain pending. See docs/RELEASE_STATUS.md for software-check results.
+
+## Live OTA validation and screenshot gaps — 20 November 2026
+
+Release v1.1.20 / 1fb9fadf201c was verified on the connected board. Added actual
+IP/RSSI/uptime, drag/drop, limits, guidance and connection-security reporting.
+Backed up flash and preserved provisioned credentials. BIN/HEX updates and startup
+rollback passed; ADC/CAN persistence, existing pages and safe OFF controls were
+checked. Fixed OTA deadline skew and isolated OTA network capacity/power handling.
+See docs/RELEASE_STATUS.md and output/testing/ota-hardware-validation-20261120.json
+for exact tests, evidence and remaining hardware limits.
+
+## OTA file-selection correction — 20 November 2026
+
+Release v1.1.21 / bd9ed0ad6a1b moves upload errors beside the picker, retains selected
+filename feedback and blocks installing a stale staged image after rejection.
+The user-selected standalone build was a pre-OTA application; both build roots
+were rebuilt. Eight GUI tests and live rejection/acceptance checks passed.
+The chip remained on v1.1.20; the new release is upload-validated, not flashed.
+See docs/RELEASE_STATUS.md for current and historical evidence.
+
+## OTA screenshot follow-up - 20 November 2026
+
+Release v1.1.22 / 1e17f3d0dbcc hides previously staged image details after a rejected
+selection and retains the chosen filename in the native picker. Both build
+folders were refreshed. Eight OTA GUI tests and live old-file rejection/new-file
+acceptance checks passed; the board remained on v1.1.21, with no flash started.

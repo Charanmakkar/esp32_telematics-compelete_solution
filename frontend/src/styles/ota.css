@@ -1,0 +1,24 @@
+.ota-page .ota-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.ota-page .ota-card{border:1px solid var(--border,#263448);border-radius:14px;background:var(--panel,#101a29);padding:24px;min-width:0}
+.ota-page h2{display:flex;align-items:center;gap:10px;font-size:17px;margin:0 0 20px}
+.ota-page p{line-height:1.6}.ota-page .ota-version{font-size:36px;font-weight:650;margin:20px 0}
+.ota-page .ota-state{font-size:12px;color:#dcae59}.ota-page .ota-state.live{color:#33bda6}
+.ota-page dl{display:grid;grid-template-columns:140px minmax(0,1fr);gap:12px;font-size:13px;margin:22px 0}
+.ota-page dt,.ota-page .ota-note{opacity:.7}.ota-page dd{margin:0;overflow-wrap:anywhere}
+.ota-page .ota-hash{font-family:monospace;font-size:12px}.ota-page .ota-note{font-size:12px}
+.ota-page .ota-upload{display:flex;flex-direction:column;gap:14px;border:1px dashed #48637c;padding:20px;border-radius:10px;margin:22px 0}
+.ota-page input[type=file]{max-width:100%;font:inherit}.ota-page .ota-consent{display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.6;margin:22px 0}
+.ota-page .ota-consent input{margin-top:5px}.ota-page .ota-progress{margin-top:22px}.ota-page progress{width:100%;accent-color:#33bda6;height:12px}
+.ota-page .primary-button{background:#148d7d;color:#fff;border:0;border-radius:8px;padding:12px 18px;font:inherit;font-weight:600;cursor:pointer}
+.ota-page .primary-button:hover:not(:disabled){background:#117c6e}.ota-page .primary-button:disabled{opacity:.45;cursor:not-allowed}
+.ota-page .primary-button:focus-visible,.ota-page input:focus-visible{outline:2px solid #33bda6;outline-offset:4px}
+.light .ota-page .ota-card{background:#fff;border-color:#d9e2ea}@media(max-width:850px){.ota-page .ota-grid{grid-template-columns:1fr}.ota-page dl{grid-template-columns:110px minmax(0,1fr)}}
+.ota-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:22px}
+.ota-summary article{display:flex;flex-direction:column;gap:10px;padding:18px;border:1px solid var(--border,#263448);border-radius:12px}
+.ota-summary span{font-size:12px;opacity:.7}.ota-summary strong{font-size:20px;overflow-wrap:anywhere}
+.ota-page .ota-upload.dragging{background:#148d7d22;border:2px solid #33bda6}
+.ota-page .ota-upload span{font-size:12px;opacity:.7}.ota-page .ota-guide{margin-top:22px}
+.ota-guide ol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;padding-left:22px;font-size:13px;line-height:1.6}
+.ota-guide li::marker{color:#33bda6;font-weight:700}.ota-security{padding:20px 0;font-size:12px;line-height:1.6}
+.ota-security span{display:inline-block;margin:8px 18px 0 0}.ota-security strong{display:block}.ota-security p{opacity:.7}
+@media(max-width:850px){.ota-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.ota-guide ol{grid-template-columns:1fr;gap:12px}.ota-summary strong{font-size:17px}}

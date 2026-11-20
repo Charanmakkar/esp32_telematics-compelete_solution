@@ -1,0 +1,71 @@
+{
+  "configured_login_status": 401,
+  "mqtt": {
+    "navsphere/ESP32_001/status": {
+      "retained": false,
+      "data": {
+        "online": true,
+        "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+        "source": "hardware",
+        "controls": {
+          "A": 0,
+          "B": 0
+        }
+      }
+    },
+    "navsphere/ESP32_001/telemetry": {
+      "retained": false,
+      "data": {
+        "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+        "sequence": 1959,
+        "source": "hardware",
+        "uptime_ms": 195939,
+        "time_valid": true
+      }
+    },
+    "navsphere/ESP32_001/can": {
+      "retained": false,
+      "data": {
+        "boot_id": "055898ca-014e-69d1-2865-2941dee1e187",
+        "stats": {
+          "queue_drops": 51,
+          "serial_drops": 60230,
+          "publish_drops": 73016,
+          "uptime_ms": 195796,
+          "rx_total": 85505,
+          "rx_bytes": 534589,
+          "standard_frames": 80007,
+          "extended_frames": 5498,
+          "rtr_frames": 0,
+          "wire_bits_min": 8405407,
+          "wire_bits_max": 10186115,
+          "rx_missed": 0,
+          "rx_overruns": 0,
+          "bus_errors": 0,
+          "arb_lost": 0,
+          "tx_failed": 0,
+          "tx_frames": 0,
+          "rx_error_counter": 0,
+          "tx_error_counter": 0,
+          "controller_state": 1,
+          "mode": "listen_only",
+          "mode_changes": 0,
+          "mode_switch_drops": 0,
+          "diag_supported": true,
+          "diag_version": 3,
+          "sw_version": "1.1.12",
+          "sw_build": "9ba9f7be53ad",
+          "periodic_tx": {
+            "enabled": false,
+            "command_id": "",
+            "reason": "off",
+            "sent_014": 0,
+            "sent_548": 0,
+            "failures": 0,
+            "skipped": 0
+          }
+        }
+      }
+    }
+  }
+}

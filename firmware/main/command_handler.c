@@ -1,6 +1,7 @@
 #include "command_handler.h"
 #include "app_config.h"
 #include <math.h>
+#include <stdatomic.h>
 #include <string.h>
 #include "cJSON.h"
 #include "driver/gpio.h"
@@ -21,6 +22,13 @@ typedef struct {
     uint64_t lease_end[2];
 } command_context_t;
 static command_context_t context;
+static atomic_bool maintenance_requested, maintenance_ready;
+void command_handler_maintenance(bool requested)
+{
+    atomic_store(&maintenance_ready,false);
+    atomic_store(&maintenance_requested,requested);
+}
+bool command_handler_maintenance_ready(void) { return atomic_load(&maintenance_ready); }
 
 static esp_err_t apply_output(size_t control, uint8_t value)
 {
@@ -149,6 +157,7 @@ void command_handler_tick(bool connected)
         const char *reason = command_rules_validate(command, pending.retained, time_valid, now, CONFIG_NAV_COMMAND_MAX_TTL_MS);
         if (!pending.parsed) { reason = "invalid_schema"; }
         if (!connected) { reason = "disconnected"; }
+        if (atomic_load(&maintenance_requested)) { reason = "firmware_update_in_progress"; }
         if (reason != NULL) { context.acknowledge(command, "rejected", reason); continue; }
         cached_command_t *available = NULL;
         cached_command_t *duplicate = NULL;
@@ -182,6 +191,7 @@ void command_handler_tick(bool connected)
         context.acknowledge(command, "applied", "logical_state_only");
 #endif
     }
+    atomic_store(&maintenance_ready,atomic_load(&maintenance_requested) && !context.controls[0] && !context.controls[1]);
 }
 
 void command_handler_state(uint8_t *control_a, uint8_t *control_b)

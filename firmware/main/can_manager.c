@@ -35,6 +35,17 @@ static portMUX_TYPE counters_lock = portMUX_INITIALIZER_UNLOCKED;
 static SemaphoreHandle_t driver_lock;
 static bool normal_mode, driver_ready;
 static bool diagnostic_requested, periodic_requested;
+static bool ota_locked;
+esp_err_t can_manager_ota_lock(bool acquire)
+{
+    if (!driver_lock) return ESP_ERR_INVALID_STATE;
+    xSemaphoreTake(driver_lock,portMAX_DELAY);
+    esp_err_t result=ESP_OK;
+    if (acquire && (diagnostic_requested || periodic_requested)) result=ESP_ERR_INVALID_STATE;
+    else ota_locked=acquire;
+    xSemaphoreGive(driver_lock);
+    return result;
+}
 static uint64_t rx_total, rx_bytes, standard_frames, extended_frames, rtr_frames, bits_min, bits_max;
 static uint32_t mode_changes, mode_switch_drops, tx_frames;
 static twai_status_info_t accumulated;
@@ -63,7 +74,7 @@ static esp_err_t set_mode(bool diagnostic, bool enabled)
     xSemaphoreTake(driver_lock, portMAX_DELAY);
     /* Keep the existing diagnostic transport exclusive. Closing an inactive
        owner must not stop the other owner's transmission. */
-    if (enabled && (diagnostic ? periodic_requested : diagnostic_requested)) {
+    if (enabled && (ota_locked || (diagnostic ? periodic_requested : diagnostic_requested))) {
         xSemaphoreGive(driver_lock);
         return ESP_ERR_INVALID_STATE;
     }

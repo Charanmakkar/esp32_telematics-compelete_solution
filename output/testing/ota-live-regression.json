@@ -1,0 +1,174 @@
+{
+  "passed": true,
+  "live_hardware": true,
+  "chip": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "version": "1.1.20",
+    "build": "1fb9fadf201c",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "partition": "ota_1",
+    "uptime_ms": 66283,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -75,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "checks": [
+    "Six hardware ADC channels continue to persist after OTA",
+    "Live WebSocket delivers received and database-persisted readings",
+    "All six analytics history APIs return readings",
+    "Passive CAN reception, statistics and current-boot database capture resume",
+    "Both safe OFF commands receive applied hardware acknowledgements",
+    "Existing BMS catalog/jobs and dependency readiness remain accessible"
+  ],
+  "evidence": {
+    "telemetry": {
+      "before_sequence": 671,
+      "after_sequence": 696,
+      "channels": [
+        "analog_1",
+        "analog_2",
+        "analog_3",
+        "analog_4",
+        "analog_5",
+        "analog_6"
+      ]
+    },
+    "can": {
+      "before": {
+        "queue_drops": 28,
+        "serial_drops": 20878,
+        "publish_drops": 23554,
+        "rx_missed": 0,
+        "rx_overruns": 0,
+        "bus_errors": 0,
+        "uptime_ms": 69871,
+        "rx_total": 29715,
+        "rx_bytes": 185786,
+        "standard_frames": 27805,
+        "extended_frames": 1910,
+        "rtr_frames": 0,
+        "wire_bits_min": 2921093,
+        "wire_bits_max": 3539935,
+        "tx_frames": 0,
+        "tx_failed": 0,
+        "arb_lost": 0,
+        "rx_error_counter": 0,
+        "tx_error_counter": 0,
+        "controller_state": 1,
+        "mode": "listen_only",
+        "periodic_tx": {
+          "enabled": false,
+          "command_id": "",
+          "reason": "off",
+          "sent_014": 0,
+          "sent_548": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        "mode_changes": 0,
+        "mode_switch_drops": 0,
+        "diag_supported": true,
+        "diag_version": 3,
+        "sw_version": "1.1.20",
+        "sw_build": "1fb9fadf201c"
+      },
+      "after": {
+        "queue_drops": 28,
+        "serial_drops": 21975,
+        "publish_drops": 24742,
+        "rx_missed": 0,
+        "rx_overruns": 0,
+        "bus_errors": 0,
+        "uptime_ms": 72228,
+        "rx_total": 31224,
+        "rx_bytes": 195226,
+        "standard_frames": 29215,
+        "extended_frames": 2009,
+        "rtr_frames": 0,
+        "wire_bits_min": 3069516,
+        "wire_bits_max": 3719805,
+        "tx_frames": 0,
+        "tx_failed": 0,
+        "arb_lost": 0,
+        "rx_error_counter": 0,
+        "tx_error_counter": 0,
+        "controller_state": 1,
+        "mode": "listen_only",
+        "periodic_tx": {
+          "enabled": false,
+          "command_id": "",
+          "reason": "off",
+          "sent_014": 0,
+          "sent_548": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        "mode_changes": 0,
+        "mode_switch_drops": 0,
+        "diag_supported": true,
+        "diag_version": 3,
+        "sw_version": "1.1.20",
+        "sw_build": "1fb9fadf201c"
+      },
+      "stored_current_boot_ids": 29
+    },
+    "devices": {
+      "devices": [
+        {
+          "device_id": "ESP32_001",
+          "online": true,
+          "last_seen": "2026-11-20T08:46:05.899000Z",
+          "source": "hardware",
+          "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+          "controls": {
+            "A": 0,
+            "B": 0
+          },
+          "mapping": [
+            {
+              "channel": "analog_1",
+              "label": "Analog 1",
+              "physical": "GPIO32 / ADC1"
+            },
+            {
+              "channel": "analog_2",
+              "label": "Analog 2",
+              "physical": "GPIO33 / ADC1"
+            },
+            {
+              "channel": "analog_3",
+              "label": "Analog 3",
+              "physical": "GPIO34 / ADC1"
+            },
+            {
+              "channel": "analog_4",
+              "label": "Analog 4",
+              "physical": "GPIO35 / ADC1"
+            },
+            {
+              "channel": "analog_5",
+              "label": "Analog 5",
+              "physical": "GPIO36 / ADC1"
+            },
+            {
+              "channel": "analog_6",
+              "label": "Analog 6",
+              "physical": "GPIO39 / ADC1"
+            }
+          ]
+        }
+      ]
+    },
+    "bms_catalog_counts": {
+      "services": 55,
+      "presets": 44
+    }
+  }
+}

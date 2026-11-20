@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "old_image_http": 400,
+  "old_image_error": {
+    "detail": "Choose NavSphere firmware with OTA protocol 1 support; legacy images would remove OTA"
+  },
+  "new_image_http": 200,
+  "new_image": {
+    "filename": "firmware.bin",
+    "version": "1.1.22",
+    "project": "firmware",
+    "size": 1038592,
+    "sha256": "787f925df445586d4003ac2aa1e17b45202500101c33e9e6fb18c0f6fc15b070",
+    "image_sha256": "7a5b8ee8ec8cebf6961d4cccb947b3753d7750bf3353f46c53538befc178daa1",
+    "elf_sha256": "34239b9b6e0d7cf63bf3aa170a5f0728a39c0e979cdad21a0117fa6fa072105e",
+    "upload_id": "165e6533-4d0b-482a-b03a-cb138bbc2ff7"
+  },
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "f14c72d1-3080-3c77-c41a-81b5e3212efd",
+    "version": "1.1.21",
+    "build": "bd9ed0ad6a1b",
+    "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+    "partition": "ota_0",
+    "uptime_ms": 31263,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -72,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "after": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "f14c72d1-3080-3c77-c41a-81b5e3212efd",
+    "version": "1.1.21",
+    "build": "bd9ed0ad6a1b",
+    "image_sha256": "8a5eb2d4fd87ab87b57d6bbe5c98acf50418897bb16398b47e310e0c33a6ead6",
+    "partition": "ota_0",
+    "uptime_ms": 35293,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -71,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "installation_started": false,
+  "page_errors": []
+}

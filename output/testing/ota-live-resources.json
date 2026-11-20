@@ -1,0 +1,7 @@
+{
+  "sample_count": 29,
+  "minimum_observed_free_heap_bytes": 92332,
+  "minimum_observed_mqtt_stack_margin_bytes": 2708,
+  "receiver_version": "1.1.17",
+  "note": "Sampled during BIN OTA; this does not measure the OTA worker stack or certify worst-case margins."
+}

@@ -1,0 +1,183 @@
+{
+  "read_only_hardware_query": true,
+  "chip": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "version": "1.1.20",
+    "build": "1fb9fadf201c",
+    "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+    "partition": "ota_1",
+    "uptime_ms": 94505,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -76,
+    "slot_size": 2031616,
+    "max_chunk_bytes": 2048,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "http": 202,
+  "initial": {
+    "id": "c2fe6b3a-df63-48bc-ae80-6777c4a69204",
+    "device_id": "ESP32_001",
+    "actor": "ota_test_9ba6f2155405",
+    "created_at": "2026-11-20T08:46:24.893000+00:00",
+    "updated_at": "2026-11-20T08:46:24.893000+00:00",
+    "status": "queued",
+    "summary": {
+      "name": "Read hardware part number",
+      "action": "read",
+      "source": "AMP 15.0.4 application-mode read",
+      "kind": "preset",
+      "entry_id": "quick_hardware",
+      "device_id": "ESP32_001",
+      "instance": 1,
+      "ecu": "abs_hv",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "session": 0,
+      "security": 0,
+      "risk": "read",
+      "sensitive": false,
+      "request_hex": "22F191",
+      "image": null,
+      "notes": [
+        "Application-mode preparation sends a two-second TesterPresent burst and waits 600 ms, matching the original client."
+      ],
+      "cdd_sha256": "649da632b11280656732e1ed685e5900e4532e6c870afadd06bd745ee3f5f441",
+      "client_version": "15.0.4",
+      "client_sha256": "84b51a8589b89a337cff76587fa7155786001ab0962ea6e9f868d930b2fa0232",
+      "image_id": 0
+    },
+    "result": {
+      "message": "Waiting to start"
+    },
+    "exchanges": [],
+    "offset": 0
+  },
+  "result": {
+    "id": "c2fe6b3a-df63-48bc-ae80-6777c4a69204",
+    "device_id": "ESP32_001",
+    "actor": "ota_test_9ba6f2155405",
+    "created_at": "2026-11-20T08:46:24.893000+00:00",
+    "updated_at": "2026-11-20T08:46:29.127000+00:00",
+    "status": "completed",
+    "summary": {
+      "name": "Read hardware part number",
+      "action": "read",
+      "source": "AMP 15.0.4 application-mode read",
+      "kind": "preset",
+      "entry_id": "quick_hardware",
+      "device_id": "ESP32_001",
+      "instance": 1,
+      "ecu": "abs_hv",
+      "tx_id": 2020,
+      "rx_id": 2028,
+      "session": 0,
+      "security": 0,
+      "risk": "read",
+      "sensitive": false,
+      "request_hex": "22F191",
+      "image": null,
+      "notes": [
+        "Application-mode preparation sends a two-second TesterPresent burst and waits 600 ms, matching the original client."
+      ],
+      "cdd_sha256": "649da632b11280656732e1ed685e5900e4532e6c870afadd06bd745ee3f5f441",
+      "client_version": "15.0.4",
+      "client_sha256": "84b51a8589b89a337cff76587fa7155786001ab0962ea6e9f868d930b2fa0232",
+      "image_id": 0
+    },
+    "result": {
+      "message": "BMS returned a positive response",
+      "response_expected": true,
+      "response_hex": "62F1913030303030303030",
+      "decoded": [
+        {
+          "name": "Customer hardware part number",
+          "value": "00000000"
+        }
+      ],
+      "warnings": [],
+      "listen_only_restored": true
+    },
+    "exchanges": [
+      {
+        "created_at": "2026-11-20T08:46:28.127000+00:00",
+        "command_id": "d735609f-f9bb-44ad-85d3-ee645167e39d",
+        "tx_id": 2020,
+        "rx_id": 2028,
+        "request_hex": "3E80",
+        "operation": "request",
+        "expect_response": false,
+        "repeat": 20,
+        "response_hex": "",
+        "pending_count": 0,
+        "status": "completed",
+        "elapsed_ms": 3224
+      },
+      {
+        "created_at": "2026-11-20T08:46:28.961000+00:00",
+        "command_id": "40a35b64-7863-445a-a765-c1fd904c4714",
+        "tx_id": 2020,
+        "rx_id": 2028,
+        "request_hex": "22F191",
+        "operation": "request",
+        "expect_response": true,
+        "repeat": 1,
+        "response_hex": "62F1913030303030303030",
+        "pending_count": 0,
+        "status": "completed",
+        "elapsed_ms": 228
+      },
+      {
+        "created_at": "2026-11-20T08:46:29.121000+00:00",
+        "command_id": "7d45fadd-10cd-4acc-9e60-02c1060cb176",
+        "tx_id": 2020,
+        "rx_id": 2028,
+        "request_hex": "",
+        "operation": "close",
+        "expect_response": true,
+        "repeat": 1,
+        "response_hex": "",
+        "pending_count": 0,
+        "status": "completed",
+        "elapsed_ms": 156
+      }
+    ],
+    "offset": 0
+  },
+  "can_after": {
+    "profiles": [
+      {
+        "can_id": 20,
+        "data": "006000",
+        "dlc": 3,
+        "period_ms": 100
+      },
+      {
+        "can_id": 1352,
+        "data": "0000000000000008",
+        "dlc": 8,
+        "period_ms": 10
+      }
+    ],
+    "supported": true,
+    "clock_ready": true,
+    "fresh": true,
+    "age_seconds": 0.08513,
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "mode": "listen_only",
+    "state": {
+      "enabled": false,
+      "command_id": "",
+      "reason": "off",
+      "sent_014": 0,
+      "sent_548": 0,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "passed": true
+}

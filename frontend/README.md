@@ -1,6 +1,6 @@
 # NavSphere dashboard
 
-Updated 19 November 2026 for **v1.1.8 / 8148c3afe9b8**. Last hardware-verified firmware: v1.1.7. Flashing v1.1.8 and final CAN timing/GUI ON/OFF checks remain pending. ESP32 BMS diagnostic success remains unverified. See the project `docs/RELEASE_STATUS.md` for current evidence.
+Updated 20 November 2026 for **v1.1.22 / 1e17f3d0dbcc**. File-selection feedback is fixed and the rebuilt firmware passed live GUI upload validation. The connected chip reported v1.1.21; this new image has not been flashed. See `docs/RELEASE_STATUS.md` for evidence and limitations.
 
 React + TypeScript + Vite dashboard for the local ESP32 telemetry platform. The current hardware contract has **six ADC1 inputs**: GPIO32, GPIO33, GPIO34, GPIO35, GPIO36, and GPIO39. Output A is GPIO2 and output B is GPIO0. GPIO25 TX and GPIO26 RX are reserved for CAN.
 
@@ -71,3 +71,15 @@ independent; updating the GUI does not flash firmware.
 `/bms` provides 55 CDD services, 44 BAT workflows, five Quick reads, previews,
 guarded changes and saved responses from HVBEOSK/be_repo. Successful diagnostic
 responses through ESP32 remain unverified. Turn periodic TX OFF before BMS work.
+
+## Wi-Fi OTA update
+
+Open **Manage → OTA over Wi-Fi** (`/ota`) to upload an application BIN/Intel HEX,
+review its target version and update the ESP32 through the existing MQTT connection.
+The page reports the actual running chip version and image SHA-256; success requires
+a new confirmed boot with the uploaded fingerprint. See the [OTA guide](../docs/firmware/OTA_GUIDE.md)
+for accepted files, permissions, recovery and the required initial USB migration.
+
+The packaged firmware now uses two OTA slots. Earlier factory-only flashing
+commands in this guide are historical: use `scripts/migrate_ota.ps1` for the first
+installation. Future application updates use the OTA page. Never erase NVS.

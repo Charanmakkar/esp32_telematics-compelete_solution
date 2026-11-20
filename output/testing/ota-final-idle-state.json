@@ -1,0 +1,113 @@
+{
+  "ota": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+      "version": "1.1.20",
+      "build": "1fb9fadf201c",
+      "image_sha256": "4ee0c99991718382bef53ab5762daf8b1d32e493750d4259caab40643c9285c9",
+      "partition": "ota_1",
+      "uptime_ms": 110606,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -75,
+      "slot_size": 2031616,
+      "max_chunk_bytes": 2048,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 0.8264107999857515,
+    "fresh": true,
+    "prepared": null,
+    "job": null,
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "can": {
+    "profiles": [
+      {
+        "can_id": 20,
+        "data": "006000",
+        "dlc": 3,
+        "period_ms": 100
+      },
+      {
+        "can_id": 1352,
+        "data": "0000000000000008",
+        "dlc": 8,
+        "period_ms": 10
+      }
+    ],
+    "supported": true,
+    "clock_ready": true,
+    "fresh": true,
+    "age_seconds": 0.662458,
+    "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+    "mode": "listen_only",
+    "state": {
+      "enabled": false,
+      "command_id": "",
+      "reason": "off",
+      "sent_014": 0,
+      "sent_548": 0,
+      "failures": 0,
+      "skipped": 0
+    }
+  },
+  "devices": {
+    "devices": [
+      {
+        "device_id": "ESP32_001",
+        "online": true,
+        "last_seen": "2026-11-20T08:46:41.305000Z",
+        "source": "hardware",
+        "boot_id": "dc36ccad-d3d2-e1f6-c3c5-010fc369190f",
+        "controls": {
+          "A": 0,
+          "B": 0
+        },
+        "mapping": [
+          {
+            "channel": "analog_1",
+            "label": "Analog 1",
+            "physical": "GPIO32 / ADC1"
+          },
+          {
+            "channel": "analog_2",
+            "label": "Analog 2",
+            "physical": "GPIO33 / ADC1"
+          },
+          {
+            "channel": "analog_3",
+            "label": "Analog 3",
+            "physical": "GPIO34 / ADC1"
+          },
+          {
+            "channel": "analog_4",
+            "label": "Analog 4",
+            "physical": "GPIO35 / ADC1"
+          },
+          {
+            "channel": "analog_5",
+            "label": "Analog 5",
+            "physical": "GPIO36 / ADC1"
+          },
+          {
+            "channel": "analog_6",
+            "label": "Analog 6",
+            "physical": "GPIO39 / ADC1"
+          }
+        ]
+      }
+    ]
+  }
+}

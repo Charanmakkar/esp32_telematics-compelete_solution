@@ -1,0 +1,126 @@
+{
+  "label": "bin-verified",
+  "live_hardware": true,
+  "before": {
+    "protocol": 1,
+    "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+    "source": "hardware",
+    "boot_id": "66e36ea8-e14b-e4ec-e62d-1523818955bc",
+    "version": "1.1.15",
+    "build": "0dc2217ec68f",
+    "image_sha256": "5fd94fdd0551069c063a3c9b0f53279caac7e3488d3f8f86647454f5876d1e7a",
+    "partition": "ota_0",
+    "uptime_ms": 121963,
+    "mqtt_tls": false,
+    "ip_address": "192.168.10.57",
+    "wifi_rssi_dbm": -77,
+    "slot_size": 2031616,
+    "confirmed": true,
+    "state": "idle"
+  },
+  "prepared": {
+    "filename": "firmware.bin",
+    "version": "1.1.16",
+    "project": "firmware",
+    "size": 1038048,
+    "sha256": "664411a029b76c5971991835cc53454c314a92b69219a7d2fef2de0bf31815d9",
+    "image_sha256": "6edcb4f45f3225e7ffc696482123a15869797ef8d3ce38748d53baf6c6d7fc0d",
+    "elf_sha256": "bb4535164265a4ad513af2d853e4cb08ba37afdf6d2b664e07a30958ea9b12e0",
+    "upload_id": "674622c9-b067-49a3-a74a-51d243b4ecd5"
+  },
+  "after": {
+    "device_id": "ESP32_001",
+    "chip": {
+      "protocol": 1,
+      "capability": "NAVSPHERE_OTA_PROTOCOL_1",
+      "source": "hardware",
+      "boot_id": "6a331f69-bdd2-9aa9-dd3b-939080a7943a",
+      "version": "1.1.15",
+      "build": "0dc2217ec68f",
+      "image_sha256": "5fd94fdd0551069c063a3c9b0f53279caac7e3488d3f8f86647454f5876d1e7a",
+      "partition": "ota_0",
+      "uptime_ms": 12729,
+      "mqtt_tls": false,
+      "ip_address": "192.168.10.57",
+      "wifi_rssi_dbm": -84,
+      "slot_size": 2031616,
+      "confirmed": true,
+      "state": "idle"
+    },
+    "age_seconds": 0.2272167999908561,
+    "fresh": true,
+    "prepared": null,
+    "job": {
+      "id": "e55a5178-7e8a-4a28-a361-b07899459c55",
+      "device_id": "ESP32_001",
+      "boot_id": "66e36ea8-e14b-e4ec-e62d-1523818955bc",
+      "image": {
+        "filename": "firmware.bin",
+        "version": "1.1.16",
+        "project": "firmware",
+        "size": 1038048,
+        "sha256": "664411a029b76c5971991835cc53454c314a92b69219a7d2fef2de0bf31815d9",
+        "image_sha256": "6edcb4f45f3225e7ffc696482123a15869797ef8d3ce38748d53baf6c6d7fc0d",
+        "elf_sha256": "bb4535164265a4ad513af2d853e4cb08ba37afdf6d2b664e07a30958ea9b12e0",
+        "upload_id": "674622c9-b067-49a3-a74a-51d243b4ecd5"
+      },
+      "state": "failed",
+      "progress": 49.8,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out",
+      "actor": "ota_test_9ba6f2155405"
+    },
+    "busy": false,
+    "limits": {
+      "max_application_bytes": 2031616,
+      "max_upload_bytes": 6291456
+    },
+    "transport": {
+      "server_mqtt_tls": false
+    }
+  },
+  "history": [
+    {
+      "elapsed_s": 0.007,
+      "state": "starting",
+      "progress": 0,
+      "message": "Waiting for the chip to accept the update"
+    },
+    {
+      "elapsed_s": 6.082,
+      "state": "transferring",
+      "progress": 0.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 78.771,
+      "state": "transferring",
+      "progress": 10,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 144.539,
+      "state": "transferring",
+      "progress": 20,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 215.566,
+      "state": "transferring",
+      "progress": 30,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 289.325,
+      "state": "transferring",
+      "progress": 40.1,
+      "message": "Writing the inactive firmware slot"
+    },
+    {
+      "elapsed_s": 374.288,
+      "state": "failed",
+      "progress": 49.8,
+      "message": "No acknowledgement from the chip; incomplete transfer will time out"
+    }
+  ],
+  "page_errors": []
+}

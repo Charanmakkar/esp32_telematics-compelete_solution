@@ -54,6 +54,7 @@ export function Layout() {
     ? "Channel analytics"
     : location.pathname === "/controls"
       ? "Device controls"
+      : location.pathname === "/ota" ? "OTA over Wi-Fi"
       : location.pathname === "/account"
         ? "Account security"
         : "Overview";
@@ -131,6 +132,7 @@ export function Layout() {
             <ShieldCheck size={18} />
             <span>Account & security</span>
           </NavLink>
+          <NavLink to="/ota"><Radio size={18} /><span>OTA over Wi-Fi</span></NavLink>
           <a href={documentationUrl} target="_blank" rel="noreferrer">
             <BookOpen size={18} />
             <span>API documentation</span>

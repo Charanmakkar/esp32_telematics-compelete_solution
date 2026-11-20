@@ -11,4 +11,6 @@ esp_err_t command_handler_init(command_ack_fn acknowledge);
 void command_handler_receive(const char *data, size_t length, bool retained);
 void command_handler_tick(bool connected);
 void command_handler_state(uint8_t *control_a, uint8_t *control_b);
+void command_handler_maintenance(bool requested);
+bool command_handler_maintenance_ready(void);
 #endif

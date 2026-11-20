@@ -17,7 +17,11 @@ def main() -> None:
     parser.add_argument('--build-directory', choices=['build', 'firmware/build'])
     parser.add_argument('--hardware-flashed', action='store_true',
                         help='Record that this exact firmware build was verified on hardware')
+    parser.add_argument('--hardware-ota-verified', action='store_true',
+                        help='Record that this exact image was installed and confirmed over live OTA')
     args = parser.parse_args()
+    if args.hardware_ota_verified and not args.hardware_flashed:
+        parser.error('--hardware-ota-verified requires --hardware-flashed')
     release = sync(check=True)
     build = ROOT / args.build_directory if args.build_directory else (ROOT / "build" if (ROOT / "build" / "firmware.bin").is_file() else ROOT / "firmware" / "build")
     image = (build / "firmware.bin").read_bytes()
@@ -32,6 +36,7 @@ def main() -> None:
     output.mkdir(parents=True, exist_ok=True)
     sources = {"bootloader.bin":build/"bootloader/bootloader.bin",
                "partition-table.bin":build/"partition_table/partition-table.bin",
+               "ota_data_initial.bin":build/"ota_data_initial.bin",
                "navsphere.bin":build/"firmware.bin"}
     files = {}
     for name, source in sources.items():
@@ -50,7 +55,9 @@ def main() -> None:
                               "tester_present_burst":{"count":20,"interval_ms":100},
                               "idle_return_to_listen_only_seconds":15}},
         "flash_mode":"dio", "flash_size":"4MB", "flash_frequency":"40m",
-        "offsets":{"bootloader.bin":"0x1000","partition-table.bin":"0x8000","navsphere.bin":"0x10000"},
+        "offsets":{"bootloader.bin":"0x1000","partition-table.bin":"0x8000","navsphere.bin":"0x10000", "ota_data_initial.bin":"0x3F0000"},
+        "ota":{"protocol":1,"transport":"mqtt","slot_size":0x1F0000,"ota_0":"0x10000","ota_1":"0x200000",
+               "initial_usb_migration_required":True,"hardware_ota_verified":args.hardware_ota_verified},
         "nvs_offset":"0x9000", "nvs_included":False,"hardware_flashed":args.hardware_flashed,
         "build_directory":build.relative_to(ROOT).as_posix(),
         "files":files, "packaged_at_utc":datetime.now(UTC).isoformat()}

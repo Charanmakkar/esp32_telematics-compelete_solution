@@ -112,6 +112,18 @@ int main(void)
     for (unsigned int index = 0U; index < 9U; ++index) { submit(second, false); }
     assert(rejected == 9U); /* ninth refused before queued processing */
     command_handler_tick(true); assert(applied == 2U && rejected == 17U);
+    command_handler_maintenance(true);
+    command_handler_tick(true);
+    assert(command_handler_maintenance_ready());
+    const char *third = "{\"command_id\":\"12345678-abcd-1234-abcd-123456789abe\",\"key\":\"A\",\"value\":1,\"issued_at_ms\":10000,\"expires_at_ms\":20000}";
+    submit(third,false); command_handler_tick(true);
+    assert(applied == 2U && rejected == 18U && pin_levels[2] == 0U);
+    command_handler_maintenance(false);
+    submit(third,false); command_handler_tick(true);
+    assert(applied == 3U && pin_levels[2] == 1U);
+    command_handler_maintenance(true); command_handler_tick(true);
+    assert(!command_handler_maintenance_ready()); /* OTA must not turn off an active output. */
+    command_handler_maintenance(false);
     puts("Command parser, duplicate, expiry, safe-state, and bounded queue tests passed");
     return 0;
 }

@@ -20,6 +20,7 @@ from app.services.bms_service import BmsService
 from app.services.can_service import CanService
 from app.services.can_tx_service import CanTxService
 from app.services.command_service import CommandService
+from app.services.ota_service import OtaService
 from app.services.websocket_manager import WebSocketManager
 
 logger = logging.getLogger(__name__)
@@ -37,6 +38,7 @@ class Runtime:
         self.mqtt = MqttClient(settings, self.enqueue)
         self.commands = CommandService(self)
         self.bms = BmsService(self)
+        self.ota = OtaService(self)
         self.latest_received: dict[str, dict] = {}
         self.arrivals: deque[float] = deque(maxlen=1000)
         self.metrics = {
@@ -97,9 +99,11 @@ class Runtime:
             asyncio.create_task(self.can.consume()),
             asyncio.create_task(self.bms.consume()),
         ]
+        self.ota.start()
         self.mqtt.start()
 
     async def stop(self):
+        await asyncio.to_thread(self.ota.stop)
         await asyncio.to_thread(self.bms.stop)
         await asyncio.to_thread(self.mqtt.stop)
         for task in self.tasks:
@@ -110,6 +114,8 @@ class Runtime:
         self.db.engine.dispose()
 
     def enqueue(self, topic: str, payload: bytes, retained: bool = False) -> bool:
+        if topic.endswith(("/ota/status", "/ota/response")):
+            return self.ota.enqueue(topic, payload, retained)
         if topic.endswith("/diagnostic/response"):
             return self.bms.enqueue(topic, payload, retained)
         if topic.endswith("/can"):
